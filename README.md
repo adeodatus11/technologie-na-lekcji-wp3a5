@@ -1,14 +1,24 @@
 # Innowacyjna lekcja w praktyce
 
-Statyczna strona WWW dla nauczycieli: trzy praktyczne karty metod pracy z technologią i innowacyjnością na lekcji.
+Statyczny katalog 16 metod pracy na lekcji dla nauczycieli zwykłej szkoły stacjonarnej.
 
-- 360 e-learning
-- blended learning
-- flipped classroom
-- kwerenda inspiracji dla uczniów niskozainteresowanych i z niską koncentracją
-- strona „O projekcie”
-- deklaracja dostępności COVE Polska w stopce każdej podstrony
+Serwis zawiera:
 
-AI jest traktowane jako narzędzie wspierające przygotowanie materiałów, pytań, instrukcji i kryteriów, a nie jako jedna z trzech metod źródłowych.
+- stronę główną z wyszukiwarką i filtrami zastosowań;
+- 16 pełnych podstron metod;
+- czterotygodniowy model ewaluacji;
+- wskazówki dotyczące zaangażowania i koncentracji;
+- rejestr źródeł oraz opis metodologii;
+- warianty bez technologii, z ZPE, telefonem ucznia i AI jako pomocą nauczyciela.
 
-Strona powstała jako praktyczna adaptacja dokumentacji WP3.A5 „Learning with digital technologies” w ramach COVE Polska / WIN4SMEs.
+360 e-learning, blended learning i flipped classroom są oznaczone jako inspiracje z materiałów WP3.A5 "Learning with digital technologies" przygotowanych przez IBC w Danii. Pozostałe metody są powiązane z przeglądami badań, metaanalizami, ewaluacjami albo ramami dydaktycznymi.
+
+## Generowanie podstron
+
+Treść metod znajduje się w `scripts/methods-data.mjs`. Statyczne pliki HTML generuje polecenie:
+
+```bash
+node scripts/generate-site.mjs
+```
+
+Wynik nie wymaga procesu budowania na GitHub Pages.

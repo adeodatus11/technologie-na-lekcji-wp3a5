@@ -1,177 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>360 e-learning przez ZPE · Innowacyjna lekcja w praktyce</title>
-  <meta name="description" content="360 e-learning jako praca ucznia z materiałem, ćwiczeniem, quizem, feedbackiem i dokumentacją postępu na Zintegrowanej Platformie Edukacyjnej.">
-  <link rel="stylesheet" href="styles.css?v=footer-logos-20260816">
+  <meta name="description" content="Pełny cykl pracy ucznia na platformie: materiał, zadanie, informacja zwrotna, poprawa i zapis postępu.">
+  <title>360 e-learning | Innowacyjna lekcja w praktyce</title>
+  <link rel="icon" href="assets/innowacyjna-lekcja-logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <a class="skip-link" href="#main">Przejdź do treści</a>
 <header class="site-header">
-  <nav class="nav-inner" aria-label="Główna nawigacja">
-    <a class="brand" href="index.html"><img src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce"></a>
-    <div class="header-project-logos" aria-label="Logotypy projektu">
-      <a class="project-logo-link" href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="Przejdź do strony projektu WIN4SMEs">
-        <img class="win-mark" src="assets/Logo-2025.png" alt="WIN4SMEs">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Innowacyjna lekcja w praktyce, strona główna">
+      <img src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce">
+    </a>
+    <nav class="nav-links" id="site-navigation" aria-label="Główna nawigacja">
+      <a href="index.html">Start</a>
+      <a href="index.html#metody" class="active" aria-current="page">Metody</a>
+      <a href="index.html#wybor">Jak wybrać metodę</a>
+      <a href="ewaluacja.html">Ewaluacja</a>
+      <a href="inspiracje.html">Zaangażowanie</a>
+      <a href="about.html">Źródła</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <div class="header-project-logos" role="group" aria-label="Partnerzy i finansowanie projektu">
+      <a href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs">
       </a>
       <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
       <img class="eu-mark" src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską">
     </div>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"></span><span>Menu</span></button>
-    <div class="nav-links" id="site-navigation">
-      <a href="index.html">Start</a>
-      <a href="method-1.html">360</a>
-      <a href="method-2.html">Blended</a>
-      <a href="method-3.html">Flipped</a>
-      <a href="inspiracje.html">Inspiracje</a>
-      <a href="projekt.html">O projekcie</a>
-      <a href="about.html">Źródła</a>
-    </div>
-  </nav>
+  </div>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Karta metody 1</p>
-        <h1>360 e-learning jako praca ucznia na ZPE w czasie lekcji</h1>
-        <p>ZPE może pełnić podobną funkcję do centrum e-learningowego: krótki materiał, ćwiczenie, quiz, feedback i omówienie w klasie.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#zrodlo">Co jest w źródle</a>
-          <a class="btn secondary" href="#zpe">Jak użyć ZPE</a>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <div class="signal-list">
-          <div class="signal"><strong>Materiał</strong><span>krótki zasób ZPE, artykuł, animacja, ćwiczenie lub karta</span></div>
-          <div class="signal"><strong>Aktywność</strong><span>quiz, odpowiedź, zadanie, refleksja, analiza przypadku</span></div>
-          <div class="signal"><strong>Feedback</strong><span>wynik, komentarz, poprawa i ślad pracy ucznia</span></div>
-        </div>
-      </div>
+  <section class="method-hero">
+    <div class="container method-hero-inner">
+      <a class="back-link" href="index.html#metody">← Wszystkie metody</a>
+      <span class="source-badge hero-badge">Inspiracja projektowa WP3.A5</span>
+      <h1>360 e-learning</h1>
+      <p class="method-definition">360 e-learning to spójne środowisko uczenia się, w którym materiał, ćwiczenie, feedback, poprawa i dokumentowanie postępu tworzą jeden cykl.</p>
+      <ul class="tag-list hero-tags"><li>ZPE</li><li>cykl uczenia się</li><li>portfolio</li></ul>
     </div>
   </section>
+<details class="mobile-toc">
+  <summary>Na tej stronie</summary>
+  <div>
+    <a href="#istota">Na czym polega</a>
+    <a href="#lekcja">Przebieg 45 minut</a>
+    <a href="#przyklad">Przykład</a>
+    <a href="#technologia">Technologia</a>
+    <a href="#bledy">Błędy wdrożeniowe</a>
+    <a href="#ewaluacja">Sprawdzenie efektu</a>
+    <a href="#zrodla">Źródła</a>
+  </div>
+</details>
+  <div class="container method-layout">
+    <aside>
+<nav class="method-toc" aria-label="Na tej stronie">
+  <strong>Na tej stronie</strong>
+  <a href="#istota">Na czym polega</a>
+  <a href="#lekcja">Przebieg 45 minut</a>
+  <a href="#przyklad">Przykład</a>
+  <a href="#technologia">Technologia</a>
+  <a href="#bledy">Błędy wdrożeniowe</a>
+  <a href="#ewaluacja">Sprawdzenie efektu</a>
+  <a href="#zrodla">Źródła</a>
+</nav></aside>
+    <article class="method-content">
+      <section id="istota" class="content-section">
+        <p class="source-kicker">Materiał projektowy i adaptacja dydaktyczna</p>
+        <h2>Na czym polega</h2>
+        <p class="source-note">Metoda została opracowana na podstawie materiałów WP3.A5 &quot;Learning with digital technologies&quot;, przygotowanych przez IBC w Danii, a następnie dostosowana do realiów zwykłej polskiej szkoły stacjonarnej. Nazwa 360 e-learning pochodzi z modelu IBC i nie jest powszechnie ustalonym terminem naukowym.</p>
+        <p>Uczeń nie kończy pracy na obejrzeniu zasobu. Musi wykonać zadanie, otrzymać informację o wyniku i wrócić do błędu lub kolejnego kroku. W zwykłej szkole tę logikę można zrealizować podczas lekcji z użyciem ZPE, papieru i rozmowy z nauczycielem. Platforma porządkuje zasoby i odpowiedzi, ale nauczyciel nadal wyjaśnia, obserwuje i podejmuje decyzje.</p>
+        <h3>Kiedy warto zastosować</h3>
+        <ul class="plain-list"><li>praca uczniów w różnym tempie nad tym samym zakresem</li><li>powtórka przed egzaminem lub zadaniem praktycznym</li><li>analiza przypadku zakończona poprawą odpowiedzi</li><li>gromadzenie kolejnych wersji prac w portfolio</li></ul>
+      </section>
 
-  <section class="band white" id="zrodlo">
-    <div class="container">
-      <div class="section-head">
-        <h2>Co dokładnie jest w metodzie źródłowej IBC</h2>
-        <p>Źródło nie opisuje specjalistycznego sprzętu ani efektownych mediów. Opisuje cyfrowe centrum uczenia się, w którym uczestnik samodzielnie przechodzi przez moduły i dostaje natychmiastową informację zwrotną.</p>
-      </div>
-      <div class="grid three">
-        <div class="card">
-          <p class="mini-meta">Element 1</p>
-          <h3>Samodzielna ścieżka</h3>
-          <p>Uczestnik dostaje cele, materiały, moduły, zadania i możliwość śledzenia, co zostało ukończone. W szkole: nauczyciel wyznacza krótki odcinek pracy na ZPE.</p>
-          <div class="tag-row"><span class="tag">ZPE</span><span class="tag">moduł</span></div>
+      <section id="lekcja" class="content-section">
+        <p class="source-kicker">Propozycja organizacyjna</p>
+        <h2>Schemat lekcji 45-minutowej</h2>
+        <div class="lesson-flow">
+          <div><span>0-5 min</span><h3>Cel i kryterium</h3><p>Nauczyciel pokazuje, jaki produkt ma powstać i po czym będzie można rozpoznać poprawną odpowiedź.</p></div><div><span>5-15 min</span><h3>Materiał wejściowy</h3><p>Uczniowie korzystają z krótkiego zasobu ZPE lub przygotowanego materiału i odpowiadają na dwa pytania kontrolne.</p></div><div><span>15-28 min</span><h3>Zadanie</h3><p>Każdy wykonuje analizę przypadku albo planuje procedurę. Nauczyciel wspiera uczniów, którzy utknęli na pierwszym kroku.</p></div><div><span>28-38 min</span><h3>Feedback i poprawa</h3><p>Uczeń dostaje wynik, wskazówkę lub komentarz i poprawia jeden konkretny element.</p></div><div><span>38-45 min</span><h3>Zapis postępu</h3><p>Uczeń zapisuje poprawioną wersję i jedno zdanie o zmianie. Nauczyciel notuje błąd, do którego warto wrócić.</p></div>
         </div>
-        <div class="card">
-          <p class="mini-meta">Element 2</p>
-          <h3>Interaktywność i feedback</h3>
-          <p>Quizy, ćwiczenia i zadania dają uczniowi szybką odpowiedź, czy rozumie temat. W szkole: wynik jest punktem startu do rozmowy, nie tylko oceną.</p>
-          <div class="tag-row"><span class="tag">quiz</span><span class="tag">feedback</span></div>
-        </div>
-        <div class="card">
-          <p class="mini-meta">Element 3</p>
-          <h3>Praktyczne zadania</h3>
-          <p>Źródło podaje analizę wideo, przypadki, symulacje decyzyjne, refleksję, ćwiczenia cyfrowe i wyszukiwanie informacji. W szkole można to skrócić do 10-20 minut.</p>
-          <div class="tag-row"><span class="tag">przypadek</span><span class="tag">refleksja</span></div>
-        </div>
-      </div>
-      <div class="callout green">
-        <p><strong>Adaptacja do szkoły stacjonarnej:</strong> zamiast całego dnia e-learningowego robimy krótki blok pracy na ZPE w klasie. Uczeń pracuje samodzielnie, ale nauczyciel jest obecny, pomaga, zatrzymuje grupę przy błędach i zamienia wynik platformy w rozmowę dydaktyczną.</p>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="band" id="zpe">
-    <div class="container">
-      <div class="section-head">
-        <h2>ZPE jako praktyczny rdzeń tego modelu</h2>
-        <p>ZPE może przejąć funkcję centrum e-learningowego: nauczyciel wybiera materiał, tworzy lub udostępnia zadanie, uczniowie pracują na lekcji, a wynik służy do omówienia i dalszego działania.</p>
-      </div>
-      <div class="grid two">
-        <div class="card">
-          <h3>Co może zrobić nauczyciel</h3>
-          <ul class="checklist">
-            <li>wybrać gotowy e-materiał zgodny z tematem lekcji,</li>
-            <li>utworzyć własny materiał lub test w kreatorze,</li>
-            <li>udostępnić uczniom zadanie linkiem lub kodem,</li>
-            <li>sprawdzić wyniki i użyć ich do planowania dalszej pracy,</li>
-            <li>połączyć materiał z kartą pracy, portfolio albo dyskusją w klasie.</li>
-          </ul>
+      <section id="przyklad" class="content-section">
+        <p class="source-kicker">Przykład do adaptacji</p>
+        <h2>Analiza reklamacji klienta</h2>
+        <p>Uczniowie czytają na ZPE krótki opis reklamacji i zasady jej rozpatrywania. Wybierają decyzję, uzasadniają ją dwoma danymi z przypadku, otrzymują kryteria i porównują odpowiedź ze wzorcem. Następnie poprawiają uzasadnienie. Autorski przykład pokazuje organizację metody, nie wynik badania.</p>
+        <div class="attention-note">
+          <h3>Wariant dla uczniów biernych lub łatwo tracących koncentrację</h3>
+          <p>Podziel ekran lub kartę na kolejne etapy. Na początku uczeń widzi tylko pierwszy krok i czas potrzebny do jego wykonania. Po każdym etapie powstaje mały, widoczny produkt. Nauczyciel wraca do zadania komunikatem: &quot;otwórz etap 2 i zaznacz jedną daną&quot;, zamiast ogólnego &quot;skup się&quot;.</p>
+          <p class="caution">Określenie "trudność z koncentracją" opisuje obserwację lekcyjną, nie diagnozę ucznia.</p>
         </div>
-        <div class="card">
-          <h3>Co może zrobić uczeń</h3>
-          <ul class="checklist">
-            <li>przejść przez krótki materiał na początku lekcji,</li>
-            <li>rozwiązać quiz wejścia lub wyjścia,</li>
-            <li>wrócić do materiału podczas powtórki,</li>
-            <li>wykonać zadanie z telefonu, tabletu albo komputera,</li>
-            <li>zostawić ślad pracy, który nauczyciel może omówić.</li>
-          </ul>
+      </section>
+
+      <section id="technologia" class="content-section">
+        <p class="source-kicker">Dobór narzędzia do celu</p>
+        <h2>Cztery warianty realizacji</h2>
+        <div class="tool-variants">
+          <div><h3>Bez technologii</h3><p>Teczka ucznia może zawierać materiał, kartę zadania, kryteria i dwie wersje odpowiedzi. Nauczyciel przekazuje feedback ustnie lub na karcie.</p></div>
+          <div><h3>Z wykorzystaniem ZPE</h3><p>ZPE może przechowywać materiał wejściowy, zadanie, miniquiz i odpowiedź ucznia. Wynik powinien prowadzić do rozmowy, korekty albo kolejnego zadania.</p><a href="https://zpe.gov.pl/o-zpe" target="_blank" rel="noopener noreferrer">Poznaj ZPE</a></div>
+          <div><h3>Z krótkim użyciem telefonu</h3><p>Telefon służy przez ustalony czas do otwarcia materiału, odpowiedzi na miniquiz lub przesłania krótkiego produktu. Po wykonaniu etapu wraca poza pole pracy.</p></div>
+          <div><h3>AI jako pomoc nauczyciela</h3><p>AI może pomóc nauczycielowi przygotować warianty przypadku, pytania kontrolne i krótkie komentarze robocze. Nauczyciel sprawdza poprawność, poziom trudności i dane przed publikacją.</p><a href="https://ai.covepolska.pl" target="_blank" rel="noopener noreferrer">Materiały o AI</a></div>
         </div>
-      </div>
-      <div class="button-row">
-        <a class="btn link" href="https://zpe.gov.pl/o-zpe" target="_blank" rel="noopener noreferrer">O ZPE</a>
-        <a class="btn link" href="https://zpe.gov.pl/a/kreator-e-materialow/DQbVTOitf" target="_blank" rel="noopener noreferrer">Kreator e-materiałów</a>
-        <a class="btn link" href="https://zpe.gov.pl/a/udostepnianie-e-materialow-i-sprawdzanie-wynikow/DltSx3XSs" target="_blank" rel="noopener noreferrer">Udostępnianie i wyniki</a>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="band white">
-    <div class="container">
-      <div class="section-head">
-        <h2>Model modułu 360 e-learning na 45 minut</h2>
-        <p>To format do zwykłej sali. Uczniowie nie muszą pracować w domu; cały cykl może odbyć się na lekcji.</p>
-      </div>
-      <ol class="steps">
-        <li><div><strong>5 minut: wejście nauczyciela.</strong> Cel lekcji, instrukcja pracy i kryterium: co uczeń ma umieć po bloku platformowym.</div></li>
-        <li><div><strong>10-15 minut: samodzielna praca na ZPE.</strong> Uczniowie przechodzą przez materiał, ćwiczenie lub quiz. Nauczyciel chodzi po klasie i pomaga przy starcie.</div></li>
-        <li><div><strong>8 minut: zatrzymanie przy błędach.</strong> Nauczyciel pokazuje 2-3 typowe trudności, bez wyciągania pojedynczych uczniów.</div></li>
-        <li><div><strong>12-15 minut: zadanie w parach lub grupach.</strong> Uczniowie stosują to, co zobaczyli na platformie, do krótkiego problemu, przykładu albo karty pracy.</div></li>
-        <li><div><strong>5 minut: dowód i follow-up.</strong> Quiz wyjścia, zdanie refleksji, poprawiona odpowiedź albo wskazanie, co trzeba powtórzyć na kolejnej lekcji.</div></li>
-      </ol>
-    </div>
-  </section>
+      <section id="bledy" class="content-section">
+        <p class="source-kicker">Ryzyka wdrożenia</p>
+        <h2>Najczęstsze błędy</h2>
+        <ul class="risk-list"><li>utożsamienie 360 e-learningu z filmem 360 stopni lub sprzętem immersyjnym</li><li>uznanie samego otwarcia materiału za dowód uczenia się</li><li>zbyt długi materiał przed pierwszym zadaniem</li><li>feedback bez czasu na poprawę</li><li>przeniesienie całej odpowiedzialności za uczenie się na platformę</li></ul>
+      </section>
 
-  <section class="band">
-    <div class="container">
-      <div class="section-head">
-        <h2>Przykłady zastosowań na lekcji</h2>
-        <p>Przykłady są neutralne przedmiotowo, aby można je było przenieść do przedmiotów ogólnych, zawodowych i zajęć praktycznych jako przygotowanie lub utrwalenie.</p>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Cel</th><th>Element online</th><th>Element w klasie</th><th>Dowód uczenia się</th><th>Ryzyko</th></tr></thead>
-          <tbody>
-            <tr><td>Przygotowanie do nowego tematu</td><td>Krótki materiał ZPE i 3 pytania wejściowe</td><td>Omówienie błędnych odpowiedzi i zadanie problemowe</td><td>wynik quizu wejścia</td><td>materiał za długi lub bez zadania</td></tr>
-            <tr><td>Utrwalenie po lekcji</td><td>Ćwiczenie interaktywne albo karta pracy</td><td>5 minut omówienia typowych trudności</td><td>poprawiona karta pracy</td><td>brak informacji zwrotnej</td></tr>
-            <tr><td>Bezpieczne użycie telefonu</td><td>Kod QR do ankiety lub zadania</td><td>2-4 minuty na odpowiedź i odłożenie telefonu</td><td>zbiorcze odpowiedzi klasy</td><td>rozproszenie, jeśli brak procedury</td></tr>
-            <tr><td>Przygotowanie do ćwiczenia praktycznego</td><td>Instrukcja, checklista, mikrotest BHP</td><td>realny instruktaż i wykonanie czynności pod nadzorem</td><td>checklista + obserwacja nauczyciela</td><td>nie wolno zastępować praktyki samym materiałem</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="callout amber">
-        <p><strong>Granica:</strong> platforma nie zastępuje nauczyciela ani pracy w klasie. W tej adaptacji ZPE daje materiał, ćwiczenie i feedback, a nauczyciel nadaje temu sens: wyjaśnia, zatrzymuje błędy, organizuje rozmowę i decyduje, co dalej.</p>
-      </div>
-    </div>
-  </section>
+      <section id="ewaluacja" class="content-section">
+        <p class="source-kicker">Ewaluacja w klasie</p>
+        <h2>Jak sprawdzić efekt</h2>
+        <div class="evaluation-questions">
+          <div><strong>Pytanie</strong><p>Czy pełny cykl zwiększa liczbę uczniów, którzy kończą zadanie i poprawiają konkretny błąd?</p></div>
+          <div><strong>Dowód</strong><p>Porównaj liczbę rozpoczętych i ukończonych prac, pierwszą i poprawioną wersję oraz odpowiedź powtórkową po kilku dniach.</p></div>
+          <div><strong>Decyzja</strong><p>Zostaw tylko te elementy platformy, które prowadzą do widocznego działania ucznia lub decyzji nauczyciela.</p></div>
+        </div>
+        <a class="text-link" href="ewaluacja.html">Zobacz czterotygodniowy model ewaluacji →</a>
+      </section>
+
+      <section id="zrodla" class="content-section">
+        <p class="source-kicker">Podstawa opisu</p>
+        <h2>Źródła i materiały</h2>
+        <div class="source-cards">
+          <a href="projekt.html#wp3a5"><span>materiał projektowy</span><strong>WP3.A5 Learning with digital technologies, IBC Denmark</strong><p>Źródło nazwy i pełnego cyklu pracy.</p></a><a href="https://zpe.gov.pl/o-zpe" target="_blank" rel="noopener noreferrer"><span>materiał instytucjonalny</span><strong>Zintegrowana Platforma Edukacyjna: czym jest ZPE</strong><p>Opis funkcji publicznej platformy.</p></a><a href="https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/feedback" target="_blank" rel="noopener noreferrer"><span>wytyczne oparte na syntezie badań</span><strong>EEF: Teacher Feedback to Improve Pupil Learning</strong><p>Podstawa dla projektowania feedbacku i poprawy.</p></a>
+        </div>
+        <h3>Warto połączyć z</h3>
+        <div class="related-links">
+          <a href="method-2.html">Blended learning</a><a href="metoda-feedback-poprawa.html">Feedback prowadzący do poprawy</a><a href="metoda-metapoznanie.html">Metapoznanie</a>
+        </div>
+      </section>
+    </article>
+  </div>
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-logos" aria-label="Logotypy projektu">
+  <div class="container footer-layout">
+    <div>
+      <img class="footer-brand" src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce">
+      <p>Praktyczny katalog metod dla nauczycieli zwykłej szkoły stacjonarnej. Technologia jest narzędziem, nie warunkiem wdrożenia.</p>
+    </div>
+    <nav class="footer-links" aria-label="Nawigacja w stopce">
+      <a href="index.html#metody">Katalog metod</a>
+      <a href="ewaluacja.html">Ewaluacja</a>
+      <a href="projekt.html">O projekcie</a>
+      <a href="about.html">Źródła i metodologia</a>
+      <a href="https://covepolska.pl/deklaracja-dostepnosci/" target="_blank" rel="noopener noreferrer">Deklaracja dostępności</a>
+    </nav>
+    <div class="footer-project-logos" role="group" aria-label="Logotypy projektu">
       <img src="assets/Logo-2025.png" alt="WIN4SMEs">
       <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
       <img class="eu-mark" src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską">
     </div>
-    <p>360 e-learning w tej wersji oznacza szkolną adaptację centrum e-learningowego IBC: ZPE jako platforma, krótka samodzielna praca ucznia, feedback i omówienie w klasie.</p>
-    <div class="footer-links"><a href="method-2.html">Blended learning</a><a href="method-3.html">Flipped classroom</a><a href="inspiracje.html">Inspiracje</a><a href="projekt.html">O projekcie</a><a href="about.html">Źródła</a><a href="https://covepolska.pl/deklaracja-dostepnosci/" target="_blank" rel="noopener noreferrer">Deklaracja dostępności</a></div>
   </div>
+  <div class="container funding-note">Finansowane ze środków Unii Europejskiej. Wyrażone poglądy nie muszą odzwierciedlać stanowiska Unii Europejskiej.</div>
 </footer>
 <script src="site.js"></script>
 </body>

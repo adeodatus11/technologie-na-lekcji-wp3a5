@@ -1,187 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flipped classroom · Innowacyjna lekcja w praktyce</title>
-  <meta name="description" content="Flipped classroom w zwykłej szkole: uczniowie przygotowują fragment tematu na lekcji, prezentują go klasie, odpowiadają na pytania i dostają feedback.">
-  <link rel="stylesheet" href="styles.css?v=footer-logos-20260816">
+  <meta name="description" content="Najpierw kontakt z materiałem, potem czas wspólny na wyjaśnianie, pytania, problem i zastosowanie.">
+  <title>Flipped classroom | Innowacyjna lekcja w praktyce</title>
+  <link rel="icon" href="assets/innowacyjna-lekcja-logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <a class="skip-link" href="#main">Przejdź do treści</a>
 <header class="site-header">
-  <nav class="nav-inner" aria-label="Główna nawigacja">
-    <a class="brand" href="index.html"><img src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce"></a>
-    <div class="header-project-logos" aria-label="Logotypy projektu">
-      <a class="project-logo-link" href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="Przejdź do strony projektu WIN4SMEs">
-        <img class="win-mark" src="assets/Logo-2025.png" alt="WIN4SMEs">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Innowacyjna lekcja w praktyce, strona główna">
+      <img src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce">
+    </a>
+    <nav class="nav-links" id="site-navigation" aria-label="Główna nawigacja">
+      <a href="index.html">Start</a>
+      <a href="index.html#metody" class="active" aria-current="page">Metody</a>
+      <a href="index.html#wybor">Jak wybrać metodę</a>
+      <a href="ewaluacja.html">Ewaluacja</a>
+      <a href="inspiracje.html">Zaangażowanie</a>
+      <a href="about.html">Źródła</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <div class="header-project-logos" role="group" aria-label="Partnerzy i finansowanie projektu">
+      <a href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs">
       </a>
       <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
       <img class="eu-mark" src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską">
     </div>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"></span><span>Menu</span></button>
-    <div class="nav-links" id="site-navigation">
-      <a href="index.html">Start</a>
-      <a href="method-1.html">360</a>
-      <a href="method-2.html">Blended</a>
-      <a href="method-3.html">Flipped</a>
-      <a href="inspiracje.html">Inspiracje</a>
-      <a href="projekt.html">O projekcie</a>
-      <a href="about.html">Źródła</a>
-    </div>
-  </nav>
+  </div>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Karta metody 3</p>
-        <h1>Flipped classroom: uczniowie opracowują i prezentują temat</h1>
-        <p>Flipped classroom bez pracy domowej: grupy opracowują fragment tematu w klasie i prezentują go innym.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#model">Model lekcyjny</a>
-          <a class="btn secondary" href="#ai">AI jako wsparcie</a>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <div class="signal-list">
-          <div class="signal"><strong>Przygotowanie w klasie</strong><span>grupa dostaje temat, materiał ZPE, pytania i kryteria</span></div>
-          <div class="signal"><strong>Prezentacja</strong><span>uczniowie uczą innych krótkim wyjaśnieniem lub przykładem</span></div>
-          <div class="signal"><strong>Feedback</strong><span>klasa zadaje pytania, nauczyciel porządkuje i koryguje</span></div>
-        </div>
-      </div>
+  <section class="method-hero">
+    <div class="container method-hero-inner">
+      <a class="back-link" href="index.html#metody">← Wszystkie metody</a>
+      <span class="source-badge hero-badge">Inspiracja projektowa WP3.A5</span>
+      <h1>Flipped classroom</h1>
+      <p class="method-definition">Flipped classroom odwraca kolejność: pierwszy kontakt z treścią poprzedza czas wspólny przeznaczony na wyjaśnianie, zastosowanie i informację zwrotną.</p>
+      <ul class="tag-list hero-tags"><li>mikroprezentacja</li><li>praca grupowa</li><li>wyjaśnianie</li></ul>
     </div>
   </section>
+<details class="mobile-toc">
+  <summary>Na tej stronie</summary>
+  <div>
+    <a href="#istota">Na czym polega</a>
+    <a href="#lekcja">Przebieg 45 minut</a>
+    <a href="#przyklad">Przykład</a>
+    <a href="#technologia">Technologia</a>
+    <a href="#bledy">Błędy wdrożeniowe</a>
+    <a href="#ewaluacja">Sprawdzenie efektu</a>
+    <a href="#zrodla">Źródła</a>
+  </div>
+</details>
+  <div class="container method-layout">
+    <aside>
+<nav class="method-toc" aria-label="Na tej stronie">
+  <strong>Na tej stronie</strong>
+  <a href="#istota">Na czym polega</a>
+  <a href="#lekcja">Przebieg 45 minut</a>
+  <a href="#przyklad">Przykład</a>
+  <a href="#technologia">Technologia</a>
+  <a href="#bledy">Błędy wdrożeniowe</a>
+  <a href="#ewaluacja">Sprawdzenie efektu</a>
+  <a href="#zrodla">Źródła</a>
+</nav></aside>
+    <article class="method-content">
+      <section id="istota" class="content-section">
+        <p class="source-kicker">Materiał projektowy i metaanaliza</p>
+        <h2>Na czym polega</h2>
+        <p class="source-note">Metoda została opracowana na podstawie materiałów WP3.A5 &quot;Learning with digital technologies&quot;, przygotowanych przez IBC w Danii, a następnie dostosowana do realiów zwykłej polskiej szkoły stacjonarnej. Klasyczny flipped classroom zakłada kontakt z materiałem przed zajęciami. Wariant opisany tutaj przenosi przygotowanie do początku lekcji i jest adaptacją, a nie klasyczną definicją modelu.</p>
+        <p>Uczeń przychodzi do aktywnej części lekcji z pierwszym obrazem treści, a nauczyciel może wykorzystać czas na pytania, ćwiczenie i korektę. W klasach, w których przygotowanie domowe byłoby barierą, materiał można przepracować na początku lekcji, a następnie poprosić grupy o wyjaśnienie małego fragmentu innym.</p>
+        <h3>Kiedy warto zastosować</h3>
+        <ul class="plain-list"><li>opracowanie pojęć i symboli branżowych przez grupy</li><li>mikroprezentacje o etapach procedury</li><li>analiza kilku perspektyw tego samego przypadku</li><li>przygotowanie pytań i przykładów do powtórki</li></ul>
+      </section>
 
-  <section class="band white">
-    <div class="container">
-      <div class="section-head">
-        <h2>Co jest w metodzie źródłowej</h2>
-        <p>IBC opisuje flipped classroom jako metodę, w której uczestnicy dostają materiały przed właściwą pracą wspólną, a czas spotkania jest przeznaczony na dialog, współpracę, problem-solving i ćwiczenia praktyczne.</p>
-      </div>
-      <div class="grid three">
-        <div class="card">
-          <p class="mini-meta">Element 1</p>
-          <h3>Materiał przed aktywnością</h3>
-          <p>W źródle są to filmy, artykuły, ćwiczenia cyfrowe albo przypadki. W szkole można dać je na początku lekcji, na poprzedniej lekcji albo w stacji zadaniowej.</p>
+      <section id="lekcja" class="content-section">
+        <p class="source-kicker">Propozycja organizacyjna</p>
+        <h2>Schemat lekcji 45-minutowej</h2>
+        <div class="lesson-flow">
+          <div><span>0-5 min</span><h3>Rama zadania</h3><p>Nauczyciel podaje cel, kryteria i dzieli temat na małe fragmenty.</p></div><div><span>5-17 min</span><h3>Przygotowanie</h3><p>Grupy korzystają z jednego sprawdzonego materiału i przygotowują wyjaśnienie, przykład oraz pytanie.</p></div><div><span>17-32 min</span><h3>Mikroprezentacje</h3><p>Każda grupa ma maksymalnie 3 minuty. Pozostali zapisują odpowiedź na pytanie grupy.</p></div><div><span>32-40 min</span><h3>Korekta</h3><p>Nauczyciel prostuje nieścisłości, łączy części i pokazuje poprawny model.</p></div><div><span>40-45 min</span><h3>Sprawdzenie</h3><p>Każdy uczeń odpowiada samodzielnie na pytanie obejmujące cały temat.</p></div>
         </div>
-        <div class="card">
-          <p class="mini-meta">Element 2</p>
-          <h3>Czas wspólny na działanie</h3>
-          <p>Zajęcia nie służą biernemu wykładowi. Uczniowie dyskutują, rozwiązują problem, wyjaśniają pojęcie innym, przygotowują przykład i pracują w grupie.</p>
-        </div>
-        <div class="card">
-          <p class="mini-meta">Element 3</p>
-          <h3>Nauczyciel jako facylitator</h3>
-          <p>Nauczyciel nie oddaje lekcji uczniom bez kontroli. Ustala zakres, daje materiały, pilnuje kryteriów, zatrzymuje błędy i domyka temat podsumowaniem.</p>
-        </div>
-      </div>
-      <div class="callout green">
-        <p><strong>Szkolna adaptacja:</strong> flipped classroom nie musi oznaczać pracy domowej. W klasach o niskiej motywacji bezpieczniej zrobić „odwrócenie” wewnątrz lekcji: najpierw grupy opracowują mały fragment, potem uczą resztę klasy.</p>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="band" id="model">
-    <div class="container">
-      <div class="section-head">
-        <h2>Model 45 minut: temat przygotowany i zaprezentowany przez uczniów</h2>
-        <p>To wersja dla klasycznej szkoły, w której uczniowie są na miejscu i pracują pod opieką nauczyciela.</p>
-      </div>
-      <ol class="steps">
-        <li><div><strong>5 minut: nauczyciel ustawia ramę.</strong> Podaje cel, dzieli temat na 3-5 małych części, pokazuje kryteria dobrej prezentacji i wyznacza czas.</div></li>
-        <li><div><strong>12 minut: grupy opracowują fragment.</strong> Każda grupa korzysta z materiału ZPE, krótkiego tekstu, grafiki, przykładu lub karty pytań. Zadanie: wyjaśnić innym jedną rzecz.</div></li>
-        <li><div><strong>12-15 minut: prezentacje uczniów.</strong> Każda grupa ma 2-3 minuty. Prezentacja musi zawierać: pojęcie, przykład, jedno pytanie do klasy i jedną typową pułapkę.</div></li>
-        <li><div><strong>8 minut: pytania i korekta.</strong> Klasa zadaje pytania, nauczyciel koryguje nieścisłości i dopisuje brakujące elementy.</div></li>
-        <li><div><strong>5 minut: podsumowanie i dowód uczenia się.</strong> Uczeń zapisuje trzy rzeczy: co zrozumiał, co było trudne i jedno pytanie kontrolne z odpowiedzią.</div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="band white">
-    <div class="container">
-      <div class="section-head">
-        <h2>Jak dobrać tematy dla uczniów niskozainteresowanych</h2>
-        <p>Flipped classroom łatwo zepsuć, jeśli grupy dostaną za szerokie tematy. W klasie o niskiej koncentracji temat musi być mały, konkretny i zakończony widocznym produktem.</p>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Zamiast</th><th>Daj uczniom</th><th>Produkt pracy</th><th>Dlaczego działa lepiej</th></tr></thead>
-          <tbody>
-            <tr><td>„Przygotujcie temat o...”</td><td>„Wyjaśnijcie jedną zasadę i pokażcie jeden przykład”</td><td>2-minutowe wyjaśnienie</td><td>mniejszy ładunek poznawczy, szybszy start</td></tr>
-            <tr><td>„Zróbcie prezentację”</td><td>„Macie 4 slajdy: pojęcie, przykład, błąd, pytanie”</td><td>mikroprezentacja</td><td>jasna struktura ogranicza chaos</td></tr>
-            <tr><td>„Znajdźcie informacje w internecie”</td><td>„Korzystacie z jednego materiału ZPE i jednej karty pytań”</td><td>odpowiedzi na pytania</td><td>mniej rozproszeń i przypadkowych źródeł</td></tr>
-            <tr><td>„Każdy coś powie”</td><td>role: wyjaśniający, przykład, pytanie, kontrola czasu</td><td>wystąpienie grupy</td><td>uczniowie wiedzą, za co odpowiadają</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="ai">
-    <div class="container">
-      <div class="section-head">
-        <h2>AI jako narzędzie rozszerzające, nie jako metoda</h2>
-        <p>AI można wykorzystać do przygotowania materiałów dla flipped classroom, ale decyzja dydaktyczna zostaje po stronie nauczyciela. Szczegółowe ćwiczenia z AI warto przenieść do kursu COVE Polska.</p>
-      </div>
-      <div class="grid two">
-        <div class="card">
-          <h3>W czym AI może pomóc nauczycielowi</h3>
-          <ul class="checklist">
-            <li>podzielić temat na małe części dla grup,</li>
-            <li>stworzyć kartę pytań do materiału ZPE,</li>
-            <li>przygotować trzy poziomy trudności tego samego zadania,</li>
-            <li>zaproponować kryteria mikroprezentacji,</li>
-            <li>wygenerować pytania kontrolne i typowe błędy.</li>
-          </ul>
+      <section id="przyklad" class="content-section">
+        <p class="source-kicker">Przykład do adaptacji</p>
+        <h2>Etapy obsługi zlecenia</h2>
+        <p>Cztery grupy opracowują po jednym etapie obsługi zlecenia: przyjęcie, weryfikacja danych, wykonanie, przekazanie wyniku. Każda przygotowuje jedno wyjaśnienie, przykład poprawnego działania i typowy błąd. Nauczyciel na końcu scala etapy w pełną procedurę. To autorska propozycja lekcyjna.</p>
+        <div class="attention-note">
+          <h3>Wariant dla uczniów biernych lub łatwo tracących koncentrację</h3>
+          <p>Zamiast polecenia &quot;przygotujcie prezentację&quot; daj format: jedno pojęcie, jeden przykład, jeden błąd, jedno pytanie. Przydziel krótkie role i ogranicz materiał źródłowy do jednego zasobu. Uczeń bierny może odpowiadać za wybór przykładu albo odczytanie pytania.</p>
+          <p class="caution">Określenie "trudność z koncentracją" opisuje obserwację lekcyjną, nie diagnozę ucznia.</p>
         </div>
-        <div class="card">
-          <h3>Czego AI nie robi za nauczyciela</h3>
-          <ul class="checklist">
-            <li>nie dobiera celu lekcji bez weryfikacji,</li>
-            <li>nie ocenia uczniów automatycznie,</li>
-            <li>nie pracuje na danych osobowych uczniów,</li>
-            <li>nie zastępuje korekty merytorycznej,</li>
-            <li>nie decyduje, czy prezentacja spełnia wymagania.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="button-row">
-        <a class="btn link" href="https://ai.covepolska.pl" target="_blank" rel="noopener noreferrer">Kurs AI: ai.covepolska.pl</a>
-        <a class="btn link" href="inspiracje.html">Inspiracje do pracy z klasą</a>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="band white">
-    <div class="container">
-      <div class="section-head">
-        <h2>Krótka rama dla nauczyciela</h2>
-        <p>To nie jest formularz do wypełniania, tylko sposób utrzymania flipped classroom w granicach jednej lekcji.</p>
-      </div>
-      <div class="card">
-        <p><strong>Temat lekcji:</strong> ...</p>
-        <p><strong>Cel dla ucznia:</strong> Po lekcji umiem wyjaśnić ... i zastosować to w przykładzie ...</p>
-        <p><strong>Podział na grupy:</strong> grupa 1 - pojęcie, grupa 2 - przykład, grupa 3 - błąd, grupa 4 - pytanie/problem.</p>
-        <p><strong>Materiał:</strong> jeden link ZPE albo jedna karta materiału na grupę.</p>
-        <p><strong>Produkt:</strong> 2-3 minuty prezentacji + jedno pytanie do klasy.</p>
-        <p><strong>Kryteria:</strong> poprawność, prosty przykład, jasne pytanie, trzymanie czasu, odpowiedź na pytanie klasy.</p>
-      </div>
-    </div>
-  </section>
+      <section id="technologia" class="content-section">
+        <p class="source-kicker">Dobór narzędzia do celu</p>
+        <h2>Cztery warianty realizacji</h2>
+        <div class="tool-variants">
+          <div><h3>Bez technologii</h3><p>Grupy pracują z wydrukiem i przygotowują dwuminutowe wyjaśnienie przy tablicy. Efektem jest wspólna notatka klasy.</p></div>
+          <div><h3>Z wykorzystaniem ZPE</h3><p>ZPE dostarcza jeden materiał źródłowy każdej grupie i może zebrać indywidualne pytanie końcowe.</p><a href="https://zpe.gov.pl/o-zpe" target="_blank" rel="noopener noreferrer">Poznaj ZPE</a></div>
+          <div><h3>Z krótkim użyciem telefonu</h3><p>Telefon służy do otwarcia przypisanego materiału lub uruchomienia krótkiej odpowiedzi po prezentacjach, nie do swobodnego wyszukiwania.</p></div>
+          <div><h3>AI jako pomoc nauczyciela</h3><p>AI może pomóc nauczycielowi podzielić temat, przygotować pytania naprowadzające i kryteria mikroprezentacji. Rozwinięcie pracy z AI znajduje się na ai.covepolska.pl.</p><a href="https://ai.covepolska.pl" target="_blank" rel="noopener noreferrer">Materiały o AI</a></div>
+        </div>
+      </section>
+
+      <section id="bledy" class="content-section">
+        <p class="source-kicker">Ryzyka wdrożenia</p>
+        <h2>Najczęstsze błędy</h2>
+        <ul class="risk-list"><li>nazwanie odwróconą klasą dowolnej prezentacji uczniowskiej</li><li>zadanie zbyt szerokiego tematu bez materiałów i kryteriów</li><li>założenie, że każdy uczeń przygotuje się w domu</li><li>oddanie uczniom odpowiedzialności za korektę merytoryczną</li><li>ocena efektownej prezentacji zamiast rozumienia treści</li></ul>
+      </section>
+
+      <section id="ewaluacja" class="content-section">
+        <p class="source-kicker">Ewaluacja w klasie</p>
+        <h2>Jak sprawdzić efekt</h2>
+        <div class="evaluation-questions">
+          <div><strong>Pytanie</strong><p>Czy po przygotowaniu i prezentacjach uczniowie potrafią samodzielnie wyjaśnić całość, nie tylko fragment swojej grupy?</p></div>
+          <div><strong>Dowód</strong><p>Zbierz indywidualną odpowiedź końcową i sprawdź poprawność pojęcia, przykładu i związku między etapami.</p></div>
+          <div><strong>Decyzja</strong><p>Jeśli wiedza pozostaje podzielona między grupy, zwiększ czas na korektę i indywidualne domknięcie.</p></div>
+        </div>
+        <a class="text-link" href="ewaluacja.html">Zobacz czterotygodniowy model ewaluacji →</a>
+      </section>
+
+      <section id="zrodla" class="content-section">
+        <p class="source-kicker">Podstawa opisu</p>
+        <h2>Źródła i materiały</h2>
+        <div class="source-cards">
+          <a href="projekt.html#wp3a5"><span>materiał projektowy</span><strong>WP3.A5 Learning with digital technologies, IBC Denmark</strong><p>Źródło modelu projektowego.</p></a><a href="https://doi.org/10.1016/j.edurev.2020.100314" target="_blank" rel="noopener noreferrer"><span>metaanaliza</span><strong>Strelan, Osborn i Palmer: The flipped classroom, a meta-analysis</strong><p>Synteza badań w szkolnictwie wyższym, dlatego przenoszenie wniosków do szkoły wymaga ostrożności.</p></a><a href="https://zpe.gov.pl/o-zpe" target="_blank" rel="noopener noreferrer"><span>materiał instytucjonalny</span><strong>Zintegrowana Platforma Edukacyjna</strong><p>Źródło materiałów do pierwszego kontaktu z treścią.</p></a>
+        </div>
+        <h3>Warto połączyć z</h3>
+        <div class="related-links">
+          <a href="metoda-uczenie-kooperacyjne.html">Uczenie kooperacyjne</a><a href="metoda-nauczanie-dialogowe.html">Nauczanie dialogowe</a><a href="metoda-problem-projekt-przypadek.html">Problem, projekt i przypadek</a>
+        </div>
+      </section>
+    </article>
+  </div>
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-logos" aria-label="Logotypy projektu">
+  <div class="container footer-layout">
+    <div>
+      <img class="footer-brand" src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce">
+      <p>Praktyczny katalog metod dla nauczycieli zwykłej szkoły stacjonarnej. Technologia jest narzędziem, nie warunkiem wdrożenia.</p>
+    </div>
+    <nav class="footer-links" aria-label="Nawigacja w stopce">
+      <a href="index.html#metody">Katalog metod</a>
+      <a href="ewaluacja.html">Ewaluacja</a>
+      <a href="projekt.html">O projekcie</a>
+      <a href="about.html">Źródła i metodologia</a>
+      <a href="https://covepolska.pl/deklaracja-dostepnosci/" target="_blank" rel="noopener noreferrer">Deklaracja dostępności</a>
+    </nav>
+    <div class="footer-project-logos" role="group" aria-label="Logotypy projektu">
       <img src="assets/Logo-2025.png" alt="WIN4SMEs">
       <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
       <img class="eu-mark" src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską">
     </div>
-    <p>Flipped classroom w tej adaptacji jest modelem pracy stacjonarnej: uczniowie przygotowują mały fragment tematu w klasie, prezentują go innym, a nauczyciel porządkuje i domyka treści.</p>
-    <div class="footer-links"><a href="method-1.html">360 e-learning</a><a href="method-2.html">Blended</a><a href="inspiracje.html">Inspiracje</a><a href="projekt.html">O projekcie</a><a href="about.html">Źródła</a><a href="https://covepolska.pl/deklaracja-dostepnosci/" target="_blank" rel="noopener noreferrer">Deklaracja dostępności</a></div>
   </div>
+  <div class="container funding-note">Finansowane ze środków Unii Europejskiej. Wyrażone poglądy nie muszą odzwierciedlać stanowiska Unii Europejskiej.</div>
 </footer>
 <script src="site.js"></script>
 </body>

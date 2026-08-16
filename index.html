@@ -1,183 +1,322 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="16 metod organizowania lekcji, angażowania uczniów, utrwalania wiedzy i wykorzystywania technologii w zwykłej szkole stacjonarnej.">
   <title>Innowacyjna lekcja w praktyce</title>
-  <meta name="description" content="Innowacyjna lekcja w praktyce: 360 e-learning przez ZPE, blended learning, flipped classroom oraz technologie wspierające zaangażowanie uczniów.">
-  <link rel="stylesheet" href="styles.css?v=footer-logos-20260816">
+  <link rel="icon" href="assets/innowacyjna-lekcja-logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <a class="skip-link" href="#main">Przejdź do treści</a>
 <header class="site-header">
-  <nav class="nav-inner" aria-label="Główna nawigacja">
-    <a class="brand" href="index.html">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Innowacyjna lekcja w praktyce, strona główna">
       <img src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce">
     </a>
-    <div class="header-project-logos" aria-label="Logotypy projektu">
-      <a class="project-logo-link" href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="Przejdź do strony projektu WIN4SMEs">
-        <img class="win-mark" src="assets/Logo-2025.png" alt="WIN4SMEs">
+    <nav class="nav-links" id="site-navigation" aria-label="Główna nawigacja">
+      <a href="index.html" class="active" aria-current="page">Start</a>
+      <a href="index.html#metody">Metody</a>
+      <a href="index.html#wybor">Jak wybrać metodę</a>
+      <a href="ewaluacja.html">Ewaluacja</a>
+      <a href="inspiracje.html">Zaangażowanie</a>
+      <a href="about.html">Źródła</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <div class="header-project-logos" role="group" aria-label="Partnerzy i finansowanie projektu">
+      <a href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs">
       </a>
       <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
       <img class="eu-mark" src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską">
     </div>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"></span><span>Menu</span></button>
-    <div class="nav-links" id="site-navigation">
-      <a href="index.html">Start</a>
-      <a href="method-1.html">360</a>
-      <a href="method-2.html">Blended</a>
-      <a href="method-3.html">Flipped</a>
-      <a href="inspiracje.html">Inspiracje</a>
-      <a href="projekt.html">O projekcie</a>
-      <a href="about.html">Źródła</a>
-    </div>
-  </nav>
+  </div>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="container hero-grid">
+  <section class="home-hero">
+    <div class="container home-hero-inner">
+      <p class="context-line">COVE Polska · WIN4SMEs · praktyka nauczycielska</p>
+      <h1>Innowacyjna lekcja w praktyce</h1>
+      <p class="hero-lead">16 metod organizowania lekcji, angażowania uczniów, utrwalania wiedzy i wykorzystywania technologii w zwykłej szkole stacjonarnej.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#metody">Przeglądaj metody</a>
+        <a class="button secondary" href="#wybor">Jak wybrać metodę</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-strip" aria-label="Założenia katalogu">
+    <div class="container intro-grid">
+      <div><strong>Innowacja metodyczna</strong><span>to zmiana sposobu organizacji uczenia się, nie obowiązek użycia nowego sprzętu.</span></div>
+      <div><strong>Technologia</strong><span>ma wspierać jasno określony cel, feedback albo dostęp do materiału.</span></div>
+      <div><strong>Źródła</strong><span>są opisane na każdej karcie bez rankingów i obietnic gwarantowanego efektu.</span></div>
+    </div>
+  </section>
+
+  <section class="section catalog-section" id="metody">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Katalog 16 metod</h2>
+        <p>Wszystkie metody mają tę samą rangę. Różnią się funkcją na lekcji, warunkami wdrożenia i rodzajem podstawy źródłowej.</p>
+      </div>
+      <div class="catalog-tools" role="search" aria-label="Wyszukiwanie i filtrowanie metod">
+        <label class="search-box">
+          <span>Znajdź metodę</span>
+          <input id="method-search" type="search" placeholder="Np. feedback, pamięć, ZPE" autocomplete="off">
+        </label>
+        <div class="filter-group" role="group" aria-label="Filtruj według zastosowania">
+          <button type="button" class="filter-button active" data-filter="all" aria-pressed="true">Wszystkie metody</button><button type="button" class="filter-button" data-filter="przygotowanie" aria-pressed="false">Przygotowanie i organizacja</button><button type="button" class="filter-button" data-filter="pamiec" aria-pressed="false">Pamięć i utrwalanie</button><button type="button" class="filter-button" data-filter="modelowanie" aria-pressed="false">Wyjaśnianie i modelowanie</button><button type="button" class="filter-button" data-filter="feedback" aria-pressed="false">Feedback i ewaluacja</button><button type="button" class="filter-button" data-filter="wspolpraca" aria-pressed="false">Współpraca i komunikacja</button><button type="button" class="filter-button" data-filter="zaangazowanie" aria-pressed="false">Zaangażowanie i koncentracja</button><button type="button" class="filter-button" data-filter="projekt" aria-pressed="false">Praca problemowa i projektowa</button><button type="button" class="filter-button" data-filter="technologia" aria-pressed="false">Zastosowanie technologii</button>
+        </div>
+        <p class="catalog-status" aria-live="polite"><span data-result-count>16</span> metod</p>
+      </div>
+      <div class="method-grid" data-method-grid>
+<article class="method-card" data-method-card data-categories="przygotowanie feedback zaangazowanie technologia" data-search="360 e-learning pełny cykl pracy ucznia na platformie: materiał, zadanie, informacja zwrotna, poprawa i zapis postępu. zpe cykl uczenia się portfolio">
+  <div class="method-card-top">
+    <span class="source-badge">Inspiracja projektowa WP3.A5</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="method-1.html">360 e-learning</a></h3>
+  <p>Pełny cykl pracy ucznia na platformie: materiał, zadanie, informacja zwrotna, poprawa i zapis postępu.</p>
+  <ul class="tag-list">
+    <li>ZPE</li><li>cykl uczenia się</li><li>portfolio</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="przygotowanie modelowanie feedback technologia" data-search="blended learning celowe połączenie materiału cyfrowego z wyjaśnieniem, ćwiczeniem, współpracą i follow-upem w klasie. zpe aktywna lekcja follow-up">
+  <div class="method-card-top">
+    <span class="source-badge">Inspiracja projektowa WP3.A5</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="method-2.html">Blended learning</a></h3>
+  <p>Celowe połączenie materiału cyfrowego z wyjaśnieniem, ćwiczeniem, współpracą i follow-upem w klasie.</p>
+  <ul class="tag-list">
+    <li>ZPE</li><li>aktywna lekcja</li><li>follow-up</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="przygotowanie wspolpraca zaangazowanie projekt technologia" data-search="flipped classroom najpierw kontakt z materiałem, potem czas wspólny na wyjaśnianie, pytania, problem i zastosowanie. mikroprezentacja praca grupowa wyjaśnianie">
+  <div class="method-card-top">
+    <span class="source-badge">Inspiracja projektowa WP3.A5</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="method-3.html">Flipped classroom</a></h3>
+  <p>Najpierw kontakt z materiałem, potem czas wspólny na wyjaśnianie, pytania, problem i zastosowanie.</p>
+  <ul class="tag-list">
+    <li>mikroprezentacja</li><li>praca grupowa</li><li>wyjaśnianie</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="pamiec zaangazowanie feedback technologia" data-search="retrieval practice krótkie wydobywanie wiedzy z pamięci zamiast kolejnego biernego czytania notatki. miniquiz pytania wejścia przypominanie">
+  <div class="method-card-top">
+    <span class="source-badge">Badania nad pamięcią</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-retrieval-practice.html">Retrieval practice</a></h3>
+  <p>Krótkie wydobywanie wiedzy z pamięci zamiast kolejnego biernego czytania notatki.</p>
+  <ul class="tag-list">
+    <li>miniquiz</li><li>pytania wejścia</li><li>przypominanie</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="pamiec przygotowanie technologia" data-search="powtórki rozłożone w czasie planowy powrót do kluczowych treści po kilku dniach i tygodniach, nie tylko przed sprawdzianem. spacing powroty planowanie">
+  <div class="method-card-top">
+    <span class="source-badge">Badania nad pamięcią</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-powtorki-rozlozone.html">Powtórki rozłożone w czasie</a></h3>
+  <p>Planowy powrót do kluczowych treści po kilku dniach i tygodniach, nie tylko przed sprawdzianem.</p>
+  <ul class="tag-list">
+    <li>spacing</li><li>powroty</li><li>planowanie</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="przygotowanie modelowanie zaangazowanie technologia" data-search="nauczanie jawne cel, modelowanie, małe kroki, praktyka kierowana i stopniowe przejście do samodzielności. małe kroki modelowanie praktyka kierowana">
+  <div class="method-card-top">
+    <span class="source-badge">Syntezy skutecznego nauczania</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-nauczanie-jawne.html">Nauczanie jawne</a></h3>
+  <p>Cel, modelowanie, małe kroki, praktyka kierowana i stopniowe przejście do samodzielności.</p>
+  <ul class="tag-list">
+    <li>małe kroki</li><li>modelowanie</li><li>praktyka kierowana</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="modelowanie przygotowanie zaangazowanie technologia" data-search="przykłady rozwiązane najpierw poprawny model z komentarzem, potem przykład z lukami, na końcu zadanie samodzielne. wzorzec myślenie na głos wycofywanie pomocy">
+  <div class="method-card-top">
+    <span class="source-badge">Badania nad obciążeniem poznawczym</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-przyklady-rozwiazane.html">Przykłady rozwiązane</a></h3>
+  <p>Najpierw poprawny model z komentarzem, potem przykład z lukami, na końcu zadanie samodzielne.</p>
+  <ul class="tag-list">
+    <li>wzorzec</li><li>myślenie na głos</li><li>wycofywanie pomocy</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="feedback zaangazowanie technologia" data-search="feedback prowadzący do poprawy informacja zwrotna kończy się działaniem ucznia: korektą, nową próbą albo zmianą strategii. komentarz druga próba korekta">
+  <div class="method-card-top">
+    <span class="source-badge">Wytyczne o informacji zwrotnej</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-feedback-poprawa.html">Feedback prowadzący do poprawy</a></h3>
+  <p>Informacja zwrotna kończy się działaniem ucznia: korektą, nową próbą albo zmianą strategii.</p>
+  <ul class="tag-list">
+    <li>komentarz</li><li>druga próba</li><li>korekta</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="feedback przygotowanie zaangazowanie technologia" data-search="ocenianie kształtujące zbieranie dowodów zrozumienia i zmiana dalszej pracy na podstawie odpowiedzi uczniów. dowód uczenia się pytanie diagnostyczne decyzja">
+  <div class="method-card-top">
+    <span class="source-badge">Badania i ewaluacje formative assessment</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-ocenianie-ksztaltujace.html">Ocenianie kształtujące</a></h3>
+  <p>Zbieranie dowodów zrozumienia i zmiana dalszej pracy na podstawie odpowiedzi uczniów.</p>
+  <ul class="tag-list">
+    <li>dowód uczenia się</li><li>pytanie diagnostyczne</li><li>decyzja</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="przygotowanie feedback zaangazowanie technologia" data-search="metapoznanie jawne uczenie planowania, monitorowania i oceny własnej pracy w konkretnym zadaniu. planowanie monitorowanie refleksja">
+  <div class="method-card-top">
+    <span class="source-badge">Syntezy metapoznania i samoregulacji</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-metapoznanie.html">Metapoznanie</a></h3>
+  <p>Jawne uczenie planowania, monitorowania i oceny własnej pracy w konkretnym zadaniu.</p>
+  <ul class="tag-list">
+    <li>planowanie</li><li>monitorowanie</li><li>refleksja</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="wspolpraca zaangazowanie projekt technologia" data-search="uczenie kooperacyjne mała grupa z jasnym celem, rolami, współzależnością i indywidualną odpowiedzialnością. role wspólny produkt odpowiedzialność">
+  <div class="method-card-top">
+    <span class="source-badge">Badania nad współpracą</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-uczenie-kooperacyjne.html">Uczenie kooperacyjne</a></h3>
+  <p>Mała grupa z jasnym celem, rolami, współzależnością i indywidualną odpowiedzialnością.</p>
+  <ul class="tag-list">
+    <li>role</li><li>wspólny produkt</li><li>odpowiedzialność</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="wspolpraca pamiec zaangazowanie technologia" data-search="tutoring rówieśniczy uczeń wspiera ucznia według przygotowanej ramy pytań, bez wykonywania zadania za drugą osobę. praca w parze pytania pomocnicze zamiana ról">
+  <div class="method-card-top">
+    <span class="source-badge">Syntezy i ewaluacje peer tutoring</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-peer-tutoring.html">Tutoring rówieśniczy</a></h3>
+  <p>Uczeń wspiera ucznia według przygotowanej ramy pytań, bez wykonywania zadania za drugą osobę.</p>
+  <ul class="tag-list">
+    <li>praca w parze</li><li>pytania pomocnicze</li><li>zamiana ról</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="wspolpraca feedback zaangazowanie technologia" data-search="nauczanie dialogowe rozmowa, w której uczniowie uzasadniają, porównują i rozwijają wypowiedzi innych. uzasadnianie pytania pogłębiające czas na namysł">
+  <div class="method-card-top">
+    <span class="source-badge">Badania nad dialogiem w klasie</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-nauczanie-dialogowe.html">Nauczanie dialogowe</a></h3>
+  <p>Rozmowa, w której uczniowie uzasadniają, porównują i rozwijają wypowiedzi innych.</p>
+  <ul class="tag-list">
+    <li>uzasadnianie</li><li>pytania pogłębiające</li><li>czas na namysł</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="przygotowanie zaangazowanie modelowanie technologia" data-search="udl projektowanie dostępnych dróg wejścia, pracy i odpowiedzi bez obniżania wspólnego celu. dostępność usuwanie barier wspólny cel">
+  <div class="method-card-top">
+    <span class="source-badge">Rama projektowa CAST</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-udl.html">UDL</a></h3>
+  <p>Projektowanie dostępnych dróg wejścia, pracy i odpowiedzi bez obniżania wspólnego celu.</p>
+  <ul class="tag-list">
+    <li>dostępność</li><li>usuwanie barier</li><li>wspólny cel</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="feedback pamiec przygotowanie technologia" data-search="mastery learning sprawdzenie kluczowego elementu, korekta luki i ponowna próba przed przejściem dalej. próg opanowania korekta ponowna próba">
+  <div class="method-card-top">
+    <span class="source-badge">Syntezy mastery learning</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-mastery-learning.html">Mastery learning</a></h3>
+  <p>Sprawdzenie kluczowego elementu, korekta luki i ponowna próba przed przejściem dalej.</p>
+  <ul class="tag-list">
+    <li>próg opanowania</li><li>korekta</li><li>ponowna próba</li>
+  </ul>
+</article>
+<article class="method-card" data-method-card data-categories="projekt wspolpraca zaangazowanie technologia" data-search="problem, projekt i przypadek praca na realnym problemie, ograniczonym projekcie lub przypadku, zakończona konkretną decyzją albo produktem. przypadek zawodowy decyzja produkt">
+  <div class="method-card-top">
+    <span class="source-badge">Metaanaliza PBL, PjBL i CBL</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+  <h3><a href="metoda-problem-projekt-przypadek.html">Problem, projekt i przypadek</a></h3>
+  <p>Praca na realnym problemie, ograniczonym projekcie lub przypadku, zakończona konkretną decyzją albo produktem.</p>
+  <ul class="tag-list">
+    <li>przypadek zawodowy</li><li>decyzja</li><li>produkt</li>
+  </ul>
+</article>
+      </div>
+      <p class="no-results" data-no-results hidden>Brak metod dla podanego wyszukiwania. Usuń filtr lub użyj innego słowa.</p>
+    </div>
+  </section>
+
+  <section class="section white" id="wybor">
+    <div class="container choice-layout">
+      <div class="section-heading compact-heading">
+        <h2>Zacznij od problemu lekcyjnego</h2>
+        <p>Nie wybieraj metody dlatego, że wygląda nowocześnie. Nazwij trudność, wybierz jeden mechanizm i sprawdź widoczny efekt.</p>
+      </div>
+      <div class="choice-paths">
+        <a href="metoda-retrieval-practice.html"><strong>Uczniowie szybko zapominają</strong><span>Retrieval practice i powtórki rozłożone</span></a>
+        <a href="metoda-nauczanie-jawne.html"><strong>Nie wiedzą, jak zacząć</strong><span>Nauczanie jawne i przykłady rozwiązane</span></a>
+        <a href="metoda-feedback-poprawa.html"><strong>Oddają pierwszą wersję i kończą</strong><span>Feedback prowadzący do poprawy</span></a>
+        <a href="metoda-uczenie-kooperacyjne.html"><strong>Praca grupowa jest pozorna</strong><span>Uczenie kooperacyjne i tutoring rówieśniczy</span></a>
+        <a href="metoda-udl.html"><strong>Bariera pojawia się przed treścią</strong><span>UDL i małe kroki</span></a>
+        <a href="metoda-problem-projekt-przypadek.html"><strong>Wiedza nie łączy się z praktyką</strong><span>Problem, projekt i przypadek</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section evaluation-teaser">
+    <div class="container evaluation-layout">
       <div>
-        <p class="eyebrow">COVE Polska · WIN4SMEs · WP3.A5</p>
-        <h1>Innowacyjna lekcja w praktyce</h1>
-        <p>Trzy metody pracy na lekcji: 360 e-learning przez ZPE, blended learning i flipped classroom. Bez kursowej fikcji, bez pracy domowej jako warunku, z naciskiem na zwykłą klasę, aktywność i feedback.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#karty">Przejdź do trzech kart metod</a>
-          <a class="btn secondary" href="projekt.html">O projekcie</a>
-        </div>
+        <h2>Sprawdź efekt po czterech tygodniach</h2>
+        <p>Ewaluacja nie pyta tylko, czy lekcja się podobała. Obserwuje start pracy, produkt, typowe błędy, poprawę po feedbacku i powrót wiedzy po czasie.</p>
       </div>
-      <div class="hero-panel" aria-label="Główne obszary narzędzi">
-        <div class="signal-list">
-          <div class="signal"><strong>3</strong><span>karty metod do pracy stacjonarnej</span></div>
-          <div class="signal"><strong>ZPE</strong><span>główna platforma narzędziowa dla szkoły</span></div>
-          <div class="signal"><strong>AI</strong><span>wsparcie przygotowania, nie osobna metoda</span></div>
-        </div>
-      </div>
+      <a class="button primary" href="ewaluacja.html">Otwórz model ewaluacji</a>
     </div>
   </section>
 
-  <section class="band white">
-    <div class="container">
-      <div class="section-head">
-        <h2>Założenie całej strony</h2>
-        <p>Technologia ma sens wtedy, gdy wzmacnia uczenie się: pomaga przygotować ucznia do pracy, uruchamia aktywność w klasie, pozwala szybciej zebrać informację zwrotną albo dokumentuje postęp. Nie jest celem samym w sobie.</p>
+  <section class="section white">
+    <div class="container connected-layout">
+      <div class="connected-copy">
+        <h2>Dwa powiązane serwisy COVE Polska</h2>
+        <p>Ten katalog koncentruje się na organizacji lekcji. Szersze materiały o zaangażowaniu oraz odpowiedzialnym użyciu AI znajdują się w osobnych serwisach.</p>
       </div>
-      <div class="grid three">
-        <div class="card compact">
-          <p class="mini-meta">Co wynika z badań</p>
-          <h3>Liczy się sposób użycia</h3>
-          <p>EEF, OECD i UNESCO podkreślają, że sama obecność sprzętu nie poprawia wyników. Największe znaczenie ma to, czy technologia służy konkretnemu celowi dydaktycznemu: wyjaśnieniu, ćwiczeniu, informacji zwrotnej albo aktywizacji.</p>
-        </div>
-        <div class="card compact">
-          <p class="mini-meta">Co wynika z praktyki szkoły</p>
-          <h3>ZPE jest publicznym punktem startu</h3>
-          <p>Zintegrowana Platforma Edukacyjna daje nauczycielowi gotowe e-materiały, możliwość tworzenia własnych materiałów, testów, kart pracy, udostępniania zadań i sprawdzania wyników.</p>
-        </div>
-        <div class="card compact">
-          <p class="mini-meta">Co wymaga ostrożności</p>
-          <h3>Telefony i AI są dodatkami, nie metodami</h3>
-          <p>Telefon może służyć do krótkiego quizu, QR lub dokumentacji pracy. AI może pomóc nauczycielowi przygotować materiały, pytania i kryteria, ale nie jest trzecią metodą z dokumentu źródłowego.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="karty">
-    <div class="container">
-      <div class="section-head">
-        <h2>Trzy karty metod</h2>
-        <p>Układ strony odpowiada trzem modelom wskazanym w dokumencie IBC Denmark: 360 E-learning Center, blended learning i flipped classroom. Każdy model został przełożony na realia zwykłej szkoły stacjonarnej.</p>
-      </div>
-      <div class="grid three">
-        <a class="card method-card" href="method-1.html">
-          <span class="number blue">1</span>
-          <h3>360 e-learning</h3>
-          <p>Samodzielna praca ucznia z materiałem, ćwiczeniem, quizem i feedbackiem na platformie. W polskiej szkole podobną funkcję może pełnić ZPE używana w czasie lekcji.</p>
-          <div class="tag-row"><span class="tag">ZPE</span><span class="tag">portfolio</span><span class="tag">feedback</span></div>
-        </a>
-        <a class="card method-card" href="method-2.html">
-          <span class="number green">2</span>
-          <h3>Blended learning</h3>
-          <p>Połączenie materiału cyfrowego, interaktywnego zadania i aktywności stacjonarnej. W zwykłej szkole część cyfrowa może odbywać się na początku lekcji, a follow-up na końcu albo na kolejnej lekcji.</p>
-          <div class="tag-row"><span class="tag">wejście cyfrowe</span><span class="tag">w klasie</span><span class="tag">follow-up</span></div>
-        </a>
-        <a class="card method-card" href="method-3.html">
-          <span class="number amber">3</span>
-          <h3>Flipped classroom</h3>
-          <p>Odwrócona klasa w szkolnej wersji: uczniowie w małych grupach przygotowują fragment tematu, korzystają z materiałów i wsparcia nauczyciela, a potem prezentują oraz odpowiadają na pytania klasy.</p>
-          <div class="tag-row"><span class="tag">projekt uczniowski</span><span class="tag">prezentacja</span><span class="tag">pytania</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="band white">
-    <div class="container">
-      <div class="section-head">
-        <h2>Najprostszy model dla szkoły od września</h2>
-        <p>Nie zaczynaj od zakupu narzędzi. Zacznij od jednej lekcji, jednej klasy i jednej jasno opisanej procedury.</p>
-      </div>
-      <ol class="steps">
-        <li><div><strong>Wybierz temat i efekt uczenia się.</strong> Np. „uczeń rozpoznaje błędy w procedurze”, „uczeń potrafi uzasadnić wybór rozwiązania”, „uczeń przygotowuje się do ćwiczenia praktycznego”.</div></li>
-        <li><div><strong>Dobierz materiał w ZPE albo przygotuj własny krótki zasób.</strong> Materiał ma być krótki, konkretny i zakończony zadaniem. Uczniowie mogą przejść przez niego na lekcji, bez założenia pracy w domu.</div></li>
-        <li><div><strong>Zaplanuj aktywność w klasie.</strong> To może być dyskusja, praca w parach, analiza przypadku, głosowanie koncepcyjne, karta pracy albo wykonanie zadania praktycznego.</div></li>
-        <li><div><strong>Zbierz szybki dowód uczenia się.</strong> Quiz wyjścia, zdjęcie karty pracy, wpis w portfolio, odpowiedź w formularzu albo poprawiona wersja zadania.</div></li>
-        <li><div><strong>Udziel informacji zwrotnej i zaplanuj poprawę.</strong> Feedback ma prowadzić do działania ucznia: poprawy, powtórki, doprecyzowania lub kolejnego kroku.</div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="container">
-      <div class="section-head">
-        <h2>ZPE, telefon i AI jako narzędzia pomocnicze</h2>
-        <p>Metody są trzy, ale narzędzia można dobierać elastycznie. Najważniejsza jest ZPE jako platforma, krótka procedura użycia telefonu oraz AI jako pomoc w przygotowaniu lekcji.</p>
-      </div>
-      <div class="grid three">
-        <div class="card">
-          <p class="mini-meta">Obszar 1</p>
-          <h3>Zintegrowana Platforma Edukacyjna</h3>
-          <p>Publiczny punkt startu: materiały zgodne z podstawą programową, e-materiały zawodowe, kreator własnych materiałów, testy, udostępnianie zadań, sprawdzanie wyników i aplikacja mobilna.</p>
-          <a class="btn link" href="method-1.html">Zobacz zastosowania ZPE</a>
-        </div>
-        <div class="card">
-          <p class="mini-meta">Obszar 2</p>
-          <h3>Telefony uczniów</h3>
-          <p>Nie jako stały ekran na ławce, tylko jako narzędzie punktowe: kod QR, odpowiedź w ankiecie, zdjęcie wyniku pracy, krótka dokumentacja, głosowanie lub exit ticket.</p>
-          <a class="btn link" href="inspiracje.html#telefony">Zobacz procedurę użycia telefonu</a>
-        </div>
-        <div class="card">
-          <p class="mini-meta">Obszar 3</p>
-          <h3>AI jako wsparcie przygotowania</h3>
-          <p>AI może pomóc opracować warianty tematów do prezentacji, pytania naprowadzające, kryteria oceny, instrukcje dla grup i komentarze robocze. Materiały trzeba sprawdzić przed użyciem z uczniami.</p>
-          <a class="btn link" href="https://ai.covepolska.pl" target="_blank" rel="noopener noreferrer">Przejdź do ai.covepolska.pl</a>
-        </div>
-      </div>
-      <div class="callout green">
-        <p><strong>Powiązany moduł COVE:</strong> wątek pracy z uczniami niskozainteresowanymi i z niską koncentracją powinien być rozwijany szerzej na stronie <a href="https://zaangazowanie.covepolska.pl" target="_blank" rel="noopener noreferrer">zaangazowanie.covepolska.pl</a>. Ta strona pokazuje część technologiczną: krótkie użycie ZPE, blended learningu i flipped classroom jako sposób na wejście w zadanie, szybki feedback i widoczny postęp.</p>
+      <div class="connected-links">
+        <a href="https://zaangazowanie.covepolska.pl" target="_blank" rel="noopener noreferrer"><strong>Zaangażowanie uczniów</strong><span>Praca z niską motywacją, wycofaniem i trudnością utrzymania uwagi.</span></a>
+        <a href="https://ai.covepolska.pl" target="_blank" rel="noopener noreferrer"><strong>AI dla nauczyciela</strong><span>Przygotowanie materiałów, weryfikacja i bezpieczne praktyki.</span></a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-logos" aria-label="Logotypy projektu">
+  <div class="container footer-layout">
+    <div>
+      <img class="footer-brand" src="assets/innowacyjna-lekcja-logo.png" alt="Innowacyjna lekcja w praktyce">
+      <p>Praktyczny katalog metod dla nauczycieli zwykłej szkoły stacjonarnej. Technologia jest narzędziem, nie warunkiem wdrożenia.</p>
+    </div>
+    <nav class="footer-links" aria-label="Nawigacja w stopce">
+      <a href="index.html#metody">Katalog metod</a>
+      <a href="ewaluacja.html">Ewaluacja</a>
+      <a href="projekt.html">O projekcie</a>
+      <a href="about.html">Źródła i metodologia</a>
+      <a href="https://covepolska.pl/deklaracja-dostepnosci/" target="_blank" rel="noopener noreferrer">Deklaracja dostępności</a>
+    </nav>
+    <div class="footer-project-logos" role="group" aria-label="Logotypy projektu">
       <img src="assets/Logo-2025.png" alt="WIN4SMEs">
       <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
       <img class="eu-mark" src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską">
     </div>
-    <p>Materiał opracowany jako praktyczne rozwinięcie WP3.A5 „Learning with digital technologies” dla nauczycieli i szkół korzystających z technologii na lekcji. Finansowane ze środków Unii Europejskiej. Wyrażone poglądy nie muszą odzwierciedlać stanowiska UE.</p>
-    <div class="footer-links">
-      <a href="method-1.html">360 e-learning</a>
-      <a href="method-2.html">Blended</a>
-      <a href="method-3.html">Flipped</a>
-      <a href="inspiracje.html">Inspiracje</a>
-      <a href="projekt.html">O projekcie</a>
-      <a href="about.html">Źródła</a>
-      <a href="https://covepolska.pl/deklaracja-dostepnosci/" target="_blank" rel="noopener noreferrer">Deklaracja dostępności</a>
-    </div>
   </div>
+  <div class="container funding-note">Finansowane ze środków Unii Europejskiej. Wyrażone poglądy nie muszą odzwierciedlać stanowiska Unii Europejskiej.</div>
 </footer>
 <script src="site.js"></script>
 </body>

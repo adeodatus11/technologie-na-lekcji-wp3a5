@@ -1,20 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const current = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-links a, .footer-links a").forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href === current) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-    }
-  });
-
   document.body.classList.add("menu-ready");
 
   const header = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+  const navigation = document.querySelector(".nav-links");
 
-  if (header && menuToggle && navLinks) {
+  if (header && menuToggle && navigation) {
     const setMenu = (isOpen) => {
       header.classList.toggle("nav-open", isOpen);
       menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -24,36 +15,66 @@ document.addEventListener("DOMContentLoaded", () => {
       setMenu(!header.classList.contains("nav-open"));
     });
 
-    navLinks.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
-        setMenu(false);
-      }
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setMenu(false);
     });
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         setMenu(false);
+        menuToggle.focus();
       }
     });
 
-    window.addEventListener("resize", () => {
-      if (window.matchMedia("(min-width: 921px)").matches) {
-        setMenu(false);
-      }
+    const desktopMenu = window.matchMedia("(min-width: 981px)");
+    desktopMenu.addEventListener("change", (event) => {
+      if (event.matches) setMenu(false);
     });
   }
 
-  document.querySelectorAll("table").forEach((table) => {
-    const headers = Array.from(table.querySelectorAll("thead th")).map((cell) =>
-      cell.textContent.trim()
-    );
+  const search = document.querySelector("#method-search");
+  const cards = Array.from(document.querySelectorAll("[data-method-card]"));
+  const filters = Array.from(document.querySelectorAll("[data-filter]"));
+  const resultCount = document.querySelector("[data-result-count]");
+  const noResults = document.querySelector("[data-no-results]");
 
-    table.querySelectorAll("tbody tr").forEach((row) => {
-      Array.from(row.children).forEach((cell, index) => {
-        if (headers[index]) {
-          cell.setAttribute("data-label", headers[index]);
-        }
+  if (search && cards.length > 0) {
+    let activeFilter = "all";
+
+    const normalize = (value) => value
+      .toLocaleLowerCase("pl")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    const updateCatalog = () => {
+      const query = normalize(search.value.trim());
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const categories = card.dataset.categories.split(" ");
+        const matchesFilter = activeFilter === "all" || categories.includes(activeFilter);
+        const matchesSearch = !query || normalize(card.dataset.search).includes(query);
+        const show = matchesFilter && matchesSearch;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+
+      resultCount.textContent = String(visible);
+      noResults.hidden = visible !== 0;
+    };
+
+    search.addEventListener("input", updateCatalog);
+
+    filters.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        filters.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle("active", active);
+          item.setAttribute("aria-pressed", String(active));
+        });
+        updateCatalog();
       });
     });
-  });
+  }
 });
