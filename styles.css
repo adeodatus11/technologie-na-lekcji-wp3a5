@@ -108,6 +108,42 @@ a { color: inherit; }
   font-size: .76rem;
 }
 .sidebar-project-logos { display: none; }
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+  font-size: .88rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 99px;
+  background: currentColor;
+}
+.menu-icon {
+  position: relative;
+}
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.menu-icon::before { top: -6px; }
+.menu-icon::after { top: 6px; }
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -115,6 +151,7 @@ a { color: inherit; }
   gap: 8px;
 }
 .nav-links a {
+  display: block;
   text-decoration: none;
   color: var(--text);
   font-size: .86rem;
@@ -126,6 +163,16 @@ a { color: inherit; }
 .nav-links a.active {
   background: var(--accent-light);
   color: var(--accent-dark);
+}
+.btn:focus-visible,
+.menu-toggle:focus-visible,
+.nav-links a:focus-visible,
+.footer-links a:focus-visible,
+.source-list a:focus-visible,
+.topline a:focus-visible,
+.brand:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, .38);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -342,6 +389,7 @@ h1 {
 .callout.amber { border-left-color: var(--orange); background: var(--orange-light); }
 .callout.red { border-left-color: var(--red); background: var(--red-light); }
 .callout p { margin: 0; color: var(--text); }
+.callout p + p { margin-top: 10px; }
 
 .steps {
   counter-reset: step;
@@ -620,26 +668,103 @@ tr:last-child td { border-bottom: 0; }
   .grid.four,
   .signal-list { grid-template-columns: 1fr; }
   .nav-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 12px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
   }
-  .nav-links { justify-content: flex-start; }
-  .hero { padding: 42px 0 30px; }
+  .brand { min-width: 0; }
+  .menu-toggle { display: inline-flex; }
+  .nav-links {
+    grid-column: 1 / -1;
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    background: var(--white);
+  }
+  body.menu-ready .nav-links { display: none; }
+  body.menu-ready .site-header.nav-open .nav-links { display: grid; }
+  .nav-links a {
+    padding: 10px 12px;
+    background: #f8fafc;
+  }
+  .site-header.nav-open .menu-toggle {
+    border-color: var(--accent);
+    color: var(--accent-dark);
+    background: var(--accent-light);
+  }
+  .hero { padding: 34px 0 30px; }
   .signal { min-height: 0; }
+}
+
+@media (max-width: 720px) {
+  .table-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+  table {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+  }
+  thead { display: none; }
+  tbody,
+  tr,
+  td { display: block; }
+  tr {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+  tr:nth-child(even) { background: var(--white); }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: .92rem;
+  }
+  td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 3px;
+    color: var(--accent-dark);
+    font-size: .72rem;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  td:last-child { border-bottom: 0; }
 }
 
 @media (max-width: 560px) {
   .topline-inner {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
     padding: 8px 0;
   }
-  .brand { min-width: 0; }
+  .topline-inner span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .topline a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
   .brand img {
     width: 42px;
     height: 42px;
   }
+  .brand strong { font-size: .9rem; }
+  .brand span span { font-size: .72rem; }
   .hero-actions,
   .button-row { flex-direction: column; }
   .btn { width: 100%; }
