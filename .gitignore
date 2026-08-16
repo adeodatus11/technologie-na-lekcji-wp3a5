@@ -1,0 +1,23 @@
+# Working documents and research notes
+badanie codex/
+Development/
+grafiki/
+*.docx
+*.pdf
+*.psd
+
+# Archived pages not published in this lightweight site
+blended-zawodowe*.html
+
+# Local assistant/workspace metadata
+.claude/
+
+# Keep the published site lightweight: only explicitly unignored assets are used
+assets/*
+!assets/
+!assets/Logo-2025.png
+!assets/COVE Polska bez tła.png
+!assets/PL_Co-fundedbytheEU_RGB_POS.png
+
+# Local system files
+.DS_Store
