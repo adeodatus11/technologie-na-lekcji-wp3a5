@@ -1,4 +1,4 @@
-# Technologie na lekcji · WP3.A5
+# Trzy metody pracy z technologią na lekcji
 
 Statyczna strona WWW dla nauczycieli: trzy praktyczne karty metod pracy z technologią na lekcji.
 
