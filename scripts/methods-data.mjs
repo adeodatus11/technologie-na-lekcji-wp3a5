@@ -1,4 +1,6 @@
-export const methods = [
+import { methodAdaptations } from "./method-adaptations.mjs";
+
+const baseMethods = [
   {
     file: "method-1.html",
     title: "360 e-learning",
@@ -818,6 +820,11 @@ export const methods = [
     related: ["Uczenie kooperacyjne", "Nauczanie dialogowe", "Flipped classroom"]
   }
 ];
+
+export const methods = baseMethods.map((method) => ({
+  ...method,
+  adaptation: methodAdaptations[method.file]
+}));
 
 export const categoryLabels = {
   all: "Wszystkie metody",

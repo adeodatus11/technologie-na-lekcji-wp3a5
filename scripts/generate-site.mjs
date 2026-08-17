@@ -13,6 +13,61 @@ const escapeHtml = (value) => String(value)
 
 const methodByTitle = new Map(methods.map((method) => [method.title, method]));
 
+const requiredAdaptationFields = [
+  "boundaries",
+  "classroom",
+  "preparation",
+  "lesson",
+  "teacherPrompt",
+  "vocational",
+  "general",
+  "engagement",
+  "assessment",
+  "mistakeFixes"
+];
+
+const countWords = (html) => html
+  .replace(/<script[\s\S]*?<\/script>/gi, " ")
+  .replace(/<style[\s\S]*?<\/style>/gi, " ")
+  .replace(/<[^>]+>/g, " ")
+  .replace(/&[a-z0-9#]+;/gi, " ")
+  .trim()
+  .split(/\s+/)
+  .filter(Boolean)
+  .length;
+
+const validateMethods = () => {
+  if (methods.length !== 16) {
+    throw new Error(`Oczekiwano dokładnie 16 metod, otrzymano ${methods.length}.`);
+  }
+
+  const files = new Set();
+  methods.forEach((method) => {
+    if (files.has(method.file)) throw new Error(`Powtórzony adres metody: ${method.file}`);
+    files.add(method.file);
+    if (!method.sources?.length) throw new Error(`${method.title}: brak źródła.`);
+    if (!method.adaptation) throw new Error(`${method.title}: brak adaptacji szkolnej.`);
+
+    requiredAdaptationFields.forEach((field) => {
+      if (!method.adaptation[field] || !Object.keys(method.adaptation[field]).length) {
+        throw new Error(`${method.title}: brak pola adaptation.${field}.`);
+      }
+    });
+
+    if (!method.adaptation.preparation.fallback) throw new Error(`${method.title}: brak wariantu awaryjnego.`);
+    if (!method.adaptation.tech && !method.tech?.none) throw new Error(`${method.title}: brak wariantu bez technologii.`);
+    if (method.adaptation.assessment.criteria?.length < 2) throw new Error(`${method.title}: brak kryteriów produktu.`);
+    if (!method.adaptation.vocational.instruction || !method.adaptation.general.product) {
+      throw new Error(`${method.title}: scenariusz zawodowy lub przykład ogólny jest niekompletny.`);
+    }
+
+    const minutes = method.adaptation.lesson.reduce((sum, step) => sum + Number(step.minutes), 0);
+    if (minutes !== 45) throw new Error(`${method.title}: harmonogram ma ${minutes} minut zamiast 45.`);
+  });
+};
+
+validateMethods();
+
 const header = (active = "") => `
 <a class="skip-link" href="#main">Przejdź do treści</a>
 <header class="site-header">
@@ -28,7 +83,7 @@ const header = (active = "") => `
       <a href="inspiracje.html"${active === "engagement" ? ' class="active" aria-current="page"' : ""}>Zaangażowanie</a>
       <a href="about.html"${active === "sources" ? ' class="active" aria-current="page"' : ""}>Źródła</a>
     </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+    <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="site-navigation">
       <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
     </button>
     <div class="header-project-logos" role="group" aria-label="Partnerzy i finansowanie projektu">
@@ -63,7 +118,7 @@ const footer = () => `
   </div>
   <div class="container funding-note">Finansowane ze środków Unii Europejskiej. Wyrażone poglądy nie muszą odzwierciedlać stanowiska Unii Europejskiej.</div>
 </footer>
-<script src="site.js"></script>`;
+<script src="site.js?v=20260817"></script>`;
 
 const documentShell = ({ title, description, body, active = "" }) => `<!DOCTYPE html>
 <html lang="pl">
@@ -73,7 +128,7 @@ const documentShell = ({ title, description, body, active = "" }) => `<!DOCTYPE 
   <meta name="description" content="${escapeHtml(description)}">
   <title>${escapeHtml(title)}</title>
   <link rel="icon" href="assets/innowacyjna-lekcja-logo.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260817">
 </head>
 <body>
 ${header(active)}
@@ -122,7 +177,7 @@ const indexBody = `
     <div class="container">
       <div class="section-heading">
         <h2>Katalog 16 metod</h2>
-        <p>Wszystkie metody mają tę samą rangę. Różnią się funkcją na lekcji, warunkami wdrożenia i rodzajem podstawy źródłowej.</p>
+        <p>Wszystkie metody mają tę samą rangę. Każdy przewodnik zawiera pełny przykład zawodowy, szczegółowy przebieg 45-minutowej lekcji, gotowe komunikaty nauczyciela i równoważny wariant bez technologii.</p>
       </div>
       <div class="catalog-tools" role="search" aria-label="Wyszukiwanie i filtrowanie metod">
         <label class="search-box">
@@ -182,33 +237,36 @@ ${methods.map((method) => methodCard(method).trim()).join("\n")}
   </section>
 </main>`;
 
+const methodTocLinks = [
+  ["istota", "Na czym polega"],
+  ["realia-klasy", "Realia klasy"],
+  ["przygotowanie", "Przygotowanie"],
+  ["lekcja", "Przebieg 45 minut"],
+  ["scenariusz-zawodowy", "Scenariusz zawodowy"],
+  ["przyklad-ogolny", "Przykład ogólny"],
+  ["koncentracja", "Udział i koncentracja"],
+  ["technologia", "Technologia"],
+  ["ocenianie", "Ocenianie"],
+  ["bledy", "Błędy i korekty"],
+  ["ewaluacja", "Sprawdzenie efektu"],
+  ["zrodla", "Źródła"]
+];
+
 const methodToc = `
 <nav class="method-toc" aria-label="Na tej stronie">
   <strong>Na tej stronie</strong>
-  <a href="#istota">Na czym polega</a>
-  <a href="#lekcja">Przebieg 45 minut</a>
-  <a href="#przyklad">Przykład</a>
-  <a href="#technologia">Technologia</a>
-  <a href="#bledy">Błędy wdrożeniowe</a>
-  <a href="#ewaluacja">Sprawdzenie efektu</a>
-  <a href="#zrodla">Źródła</a>
+  ${methodTocLinks.map(([id, label]) => `<a href="#${id}">${label}</a>`).join("")}
 </nav>`;
 
 const mobileToc = `
 <details class="mobile-toc">
   <summary>Na tej stronie</summary>
-  <div>
-    <a href="#istota">Na czym polega</a>
-    <a href="#lekcja">Przebieg 45 minut</a>
-    <a href="#przyklad">Przykład</a>
-    <a href="#technologia">Technologia</a>
-    <a href="#bledy">Błędy wdrożeniowe</a>
-    <a href="#ewaluacja">Sprawdzenie efektu</a>
-    <a href="#zrodla">Źródła</a>
-  </div>
+  <div>${methodTocLinks.map(([id, label]) => `<a href="#${id}">${label}</a>`).join("")}</div>
 </details>`;
 
-const methodBody = (method) => `
+const methodBody = (method) => {
+  const adaptation = method.adaptation;
+  return `
 <main id="main">
   <section class="method-hero">
     <div class="container method-hero-inner">
@@ -225,30 +283,82 @@ ${mobileToc.trim()}
     <article class="method-content">
       <section id="istota" class="content-section">
         <p class="source-kicker">${escapeHtml(method.sourceType)}</p>
-        <h2>Na czym polega</h2>
+        <h2>Definicja i granice metody</h2>
         <p class="source-note">${escapeHtml(method.sourceNote)}</p>
         <p>${escapeHtml(method.mechanism)}</p>
+        <h3>Czym ta metoda nie jest</h3>
+        <p>${escapeHtml(adaptation.boundaries.isNot)}</p>
+        <h3>Jaki problem lekcyjny może rozwiązać</h3>
+        <p>${escapeHtml(adaptation.boundaries.classroomProblem)}</p>
+        <div class="evidence-caution"><strong>Granica wnioskowania z badań</strong><p>${escapeHtml(adaptation.boundaries.promiseLimit)}</p></div>
         <h3>Kiedy warto zastosować</h3>
         <ul class="plain-list">${method.uses.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
       </section>
 
-      <section id="lekcja" class="content-section">
-        <p class="source-kicker">Propozycja organizacyjna</p>
-        <h2>Schemat lekcji 45-minutowej</h2>
-        <div class="lesson-flow">
-          ${method.lesson.map(([time, title, text]) => `<div><span>${escapeHtml(time)}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></div>`).join("")}
+      <section id="realia-klasy" class="content-section">
+        <p class="source-kicker">Adaptacja do polskiej szkoły stacjonarnej</p>
+        <h2>Realia klasy 25-32-osobowej</h2>
+        <ul class="classroom-list">${adaptation.classroom.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+      </section>
+
+      <section id="przygotowanie" class="content-section">
+        <p class="source-kicker">Przed lekcją</p>
+        <h2>Przygotowanie nauczyciela</h2>
+        <p>${escapeHtml(adaptation.preparation.before)}</p>
+        <div class="preparation-grid">
+          <div><h3>Materiały</h3><ul>${adaptation.preparation.materials.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></div>
+          <div><h3>Tablica i organizacja</h3><p>${escapeHtml(adaptation.preparation.boardSetup)}</p></div>
+          <div><h3>Oczekiwany produkt</h3><p>${escapeHtml(adaptation.preparation.successProduct)}</p></div>
+          <div><h3>Plan awaryjny</h3><p>${escapeHtml(adaptation.preparation.fallback)}</p></div>
         </div>
       </section>
 
-      <section id="przyklad" class="content-section">
-        <p class="source-kicker">Przykład do adaptacji</p>
-        <h2>${escapeHtml(method.exampleTitle)}</h2>
-        <p>${escapeHtml(method.example)}</p>
-        <div class="attention-note">
-          <h3>Wariant dla uczniów biernych lub łatwo tracących koncentrację</h3>
-          <p>${escapeHtml(method.concentration)}</p>
-          <p class="caution">Określenie \"trudność z koncentracją\" opisuje obserwację lekcyjną, nie diagnozę ucznia.</p>
+      <section id="lekcja" class="content-section">
+        <p class="source-kicker">Propozycja organizacyjna</p>
+        <h2>Przebieg lekcji 45-minutowej</h2>
+        <blockquote class="teacher-script">${escapeHtml(adaptation.teacherPrompt)}</blockquote>
+        <div class="detailed-lesson-flow">
+          ${adaptation.lesson.map((step) => `<section class="lesson-step"><div class="lesson-step-heading"><span>${step.minutes} min</span><h3>${escapeHtml(step.title)}</h3></div><dl><div><dt>Nauczyciel</dt><dd>${escapeHtml(step.teacher)}</dd></div><div><dt>Uczniowie</dt><dd>${escapeHtml(step.students)}</dd></div><div><dt>Dowód uczenia się</dt><dd>${escapeHtml(step.evidence)}</dd></div><div><dt>Decyzja w trakcie</dt><dd>${escapeHtml(step.decision)}</dd></div></dl></section>`).join("")}
         </div>
+        <p class="proposal-note">Podane czasy i komunikaty są autorską propozycją organizacyjną. Należy je dopasować do programu, poziomu klasy i warunków lekcji.</p>
+      </section>
+
+      <section id="scenariusz-zawodowy" class="content-section">
+        <p class="source-kicker">Pełny przykład do adaptacji</p>
+        <h2>Scenariusz zawodowy</h2>
+        <div class="scenario-lead"><strong>Kontekst</strong><p>${escapeHtml(adaptation.vocational.context)}</p><strong>Cel</strong><p>${escapeHtml(adaptation.vocational.goal)}</p></div>
+        <h3>Materiały</h3>
+        <ul class="plain-list">${adaptation.vocational.materials.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+        <h3>Dokładne polecenie dla uczniów</h3>
+        <blockquote class="student-task">${escapeHtml(adaptation.vocational.instruction)}</blockquote>
+        <h3>Przebieg krok po kroku</h3>
+        <ol class="phase-list">${adaptation.vocational.phases.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ol>
+        <h3>Spodziewany produkt</h3>
+        <p>${escapeHtml(adaptation.vocational.product)}</p>
+        <div class="scenario-response-grid">
+          <div><h3>Możliwe błędy</h3><ul>${adaptation.vocational.likelyErrors.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></div>
+          <div><h3>Reakcje nauczyciela</h3><ul>${adaptation.vocational.teacherResponses.map((item) => `<li>„${escapeHtml(item)}”</li>`).join("")}</ul></div>
+        </div>
+        <h3>Domknięcie lekcji</h3>
+        <p>${escapeHtml(adaptation.vocational.closing)}</p>
+      </section>
+
+      <section id="przyklad-ogolny" class="content-section">
+        <p class="source-kicker">Krótszy przykład</p>
+        <h2>${escapeHtml(adaptation.general.subject)}: ${escapeHtml(adaptation.general.topic)}</h2>
+        <div class="general-example"><div><strong>Organizacja</strong><p>${escapeHtml(adaptation.general.setup)}</p></div><div><strong>Przebieg</strong><p>${escapeHtml(adaptation.general.flow)}</p></div><div><strong>Produkt ucznia</strong><p>${escapeHtml(adaptation.general.product)}</p></div><div><strong>Sprawdzenie efektu</strong><p>${escapeHtml(adaptation.general.check)}</p></div></div>
+      </section>
+
+      <section id="koncentracja" class="content-section">
+        <p class="source-kicker">Wejście w zadanie</p>
+        <h2>Uczeń bierny lub łatwo tracący koncentrację</h2>
+        <div class="engagement-detail">
+          <div><strong>Pierwszy wykonalny krok</strong><p>${escapeHtml(adaptation.engagement.firstStep)}</p></div>
+          <div><strong>Krótkie odcinki pracy</strong><p>${escapeHtml(adaptation.engagement.segments)}</p></div>
+          <div><strong>Neutralny komunikat powrotu</strong><p>„${escapeHtml(adaptation.engagement.returnPrompt)}”</p></div>
+          <div><strong>Rola dająca realny udział</strong><p>${escapeHtml(adaptation.engagement.role)}</p></div>
+        </div>
+        <p class="caution">${escapeHtml(adaptation.engagement.caution)}</p>
       </section>
 
       <section id="technologia" class="content-section">
@@ -262,18 +372,31 @@ ${mobileToc.trim()}
         </div>
       </section>
 
+      <section id="ocenianie" class="content-section">
+        <p class="source-kicker">Dowód zamiast pozornej aktywności</p>
+        <h2>Ocenianie i informacja zwrotna</h2>
+        <div class="assessment-grid">
+          <div><strong>Co jest dowodem</strong><p>${escapeHtml(adaptation.assessment.evidence)}</p></div>
+          <div><strong>Czego nie warto oceniać stopniem</strong><p>${escapeHtml(adaptation.assessment.notGrade)}</p></div>
+        </div>
+        <h3>Jawne kryteria produktu</h3>
+        <ol class="criteria-list">${adaptation.assessment.criteria.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ol>
+        <h3>Pierwsza i poprawiona wersja</h3>
+        <p>${escapeHtml(adaptation.assessment.revision)}</p>
+      </section>
+
       <section id="bledy" class="content-section">
-        <p class="source-kicker">Ryzyka wdrożenia</p>
-        <h2>Najczęstsze błędy</h2>
-        <ul class="risk-list">${method.mistakes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+        <p class="source-kicker">Korekta wdrożenia</p>
+        <h2>Najczęstsze błędy i co zrobić zamiast</h2>
+        <div class="mistake-fixes">${adaptation.mistakeFixes.map((item) => `<div><h3>${escapeHtml(item.mistake)}</h3><p><strong>Zamiast:</strong> ${escapeHtml(item.instead)}</p></div>`).join("")}</div>
       </section>
 
       <section id="ewaluacja" class="content-section">
         <p class="source-kicker">Ewaluacja w klasie</p>
         <h2>Jak sprawdzić efekt</h2>
         <div class="evaluation-questions">
-          <div><strong>Pytanie</strong><p>${escapeHtml(method.evaluation.question)}</p></div>
-          <div><strong>Dowód</strong><p>${escapeHtml(method.evaluation.evidence)}</p></div>
+          <div><strong>Po jednej lekcji</strong><p>${escapeHtml(method.evaluation.evidence)}</p></div>
+          <div><strong>Po 2-4 tygodniach</strong><p>${escapeHtml(method.evaluation.question)}</p></div>
           <div><strong>Decyzja</strong><p>${escapeHtml(method.evaluation.decision)}</p></div>
         </div>
         <a class="text-link" href="ewaluacja.html">Zobacz czterotygodniowy model ewaluacji →</a>
@@ -296,6 +419,7 @@ ${mobileToc.trim()}
     </article>
   </div>
 </main>`;
+};
 
 const evaluationBody = `
 <main id="main">
@@ -436,13 +560,27 @@ const projectBody = `
   </section>
 </main>`;
 
+const generatedMethodPages = methods.map((method) => {
+  const body = methodBody(method);
+  const article = body.match(/<article class="method-content">([\s\S]*?)<\/article>/)?.[1] ?? "";
+  const words = countWords(article);
+  return { method, body, words };
+});
+
+const wordCountViolations = generatedMethodPages.filter(({ words }) => words < 1200 || words > 1600);
+if (wordCountViolations.length) {
+  const report = generatedMethodPages.map(({ method, words }) => `${method.title}: ${words}`).join("\n");
+  throw new Error(`Treści metod muszą mieć 1200-1600 słów:\n${report}`);
+}
+
 await Promise.all([
   writeFile(resolve(root, "index.html"), documentShell({ title: "Innowacyjna lekcja w praktyce", description: "16 metod organizowania lekcji, angażowania uczniów, utrwalania wiedzy i wykorzystywania technologii w zwykłej szkole stacjonarnej.", body: indexBody, active: "start" })),
   writeFile(resolve(root, "ewaluacja.html"), documentShell({ title: "Ewaluacja metod | Innowacyjna lekcja w praktyce", description: "Czterotygodniowy model sprawdzania, czy metoda lekcyjna pomaga uczniom rozpocząć pracę, poprawiać błędy i utrwalać wiedzę.", body: evaluationBody, active: "evaluation" })),
   writeFile(resolve(root, "inspiracje.html"), documentShell({ title: "Zaangażowanie i koncentracja | Innowacyjna lekcja w praktyce", description: "Praktyczne sposoby ułatwiające uczniom rozpoczęcie zadania, utrzymanie kierunku pracy i ukończenie produktu.", body: engagementBody, active: "engagement" })),
   writeFile(resolve(root, "about.html"), documentShell({ title: "Źródła i metodologia | Innowacyjna lekcja w praktyce", description: "Źródła naukowe, instytucjonalne i projektowe wykorzystane w katalogu 16 metod pracy na lekcji.", body: aboutBody, active: "sources" })),
   writeFile(resolve(root, "projekt.html"), documentShell({ title: "O projekcie | Innowacyjna lekcja w praktyce", description: "Informacje o materiale WP3.A5 Learning with digital technologies i sposobie jego adaptacji do polskiej szkoły stacjonarnej.", body: projectBody })),
-  ...methods.map((method) => writeFile(resolve(root, method.file), documentShell({ title: `${method.title} | Innowacyjna lekcja w praktyce`, description: method.short, body: methodBody(method), active: "methods" })))
+  ...generatedMethodPages.map(({ method, body }) => writeFile(resolve(root, method.file), documentShell({ title: `${method.title} | Innowacyjna lekcja w praktyce`, description: method.short, body, active: "methods" })))
 ]);
 
 console.log(`Wygenerowano ${methods.length} podstron metod i 5 stron serwisu.`);
+console.log(generatedMethodPages.map(({ method, words }) => `${method.file}: ${words} słów`).join("\n"));
