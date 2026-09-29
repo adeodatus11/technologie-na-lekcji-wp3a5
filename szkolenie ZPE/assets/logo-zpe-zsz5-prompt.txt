@@ -1,0 +1,8 @@
+Wygenerowano wbudowanym narzędziem image_gen. Wariant 1, PNG z przezroczystym tłem.
+
+Use case: logo-brand / compositing.
+Create one polished original workshop logotype merging the two supplied marks, for the Polish teacher training "ZPE bez pośpiechu" at ZSZ5 school in Wrocław.
+Reference 1: ZPE lettering, near black and cyan #00A3DE rectangular pixel fragments.
+Reference 2: the school's distinctive left-facing eagle head and arching neck contour with ZSZ5. Preserve its recognizable hooked beak, eye, head profile and elegant arcing silhouette; ignore the large unused canvas.
+Design a clever single integrated horizontal lockup: eagle head on the left, its arcing neck transitions smoothly into a few geometric cyan pixel bars that visually connect into the stylized ZPE lettering to the right. Clear strong silhouette, controlled negative space, restrained pixel details, not two separate logos pasted side by side. Eagle remains recognizable and ZPE very legible.
+Exact typography: main large text "ZPE", secondary line "bez pośpiechu", small supporting line "ZSZ5 • SZKOŁA MISTRZÓW". Correct Polish accents. Balanced professional modern sans typography, black with cyan accents only. No full long platform name, no extra words. Clean flat vector-like logo artwork, crisp edges, no shadows, no gradients, no mockup, no decorative background. Genuinely transparent background, comfortable close margins, landscape composition. One final logo only.

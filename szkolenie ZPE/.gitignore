@@ -1,0 +1,7 @@
+# Pomocnicze rendery kontroli jakości
+qa/*.png
+qa/*.jpg
+__pycache__/
+
+# PDF-y są częścią pakietu szkolenia
+!output/pdf/*.pdf
