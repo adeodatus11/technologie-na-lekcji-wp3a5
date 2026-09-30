@@ -394,7 +394,7 @@ p { margin-top: 0; }
 .phase-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; padding: 0; list-style: none; counter-reset: phase; }
 .phase-list li { position: relative; min-height: 112px; padding: 38px 12px 12px; border-top: 3px solid var(--blue); background: #fff; counter-increment: phase; font-size: 0.88rem; }
 .phase-list li::before { content: counter(phase); position: absolute; left: 12px; top: 9px; color: var(--blue-dark); font-weight: 800; }
-.scenario-response-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.scenario-response-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .scenario-response-grid > div { padding: 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .scenario-response-grid h3 { margin-top: 0; }
 .scenario-response-grid ul { margin-bottom: 0; padding-left: 19px; }
@@ -613,4 +613,47 @@ p { margin-top: 0; }
   .method-layout { display: block; padding: 0; }
   .content-section { break-inside: avoid; }
   a { color: #000; }
+}
+
+/* Katalog 12 metod: dowody, materiały, scenariusze */
+.evidence-chip { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; border: 1px solid transparent; }
+.evidence-mocne { background: #e3f4ec; color: #0f5d42; border-color: #b7e1cf; }
+.evidence-umiarkowane { background: #e9f0fd; color: #0e3f9d; border-color: #c4d6f7; }
+.evidence-ograniczone { background: #fff4d6; color: #6a4d00; border-color: #f0d98a; }
+.evidence-rama, .evidence-inspiracja { background: #eef1f6; color: #3f4b61; border-color: #d3dae6; }
+.evidence-line { margin: 10px 0 0; }
+.aliases { margin: 12px 0 0; color: #dce7fb; font-size: 0.94rem; }
+.aliases strong { color: #fff; }
+.differs { display: grid; gap: 12px; }
+.differs > div { padding: 14px 18px; border-left: 4px solid var(--blue); background: #fff; }
+.differs p { margin: 4px 0 0; font-size: 0.93rem; }
+.when-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.when-grid > div { padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.when-grid h3 { margin-top: 0; }
+.when-grid ul { margin: 0; padding-left: 19px; font-size: 0.93rem; }
+.time-note { padding: 12px 16px; border-left: 4px solid var(--yellow); background: #fff8cf; font-size: 0.93rem; }
+.decision-point, .teacher-key { margin: 20px 0; padding: 16px 20px; border-left: 4px solid var(--green); background: #eef8f3; }
+.decision-point p, .teacher-key p { margin: 6px 0 0; font-size: 0.93rem; }
+.teacher-key h4 { margin: 0; color: var(--green); }
+.variant-b { margin-top: 24px; padding: 18px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.variant-b h3 { margin-top: 0; }
+.scenario { margin: 30px 0 40px; padding-top: 10px; border-top: 3px solid var(--blue); }
+.scenario-kind { margin: 10px 0 0; color: var(--blue-dark); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
+.scenario h3 { margin-top: 4px; }
+.materials { display: grid; gap: 12px; margin: 18px 0; }
+.material-card { padding: 16px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.material-card h4 { margin: 0 0 8px; color: var(--navy); font-size: 0.95rem; }
+.material-card p { margin: 0; }
+.material-card ul { margin: 0; padding-left: 19px; }
+.table-wrap { overflow-x: auto; }
+.table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.table-wrap th, .table-wrap td { padding: 8px 10px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.table-wrap th { background: var(--surface-soft); color: var(--navy); }
+.scenario-response-grid h4 { margin: 0 0 6px; color: var(--navy); }
+.scenario-response-grid p { margin: 0; font-size: 0.93rem; }
+@media (max-width: 720px) {
+  .when-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .material-card, .teacher-key, .scenario { break-inside: avoid; }
 }
