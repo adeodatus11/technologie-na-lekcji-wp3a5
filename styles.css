@@ -663,3 +663,8 @@ p { margin-top: 0; }
 .project-mark img { display: block; height: 22px; width: auto; }
 .hero-mark { margin-left: 10px; vertical-align: middle; }
 .hero-mark img { height: 26px; }
+
+.plain-list.single { grid-template-columns: 1fr; }
+.prep-note { padding: 10px 16px; border-left: 4px solid var(--blue); background: #edf3fb; font-size: 0.93rem; }
+.print-links { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 14px 0 6px; padding: 12px 16px; border: 1px dashed var(--blue); border-radius: var(--radius); background: #fff; }
+.print-links a { font-weight: 700; }

@@ -36,7 +36,7 @@ export default {
       context: "Klasa 2. Cykl na 3 tygodnie: tydzień 0 przygotowanie (quiz z pięciu pytań), tydzień 1 warsztat, tydzień 3 pytanie powrotne. Bez wykonywania czynności przy instalacji. Ćwiczenie planowania na papierze.",
       goal: "Uczeń zna oznaczenia barw przewodów i potrafi zaplanować kolejność sprawdzania obwodu.",
       materials: [
-        { t: "Quiz przygotowawczy z kluczem", table: { head: ["Pytanie", "Odpowiedź"], rows: [
+        { t: "Quiz przygotowawczy z kluczem", studentCols: [0], table: { head: ["Pytanie", "Odpowiedź"], rows: [
           ["Jaki kolor izolacji ma przewód ochronny PE?", "żółto-zielony"],
           ["Jaki kolor ma przewód neutralny N?", "niebieski (jasnoniebieski)"],
           ["Jakie kolory mogą mieć przewody fazowe?", "brązowy, czarny, szary"],

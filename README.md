@@ -19,10 +19,15 @@ Trzy metody (360 e-learning, blended learning, flipped classroom) pochodzą z ma
 - `scripts/methods/*.mjs`: jedna metoda na plik. To tu edytuje się treść.
 - `scripts/methods-data.mjs`: lista metod, synonimy starych adresów i etykiety.
 - `scripts/generate-site.mjs`: generator stron i przekierowań. Zatrzymuje budowę, jeśli liczba metod jest inna niż 12, brakuje scenariusza zawodowego lub ogólnokształcącego, klucza albo źródła. Gdy czas roboczy lekcji wychodzi poza 35–40 minut, tylko ostrzega.
+- `scripts/extras.mjs`: czas przygotowania, wariant na blok 90 minut i pytania dla recenzentów.
+- `scripts/verify-math.mjs`, `scripts/check-content.mjs`: kontrola rachunków i kompletności treści. Uruchamiaj przed publikacją.
+- `scripts/build-print.mjs`: buduje PDF-y w `wydruki/` (karty ucznia i arkusze nauczyciela) oraz `przeglad/` (arkusze recenzji). Wymaga Playwrighta.
 - `AUDYT.md`: wyniki audytu (źródła, połączenia metod, luki, język) i lista rzeczy do weryfikacji przez człowieka.
 
 ```bash
-node scripts/generate-site.mjs
+node scripts/generate-site.mjs                              # strony
+NODE_PATH=$(npm root -g) node scripts/build-print.mjs       # PDF-y
+node scripts/verify-math.mjs && node scripts/check-content.mjs
 ```
 
 Wynik nie wymaga procesu budowania na GitHub Pages. Stare adresy połączonych metod (np. `metoda-retrieval-practice.html`) przekierowują na nowe strony.

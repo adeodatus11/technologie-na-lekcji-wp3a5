@@ -49,6 +49,7 @@ export default {
       context: "Pracownia gastronomiczna, grupa do 12–15 osób. Uczniowie znają już podstawy bezpieczeństwa pracy przy kuchni. Jeden stopień po drugim.",
       goal: "Uczeń przygotowuje gładki sos beszamelowy średniej gęstości.",
       materials: [
+        { t: "Karta stanowiska ucznia (przed rozpoczęciem)", list: ["Stanowisko czyste, rondel stabilnie na palniku, rękaw lub ściereczka pod ręką.", "Masło, mąka i mleko odmierzone przed włączeniem kuchni.", "Wiem, że zasmażka i sos są gorące: nie pochylam się nad rondlem i mieszam rózgą, nie łyżką trzymaną blisko rąk.", "Po skończeniu sprawdzam: sos gładki, bez grudek, bez zapachu surowej mąki."] },
         { t: "Cztery stopnie", table: { head: ["Stopień", "Co robi nauczyciel i uczeń"], rows: [
           ["1. Przygotowanie", "Cel: gładki sos bez grudek. Proporcje na 500 ml: 50 g masła, 50 g mąki, 500 ml mleka. Sprawdzenie stanowiska i BHP przy gorącej kuchni."],
           ["2. Pokaz z objaśnieniem", "Masło rozpuszczone, dodaj mąkę i smaż 1–2 minuty, mieszając, bez zbrązowienia. Dolewaj mleko stopniowo, ciągle mieszając rózgą. Gotuj kilka minut do zgęstnienia."],
@@ -62,14 +63,14 @@ export default {
     {
       kind: "ogolny",
       label: "Matematyka: równanie liniowe",
-      context: "Dowolna klasa.",
-      goal: "Uczeń rozwiązuje równanie liniowe i sprawdza wynik przez podstawienie.",
+      context: "Klasa 1–2 technikum lub branżowej szkoły I stopnia. Uczeń zna przekształcanie wyrażeń, a równania liniowe z niewiadomą po obu stronach rozwiązuje po raz pierwszy w tym roku.",
+      goal: "Uczeń rozwiązuje równanie liniowe, wykonując każdą operację po obu stronach znaku równości, i sprawdza wynik przez podstawienie.",
       materials: [
         { t: "Przykład pełny", text: "3x + 5 = 20. Odejmij 5 od obu stron: 3x = 15. Podziel przez 3: x = 5. Sprawdzenie: 3 · 5 + 5 = 20. Komentarz: każdą operację wykonujemy po obu stronach znaku równości." },
-        { t: "Przykład z lukami", text: "4x − 7 = 13. Luki: operacja po obu stronach i sprawdzenie." },
-        { t: "Samodzielne", text: "5x + 3 = 2x + 18." }
+        { t: "Przykład z lukami", text: "4x − 6 = 10. Luki: operacja po obu stronach i sprawdzenie." },
+        { t: "Samodzielne", text: "5x + 3 = 2x + 21." }
       ],
-      key: "4x − 7 = 13 daje x = 5 (4 · 5 − 7 = 13). 5x + 3 = 2x + 18 daje 3x = 15, x = 5. Uczniowie zwykle zmieniają tylko jedną stronę albo mylą znak.",
+      key: "4x − 6 = 10 daje 4x = 16, x = 4 (sprawdzenie: 4 · 4 − 6 = 10). 5x + 3 = 2x + 21 daje 3x = 18, x = 6 (sprawdzenie: 5 · 6 + 3 = 33 = 2 · 6 + 21). Uczniowie zwykle zmieniają tylko jedną stronę albo mylą znak.",
       errors: ["operacja tylko po jednej stronie", "błąd znaku po przeniesieniu"]
     }
   ],

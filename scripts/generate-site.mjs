@@ -2,6 +2,7 @@ import { writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { categoryLabels, evidenceLabels, groupLabels, legacyRedirects, methods } from "./methods-data.mjs";
+import { block90, prepTime } from "./extras.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -54,6 +55,7 @@ const header = (active = "") => `
       <a href="index.html#metody"${active === "methods" ? ' class="active" aria-current="page"' : ""}>Metody</a>
       <a href="index.html#wybor"${active === "choice" ? ' class="active" aria-current="page"' : ""}>Jak wybrać metodę</a>
       <a href="ewaluacja.html"${active === "evaluation" ? ' class="active" aria-current="page"' : ""}>Ewaluacja</a>
+      <a href="praktyka-szkolna.html"${active === "practice" ? ' class="active" aria-current="page"' : ""}>Dla nauczyciela</a>
       <a href="inspiracje.html"${active === "engagement" ? ' class="active" aria-current="page"' : ""}>Zaangażowanie</a>
       <a href="about.html"${active === "sources" ? ' class="active" aria-current="page"' : ""}>Źródła</a>
     </nav>
@@ -80,6 +82,7 @@ const footer = () => `
     <nav class="footer-links" aria-label="Nawigacja w stopce">
       <a href="index.html#metody">Katalog metod</a>
       <a href="ewaluacja.html">Ewaluacja</a>
+      <a href="praktyka-szkolna.html">Dla nauczyciela</a>
       <a href="projekt.html">O projekcie</a>
       <a href="about.html">Źródła i metodologia</a>
       <a href="https://covepolska.pl/deklaracja-dostepnosci/" target="_blank" rel="noopener noreferrer">Deklaracja dostępności</a>
@@ -326,14 +329,20 @@ ${mobileToc.trim()}
       <section id="lekcja" class="content-section">
         <h2>Przebieg lekcji 45-minutowej</h2>
         <p class="time-note">Czas roboczy: ${total} minut. Pierwsze około 5 minut lekcji (obecność, sprawy organizacyjne) nie jest wliczone w poniższy plan. Podane minuty liczone są od rozpoczęcia pracy nad tematem.${total < 40 ? ` Do 40 minut zostaje ${40 - total} min zapasu na przejścia i nieprzewidziane sytuacje.` : ""}</p>
+        <p class="prep-note"><strong>Przygotowanie:</strong> ${escapeHtml(prepTime[method.file])}</p>
         <div class="detailed-lesson-flow">${steps}</div>
         <div class="decision-point"><strong>Punkt decyzji</strong><p>${escapeHtml(method.decisionPoint)}</p></div>
+        <div class="variant-b"><h3>Wariant na blok 90 minut</h3><p>${escapeHtml(block90[method.file])}</p></div>
         ${method.variantB ? `<div class="variant-b"><h3>${escapeHtml(method.variantB.title)}</h3><ol>${method.variantB.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol></div>` : ""}
       </section>
 
       <section id="scenariusze" class="content-section">
         <h2>Scenariusze z gotowymi materiałami</h2>
         <p>Materiały można przepisać na kartę lub wydrukować. Dane oznaczone jako przykładowe są fikcyjne. Wartości i procedury zawodowe skonsultuj z nauczycielem przedmiotu przed użyciem w klasie.</p>
+        <div class="print-links"><strong>Do druku:</strong>
+          <a href="wydruki/${method.file.replace(/\.html$/, "")}-uczen.pdf" target="_blank" rel="noopener noreferrer">Karty dla uczniów (PDF)</a>
+          <a href="wydruki/${method.file.replace(/\.html$/, "")}-nauczyciel.pdf" target="_blank" rel="noopener noreferrer">Arkusz nauczyciela z kluczem (PDF)</a>
+        </div>
         ${method.scenarios.map(renderScenario).join("")}
       </section>
 
@@ -527,6 +536,73 @@ const projectBody = `
   </section>
 </main>`;
 
+
+const practiceBody = `
+<main id="main">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="context-line">Dla nauczyciela</p>
+      <h1>Ocenianie, telefony i dane uczniów</h1>
+      <p>Co sprawdzić w swojej szkole, zanim wprowadzisz metodę na lekcji.</p>
+    </div>
+  </section>
+  <section class="section white">
+    <div class="container narrow prose">
+      <div class="method-note"><strong>To nie jest porada prawna.</strong> Decydują statut i wewnątrzszkolny system oceniania (WZO) Twojej szkoły oraz aktualne przepisy. W razie wątpliwości zapytaj dyrekcję lub inspektora ochrony danych w szkole.</div>
+
+      <h2>Ocenianie</h2>
+      <p>Wiele metod w katalogu zaleca, żeby pierwsza próba ucznia nie była oceniana stopniem. To nie znaczy, że nie ma oceniania. Sprawdź w WZO:</p>
+      <ul class="plain-list single">
+        <li>czy informację zwrotną (komentarz, kod kryterium) można zapisać bez stopnia i gdzie;</li>
+        <li>ile ocen bieżących i jakiego rodzaju trzeba mieć w semestrze;</li>
+        <li>czy uczeń może poprawić pracę i czy ocena po poprawie zastępuje poprzednią;</li>
+        <li>jak ocenia się pracę grupową (w katalogu zawsze jest też indywidualna odpowiedź końcowa, którą można ocenić osobno).</li>
+      </ul>
+      <p>Trzy sposoby, które pasują do większości systemów oceniania. To propozycje do sprawdzenia w WZO, a nie zalecenia urzędowe.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Sposób</th><th scope="col">Co robisz</th><th scope="col">Kiedy pasuje</th></tr></thead>
+        <tbody>
+          <tr><td>A. Stopień za wersję poprawioną</td><td>Pierwsza wersja bez stopnia, stopień za drugą według jawnych kryteriów.</td><td>WZO dopuszcza poprawę i ocenę po poprawie.</td></tr>
+          <tr><td>B. Stopień za jedno kryterium</td><td>Oceniasz tylko kryterium, nad którym uczeń pracował (np. K2).</td><td>WZO dopuszcza oceny cząstkowe.</td></tr>
+          <tr><td>C. Informacja bez stopnia</td><td>Komentarz lub kod kryterium w zeszycie, stopień za późniejszą samodzielną pracę.</td><td>WZO dopuszcza ocenianie kształtujące bez stopnia.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>Telefony uczniów</h2>
+      <p>Każda metoda ma wariant bez telefonu i nie wymaga telefonu ucznia. Jeśli chcesz go użyć:</p>
+      <ul class="plain-list single">
+        <li>sprawdź statut i obowiązujące przepisy o telefonach w szkole (zasady w ostatnich latach się zmieniały, więc sprawdź aktualne brzmienie) i uzgodnij to z dyrekcją;</li>
+        <li>nie zakładaj, że każdy uczeń ma telefon i pakiet danych: zapewnij komputer szkolny, wydruk albo pracę w parze;</li>
+        <li>nie wymagaj zakładania kont w zewnętrznych narzędziach;</li>
+        <li>zapisz na tablicy, kiedy telefon jest potrzebny i kiedy wraca do plecaka.</li>
+      </ul>
+
+      <h2>Dane uczniów i narzędzia, w tym AI</h2>
+      <ul class="plain-list single">
+        <li>nie wpisuj do zewnętrznych narzędzi (w tym AI) imion, nazwisk, ocen ani prac uczniów z danymi osobowymi;</li>
+        <li>przypadki z prawdziwych firm anonimizuj: bez nazw klientów, pracowników i wyników przedsiębiorstwa;</li>
+        <li>do zbierania odpowiedzi używaj narzędzi zatwierdzonych przez szkołę;</li>
+        <li>zdjęcia prac rób bez twarzy i nazwisk, a prace przechowuj tylko tak długo, jak potrzebne do informacji zwrotnej;</li>
+        <li>w razie wątpliwości zapytaj inspektora ochrony danych (IOD) w swojej szkole.</li>
+      </ul>
+      <p><a class="text-link" href="https://ai.covepolska.pl" target="_blank" rel="noopener noreferrer">Więcej o bezpiecznym użyciu AI przez nauczyciela →</a></p>
+
+      <h2>BHP i zajęcia praktyczne</h2>
+      <p>Scenariusze w katalogu to analiza na papierze. Nie zastępują instruktażu BHP ani nadzoru nad czynnościami wymagającymi uprawnień. Nie stosuj metod opartych na pracy uczniów w parach (tutoring) do czynności, w których błąd może zrobić krzywdę uczniowi lub innym osobom. Decyzje o bezpieczeństwie w pracowni należą do nauczyciela zawodu.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container narrow prose">
+      <h2>Blok 90 minut i zajęcia w podgrupach</h2>
+      <p>Każda strona metody ma wariant na blok 90 minut. W pracowni, gdzie klasa dzieli się na podgrupy, skróć strukturę: mniej grup, mniej przesiadania się i rotacja ról.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Metoda</th><th scope="col">Wariant na blok 90 minut</th><th scope="col">Ile trwa przygotowanie</th></tr></thead>
+        <tbody>${methods.map((method) => `<tr><td><a href="${method.file}#lekcja">${escapeHtml(method.title)}</a></td><td>${escapeHtml(block90[method.file])}</td><td>${escapeHtml(prepTime[method.file])}</td></tr>`).join("")}</tbody>
+      </table></div>
+    </div>
+  </section>
+</main>`;
+
 const redirectPage = (target) => `<!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -547,10 +623,11 @@ await Promise.all([
   writeFile(resolve(root, "index.html"), documentShell({ title: "Innowacyjna lekcja w praktyce", description: `${methods.length} metod dla nauczycieli techników i szkół branżowych I stopnia: przedmioty zawodowe i ogólnokształcące, lekcja 45 minut.`, body: indexBody, active: "start" })),
   writeFile(resolve(root, "ewaluacja.html"), documentShell({ title: "Ewaluacja metod | Innowacyjna lekcja w praktyce", description: "Czterotygodniowy model sprawdzania, czy metoda lekcyjna pomaga uczniom rozpocząć pracę, poprawiać błędy i utrwalać wiedzę.", body: evaluationBody, active: "evaluation" })),
   writeFile(resolve(root, "inspiracje.html"), documentShell({ title: "Zaangażowanie i koncentracja | Innowacyjna lekcja w praktyce", description: "Praktyczne sposoby ułatwiające uczniom rozpoczęcie zadania, utrzymanie kierunku pracy i ukończenie produktu.", body: engagementBody, active: "engagement" })),
+  writeFile(resolve(root, "praktyka-szkolna.html"), documentShell({ title: "Dla nauczyciela: ocenianie, telefony, dane | Innowacyjna lekcja w praktyce", description: "Co sprawdzić w swojej szkole przed wprowadzeniem metody: WZO, telefony, dane uczniów, BHP, blok 90 minut.", body: practiceBody, active: "practice" })),
   writeFile(resolve(root, "about.html"), documentShell({ title: "Źródła i metodologia | Innowacyjna lekcja w praktyce", description: "Źródła naukowe, instytucjonalne i projektowe wykorzystane w katalogu oraz synonimy nazw metod.", body: aboutBody, active: "sources" })),
   writeFile(resolve(root, "projekt.html"), documentShell({ title: "O projekcie | Innowacyjna lekcja w praktyce", description: "Informacje o materiale WP3.A5 i sposobie jego adaptacji do lekcji w technikum i szkole branżowej.", body: projectBody })),
   ...methods.map((method) => writeFile(resolve(root, method.file), documentShell({ title: `${method.title} | Innowacyjna lekcja w praktyce`, description: method.short, body: methodBody(method), active: "methods" }))),
   ...Object.entries(legacyRedirects).map(([old, target]) => writeFile(resolve(root, old), redirectPage(target)))
 ]);
 
-console.log(`Wygenerowano ${methods.length} podstron metod, 5 stron serwisu i ${Object.keys(legacyRedirects).length} przekierowań.`);
+console.log(`Wygenerowano ${methods.length} podstron metod, 6 stron serwisu i ${Object.keys(legacyRedirects).length} przekierowań.`);

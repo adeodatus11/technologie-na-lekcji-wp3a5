@@ -71,8 +71,8 @@ Nadal brakuje (kandydaci na kolejne wersje):
 3. **Nauka w miejscu pracy i praktyki u pracodawcy.** Brak w katalogu, choć w szkole zawodowej to duża część kształcenia.
 4. **Mapowanie na podstawę programową kształcenia w zawodach i na egzamin zawodowy.**
 5. **Polskie źródła:** CEO (ocenianie kształtujące), IBE, ORE, CKE.
-6. **Wskazówki prawne dla nauczyciela:** ocenianie w WZO (czy można nie wystawiać stopnia), statuty (telefony), RODO (prace uczniów).
-7. **Zajęcia praktyczne w podgrupach i bloki 2×45 min.** Plany są napisane na jedną lekcję.
+6. ~~Wskazówki dla nauczyciela o WZO, telefonach i danych uczniów~~: dodane na stronie „Dla nauczyciela” (`praktyka-szkolna.html`). Wymagają jeszcze przeglądu dyrekcji lub prawnika.
+7. ~~Bloki 2×45 min~~: każda metoda ma wariant na blok 90 minut. Zajęcia w podgrupach opisano ogólnie na stronie „Dla nauczyciela”. Brakuje osobnych scenariuszy pracowniowych.
 
 ## 4. Audyt językowy i redakcyjny
 
@@ -88,7 +88,38 @@ Zmienione:
 - minuty: plan zakłada 35–40 minut czasu roboczego. Generator ostrzega, gdy lekcja wychodzi poza ten zakres, a strona pokazuje zapas czasu. Lekcje zbito do 4–5 bloków, a te z logowaniem lub przesiadaniem się (360 e-learning, jigsaw) mają 38 minut;
 - każdy scenariusz ma prawdziwe pytania, dane i klucz, a dane fikcyjne są oznaczone.
 
-## 5. Do weryfikacji przez człowieka przed publikacją
+## 5. Druga runda: ewaluacja treści i kontrola kompletności (30.09.2026)
+
+Dodane narzędzia (uruchamiaj przed każdą publikacją):
+- `node scripts/verify-math.mjs`: 27 grup rachunków z scenariuszy (VAT, menu, receptury, ułamki, prąd i moc, budżet). Wszystkie się zgadzają.
+- `node scripts/check-content.mjs`: sprawdza kompletność każdej metody i scenariusza (pola, bloki lekcji, materiały dla ucznia, klucz, typowe błędy, pytania dla recenzenta), wyciek klucza do materiałów ucznia, powtarzalność zdań i ciągów wyrazów, strukturę stron (jeden h1, alt, unikalne id, martwe linki i kotwice) oraz obecność wydruków.
+- `NODE_PATH=$(npm root -g) node scripts/build-print.mjs`: buduje PDF-y (karty ucznia, arkusz nauczyciela z kluczem, arkusze recenzji, arkusz weryfikacji źródeł).
+
+Błędy znalezione i poprawione:
+1. **Fizyka (flipped):** scenariusz twierdził, że przy 17,4 A na wyłączniku 16 A „wyłącznik zadziała”. To przeciążenie o ok. 9%, przy którym wyłącznik może nie zadziałać szybko. Zmieniono zadanie (4500 W, ok. 19,6 A) i klucz: wyłącznik zadziała po czasie, a przewody się nagrzewają.
+2. **Matematyka (modelowanie):** wszystkie trzy równania miały wynik x = 5. Teraz x = 5, 4, 6.
+3. **Brakujące materiały, o których mówił plan lekcji lub kontekst:** nowa próba w mastery (receptura i ułamki), karta do przygotowania (fizyka), karta stanowiska (kucharz, handlowiec), przypadek po sprawdzeniu (biologia), karta planowania (metapoznanie).
+4. **Klucz w materiałach ucznia:** pytania z odpowiedziami w nawiasach zamieniono na tabele, w których wydruk ucznia pomija kolumnę odpowiedzi. Test wycieku na wszystkich 12 kartach ucznia: brak odpowiedzi.
+5. **Zbyt drobne bloki lekcji:** bloki krótsze niż 3 minuty połączono z sąsiednimi (plany mają 4–5 bloków).
+6. **Zbyt krótkie scenariusze matematyczne** (jednozdaniowy kontekst, brak celu, mało typowych błędów) rozbudowano.
+7. **Czas przygotowania i wariant na 90 minut:** dodane do każdej metody (wcześniej brak).
+
+Zakres kontroli: automatyczna kontrola sprawdza formę, kompletność i rachunki. **Nie zastępuje recenzji merytorycznej** (fakty zawodowe, przepisy, źródła). Do niej służą arkusze w `przeglad/`:
+
+| Plik | Dla kogo |
+|---|---|
+| `recenzja-logistyka.pdf` | nauczyciel logistyki |
+| `recenzja-elektryka.pdf` | nauczyciel elektryki |
+| `recenzja-mechanika.pdf` | nauczyciel mechaniki pojazdów |
+| `recenzja-gastronomia.pdf` | nauczyciel żywienia i gastronomii |
+| `recenzja-ekonomia-handel.pdf` | nauczyciel ekonomii i handlu |
+| `recenzja-budownictwo.pdf` | nauczyciel budownictwa |
+| `recenzja-matematyka.pdf`, `recenzja-przyroda.pdf`, `recenzja-historia.pdf`, `recenzja-historia-wos.pdf` | nauczyciele przedmiotów ogólnych |
+| `weryfikacja-zrodel.pdf` | osoba z dostępem do pełnych tekstów |
+
+Arkusze nie są linkowane ze strony, ale jako pliki w repozytorium są publicznie dostępne pod znanym adresem.
+
+## 6. Do weryfikacji przez człowieka przed publikacją
 
 Scenariusze są autorskie. Zawodowe wymagają konsultacji z praktykiem danej branży:
 

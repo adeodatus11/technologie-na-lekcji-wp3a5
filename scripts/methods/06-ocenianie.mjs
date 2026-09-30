@@ -37,7 +37,7 @@ export default {
       goal: "Uczeń wybiera opakowanie na podstawie masy, wrażliwości na wstrząsy i warunków transportu.",
       materials: [
         { t: "Pytanie diagnostyczne", text: "Przesyłka: drukarka biurowa 14 kg, transport kurierski, możliwe wstrząsy i piętrowanie do dwóch warstw. Które opakowanie wybierasz?" },
-        { t: "Odpowiedzi (każda odpowiada innemu błędowi)", table: { head: ["Odpowiedź", "Jaki błąd odsłania"], rows: [
+        { t: "Odpowiedzi (każda odpowiada innemu błędowi)", studentCols: [0], table: { head: ["Odpowiedź", "Jaki błąd odsłania"], rows: [
           ["A. Worek foliowy z taśmą", "uznanie, że lekka ochrona wystarcza"],
           ["B. Karton jednowarstwowy bez wypełnienia", "zakładanie, że karton wystarczy"],
           ["C. Karton pięciowarstwowy z wypełnieniem (pianka/folia bąbelkowa) i taśmą po krawędziach", "poprawna"],
@@ -52,15 +52,15 @@ export default {
     {
       kind: "ogolny",
       label: "Matematyka: procent po obniżce i podwyżce",
-      context: "Dowolna klasa, kartoniki A–D.",
-      goal: "Uczeń odróżnia procent liczony od różnych podstaw.",
+      context: "Dowolna klasa, kartoniki A–D. Uczniowie znają pojęcie procentu, ale zwykle nie zastanawiają się, od jakiej wartości go liczą.",
+      goal: "Uczeń odróżnia zmianę procentową liczoną od różnych podstaw i uzasadnia wybór jednym zdaniem.",
       materials: [
         { t: "Pytanie diagnostyczne", text: "Cena 80 zł została obniżona o 25%, a potem nowa cena została podniesiona o 25%. Ile wynosi cena końcowa?" },
-        { t: "Odpowiedzi", table: { head: ["Odpowiedź", "Jaki błąd odsłania"], rows: [["A. 80 zł", "uznanie, że procenty się znoszą"], ["B. 75 zł", "poprawna"], ["C. 100 zł", "pomylenie kierunku zmiany"], ["D. 60 zł", "pominięcie drugiej zmiany"]] } },
+        { t: "Odpowiedzi", studentCols: [0], table: { head: ["Odpowiedź", "Jaki błąd odsłania"], rows: [["A. 80 zł", "uznanie, że procenty się znoszą"], ["B. 75 zł", "poprawna"], ["C. 100 zł", "pomylenie kierunku zmiany"], ["D. 60 zł", "pominięcie drugiej zmiany"]] } },
         { t: "Zadanie (pierwsza wersja)", text: "Cena 200 zł wzrosła o 10%, a potem spadła o 10%. Czy jest taka sama? Zapisz obliczenia. Kryterium K1: podstawa procentu w każdym kroku." }
       ],
       key: "B. 80 · 0,75 = 60, 60 · 1,25 = 75. W zadaniu: 200 · 1,1 = 220, 220 · 0,9 = 198. Nie jest taka sama.",
-      errors: ["obliczenie obu zmian od ceny pierwotnej"]
+      errors: ["obliczenie obu zmian od ceny pierwotnej", "przekonanie, że obniżka i podwyżka o tyle samo procent dają cenę wyjściową"]
     }
   ],
   tech: {

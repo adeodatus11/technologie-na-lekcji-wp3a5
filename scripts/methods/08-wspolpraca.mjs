@@ -41,7 +41,7 @@ export default {
         { t: "Karta 3: Wykonalność", text: "Dwie osoby przygotowują kanapki w 60 minut (około 40 sztuk). Ciastka są gotowe z cukierni. Nie ma lodówki na sok dla 40 osób." },
         { t: "Karta 4: Porcje", text: "Na osobę: jedna kanapka, jedno ciastko, jedna kawa lub herbata, jeden owoc. Ustal, czy starczy budżetu na sok." },
         { t: "Produkt grupy", text: "Menu z kalkulacją kosztu i jednym zdaniem uzasadnienia." },
-        { t: "Pytanie indywidualne", text: "Budżet spadł do 280 zł. Co zmienisz jako pierwsze i dlaczego?" }
+        { t: "Pytanie indywidualne", later: true, text: "Budżet spadł do 280 zł. Co zmienisz jako pierwsze i dlaczego?" }
       ],
       key: "Dla 38 osób: 2,60 + 1,80 + 0,90 + 1,20 + 1,20 = 7,70 zł, razem 292,60 zł. Dla 2 osób: 2,90 + 2,20 + 0,90 + 1,20 + 1,20 = 8,40 zł, razem 16,80 zł. Suma 309,40 zł, czyli w budżecie. Pytanie indywidualne: rezygnacja z soku dla wszystkich obniża koszt o 48 zł do 261,40 zł. Receptury i ceny to dane do lekcji, nie do zakupów.",
       errors: ["pominięcie osób z nietolerancją", "brak kontroli sumy", "dominacja jednej osoby przy kalkulacji"]
@@ -55,7 +55,7 @@ export default {
         { t: "Karta 1: Wydarzenia", list: ["11 listopada 1918: Piłsudski obejmuje naczelne dowództwo wojskowe", "26 stycznia 1919: wybory do Sejmu Ustawodawczego", "20 lutego 1919: Mała Konstytucja"] },
         { t: "Karta 2: Granice", list: ["27 grudnia 1918: wybucha powstanie wielkopolskie", "28 czerwca 1919: traktat wersalski", "18 marca 1921: pokój ryski"] },
         { t: "Karta 3: Ustrój", list: ["17 marca 1921: Konstytucja marcowa", "Sejm Ustawodawczy działa od 1919 do 1922", "Naczelnik Państwa: Józef Piłsudski do 1922"] },
-        { t: "Pytanie indywidualne", text: "Dlaczego państwo potrzebowało jednocześnie armii i Sejmu, żeby się utrzymać?" }
+        { t: "Pytanie indywidualne", later: true, text: "Dlaczego państwo potrzebowało jednocześnie armii i Sejmu, żeby się utrzymać?" }
       ],
       key: "Odpowiedź łączy dwie karty: granice rozstrzygały się zbrojnie i dyplomatycznie (armia, traktaty), a ustrój i legitymacja wymagały instytucji (Sejm, konstytucja). Uczeń ma wskazać po jednym przykładzie z dwóch kart.",
       errors: ["lista dat bez związku przyczynowego", "jedna osoba uzupełnia całą oś"]

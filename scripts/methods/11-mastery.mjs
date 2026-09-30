@@ -39,22 +39,25 @@ export default {
         { t: "Receptura na 10 porcji", table: { head: ["Składnik", "Ilość na 10 porcji"], rows: [["mąka", "500 g"], ["mleko", "750 ml"], ["jaja", "4 szt."], ["cukier", "100 g"], ["olej", "60 ml"]] } },
         { t: "Diagnoza (3 zadania)", list: ["Podaj współczynnik przeliczenia z 10 na 36 porcji.", "Oblicz mąkę na 36 porcji. Zapisz w kilogramach.", "Oblicz jaja na 36 porcji i zdecyduj, jak zaokrąglisz."] },
         { t: "Korekta (inne wyjaśnienie)", text: "Metoda „na jedną porcję”: mąka 500 g : 10 = 50 g na porcję, 50 g · 36 = 1800 g." },
+        { t: "Nowa próba (inna receptura, dla osób po korekcie)", table: { head: ["Składnik", "Ilość na 8 porcji"], rows: [["ryż", "400 g"], ["woda", "800 ml"], ["marchew", "240 g"]] } },
+        { t: "Polecenie do nowej próby", text: "Przelicz recepturę z 8 na 30 porcji. Zapisz współczynnik i wszystkie ilości z jednostkami." },
         { t: "Rozszerzenie", text: "Ceny: mąka 3,20 zł/kg, mleko 3,80 zł/l, jaja 1,10 zł/szt. Oblicz koszt mąki, mleka i jaj na 36 porcji oraz koszt na porcję." }
       ],
-      key: "Współczynnik 3,6. Mąka 1800 g = 1,8 kg. Jaja 14,4, więc 14 lub 15 szt. (zależy od receptury). Rozszerzenie: mąka 5,76 zł, mleko 2,7 l · 3,80 = 10,26 zł, jaja 15 · 1,10 = 16,50 zł. Razem 32,52 zł, czyli około 0,90 zł na porcję. Przypadek skonsultuj z nauczycielem gastronomii. Przy przyprawach przeliczenie nie zawsze jest liniowe.",
+      key: "Współczynnik 3,6. Mąka 1800 g = 1,8 kg. Jaja 14,4, więc 14 lub 15 szt. (zależy od receptury). Rozszerzenie: mąka 5,76 zł, mleko 2,7 l · 3,80 = 10,26 zł, jaja 15 · 1,10 = 16,50 zł. Razem 32,52 zł, czyli około 0,90 zł na porcję. Nowa próba: współczynnik 3,75, ryż 1500 g (1,5 kg), woda 3000 ml (3 l), marchew 900 g. Przypadek skonsultuj z nauczycielem gastronomii. Przy przyprawach przeliczenie nie zawsze jest liniowe.",
       errors: ["zmiana liczby bez zachowania proporcji", "mieszanie jednostek (g i kg)", "brak sprawdzenia, czy wynik jest sensowny"]
     },
     {
       kind: "ogolny",
       label: "Matematyka: dodawanie ułamków o różnych mianownikach",
-      context: "Dowolna klasa, warunek przed zadaniami tekstowymi.",
+      context: "Dowolna klasa. Dodawanie i odejmowanie ułamków o różnych mianownikach jest warunkiem przed zadaniami tekstowymi o częściach całości.",
       goal: "Uczeń dodaje i odejmuje ułamki o różnych mianownikach.",
       materials: [
         { t: "Diagnoza (3 zadania)", list: ["1/2 + 1/3", "3/4 − 1/6", "2/5 + 3/10"] },
         { t: "Korekta", text: "Model wizualny: dwa paski podzielone na 6 i 12 części. Uczeń zaznacza ułamki na paskach i łączy je ze wspólnym mianownikiem." },
+        { t: "Nowa próba (inne ułamki, dla osób po korekcie)", list: ["1/4 + 1/6", "5/6 − 1/4", "1/3 + 2/9"] },
         { t: "Rozszerzenie", text: "Piotr przeznaczył 1/3 czasu na naukę i 1/4 na trening. Jaka część czasu mu została?" }
       ],
-      key: "5/6; 7/12; 7/10. Rozszerzenie: 1/3 + 1/4 = 7/12, zostało 5/12.",
+      key: "Diagnoza: 5/6; 7/12; 7/10. Kryterium opanowania: wszystkie trzy poprawnie. Uczniowie z luką zwykle dodają liczniki i mianowniki osobno (1/2 + 1/3 = 2/5). Nowa próba: 1/4 + 1/6 = 5/12; 5/6 − 1/4 = 7/12; 1/3 + 2/9 = 5/9. Rozszerzenie: 1/3 + 1/4 = 7/12, czyli zostało 5/12.",
       errors: ["dodawanie liczników i mianowników osobno", "błąd przy sprowadzaniu do wspólnego mianownika"]
     }
   ],

@@ -37,7 +37,7 @@ export default {
       goal: "Uczeń tworzy plan, w połowie go sprawdza i zmienia po nowej informacji.",
       materials: [
         { t: "Zadanie", text: "Dostawa: dwie palety mrożonek (−18 °C) i jedna paleta suchej żywności. Chłodnia ma dwa wolne miejsca paletowe. Jest jeden wózek, a kierowca ma czas do przyjęcia 30 minut. Zapisz plan: ograniczenie, pierwszy krok, punkt kontrolny." },
-        { t: "Nowa informacja w punkcie kontrolnym", text: "W chłodni zostało tylko jedno wolne miejsce (awaria regału)." },
+        { t: "Nowa informacja w punkcie kontrolnym", later: true, text: "W chłodni zostało tylko jedno wolne miejsce (awaria regału)." },
         { t: "Karta", list: ["Planowanie: co ogranicza zadanie? Od czego zaczynam i dlaczego?", "Kontrola: czy plan nadal działa? Czego nie uwzględniłem?", "Ocena: co zachowam w następnym zadaniu?"] }
       ],
       key: "Dobry plan zaczyna od mrożonek (ryzyko rozmrożenia przy czekaniu). Po nowej informacji uczeń powinien zgłosić problem przełożonemu, rozważyć drugą chłodnię lub zmianę terminu dostawy drugiej palety, a nie upychać palety poza chłodnią. Suchą paletę przyjmujesz po mrożonkach. Przypadek skonsultuj z nauczycielem logistyki.",
@@ -46,11 +46,12 @@ export default {
     {
       kind: "ogolny",
       label: "Matematyka: zadanie tekstowe o średniej prędkości",
-      context: "Dowolna klasa.",
-      goal: "Uczeń wykrywa pułapkę „średnia z dwóch prędkości” dzięki pytaniu kontrolnemu.",
+      context: "Dowolna klasa. Zadanie o średniej prędkości służy do ćwiczenia planu i punktu kontrolnego. Uczniowie znają wzór v = s / t.",
+      goal: "Uczeń planuje obliczenia przed liczeniem i w połowie sprawdza, czy wynik jest realny, co pozwala mu wykryć pułapkę „średnia z dwóch prędkości”.",
       materials: [
+        { t: "Karta planowania", list: ["Co wiem? (zapisz dane)", "Czego szukam i w jakiej jednostce?", "Od czego zaczynam i po czym poznam, że wynik ma sens?"] },
         { t: "Zadanie", text: "Turysta szedł 2 godziny z prędkością 4 km/h, a potem 1,5 godziny z prędkością 5 km/h. Jaka jest jego średnia prędkość na całej trasie?" },
-        { t: "Pytanie kontrolne (w połowie)", text: "Jeżeli szedł dłużej wolniej, czy średnia może wynosić 4,5 km/h?" }
+        { t: "Pytanie kontrolne (w połowie)", later: true, text: "Jeżeli szedł dłużej wolniej, czy średnia może wynosić 4,5 km/h?" }
       ],
       key: "Droga: 2 · 4 + 1,5 · 5 = 15,5 km. Czas: 3,5 h. Średnia: 15,5 : 3,5 ≈ 4,43 km/h. Uczniowie zwykle liczą (4+5):2 = 4,5 km/h. Pytanie kontrolne pokazuje, że wynik jest nierealny, bo przez dłuższy czas szedł wolniej.",
       errors: ["średnia arytmetyczna z dwóch prędkości", "brak sprawdzenia, czy wynik ma sens"]

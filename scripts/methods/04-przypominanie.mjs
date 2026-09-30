@@ -35,7 +35,7 @@ export default {
       context: "Klasa 2 technikum lub 1–2 klasa branżowej szkoły I stopnia. Uczniowie przed analizą przypadku przypominają podstawy układu ładowania. Bez wykonywania czynności przy pojeździe.",
       goal: "Uczeń przywołuje typowe wartości napięć i nazwy elementów, a potem ocenia wynik pomiaru.",
       materials: [
-        { t: "Pięć pytań z kluczem", table: { head: ["Pytanie", "Odpowiedź"], rows: [
+        { t: "Pięć pytań z kluczem", studentCols: [0], table: { head: ["Pytanie", "Odpowiedź"], rows: [
           ["Jakie napięcie pokazuje woltomierz na zaciskach w pełni naładowanego, sprawnego akumulatora 12 V przy wyłączonym silniku?", "około 12,6–12,8 V"],
           ["Jakie napięcie na akumulatorze powinien dawać sprawny układ ładowania przy pracującym silniku (ok. 2000 obr./min)?", "około 13,8–14,4 V"],
           ["Jak nazywa się element, który zamienia energię mechaniczną silnika na elektryczną?", "alternator (prądnica z prostownikiem)"],
@@ -54,15 +54,16 @@ export default {
       context: "Dowolna klasa. Przed nowym tematem (oddychanie komórkowe) uczniowie przypominają fotosyntezę.",
       goal: "Uczeń przywołuje równanie fotosyntezy i umie wskazać, skąd roślina bierze substraty.",
       materials: [
-        { t: "Pytania z kluczem", table: { head: ["Pytanie", "Odpowiedź"], rows: [
+        { t: "Pytania z kluczem", studentCols: [0], table: { head: ["Pytanie", "Odpowiedź"], rows: [
           ["Zapisz słownie substraty i produkty fotosyntezy.", "substraty: dwutlenek węgla i woda. Produkty: glukoza i tlen"],
           ["W której organelli zachodzi fotosynteza?", "w chloroplastach"],
           ["Jaką rolę pełni chlorofil?", "pochłania energię światła"],
           ["Którędy CO₂ wchodzi do liścia?", "przez aparaty szparkowe"]
         ] } },
-        { t: "Przypomnienie po tygodniu", text: "Dlaczego w pełnym słońcu, przy zamkniętych aparatach szparkowych (upał), fotosynteza zwalnia?" }
+        { t: "Przypadek po sprawdzeniu", text: "Roślina doniczkowa stoi dwa dni w zupełnie ciemnym pomieszczeniu. Czy w tym czasie zachodzi w niej fotosynteza? Czy roślina oddycha? Uzasadnij odpowiedź, korzystając z pytań powyżej." },
+        { t: "Przypomnienie po tygodniu", later: true, text: "Dlaczego w pełnym słońcu, przy zamkniętych aparatach szparkowych (upał), fotosynteza zwalnia?" }
       ],
-      key: "Bez wejścia CO₂ substrat się kończy, więc tempo spada.",
+      key: "Równanie: 6CO₂ + 6H₂O + światło → C₆H₁₂O₆ + 6O₂. Substraty: dwutlenek węgla i woda. Produkty: glukoza i tlen. Przypadek w ciemni: fotosynteza nie zachodzi bez światła, ale roślina oddycha cały czas (oddychanie komórkowe), co łączy starą wiedzę z nowym tematem. Pytanie po tygodniu: przy zamkniętych aparatach szparkowych CO₂ nie wchodzi do liścia, substrat się kończy, więc tempo fotosyntezy spada.",
       errors: ["mylenie substratów z produktami", "pomijanie roli aparatów szparkowych"],
       schedule: "Po 2 dniach pytanie 1 w formie luki, po tygodniu pytanie o aparaty szparkowe, po 3 tygodniach pytanie o oddychanie (połączenie starej i nowej wiedzy)."
     }

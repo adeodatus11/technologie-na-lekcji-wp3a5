@@ -35,8 +35,8 @@ export default {
       context: "Klasa 2. Materiał przed lekcją: jedna strona z 14 alergenami, które trzeba oznaczać w żywności (rozporządzenie UE nr 1169/2011). Lekcja: problem na jadłospisie.",
       goal: "Uczeń rozpoznaje alergeny w typowych daniach i proponuje zmiany w jadłospisie dla osoby z alergią.",
       materials: [
-        { t: "Materiał przed lekcją (karta)", list: ["14 alergenów: zboża zawierające gluten, skorupiaki, jaja, ryby, orzeszki ziemne, soja, mleko (z laktozą), orzechy, seler, gorczyca, sezam, dwutlenek siarki i siarczyny, łubin, mięczaki"] },
-        { t: "Sprawdzenie przygotowania", list: ["Wymień pięć z czternastu alergenów.", "Czy mleko i laktoza to ten sam alergen na liście?", "W którym daniu spodziewasz się gorczycy: w sosie vinaigrette czy w kisielu?"] },
+        { t: "Materiał przed lekcją (karta)", list: ["14 alergenów: zboża zawierające gluten, skorupiaki, jaja, ryby, orzeszki ziemne, soja, mleko (z laktozą), orzechy, seler, gorczyca, sezam, dwutlenek siarki i siarczyny (powyżej 10 mg/kg), łubin, mięczaki"] },
+        { t: "Sprawdzenie przygotowania", table: { head: ["Pytanie", "Odpowiedź"], rows: [["Wymień pięć z czternastu alergenów.", "dowolne pięć z listy na karcie"], ["Czy mleko i laktoza to ten sam alergen na liście?", "tak, jedna pozycja: mleko i produkty pochodne (łącznie z laktozą)"], ["W którym daniu spodziewasz się gorczycy: w sosie vinaigrette czy w kisielu?", "w sosie vinaigrette (musztarda)"]] }, studentCols: [0] },
         { t: "Problem", text: "Obiad dla 40 osób, w tym dwie osoby z alergią na mleko i jedna na orzechy. Menu: zupa krem z brokułów (ze śmietanką), kotlet schabowy panierowany (jajko, bułka tarta pszenna), surówka z sosem vinaigrette (z musztardą), ciasto z orzechami włoskimi. Zaznacz alergeny w każdym daniu i zaproponuj dwie zmiany." }
       ],
       key: "Zupa: mleko, możliwy gluten w zasmażce, możliwy seler w wywarze (sprawdź recepturę). Kotlet: jaja, gluten (pszenica). Surówka: gorczyca, możliwe siarczyny w occie. Ciasto: orzechy, gluten, jaja, prawdopodobnie mleko (masło). Zmiany: zupa bez śmietanki (np. zagęszczona ziemniakiem), ciasto zastąpione deserem bez orzechów i mleka (np. owoce). Dodatkowo: oddzielne narzędzia i deski, żeby uniknąć zanieczyszczenia krzyżowego. Receptury szkolne mogą się różnić, więc sprawdź je z nauczycielem gastronomii.",
@@ -48,11 +48,12 @@ export default {
       context: "Przygotowanie: karta ze wzorami U = I · R oraz P = U · I i dwoma przykładami.",
       goal: "Uczeń oblicza prąd urządzenia z jego mocy i ocenia, czy zabezpieczenie wystarczy.",
       materials: [
-        { t: "Sprawdzenie przygotowania", list: ["Grzałka 6 V ma opór 12 Ω. Jaki prąd płynie? (0,5 A)", "Jaką moc ma odbiornik 230 V pobierający 2 A? (460 W)", "Który wzór wiąże napięcie, prąd i opór? (U = I · R)"] },
-        { t: "Problem", text: "Czajnik ma moc 2000 W i zasilanie 230 V. (1) Oblicz prąd. (2) Czy wyłącznik 10 A wystarczy dla jednego czajnika? (3) Dwa takie czajniki włączono na jednym obwodzie z wyłącznikiem 16 A. Co się stanie?" }
+        { t: "Karta do przygotowania (przed lekcją)", list: ["Napięcie U mierzymy w woltach (V), prąd I w amperach (A), opór R w omach (Ω), moc P w watach (W).", "Prawo Ohma: U = I · R, więc I = U / R.", "Moc: P = U · I, więc I = P / U.", "Przykład: odbiornik 12 V o oporze 4 Ω pobiera prąd 3 A, a jego moc to 36 W."] },
+        { t: "Sprawdzenie przygotowania", table: { head: ["Pytanie", "Odpowiedź"], rows: [["Grzałka 6 V ma opór 12 Ω. Jaki prąd płynie?", "0,5 A"], ["Jaką moc ma odbiornik 230 V pobierający 2 A?", "460 W"], ["Który wzór wiąże napięcie, prąd i opór?", "U = I · R"]] }, studentCols: [0] },
+        { t: "Problem", text: "Czajnik ma moc 2000 W i zasilanie 230 V. (1) Oblicz prąd. (2) Czy wyłącznik 10 A wystarczy dla jednego czajnika? (3) Na jednym obwodzie z wyłącznikiem 16 A włączono jednocześnie czajnik 2000 W, grzejnik 1500 W i ekspres 1000 W. Oblicz łączny prąd i oceń, czy obwód jest przeciążony." }
       ],
-      key: "(1) I = P / U = 2000 / 230 ≈ 8,7 A. (2) Tak, bo 8,7 A < 10 A. (3) Dwa czajniki: ok. 17,4 A > 16 A. Wyłącznik zadziała (po pewnym czasie, nie natychmiast). Uczniowie mają wyjaśnić, dlaczego obwód ma ograniczenie sumy mocy.",
-      errors: ["pomylenie mocy z energią", "brak sumowania prądów dwóch odbiorników", "użycie wzoru P = U/I"]
+      key: "(1) I = P / U = 2000 / 230 ≈ 8,7 A. (2) Tak, bo 8,7 A < 10 A. (3) Razem 4500 W, czyli 4500 / 230 ≈ 19,6 A, więcej niż 16 A: obwód jest przeciążony. Wyłącznik nadprądowy nie reaguje natychmiast przy niewielkim przeciążeniu, zadziała po pewnym czasie (nawet kilkudziesięciu minut), a do tego czasu przewody się nagrzewają. Dlatego sumę mocy odbiorników trzeba pilnować, a nie liczyć na wyłącznik. Skonsultuj z nauczycielem elektryki.",
+      errors: ["pomylenie mocy z energią", "brak sumowania prądów wszystkich odbiorników", "użycie wzoru P = U/I", "przekonanie, że wyłącznik zadziała natychmiast po przekroczeniu 16 A"]
     }
   ],
   tech: {

@@ -37,8 +37,9 @@ export default {
       goal: "Uczeń rozpoznaje, które dane wpływają na decyzję sprzedawcy, i uaktualnia ją po nowej informacji.",
       materials: [
         { t: "Przypadek", text: "Klient kupił w sklepie ekspres do kawy za 899 zł. Po trzech tygodniach ekspres przestał grzać wodę. Sprzedawca mówi: „Ma pan gwarancję producenta na rok, proszę jechać do serwisu”. Klient żąda wymiany na nowy w sklepie." },
-        { t: "Pytania nauczyciela", list: ["Które dane z przypadku są ważne dla decyzji (czas, rodzaj usterki, stan towaru, dowód zakupu)?", "Czy odesłanie klienta do serwisu producenta jest wystarczającą odpowiedzią sprzedawcy? Dlaczego?", "Co musiałoby się zmienić, żebyś zmienił decyzję?"] },
-        { t: "Nowa informacja", text: "Klient przyznaje, że ekspres spadł ze stołu." }
+        { t: "Karta stanowiska ucznia", list: ["Moja decyzja sprzedawcy: odmowa / naprawa / wymiana / zwrot pieniędzy (zakreśl jedną).", "Dwie dane z przypadku, na których ją opieram:", "Jedno założenie, które przyjmuję:", "Co musiałoby się zmienić, żebym zmienił decyzję:"] },
+        { t: "Pytania nauczyciela", teacher: true, list: ["Które dane z przypadku są ważne dla decyzji (czas, rodzaj usterki, stan towaru, dowód zakupu)?", "Czy odesłanie klienta do serwisu producenta jest wystarczającą odpowiedzią sprzedawcy? Dlaczego?", "Co musiałoby się zmienić, żebyś zmienił decyzję?"] },
+        { t: "Nowa informacja", later: true, text: "Klient przyznaje, że ekspres spadł ze stołu." }
       ],
       key: "Dla nauczyciela: sprzedawca odpowiada wobec konsumenta za wady towaru (rękojmia, niezgodność towaru z umową) niezależnie od gwarancji producenta, a konsument może wybrać, z czego skorzysta. Uszkodzenie mechaniczne zmienia ocenę, bo nie jest wadą towaru, ale ciężar wykazania przyczyny usterki bywa sporny, więc liczy się dokumentacja. Przed lekcją sprawdź aktualny stan przepisów (Kodeks cywilny, ustawa o prawach konsumenta) z nauczycielem przedmiotu.",
       errors: ["opinia bez danych", "powtarzanie procedury zamiast analizy faktów", "zmiana zdania bez wskazania, co zmieniło ocenę"]
@@ -51,7 +52,7 @@ export default {
       materials: [
         { t: "Dane (przykładowe)", table: { head: ["Wskaźnik", "Wartość"], rows: [["Liczebność saren w gminie X przez 10 lat", "wzrost o 40%"], ["Szkody w uprawach od saren", "rosną z roku na rok"], ["Liczba owiec zaatakowanych przez wilki w sąsiedniej gminie", "12 rocznie"], ["Opinia leśników", "wilki ograniczają nadmierny wzrost populacji saren"]] } },
         { t: "Pytanie", text: "Czy w gminie X warto wspierać powrót wilków? Zapisz decyzję i dwa dane." },
-        { t: "Nowa informacja", text: "Hodowcy w gminie X oferują ogrodzenia elektryczne za 70% ceny." }
+        { t: "Nowa informacja", later: true, text: "Hodowcy w gminie X oferują ogrodzenia elektryczne za 70% ceny." }
       ],
       key: "Dobre uzasadnienia łączą dane o zwierzynie z kosztami dla rolników. Uczeń powinien zauważyć, że dane nie rozstrzygają wszystkiego (jedna sąsiednia gmina to za mało). Nowa informacja pokazuje, że ograniczenie szkód jest możliwe bez rezygnacji z wilków.",
       errors: ["uogólnienie z jednej gminy", "pominięcie interesu rolników"]

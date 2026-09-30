@@ -36,7 +36,7 @@ export default {
       context: "Klasa 2 technikum logistycznego. Moduł na ZPE (np. materiał o dokumentacji w obrocie magazynowym) lub własny wydruk. Uczniowie mają odróżniać PZ, WZ, MM, RW i PW.",
       goal: "Uczeń dobiera dokument do sytuacji magazynowej i poprawnie rozlicza rozbieżność przy przyjęciu dostawy.",
       materials: [
-        { t: "Pięć pytań z kluczem (ćwiczenie na etapie 1)", table: { head: ["Pytanie", "Poprawna odpowiedź"], rows: [
+        { t: "Pięć pytań z kluczem (ćwiczenie na etapie 1)", studentCols: [0], table: { head: ["Pytanie", "Poprawna odpowiedź"], rows: [
           ["Który dokument potwierdza przyjęcie towaru od dostawcy do magazynu?", "PZ (przyjęcie zewnętrzne)"],
           ["Który dokument wystawiasz przy wydaniu towaru odbiorcy spoza firmy?", "WZ (wydanie zewnętrzne)"],
           ["Który dokument dotyczy przesunięcia towaru między dwoma magazynami tej samej firmy?", "MM (przesunięcie międzymagazynowe)"],
@@ -55,7 +55,7 @@ export default {
       context: "Dowolna klasa. Materiał: ZPE „Obliczenia procentowe” albo jedna strona z przykładami.",
       goal: "Uczeń rozumie, że procent liczy się od konkretnej podstawy, i nie dodaje procentów z różnych podstaw.",
       materials: [
-        { t: "Ćwiczenia z kluczem (etap 1)", list: ["15% z 200 zł = ? (30 zł)", "Cena wzrosła z 80 zł do 100 zł. O ile procent? (o 25%)", "Po obniżce o 20% towar kosztuje 160 zł. Ile kosztował przed obniżką? (200 zł)"] },
+        { t: "Ćwiczenia z kluczem (etap 1)", table: { head: ["Zadanie", "Odpowiedź"], rows: [["15% z 200 zł = ?", "30 zł"], ["Cena wzrosła z 80 zł do 100 zł. O ile procent?", "o 25%"], ["Po obniżce o 20% towar kosztuje 160 zł. Ile kosztował przed obniżką?", "200 zł"]] }, studentCols: [0] },
         { t: "Przypadek (etap 2)", text: "Sklep obniżył cenę kurtki o 20%, a po miesiącu podniósł nową cenę o 20%. Kurtka kosztowała 250 zł. Czy po podwyżce wróciła do ceny 250 zł? Zapisz obliczenia." }
       ],
       key: "Po obniżce: 250 · 0,8 = 200 zł. Po podwyżce: 200 · 1,2 = 240 zł. Nie wróciła, bo 20% z 200 zł to mniej niż 20% z 250 zł. Para ma wyjaśnić to jednym zdaniem.",
