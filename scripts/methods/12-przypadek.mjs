@@ -22,12 +22,10 @@ export default {
     notFor: ["wprowadzanie nowej wiedzy (najpierw ją nauczaj jawnie)", "tematy bez jasnego kryterium poprawności", "projekty trwające kilka tygodni bez planu konsultacji"]
   },
   lesson: [
-    { min: 6, title: "Przypadek i dane", teacher: "Przedstawia przypadek, dane i oczekiwany produkt (jedna strona).", students: "Czytają dane i zaznaczają fakty ważne dla decyzji." },
-    { min: 4, title: "Hipoteza indywidualna", teacher: "Nie komentuje.", students: "Każdy zapisuje wstępną przyczynę lub rozwiązanie." },
+    { min: 10, title: "Przypadek, dane i hipoteza", teacher: "Przedstawia przypadek, dane i oczekiwany produkt (jedna strona). Przez ostatnie 4 minuty nie komentuje.", students: "Czytają dane i zaznaczają fakty ważne dla decyzji. Każdy zapisuje wstępną przyczynę lub rozwiązanie." },
     { min: 14, title: "Analiza w grupach", teacher: "Zadaje pytania o wzorce w danych. Nie podaje rozwiązania.", students: "Porównują hipotezy i zaznaczają dowody w danych." },
     { min: 8, title: "Decyzja i ryzyko", teacher: "Przypomina kryteria: dane, wykonalność, ryzyko.", students: "Zapisują jedną zmianę, dwa dowody i jedno ryzyko na karcie." },
-    { min: 6, title: "Krytyka krzyżowa", teacher: "Łączy grupy parami.", students: "Czytają kartę innej grupy i piszą jedną uwagę odnoszącą się do kryterium." },
-    { min: 2, title: "Decyzja indywidualna", teacher: "Zbiera kartki.", students: "Zapisują własną decyzję w jednym zdaniu." }
+    { min: 8, title: "Krytyka krzyżowa i decyzja indywidualna", teacher: "Łączy grupy parami. Na koniec zbiera kartki.", students: "Czytają kartę innej grupy i piszą jedną uwagę odnoszącą się do kryterium. Każdy zapisuje własną decyzję w jednym zdaniu." }
   ],
   decisionPoint: "Jeżeli grupa po 6 minutach analizy nie wskazała żadnego dowodu w danych, nie przechodzi do rozwiązania. Wróć do tabeli i wskaż jeden wiersz, z którego trzeba zacząć.",
   scenarios: [

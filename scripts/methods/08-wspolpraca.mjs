@@ -22,9 +22,9 @@ export default {
     notFor: ["czynności wymagające uprawnień lub bezpośredniego nadzoru BHP", "wprowadzanie nowej treści wyłącznie przez rówieśnika", "zadanie, które jedna osoba zrobi sama w pięć minut"]
   },
   lesson: [
-    { min: 5, title: "Cel, produkt i karty ekspertów", teacher: "Pokazuje produkt końcowy. Rozdaje 4 różne karty w grupach domowych po 4 osoby.", students: "Każdy czyta swój cel na karcie." },
-    { min: 7, title: "Praca indywidualna nad kartą", teacher: "Sprawdza, czy każdy zapisuje własną odpowiedź przed rozmową.", students: "Czytają kartę, zapisują 2–3 kluczowe fakty." },
-    { min: 10, title: "Grupy ekspertów", teacher: "Łączy osoby z tą samą kartą w 4-osobowe zespoły. Krąży i sprawdza poprawność.", students: "Porównują zapisy, poprawiają i ustalają, jak wyjaśnią to innym." },
+    { min: 5, title: "Cel, produkt i karty ekspertów", teacher: "Pokazuje produkt końcowy. Rozdaje 4 różne karty w grupach domowych po 4 osoby. Przesiadanie się do grup ekspertów i z powrotem zajmuje około 2 minut, więc plan ma zapas.", students: "Każdy czyta swój cel na karcie." },
+    { min: 6, title: "Praca indywidualna nad kartą", teacher: "Sprawdza, czy każdy zapisuje własną odpowiedź przed rozmową.", students: "Czytają kartę, zapisują 2–3 kluczowe fakty." },
+    { min: 9, title: "Grupy ekspertów", teacher: "Łączy osoby z tą samą kartą w 4-osobowe zespoły. Krąży i sprawdza poprawność.", students: "Porównują zapisy, poprawiają i ustalają, jak wyjaśnią to innym." },
     { min: 12, title: "Grupy domowe: wspólny produkt", teacher: "Nie podpowiada, tylko pyta: „Kto wniósł tę informację?”", students: "Każdy uczy grupę swojej części. Razem tworzą jeden produkt na karcie A3." },
     { min: 6, title: "Odpowiedź indywidualna", teacher: "Zmienia jeden warunek zadania. Zbiera kartki.", students: "Każdy sam zapisuje jedną konieczną zmianę w produkcie i dlaczego." }
   ],

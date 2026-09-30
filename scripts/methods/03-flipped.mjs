@@ -25,8 +25,7 @@ export default {
     { min: 6, title: "Sprawdzenie przygotowania", teacher: "Daje 3 pytania na kartce (bez oceny). Osobom, które nie miały materiału, daje kartę z podsumowaniem na jedną stronę.", students: "Odpowiadają na pytania albo czytają kartę i zapisują jedno pytanie." },
     { min: 4, title: "Odpowiedzi na pytania", teacher: "Wybiera dwa pytania z kart i odpowiada na nie krótko.", students: "Poprawiają własne odpowiedzi." },
     { min: 22, title: "Problem w parach lub trójkach", teacher: "Daje problem, którego nie da się rozwiązać bez materiału. Siada przy grupach, które nie ruszyły po 5 minutach.", students: "Rozwiązują problem i zapisują odpowiedź z jednym uzasadnieniem." },
-    { min: 6, title: "Konfrontacja rozwiązań", teacher: "Pokazuje dwa różne rozwiązania i pokazuje poprawny model.", students: "Zaznaczają w swoim rozwiązaniu, czego nie uwzględnili." },
-    { min: 2, title: "Zdanie na wyjście", teacher: "Zbiera kartki.", students: "Piszą jedno zdanie: „Z materiału wystarczyło mi…, a bez nauczyciela nie zrozumiałem…”" }
+    { min: 8, title: "Konfrontacja rozwiązań i zdanie na wyjście", teacher: "Pokazuje dwa różne rozwiązania i poprawny model. Na koniec zbiera kartki.", students: "Zaznaczają w swoim rozwiązaniu, czego nie uwzględnili. Piszą jedno zdanie: „Z materiału wystarczyło mi…, a bez nauczyciela nie zrozumiałem…”" }
   ],
   decisionPoint: "Jeżeli mniej niż połowa przygotowała się, przesuń problem o 5 minut i daj 8 minut na kartę z podsumowaniem. Nie karz brakiem oceny.",
   scenarios: [

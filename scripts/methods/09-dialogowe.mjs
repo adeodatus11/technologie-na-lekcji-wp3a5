@@ -23,8 +23,7 @@ export default {
   },
   lesson: [
     { min: 6, title: "Przypadek i pytanie", teacher: "Czyta przypadek i podaje pytanie decyzyjne. Nie sugeruje odpowiedzi.", students: "Czytają i zaznaczają fakty." },
-    { min: 4, title: "Zapis indywidualny", teacher: "Pilnuje ciszy. Odpowiedzi nie komentuje.", students: "Zapisują decyzję i dwa dane." },
-    { min: 6, title: "Rozmowa w parach", teacher: "Podaje ramę: twierdzenie, dowód, pytanie do drugiej osoby.", students: "Porównują i zapisują, w czym się różnią." },
+    { min: 10, title: "Zapis indywidualny i rozmowa w parach", teacher: "Przez 4 minuty pilnuje ciszy i nie komentuje. Potem podaje ramę: twierdzenie, dowód, pytanie do drugiej osoby.", students: "Zapisują decyzję i dwa dane. Potem w parach porównują i zapisują, w czym się różnią." },
     { min: 16, title: "Rozmowa klasy", teacher: "Prosi o argumenty. Pyta o dane, zestawia wypowiedzi. Zapisuje argumenty na tablicy bez nazwisk.", students: "Mówią, odwołując się do danych i do wypowiedzi innych." },
     { min: 5, title: "Nowa informacja", teacher: "Dodaje fakt, który zmienia jeden warunek.", students: "Uaktualniają stanowisko i zapisują, co się zmieniło." },
     { min: 3, title: "Wniosek", teacher: "Podsumowuje merytorycznie: co rozstrzygają dane, a co zostaje sporne.", students: "Zapisują ostateczną decyzję i zmianę względem pierwszej." }

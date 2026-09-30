@@ -10,7 +10,7 @@ export default {
   definition: "Uczniowie pracują indywidualnie z modułem cyfrowym, który prowadzi ich od materiału przez zadania z natychmiastową informacją zwrotną do przypadku praktycznego.",
   how: [
     "W IBC (Dania) 360 E-learning Center to środowisko, w którym uczestnicy spędzają cały dzień (7,4 godziny) na samodzielnej pracy z materiałami: filmy, artykuły, ćwiczenia interaktywne, quizy, zadania na przypadkach i symulacje. Platforma pokazuje postęp, a odpowiedzi w quizach są sprawdzane automatycznie. Materiał opisuje cztery zasady takiego modułu: uczenie całościowe (praca indywidualna przeplatana pracą w grupie), interaktywność i informacja zwrotna, praktyczna przydatność zadań oraz kompetencje cyfrowe (krytyczne używanie narzędzi i źródeł).",
-    "W szkole nie ma całego dnia, więc moduł skraca się do jednej lekcji w pracowni komputerowej albo z laptopami: około 12 minut materiału z ćwiczeniami, 12 minut na przypadek, potem wymiana w parach. Nauczyciel nie prowadzi lekcji z przodu. Chodzi po sali, widzi, kto stoi na którym etapie, i rozmawia z tymi, którzy utknęli."
+    "W szkole nie ma całego dnia, więc moduł skraca się do jednej lekcji w pracowni komputerowej albo z laptopami: około 12 minut materiału z ćwiczeniami, 10 minut na przypadek, potem wymiana w parach (razem 38 minut, bo logowanie i przejścia zawsze zabierają czas). Nauczyciel nie prowadzi lekcji z przodu. Chodzi po sali, widzi, kto stoi na którym etapie, i rozmawia z tymi, którzy utknęli."
   ],
   differs: [
     { with: "Blended learning", text: "Tu cała praca odbywa się w jednym bloku, a tempo wyznacza uczeń. W blended nauczyciel prowadzi warsztat, a część cyfrowa jest przed nim i po nim." },
@@ -22,13 +22,13 @@ export default {
     notFor: ["wprowadzanie nowej, trudnej treści (uczeń bez wiedzy wstępnej sam jej nie zbuduje)", "klasy bez pewnego dostępu do sprzętu: awaria logowania zjada połowę lekcji", "zajęcia wymagające ćwiczenia czynności manualnych"]
   },
   lesson: [
-    { min: 4, title: "Mapa modułu", teacher: "Zapisuje na tablicy cztery etapy z czasem: materiał (12 min), przypadek (12 min), para (8 min), refleksja (4 min). Podaje link lub ścieżkę do materiału.", students: "Logują się i otwierają pierwszy etap. Każdy zaznacza w karcie, że wystartował." },
+    { min: 4, title: "Mapa modułu", teacher: "Zapisuje na tablicy cztery etapy z czasem: materiał (12 min), przypadek (10 min), para (8 min), refleksja (4 min). Podaje link lub ścieżkę do materiału.", students: "Logują się i otwierają pierwszy etap. Każdy zaznacza w karcie, że wystartował." },
     { min: 12, title: "Materiał i ćwiczenia z automatycznym sprawdzaniem", teacher: "Chodzi po sali. Zapisuje w swojej karcie, kto utknął na którym ćwiczeniu. Nie tłumaczy całej klasie, tylko osobom.", students: "Pracują samodzielnie. Po każdym ćwiczeniu czytają informację zwrotną i poprawiają błędną odpowiedź." },
-    { min: 12, title: "Przypadek", teacher: "Sprawdza, czy uczniowie zapisują decyzję, zanim zajrzą do wzoru. Siada przy osobach z listy.", students: "Rozwiązują przypadek praktyczny i zapisują decyzję z jednym uzasadnieniem." },
+    { min: 10, title: "Przypadek", teacher: "Sprawdza, czy uczniowie zapisują decyzję, zanim zajrzą do wzoru. Siada przy osobach z listy.", students: "Rozwiązują przypadek praktyczny i zapisują decyzję z jednym uzasadnieniem." },
     { min: 8, title: "Wymiana w parach", teacher: "Podaje jedno pytanie do wymiany: „Gdzie wasze decyzje się różnią i dlaczego?”", students: "Porównują decyzje w parach i zaznaczają jedną rzecz, którą zmieniają." },
     { min: 4, title: "Refleksja", teacher: "Zbiera karty z jednym zdaniem.", students: "Piszą: „Tę wiedzę użyję w pracy/zadaniu, gdy…”" }
   ],
-  decisionPoint: "Jeżeli po 12 minutach więcej niż jedna trzecia klasy nie skończyła materiału, skróć go: daj wydruk z najważniejszym fragmentem i przejdź do przypadku.",
+  decisionPoint: "Jeżeli po 12 minutach (licząc od startu materiału) więcej niż jedna trzecia klasy nie skończyła materiału, skróć go: daj wydruk z najważniejszym fragmentem i przejdź do przypadku.",
   scenarios: [
     {
       kind: "zawodowy",

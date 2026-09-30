@@ -25,8 +25,7 @@ export default {
     { min: 4, title: "Cel i pierwszy krok", teacher: "Podaje cel i pokazuje dane zadania. Prosi o zapisanie pierwszego kroku bez podpowiedzi.", students: "Zapisują pierwszy krok i podnoszą kartkę. Nauczyciel widzi punkt startowy." },
     { min: 10, title: "Pokaz z głośnym myśleniem", teacher: "Rozwiązuje pełny przykład na tablicy. Przy każdym kroku mówi, którą daną wybiera i dlaczego.", students: "Śledzą i zaznaczają w karcie dane, decyzje i kontrolę różnymi kolorami." },
     { min: 10, title: "Przykład z lukami", teacher: "Daje drugi przykład z dwiema lukami. Sprawdza odpowiedzi wszystkich, nie tylko ochotników.", students: "W parach uzupełniają luki i porównują z sąsiadem." },
-    { min: 13, title: "Samodzielne zadanie", teacher: "Daje zadanie z innymi danymi. Siada przy uczniach z największym kłopotem.", students: "Rozwiązują bez wzoru." },
-    { min: 3, title: "Klucz i jeden błąd", teacher: "Pokazuje poprawne rozwiązanie i jeden typowy błąd.", students: "Zaznaczają krok, w którym ich rozwiązanie różni się od klucza." }
+    { min: 16, title: "Samodzielne zadanie i klucz", teacher: "Daje zadanie z innymi danymi. Siada przy uczniach z największym kłopotem. Na koniec pokazuje poprawne rozwiązanie i jeden typowy błąd.", students: "Rozwiązują bez wzoru. Na końcu zaznaczają krok, w którym ich rozwiązanie różni się od klucza." }
   ],
   decisionPoint: "Jeżeli w przykładzie z lukami ta sama luka sprawia kłopot połowie klasy, wróć do modelu tego jednego kroku zamiast dawać kolejne zadania.",
   scenarios: [

@@ -18,7 +18,7 @@ Trzy metody (360 e-learning, blended learning, flipped classroom) pochodzą z ma
 
 - `scripts/methods/*.mjs`: jedna metoda na plik. To tu edytuje się treść.
 - `scripts/methods-data.mjs`: lista metod, synonimy starych adresów i etykiety.
-- `scripts/generate-site.mjs`: generator stron i przekierowań. Zatrzymuje budowę, jeśli liczba metod jest inna niż 12, czas roboczy lekcji wychodzi poza 35–40 minut, brakuje scenariusza zawodowego lub ogólnokształcącego, klucza albo źródła.
+- `scripts/generate-site.mjs`: generator stron i przekierowań. Zatrzymuje budowę, jeśli liczba metod jest inna niż 12, brakuje scenariusza zawodowego lub ogólnokształcącego, klucza albo źródła. Gdy czas roboczy lekcji wychodzi poza 35–40 minut, tylko ostrzega.
 - `AUDYT.md`: wyniki audytu (źródła, połączenia metod, luki, język) i lista rzeczy do weryfikacji przez człowieka.
 
 ```bash

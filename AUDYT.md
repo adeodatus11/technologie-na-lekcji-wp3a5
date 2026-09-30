@@ -85,7 +85,7 @@ Usunięte:
 - puste obietnice materiałów („karta odpowiedzi”, „pięć pytań”) bez treści.
 
 Zmienione:
-- minuty: plan zakłada 35–40 minut czasu roboczego, a generator to sprawdza;
+- minuty: plan zakłada 35–40 minut czasu roboczego. Generator ostrzega, gdy lekcja wychodzi poza ten zakres, a strona pokazuje zapas czasu. Lekcje zbito do 4–5 bloków, a te z logowaniem lub przesiadaniem się (360 e-learning, jigsaw) mają 38 minut;
 - każdy scenariusz ma prawdziwe pytania, dane i klucz, a dane fikcyjne są oznaczone.
 
 ## 5. Do weryfikacji przez człowieka przed publikacją

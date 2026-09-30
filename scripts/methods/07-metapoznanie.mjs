@@ -22,13 +22,11 @@ export default {
     notFor: ["proste ćwiczenia jednokrokowe", "sytuacje, w których karta staje się formularzem wypełnianym po fakcie", "lekcje bez czasu na punkt kontrolny"]
   },
   lesson: [
-    { min: 6, title: "Model planowania", teacher: "Na pierwszym przykładzie myśli na głos: ograniczenia, pierwszy krok, kontrola.", students: "Zaznaczają w karcie, które pytania nauczyciel sobie zadał." },
-    { min: 4, title: "Plan własny", teacher: "Daje nowy przypadek. Uczeń bez planu dostaje dwa możliwe pierwsze kroki do porównania.", students: "Wypełniają trzy pola: ograniczenie, pierwszy krok, punkt kontrolny." },
+    { min: 10, title: "Model planowania i plan własny", teacher: "Na pierwszym przykładzie myśli na głos: ograniczenia, pierwszy krok, kontrola. Potem daje nowy przypadek. Uczeń bez planu dostaje dwa możliwe pierwsze kroki do porównania.", students: "Zaznaczają w karcie, które pytania nauczyciel sobie zadał. Wypełniają trzy pola: ograniczenie, pierwszy krok, punkt kontrolny." },
     { min: 9, title: "Praca, część 1", teacher: "Nie podaje gotowej kolejności. Obserwuje strategie.", students: "Wykonują zadanie według planu." },
     { min: 4, title: "Punkt kontrolny", teacher: "Zatrzymuje wszystkich. Podaje nową informację do zadania.", students: "Odpowiadają na dwa pytania: „Czy plan nadal działa? Co muszę zmienić?”" },
     { min: 9, title: "Praca, część 2", teacher: "Sprawdza, czy uczniowie wpisali zmianę planu.", students: "Kończą zadanie, zaznaczają zmianę innym kolorem." },
-    { min: 6, title: "Ocena strategii", teacher: "Porównuje dwa różne podejścia i pyta: „Kiedy ta strategia się sprawdza, a kiedy nie?”", students: "Zapisują, co zachowają w następnym zadaniu." },
-    { min: 2, title: "Zapis", teacher: "Zbiera karty.", students: "Kończą zdanie: „Zmieniłem plan, ponieważ…”" }
+    { min: 8, title: "Ocena strategii i zapis", teacher: "Porównuje dwa różne podejścia i pyta: „Kiedy ta strategia się sprawdza, a kiedy nie?” Na koniec zbiera karty.", students: "Zapisują, co zachowają w następnym zadaniu. Kończą zdanie: „Zmieniłem plan, ponieważ…”" }
   ],
   decisionPoint: "Jeżeli w punkcie kontrolnym nikt nie zmienił planu, sprawdź, czy nowa informacja była wystarczająco istotna. Jeśli była, wróć do modelu punktu kontrolnego na innym przykładzie.",
   scenarios: [

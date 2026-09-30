@@ -657,3 +657,9 @@ p { margin-top: 0; }
 @media print {
   .material-card, .teacher-key, .scenario { break-inside: avoid; }
 }
+
+.method-card-top { align-items: center; gap: 10px; }
+.project-mark { display: inline-flex; align-items: center; margin-left: auto; padding: 2px 6px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.project-mark img { display: block; height: 22px; width: auto; }
+.hero-mark { margin-left: 10px; vertical-align: middle; }
+.hero-mark img { height: 26px; }

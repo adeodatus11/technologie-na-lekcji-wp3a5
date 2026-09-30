@@ -23,8 +23,7 @@ export default {
   },
   lesson: [
     { min: 4, title: "Cztery pytania bez notatek", teacher: "Wyświetla 4 pytania (2 z poprzedniej lekcji, 2 sprzed 2–3 tygodni) i mówi wprost, że nie będzie oceny.", students: "Piszą odpowiedzi. Przy każdej zaznaczają, czy są pewni, czy nie." },
-    { min: 5, title: "Sprawdzenie i poprawa", teacher: "Czyta odpowiedzi. Po każdym pytaniu prosi o podniesienie ręki, kto miał dobrze.", students: "Poprawiają odpowiedzi innym kolorem. Ich pierwsza wersja zostaje widoczna." },
-    { min: 3, title: "Jedna luka", teacher: "Wybiera pytanie z największą liczbą błędów i wyjaśnia je na przykładzie i kontrprzykładzie.", students: "Dopisują jedno zdanie wyjaśnienia." },
+    { min: 8, title: "Sprawdzenie, poprawa i jedna luka", teacher: "Czyta odpowiedzi. Po każdym pytaniu prosi o podniesienie ręki, kto miał dobrze. Pytanie z największą liczbą błędów wyjaśnia na przykładzie i kontrprzykładzie.", students: "Poprawiają odpowiedzi innym kolorem. Ich pierwsza wersja zostaje widoczna. Dopisują jedno zdanie wyjaśnienia." },
     { min: 22, title: "Nowy temat", teacher: "Prowadzi nowy materiał, który korzysta z przypomnianej wiedzy.", students: "Pracują nad nowym tematem." },
     { min: 6, title: "Powrót na koniec", teacher: "Zadaje ponownie najtrudniejsze pytanie z początku. Zapisuje w karcie powrotów, co wróci za tydzień i za trzy.", students: "Odpowiadają jeszcze raz bez podglądania poprawnej wersji." }
   ],

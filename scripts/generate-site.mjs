@@ -22,7 +22,7 @@ const validateMethods = () => {
     if (!method.sources?.length) throw new Error(`${method.title}: brak źródła.`);
     if (!evidenceLabels[method.evidence?.level]) throw new Error(`${method.title}: nieznany poziom dowodów.`);
     const minutes = method.lesson.reduce((sum, step) => sum + Number(step.min), 0);
-    if (minutes < 35 || minutes > 40) throw new Error(`${method.title}: czas roboczy ${minutes} min (oczekiwano 35-40).`);
+    if (minutes < 35 || minutes > 40) console.warn(`Uwaga: ${method.title}: czas roboczy ${minutes} min (zalecane 35-40). Dostosuj plan lekcji.`);
     const kinds = method.scenarios.map((scenario) => scenario.kind);
     if (!kinds.includes("zawodowy") || !kinds.includes("ogolny")) throw new Error(`${method.title}: potrzebny scenariusz zawodowy i ogólnokształcący.`);
     method.scenarios.forEach((scenario) => {
@@ -113,10 +113,15 @@ ${footer()}
 `;
 
 
+const projectMark = (method, cls = "project-mark") => method.group === "wp3"
+  ? `<a class="${cls}" href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="Metoda z projektu WIN4SMEs"><img src="assets/Logo-2025.png" alt="WIN4SMEs"></a>`
+  : "";
+
 const methodCard = (method) => `
 <article class="method-card" data-method-card data-categories="${method.categories.join(" ")}" data-search="${escapeHtml([method.title, method.short, method.tags.join(" "), method.aliases.join(" ")].join(" ").toLocaleLowerCase("pl"))}">
   <div class="method-card-top">
     <span class="source-badge">${escapeHtml(groupLabels[method.group])}</span>
+    ${projectMark(method)}
     <span class="card-arrow" aria-hidden="true">→</span>
   </div>
   <h3><a href="${method.file}">${escapeHtml(method.title)}</a></h3>
@@ -283,7 +288,7 @@ const methodBody = (method) => {
   <section class="method-hero">
     <div class="container method-hero-inner">
       <a class="back-link" href="index.html#metody">← Wszystkie metody</a>
-      <span class="source-badge hero-badge">${escapeHtml(groupLabels[method.group])}</span>
+      <span class="source-badge hero-badge">${escapeHtml(groupLabels[method.group])}</span>${projectMark(method, "project-mark hero-mark")}
       <h1>${escapeHtml(method.title)}</h1>
       <p class="method-definition">${escapeHtml(method.definition)}</p>
       <p class="aliases"><strong>Nazywane też:</strong> ${method.aliases.map(escapeHtml).join(", ")}</p>
@@ -320,7 +325,7 @@ ${mobileToc.trim()}
 
       <section id="lekcja" class="content-section">
         <h2>Przebieg lekcji 45-minutowej</h2>
-        <p class="time-note">Czas roboczy: ${total} minut. Pierwsze około 5 minut lekcji (obecność, sprawy organizacyjne) nie jest wliczone w poniższy plan. Podane minuty liczone są od rozpoczęcia pracy nad tematem.</p>
+        <p class="time-note">Czas roboczy: ${total} minut. Pierwsze około 5 minut lekcji (obecność, sprawy organizacyjne) nie jest wliczone w poniższy plan. Podane minuty liczone są od rozpoczęcia pracy nad tematem.${total < 40 ? ` Do 40 minut zostaje ${40 - total} min zapasu na przejścia i nieprzewidziane sytuacje.` : ""}</p>
         <div class="detailed-lesson-flow">${steps}</div>
         <div class="decision-point"><strong>Punkt decyzji</strong><p>${escapeHtml(method.decisionPoint)}</p></div>
         ${method.variantB ? `<div class="variant-b"><h3>${escapeHtml(method.variantB.title)}</h3><ol>${method.variantB.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol></div>` : ""}

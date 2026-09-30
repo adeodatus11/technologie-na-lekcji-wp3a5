@@ -24,11 +24,9 @@ export default {
   lesson: [
     { min: 3, title: "Cel i dwa kryteria", teacher: "Zapisuje cel lekcji i dwa kryteria sukcesu (np. K1, K2).", students: "Przepisują kryteria w nagłówku karty." },
     { min: 7, title: "Krótkie wyjaśnienie", teacher: "Wyjaśnia nowe pojęcie na jednym przykładzie.", students: "Notują jedno zdanie własnymi słowami." },
-    { min: 5, title: "Pytanie A–D", teacher: "Pokazuje pytanie z czterema odpowiedziami. Na sygnał wszyscy podnoszą kartonik.", students: "Odpowiadają jednocześnie, potem w parze mówią jeden powód wyboru." },
-    { min: 3, title: "Decyzja nauczyciela", teacher: "Liczy kartoniki i wybiera jedną z trzech ścieżek: dalej, rozmowa w parach i ponowne głosowanie, krótkie ponowne wyjaśnienie.", students: "Głosują ponownie, jeśli nauczyciel zdecyduje o rozmowie." },
+    { min: 8, title: "Pytanie A–D i decyzja nauczyciela", teacher: "Pokazuje pytanie z czterema odpowiedziami. Na sygnał wszyscy podnoszą kartonik. Liczy je i wybiera jedną z trzech ścieżek: dalej, rozmowa w parach i ponowne głosowanie, krótkie ponowne wyjaśnienie.", students: "Odpowiadają jednocześnie, w parze mówią jeden powód wyboru. Głosują ponownie, jeśli nauczyciel zdecyduje o rozmowie." },
     { min: 12, title: "Zadanie: pierwsza wersja", teacher: "Daje zadanie z tymi samymi kryteriami. Obserwuje i zbiera dwa typowe błędy.", students: "Wykonują zadanie samodzielnie." },
-    { min: 7, title: "Jeden komentarz i poprawa", teacher: "Daje każdemu kod kryterium (np. K2) i jedno pytanie. Nie komentuje całych prac.", students: "Poprawiają wskazany fragment i zaznaczają zmianę kolorem." },
-    { min: 3, title: "Zdanie na wyjście", teacher: "Zbiera kartki.", students: "Piszą jedno zdanie: „Zmieniłem…, ponieważ…”" }
+    { min: 10, title: "Jeden komentarz, poprawa i zdanie na wyjście", teacher: "Daje każdemu kod kryterium (np. K2) i jedno pytanie. Nie komentuje całych prac. Na koniec zbiera kartki.", students: "Poprawiają wskazany fragment i zaznaczają zmianę kolorem. Piszą jedno zdanie: „Zmieniłem…, ponieważ…”" }
   ],
   decisionPoint: "Ustal przed lekcją: powyżej 70% poprawnych odpowiedzi idziesz dalej, 30–70% dajesz rozmowę w parach i drugie głosowanie, poniżej 30% wyjaśniasz jeszcze raz na innym przykładzie.",
   scenarios: [
