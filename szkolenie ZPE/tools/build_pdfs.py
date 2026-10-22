@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,html
+import json,html,os
 from reportlab.pdfgen import canvas
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,Table,TableStyle,Image,KeepTogether,Flowable
 from reportlab.lib.styles import ParagraphStyle
@@ -9,7 +9,8 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.pagesizes import A4
 R=Path(__file__).resolve().parents[1]; D=json.loads((R/'content.json').read_text())
-F=Path('/Users/maciejnajwer/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/Resources/fonts/truetype')
+# Katalog z DejaVuSans.ttf; na innym komputerze ustaw zmienną ZPE_FONTS (np. /usr/share/fonts/truetype/dejavu).
+F=Path(os.environ.get('ZPE_FONTS','/Users/maciejnajwer/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/Resources/fonts/truetype'))
 # Both fonts cover Polish characters.
 pdfmetrics.registerFont(TTFont('Body',str(F/'DejaVuSans.ttf')))
 pdfmetrics.registerFont(TTFont('Bold',str(F/'DejaVuSans-Bold.ttf')))
@@ -38,7 +39,7 @@ class NumberedCanvas(canvas.Canvas):
  def save(self):
   count=len(self.saved)
   for s in self.saved:
-   self.__dict__.update(s);self.setFont('Body',8);self.setFillColor(GRAY);self.drawString(52,30,'ZPE bez pośpiechu | Materiały warsztatowe | 28.09.2026');self.drawRightString(A4[0]-52,30,f'{self._pageNumber} / {count}');super().showPage()
+   self.__dict__.update(s);self.setFont('Body',8);self.setFillColor(GRAY);self.drawString(52,30,'ZPE bez pośpiechu | Materiały warsztatowe | aktualizacja 22.10.2026');self.drawRightString(A4[0]-52,30,f'{self._pageNumber} / {count}');super().showPage()
   super().save()
 def build(name,pages,title):
  story=[]
@@ -53,12 +54,17 @@ styles['body'].leading=17
 styles['small'].fontSize=9.5
 styles['small'].leading=13
 C=[]
+I=D['intro']
+def methods_table(rows,widths):
+ t=Table(rows,colWidths=widths,repeatRows=1);t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),LIGHT),('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,-1),.3,colors.HexColor('#cbd6cd')),('TOPPADDING',(0,0),(-1,-1),4),('BOTTOMPADDING',(0,0),(-1,-1),4)]));return t
+rows=[[p('Moment lekcji','small'),p('Metoda','small'),p('Co robią uczniowie','small')]]+[[p(I['moments'][m['moment']][0],'small'),p(m['title'],'small'),p(m['students'],'small')] for m in I['methods']]
+C.append(heading('KARTA WSTĘPNA / METODY PRACY','Czas dla uczniów')+[p('Rytm lekcji: '+' → '.join(r[0] for r in I['rhythm'])+'.'),methods_table(rows,[95,130,266]),Spacer(1,8),p('Mój wybór: metoda i moment lekcji, w którym uczniowie pracują sami','h3'),lines(2),p('Opisy metod, plany lekcji i poziom dowodów: metodyka.covepolska.pl. Badania: strona szkolenia „Metody pracy”.','small')])
 C.append(heading('KARTA 1 / PODSTAWY','Pierwsze kroki')+[p('Cel: otworzyć ZPE, przełączyć kartę i wrócić do instrukcji.'),p('Przeglądarka','h3'),p('Program do otwierania stron, np. Chrome, Edge, Firefox lub Safari.'),p('Pasek adresu','h3'),p('Pole u góry okna. Kliknij je, wpisz zpe.gov.pl i naciśnij Enter. Link to klikany tekst lub przycisk otwierający stronę.'),p('Karta przeglądarki','h3'),p('Zakładka z tytułem u góry. W jednej karcie jest szkolenie, w drugiej ZPE. Kliknij tytuł karty, aby wrócić.'),p('Przećwicz','h2')]+numbered(['Przewijanie: kółko myszy lub dwa palce przesuwane po płytce laptopa.','Powiększanie: menu przeglądarki → Powiększenie → plus. Skrót: Ctrl i + (Mac: Cmd i +).','Kopiowanie adresu: kliknij pasek adresu i zaznacz go w całości (Ctrl+A). Skopiuj (Ctrl+C). Kliknij pole Link w planie i wklej (Ctrl+V). Na Macu użyj Cmd zamiast Ctrl.'])+[p('Jeśli coś się nie zgadza','h2'),p('Zatrzymaj się i wskaż krok instrukcji. Nie zamykaj całego programu. Hasło wpisuj samodzielnie, wyłącznie w ZPE.'),p('Sprawdzam: potrafię otworzyć ZPE i wrócić do karty szkolenia.','h3'),p('Mój temat następnej lekcji:'),lines(2)])
 C.append(heading('KARTA 2A / WYSZUKIWANIE','Znajduję materiał')+numbered(['Na ZPE otwórz Katalog i pole wyszukiwania.','Wpisz „Gdzie tego szukać? O notowaniu”. Uruchom wyszukiwanie.','Otwórz wynik o tym tytule. Znajdź fragment o tabeli, punktach i schemacie.','Przy własnym temacie możesz wybrać etap i przedmiot. Gdy nie ma wyników, usuń część filtrów lub skróć hasło.'])+[fig('wyszukiwanie.png',230),p('Oficjalna ilustracja ZPE pokazuje przykład biologiczny. Na warsztacie wpisz tytuł o notowaniu. Nie przepisuj zapytania z ilustracji.','small'),url('Źródło ilustracji i instrukcji: Wyszukiwanie materiałów',D['sources'][0][1]),p('Ilustracja pochodzi z poradnika ZPE, pobrana 28.09.2026; nie z konta uczestnika. Prowadzący porównuje ją z ekranem przed szkoleniem.','small'),p('Mój temat wyszukiwania:'),lines(2),p('Gdy nie znajduję materiału','h2'),p('Po 5 minutach wybieram propozycję z zestawu startowego. Sprawdzam: cel, poziom trudności i wielkość fragmentu.')])
 C.append(heading('KARTA 2B / ULUBIONE','Zapisuję i wracam')+numbered(['Zaloguj się na własne konto ZPE.','W materiale kliknij serce „Dodaj do ulubionych”. Drugie kliknięcie może usunąć zapis.','Otwórz Katalog → Ulubione. Znajdź tytuł i ponownie otwórz materiał.'])+[fig('ulubione-serce.png',165),p('1. Ikona serca zaznaczona na ilustracji poradnika.','small'),fig('ulubione-katalog.png',165),p('2. Powrót przez Katalog → Ulubione.','small'),url('Źródło obu ilustracji: oficjalna instrukcja Ulubione',D['sources'][1][1]),p('Pobrano 28.09.2026. W materiale wielostronicowym serce może być nad spisem treści. Operację na koncie sprawdza uczestnik z prowadzącym.','small'),p('Sprawdzam: zasób jest na mojej liście i otwieram go przez tę listę. Bez logowania mogę oglądać stronę, ale nie potwierdzam zapisu.','small')])
 C.append(heading('KARTA 3 / PRACA W PARZE','Pomagamy sobie')+[p('Każdy obsługuje własny laptop. Zmieniamy role.'),p('Osoba ćwicząca','h2')]+numbered(['Otwiera Ulubione.','Wybiera zapisany materiał.','Pokazuje dokładny fragment.','Mówi, co mogliby zrobić z nim uczniowie.'])+[p('Osoba wspierająca pyta','h2')]+numbered(['Na którym kroku teraz jesteś?','Co widzisz na ekranie i jak to się nazywa?','Jaki następny krok wskazuje instrukcja?'])+[p('Wskaż instrukcję i daj czas na próbę. Nie przejmuj myszy ani nie odczytuj hasła. Po zmianie ról obie osoby mają wykonać procedurę.'),p('Próba własnego polecenia','h2'),p('Wiem, co mam zrobić…'),lines(),p('Potrzebuję doprecyzowania…'),lines(),p('Jedna zmiana w moim poleceniu:'),lines(2)])
 card4=heading('KARTA 4A / MÓJ PLAN','Moja lekcja z ZPE')+[p('Plan na 10–15 minut. Uzupełnij krótko; kontynuacja na następnej stronie.')]
-for key in ['topic','group','need','goal','title','url','fragment']:
+for key in ['topic','group','need','method','goal','title','url','fragment']:
  label=next(f[1] for f in D['fields'] if f[0]==key);card4 +=[p(label,'h3'),lines(2 if key=='fragment' else 1)]
 C.append(card4)
 card4b=heading('KARTA 4B / MÓJ PLAN','Zadanie i sprawdzenie')
@@ -80,14 +86,26 @@ styles['body'].leading=15.5
 styles['small'].fontSize=8.5
 styles['small'].leading=12
 T=[]
-T.append(heading('SCENARIUSZ PROWADZĄCEGO','ZPE bez pośpiechu')+[p('180 minut zegarowych, w tym dwie przerwy. Około 40 osób, 20 par, jeden trener. Każdy pracuje na swoim laptopie i koncie ZPE.'),p('Efekt warsztatu','h2'),p('Uczestnik znajduje, zapisuje i ponownie otwiera materiał. Przygotowuje fragment lekcji na 10–15 minut: cel, polecenie, oczekiwaną odpowiedź i sposób sprawdzenia.'),p('Zasady prowadzenia','h2')]+numbered(['Pokaż jedną krótką czynność przez 2–4 minuty. Potem uczestnik wykonuje ją na swoim komputerze.','Pracuj z całą grupą przy czterech parach zgłaszających ten sam problem. Przy pojedynczej trudności udziel wskazówki przy stanowisku.','Zmieniaj role w parach. Osoba wspierająca wskazuje instrukcję, nie przejmuje myszy. Osoby szybsze układają drugie polecenie do tego samego materiału.','Dostosuj pomoc do obserwowanej trudności. Nie etykietuj uczestników według wieku ani szybkości pracy.','Oddziel brak logowania od braku umiejętności. Publiczne przeglądanie nie zalicza zapisu w Ulubionych.'])+[p('Co jest już sprawdzone','h2'),p('Kwerenda publicznych źródeł: 28.09.2026. Oficjalne instrukcje opisują serce i drogę Katalog → Ulubione. Ilustracje pochodzą z tych poradników.'),p('Do wykonania przez organizatora','h2'),p('Próba na zalogowanym koncie, test sieci i projektora w sali oraz pilotaż z dwiema osobami początkującymi. Autor pakietu nie wykonał tych prób. Nie są przedstawiane jako zakończone.')])
+T.append(heading('SCENARIUSZ PROWADZĄCEGO','ZPE bez pośpiechu')+[p('180 minut zegarowych, w tym dwie przerwy. Około 40 osób, 20 par, jeden trener. Każdy pracuje na swoim laptopie i koncie ZPE.'),p('Efekt warsztatu','h2'),p('Uczestnik wybiera metodę, w której uczniowie pracują samodzielnie. Znajduje, zapisuje i ponownie otwiera materiał. Przygotowuje fragment lekcji na 10–15 minut: cel, metodę, polecenie, oczekiwaną odpowiedź i sposób sprawdzenia.'),p('Zasady prowadzenia','h2')]+numbered(['Pokaż jedną krótką czynność przez 2–4 minuty. Potem uczestnik wykonuje ją na swoim komputerze.','Pracuj z całą grupą przy czterech parach zgłaszających ten sam problem. Przy pojedynczej trudności udziel wskazówki przy stanowisku.','Zmieniaj role w parach. Osoba wspierająca wskazuje instrukcję, nie przejmuje myszy. Osoby szybsze układają drugie polecenie do tego samego materiału.','Dostosuj pomoc do obserwowanej trudności. Nie etykietuj uczestników według wieku ani szybkości pracy.','Oddziel brak logowania od braku umiejętności. Publiczne przeglądanie nie zalicza zapisu w Ulubionych.'])+[p('Co jest już sprawdzone','h2'),p('Kwerenda publicznych źródeł: 28.09.2026. Oficjalne instrukcje opisują serce i drogę Katalog → Ulubione. Ilustracje pochodzą z tych poradników.'),p('Do wykonania przez organizatora','h2'),p('Próba na zalogowanym koncie, test sieci i projektora w sali oraz pilotaż z dwiema osobami początkującymi. Autor pakietu nie wykonał tych prób. Nie są przedstawiane jako zakończone.')])
 prep=heading('PRZED SZKOLENIEM','Lista przygotowania')
 for x in D['preflight']:prep += [p('○ '+x)]
 prep +=[p('Krótki protokół pilotażu','h2'),p('Osoba / etap / miejsce zatrzymania / potrzebna podpowiedź / poprawka instrukcji:'),lines(3)];T.append(prep)
 rows=[[p('Minuty','small'),p('Etap','small'),p('Efekt','small')]]+[[p('-'.join(map(str,s['time'])),'small'),p(s['title'],'small'),p(s['done'],'small')] for s in D['stages']]
 t=Table(rows,colWidths=[60,145,286],repeatRows=1);t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),LIGHT),('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,-1),.3,colors.HexColor('#cbd6cd')),('TOPPADDING',(0,0),(-1,-1),6),('BOTTOMPADDING',(0,0),(-1,-1),6)]))
 T.append(heading('HARMONOGRAM','Wersja 180 minut')+[t])
-T.append(heading('KRÓTSZY WARIANT','Wersja 120 minut')+[p(r[0]+' min | '+r[1]) for r in D['short']]+[p('Dostosowanie pracy','h2'),p('Etap par: 2 min instrukcji, po 5 min na każdą rolę i 3 min na sprawdzenie. Zakończenie: 10 min samodzielnej próby i 5 min na termin użycia oraz zachowanie planu.'),p('Pomijamy drugą przerwę, osobny test poleceń w parach i pokaz kursów. Pozostają własna praca, przerwa, indywidualny sprawdzian wykonania i plan wdrożenia.'),p('Gdy grupa potrzebuje jeszcze więcej pomocy','h2'),p('Zachowaj przerwę i próbę samodzielną. Ogranicz wybór do jednego zasobu startowego, a oszczędzony czas przeznacz na ponowne wykonanie trudnego kroku. Nie obiecuj, że w tym samym czasie nauczysz wszystkich również tworzenia kursów.')])
+T.append(heading('KRÓTSZY WARIANT','Wersja 120 minut')+[p(r[0]+' min | '+r[1]) for r in D['short']]+[p('Dostosowanie pracy','h2'),p('Etap par: 2 min instrukcji, po 5 min na każdą rolę i 3 min na sprawdzenie. Zakończenie: 10 min samodzielnej próby i 5 min na termin użycia oraz zachowanie planu.'),p('Pomijamy drugą przerwę, osobny test poleceń w parach i pokaz kursów. Pozostają własna praca, przerwa, indywidualny sprawdzian wykonania i plan wdrożenia. Część ogólną skracamy do 10 minut: trzy powody bez pokazu materiału i wybór metody; mapa metod zostaje na karcie wstępnej.'),p('Gdy grupa potrzebuje jeszcze więcej pomocy','h2'),p('Zachowaj przerwę i próbę samodzielną. Ogranicz wybór do jednego zasobu startowego, a oszczędzony czas przeznacz na ponowne wykonanie trudnego kroku. Nie obiecuj, że w tym samym czasie nauczysz wszystkich również tworzenia kursów.')])
+gen=heading('CZĘŚĆ OGÓLNA / ETAP 1',I['title'])+[p(I['lede']),p('Rytm lekcji','h2')]+[p(r[0]+': '+r[1]) for r in I['rhythm']]+[p('Ten warsztat jest zbudowany tak samo: krótki pokaz, potem próba uczestników i sprawdzenie.','small')]
+for i,r in enumerate(I['reasons']):
+ gen +=[p(f"{i+1}. {r['title']}",'h2'),p(r['text']),p('Co mówią badania','h3')]+[p('• '+e) for e in r['evidence']]+[p('Zastrzeżenie: '+r['caveat'],'small')]
+gen +=[p('Co robię, kiedy uczniowie pracują','h2')]+[p('• '+x) for x in I['teacher']]+[p('Gotowe zadania a oceny','h2')]+[p('• '+x) for x in I['grades']]+[p('Na co uważać','h2')]+[p('• '+x) for x in I['pitfalls']]
+T.append(gen)
+gen2=heading('CZĘŚĆ OGÓLNA / ETAP 1','Mapa metod')
+rows=[[p('Moment','small'),p('Metoda / dowody','small'),p('Uczniowie','small'),p('Nauczyciel','small')]]+[[p(I['moments'][m['moment']][0],'small'),p(m['title']+' ('+m['evidence'].lower()+')','small'),p(m['students'],'small'),p(m['teacher'],'small')] for m in I['methods']]
+gen2 +=[p('Dwanaście metod z katalogu metodyka.covepolska.pl. Każda ma tam opis, plan lekcji i wersję z technologią oraz bez niej.','small'),methods_table(rows,[70,110,156,155])]
+T.append(gen2)
+src=heading('KWERENDA / '+I['date'],'Źródła części ogólnej')
+for s_ in I['sources']:src +=[p(s_[0],'h3'),p(s_[2],'small'),url(s_[1],s_[1])]
+T.append(src)
 for i,s in enumerate(D['stages']):
  page=heading(f'ETAP {i+1} / {s["time"][0]}-{s["time"][1]} MIN',s['title'])
  for label,key in [('Cel','goal'),('Przygotuj','prep'),('Powiedz','say'),('Poprowadź','run')]:page +=[p(label,'h3'),p(s[key])]
@@ -95,7 +113,7 @@ for i,s in enumerate(D['stages']):
  for label,key in [('Sprawdź efekt','done'),('Typowa trudność','error'),('Jak pomóc','help')]:page +=[p(label,'h3'),p(s[key])]
  T.append(page)
 page=heading('PRZYKŁAD WYPEŁNIENIA','Gotowy fragment lekcji')
-for k in ['topic','goal','fragment','duration','task','answer','check','revision','backup']:
+for k in ['topic','method','goal','fragment','duration','task','answer','check','revision','backup']:
  page +=[p(next(f[1] for f in D['fields'] if f[0]==k),'h3'),p(D['example'][k])]
 page +=[url('Materiał źródłowy: Gdzie tego szukać? O notowaniu',D['example']['url'])];T.append(page)
 T.append(heading('POKAZ DLA GRUPY','Kurs i informacja zwrotna')+[p('Uczestnicy obserwują. Wykorzystaj konta testowe lub oficjalne ilustracje. Nigdy nie prezentuj danych rzeczywistych uczniów.')]+numbered(['3 min: Udostępnij → Platforma edukacyjna → Nowy kurs.','3 min: wyjaśnij Zapisz / Opublikuj oraz przypisanie uczniów.','3 min: pokaż zakładkę Analiza i omów przypadek poniżej.','1 min: pytanie „Czy zwykły link daje raport ucznia?”. Odpowiedź: nie.'])+[p('Przypadek do rozmowy: dane fikcyjne','h2'),p('Pytanie: jaka forma notatki ułatwia porównanie dwóch rzeczy?\nA: „Tabela, bo widzę te same cechy obok siebie”.\nB: „Punkty, bo zawsze są najlepsze”.\nC: brak odpowiedzi.'),p('To autorski przykład dydaktyczny, nie zrzut ani odwzorowanie raportu ZPE.','small'),p('Decyzja nauczyciela','h2'),p('A uzasadnia wybór celem. B potrzebuje konkretnego porównania dwóch form. Przy C najpierw sprawdzamy dostęp i zrozumienie polecenia. Brak odpowiedzi nie dowodzi braku chęci, a czas wyświetlania nie mierzy uwagi.'),p('Instrukcje do pokazu','h2')]+[url(s[0],s[1]) for s in D['sources'][4:7]])

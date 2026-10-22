@@ -1,6 +1,8 @@
 # ZPE bez pośpiechu
 
-Gotowy pakiet warsztatu dla około 40 nauczycieli: 180 minut z dwiema przerwami, jeden trener, własne laptopy i konta ZPE. Zawiera też wariant 120 minut. Cel uczestnika: gotowy fragment lekcji na 10–15 minut i umiejętność powrotu do materiału.
+Gotowy pakiet warsztatu dla około 40 nauczycieli: 180 minut z dwiema przerwami, jeden trener, własne laptopy i konta ZPE. Zawiera też wariant 120 minut. Cel uczestnika: gotowy fragment lekcji na 10–15 minut, w którym uczniowie pracują samodzielnie, oraz umiejętność powrotu do materiału.
+
+Szkolenie zaczyna się od części ogólnej (etap 1, 20 minut): „Lekcja to nie tylko wykład”. Pokazuje rytm lekcji (krótkie wyjaśnienie → praca uczniów → sprawdzenie), trzy powody oparte na badaniach (uwaga, zaangażowanie uczniów mało aktywnych i z trudnościami, gotowe zadania jako informacja zwrotna i podstawa ocen) oraz mapę 12 metod z katalogu [metodyka.covepolska.pl](https://metodyka.covepolska.pl/index.html#metody). Uczestnik wybiera metodę i zapisuje ją w planie lekcji.
 
 ## Uruchomienie
 
@@ -16,11 +18,11 @@ Polecenie uruchom w folderze pakietu, następnie otwórz `http://127.0.0.1:8765/
 
 ## Co jest w pakiecie
 
-- Strona: 12 etapów, 8 materiałów (4 ogólne i 4 zawodowe), formularz lekcji, samoocena, instrukcje i widok trenera.
-- `output/pdf/karty-uczestnika.pdf`: 8 stron A4; pięć kart tematycznych (karty 2 i 4 mają po dwie strony) oraz komunikaty na stolik.
-- `output/pdf/scenariusz-trenera.pdf`: 23 strony A4; harmonogramy, komunikaty, czynności, trudności i pomoc, pokaz kursu, przykład lekcji, plan awaryjny, źródła.
+- Strona: 12 etapów (etap 1 to część ogólna), strona „Metody pracy” z badaniami i mapą metod, 8 materiałów (4 ogólne i 4 zawodowe), formularz lekcji, samoocena, instrukcje i widok trenera.
+- `output/pdf/karty-uczestnika.pdf`: 9 stron A4; karta wstępna z mapą metod, pięć kart tematycznych (karty 2 i 4 mają po dwie strony) oraz komunikaty na stolik.
+- `output/pdf/scenariusz-trenera.pdf`: 29 stron A4; harmonogramy, część ogólna (trzy powody z badaniami, mapa metod, źródła), komunikaty, czynności, trudności i pomoc, pokaz kursu, przykład lekcji, plan awaryjny, źródła.
 - `content.json`: treści do dalszej edycji; źródłem generującym JSON i JS jest `tools/content.py`.
-- `tools/build_pdfs.py`: generator PDF (Python, ReportLab, czcionki DejaVu; ścieżkę czcionek należy dostosować na innym komputerze).
+- `tools/build_pdfs.py`: generator PDF (Python, ReportLab, czcionki DejaVu). Katalog czcionek wskazuje zmienna `ZPE_FONTS`, np. `ZPE_FONTS=/usr/share/fonts/truetype/dejavu python3 tools/build_pdfs.py`.
 - `tools/test.mjs`: testy logiki i spójności; uruchomienie `node tools/test.mjs`.
 
 ## Jak poprowadzić zajęcia

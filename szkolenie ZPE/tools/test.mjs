@@ -19,4 +19,8 @@ const broken=boot('{corrupt');assert.equal(broken.run('storageOK'),false);
 const denied=boot(null,true);denied.run(`state.lesson.topic='Nie zgub danych';save();`);assert.equal(denied.run('state.lesson.topic'),'Nie zgub danych');assert.equal(denied.run('storageOK'),false);
 for(let i=1;i<=12;i++)assert(app.run(`stage(${i})`).includes(data.stages[i-1].title.replaceAll('&','&amp;')));
 for(const f of data.fields)assert(app.run('cardsHTML()').includes(f[1]));
-console.log('PASS: harmonogram, 4+4 zasoby, 12 etapów, wszystkie pola kart, walidacja adresów, escaping, zapis i odtworzenie, uszkodzone i niedostępne localStorage.');
+assert.equal(data.intro.methods.length,12);assert.equal(data.intro.reasons.length,3);
+const mv=app.run('methodsView()');for(const m of data.intro.methods){assert(m.url.startsWith('https://metodyka.covepolska.pl/'));assert(mv.includes(m.url));assert(data.intro.moments[m.moment]);}
+for(const s of data.intro.sources)assert(mv.includes(s[1].replaceAll('&','&amp;')));
+assert(app.run('cardsHTML()').includes('Karta wstępna'));assert(app.run('lesson()').includes('f-method'));assert(data.example.method);
+console.log('PASS: harmonogram, 4+4 zasoby, 12 etapów, część ogólna (12 metod, 3 powody, źródła), wszystkie pola kart, walidacja adresów, escaping, zapis i odtworzenie, uszkodzone i niedostępne localStorage.');

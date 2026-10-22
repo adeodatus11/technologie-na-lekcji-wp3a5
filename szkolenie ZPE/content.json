@@ -162,6 +162,277 @@
       "note": "Dostępny jest także opis tekstowy. Nie trzeba przechodzić wszystkich zakładek."
     }
   ],
+  "intro": {
+    "date": "22.10.2026",
+    "title": "Lekcja to nie tylko wykład",
+    "lede": "Technologia nie musi oznaczać, że nauczyciel klika, a klasa patrzy. Największą zmianę daje wtedy, gdy część lekcji przejmują uczniowie: pracują samodzielnie, w parze lub w grupie, a nauczyciel obserwuje i pomaga.",
+    "rhythm": [
+      [
+        "Krótko wyjaśniam",
+        "5-10 minut: pokaz, przykład, jedno polecenie zapisane na tablicy lub w materiale."
+      ],
+      [
+        "Uczniowie działają",
+        "10-15 minut: zadanie z gotowym materiałem, w parze albo w grupie. Na końcu zostaje odpowiedź lub produkt."
+      ],
+      [
+        "Sprawdzamy",
+        "3-5 minut: odpowiedź każdego ucznia, wynik ćwiczenia albo jedna wspólna poprawka."
+      ],
+      [
+        "Kolejny krok",
+        "Decyduję, co dalej: powtórka, trudniejsze zadanie albo nowa treść."
+      ]
+    ],
+    "reasons": [
+      {
+        "title": "Uwaga wraca, gdy uczeń ma coś do zrobienia",
+        "text": "Długie słuchanie bez zadania sprzyja „odpływaniu”. Krótkie zadania przeplatane z wyjaśnianiem przywracają uwagę i pomagają zapamiętać treść. Uczeń, który porównuje, wybiera albo wyjaśnia, uczy się więcej niż osoba, która tylko słucha.",
+        "evidence": [
+          "Szpunar, Khan i Schacter (2013): przerywanie 21-minutowego wykładu online krótkimi pytaniami zmniejszyło błądzenie myślami mniej więcej o połowę i poprawiło zapamiętanie treści.",
+          "Freeman i in. (2014), metaanaliza 225 badań: przy aktywnym uczeniu się wyniki egzaminów były średnio o około 6% wyższe, a w zajęciach wykładowych ryzyko niezaliczenia było około 1,5 raza większe.",
+          "Chi i Wylie (2014), model ICAP: uczenie się rośnie, gdy uczeń przechodzi od biernego słuchania do działania, tworzenia własnej odpowiedzi i rozmowy z innymi."
+        ],
+        "caveat": "Większość tych badań dotyczy studentów i przedmiotów ścisłych. Dla technikum i szkoły branżowej to mocne uzasadnienie kierunku, a nie gwarancja konkretnego wyniku."
+      },
+      {
+        "title": "Uczniowie mało zaangażowani i z trudnościami często łatwiej wchodzą w działanie",
+        "text": "Uczeń, który dostaje do rąk zadanie, wybór i odpowiedzialność za produkt, ma więcej powodów, żeby się włączyć, niż wtedy, gdy tylko słucha. Uczniom, którym trudno długo słuchać, pomaga krótka instrukcja zapisana na piśmie, jedno zadanie naraz i widoczny efekt pracy.",
+        "evidence": [
+          "Patall, Cooper i Robinson (2008), metaanaliza 41 badań: możliwość wyboru zwiększa motywację wewnętrzną, wysiłek i wyniki zadań. Efekt jest najsilniejszy przy niewielkiej liczbie opcji (2-4).",
+          "Theobald i in. (2020): aktywne uczenie się zmniejszyło różnice w wynikach egzaminów o 33%, a w zdawalności o 45% między studentami z grup niedoreprezentowanych a pozostałymi.",
+          "EEF, Special Educational Needs in Mainstream Schools (2020): uczniom ze specjalnymi potrzebami najbardziej pomaga dobre nauczanie dla całej klasy: jawne wyjaśnianie, rusztowanie zdejmowane z czasem, strategie planowania i kontroli pracy, elastyczne grupowanie i przemyślane użycie technologii."
+        ],
+        "caveat": "Praca samodzielna nie oznacza zostawienia ucznia samego sobie. Bez jasnego polecenia, przykładu i wiedzy wstępnej najwięcej tracą właśnie słabsi uczniowie (Kirschner, Sweller, Clark 2006). „Style uczenia się” nie mają poparcia w badaniach (Pashler i in. 2008). Różnicujemy drogę dostępu, nie cel."
+      },
+      {
+        "title": "Gotowe zadania dają informację zwrotną, a często także oceny",
+        "text": "Jeśli materiał ma ćwiczenia sprawdzane automatycznie albo test w kursie, dostajesz wynik każdego ucznia bez ręcznego sprawdzania. Od razu widzisz, kto potrzebuje pomocy. Po przypisaniu zadania w kursie ZPE wyniki znajdziesz w zakładce Analiza i możesz je wykorzystać przy ocenianiu.",
+        "evidence": [
+          "EEF, Using Digital Technology to Improve Learning (2019): technologia pomaga przede wszystkim wtedy, gdy poprawia ćwiczenie oraz ocenianie i informację zwrotną. Sam sprzęt nie poprawia uczenia się.",
+          "Roediger i Karpicke (2006), Dunlosky i in. (2013): przypominanie sobie odpowiedzi w quizie utrwala wiedzę lepiej niż ponowne czytanie. To jedna z najlepiej udokumentowanych technik uczenia się."
+        ],
+        "caveat": "Automat sprawdza tylko to, co da się sprawdzić automatycznie. Ocena musi być zgodna z zasadami oceniania w statucie szkoły. Część quizów zostaw jako ćwiczenie bez stopnia, bo przypominanie działa najlepiej bez stresu. Przed obietnicą ocen sprawdź, czy wybrane ćwiczenie zapisuje wyniki w kursie."
+      }
+    ],
+    "teacher": [
+      "Chodzę po klasie i obserwuję, jak uczniowie wykonują zadanie.",
+      "Pomagam osobom, które utknęły, wskazówką, a nie gotową odpowiedzią.",
+      "Zapisuję jeden typowy błąd do omówienia z całą klasą.",
+      "Wybieram dwie lub trzy prace do pokazania przy sprawdzeniu.",
+      "Przy wynikach automatycznych decyduję, kto idzie dalej, a kto dostaje drugie wyjaśnienie."
+    ],
+    "grades": [
+      "Wynik z kursu ZPE lub karta z kluczem może być podstawą oceny, jeśli taka forma mieści się w zasadach oceniania szkoły.",
+      "Oceniaj opanowanie konkretnej umiejętności, nie samo kliknięcie ani czas spędzony w materiale.",
+      "Daj możliwość poprawy: druga próba po wskazówce pokazuje postęp ucznia.",
+      "Praca na lekcji daje pewność, że wynik jest samodzielny. Praca domowa jest dobra jako ćwiczenie."
+    ],
+    "pitfalls": [
+      "Polecenie „obejrzyjcie materiał” bez zadania i produktu kończy się przeglądaniem.",
+      "Zbyt długi blok samodzielnej pracy bez sprawdzenia po drodze utrwala błędy.",
+      "Komputer lub telefon bez jasnego celu rozprasza. Urządzenie odkładamy, gdy zadanie jest wykonane.",
+      "Wynik automatyczny nie zastępuje rozmowy o błędzie. Omów z klasą najczęstszą pomyłkę."
+    ],
+    "moments": [
+      [
+        "Na start lekcji",
+        "Uczniowie przypominają sobie poprzednią lekcję lub przygotowują się do nowej."
+      ],
+      [
+        "Po krótkim wyjaśnieniu",
+        "Uczniowie przejmują zadanie stopniowo, od przykładu do samodzielnej próby."
+      ],
+      [
+        "Praca samodzielna",
+        "Każdy pracuje we własnym tempie z materiałem i zadaniami."
+      ],
+      [
+        "Praca z innymi",
+        "Uczniowie potrzebują siebie nawzajem, żeby wykonać zadanie."
+      ],
+      [
+        "Sprawdzenie i poprawa",
+        "Każdy uczeń pokazuje odpowiedź, a nauczyciel decyduje, co dalej."
+      ],
+      [
+        "Cykl kilku lekcji",
+        "Praca cyfrowa i praca na żywo łączą się w jeden plan."
+      ]
+    ],
+    "methods": [
+      {
+        "moment": 0,
+        "title": "Przypominanie i powroty",
+        "url": "https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html",
+        "evidence": "Mocne dowody",
+        "students": "Odpowiadają z pamięci na 3-5 pytań, sami sprawdzają z kluczem i poprawiają.",
+        "teacher": "Zbierasz najczęstszy błąd i wracasz do treści po kilku dniach.",
+        "tech": "Ćwiczenie ZPE sprawdzane automatycznie albo krótki quiz."
+      },
+      {
+        "moment": 0,
+        "title": "Flipped classroom",
+        "url": "https://metodyka.covepolska.pl/method-3.html",
+        "evidence": "Umiarkowane dowody",
+        "students": "Poznają krótki materiał przed lekcją albo w pierwszych minutach na miejscu.",
+        "teacher": "Czas lekcji przeznaczasz na problemy i pytania, nie na powtórzenie wykładu.",
+        "tech": "Film lub e-materiał ZPE; plan B na papierze dla osób nieprzygotowanych."
+      },
+      {
+        "moment": 1,
+        "title": "Modelowanie",
+        "url": "https://metodyka.covepolska.pl/metoda-modelowanie.html",
+        "evidence": "Mocne dowody",
+        "students": "Dokańczają przykład z lukami, potem samodzielnie rozwiązują podobne zadanie.",
+        "teacher": "Pokazujesz procedurę na głos, a potem stopniowo zdejmujesz wsparcie.",
+        "tech": "E-materiał z przykładem krok po kroku albo prezentacja z odsłanianiem kroków."
+      },
+      {
+        "moment": 2,
+        "title": "360 e-learning",
+        "url": "https://metodyka.covepolska.pl/method-1.html",
+        "evidence": "Inspiracja projektowa",
+        "students": "Przechodzą moduł: materiał, zadania z natychmiastową informacją zwrotną, przypadek.",
+        "teacher": "Obserwujesz postęp i pomagasz tam, gdzie ktoś utknął.",
+        "tech": "E-materiał ZPE z ćwiczeniami interaktywnymi; kurs, jeśli chcesz zebrać wyniki."
+      },
+      {
+        "moment": 2,
+        "title": "Mastery learning",
+        "url": "https://metodyka.covepolska.pl/metoda-mastery-learning.html",
+        "evidence": "Umiarkowane dowody",
+        "students": "Rozwiązują trzy krótkie zadania diagnozy, potem idą do korekty albo rozszerzenia.",
+        "teacher": "Ustalasz próg i prowadzisz grupę, która potrzebuje innego wyjaśnienia.",
+        "tech": "Ćwiczenie ZPE sprawdzane automatycznie jako diagnoza."
+      },
+      {
+        "moment": 2,
+        "title": "UDL",
+        "url": "https://metodyka.covepolska.pl/metoda-udl.html",
+        "evidence": "Rama projektowa",
+        "students": "Wybierają jedną z dwóch dróg dostępu (tekst, schemat, nagranie) i jedną z dwóch form odpowiedzi.",
+        "teacher": "Usuwasz barierę, która nie jest celem lekcji. Cel i kryteria są wspólne.",
+        "tech": "E-materiał ZPE często ma tekst, grafikę i nagranie jednocześnie."
+      },
+      {
+        "moment": 2,
+        "title": "Metapoznanie",
+        "url": "https://metodyka.covepolska.pl/metoda-metapoznanie.html",
+        "evidence": "Mocne dowody",
+        "students": "Zapisują plan, zatrzymują się w połowie i oceniają, co z planu zadziałało.",
+        "teacher": "Pokazujesz własne planowanie na przykładzie i dajesz sygnał punktu kontrolnego.",
+        "tech": "Wystarczy kartka; timer jako sygnał punktu kontrolnego."
+      },
+      {
+        "moment": 3,
+        "title": "Współpraca: grupy z rolami i tutoring w parach",
+        "url": "https://metodyka.covepolska.pl/metoda-wspolpraca.html",
+        "evidence": "Umiarkowane dowody",
+        "students": "Każdy ma inną część wiedzy potrzebną do wspólnego produktu albo prowadzi partnera pytaniami z karty.",
+        "teacher": "Przygotowujesz role i karty, na końcu sprawdzasz każdego indywidualnie.",
+        "tech": "Jedno urządzenie w grupie do otwarcia źródła; produkt na papierze lub w dokumencie."
+      },
+      {
+        "moment": 3,
+        "title": "Nauczanie dialogowe",
+        "url": "https://metodyka.covepolska.pl/metoda-nauczanie-dialogowe.html",
+        "evidence": "Ograniczone dowody",
+        "students": "Zapisują stanowisko, porównują je w parze i uzasadniają danymi.",
+        "teacher": "Prowadzisz rozmowę pytaniami o dane i o to, co mogłoby zmienić decyzję.",
+        "tech": "Materiał ZPE jako źródło danych; rozmowa bez ekranów."
+      },
+      {
+        "moment": 3,
+        "title": "Problem, przypadek, projekt",
+        "url": "https://metodyka.covepolska.pl/metoda-problem-projekt-przypadek.html",
+        "evidence": "Umiarkowane dowody",
+        "students": "Podejmują decyzję albo tworzą produkt w realistycznej sytuacji zawodowej.",
+        "teacher": "Dajesz dane, kryteria i wiedzę wstępną, potem porównujecie decyzje grup.",
+        "tech": "Materiał ZPE z danymi udostępnianymi etapami."
+      },
+      {
+        "moment": 4,
+        "title": "Ocenianie kształtujące i poprawa",
+        "url": "https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html",
+        "evidence": "Mocne dowody",
+        "students": "Odpowiadają wszyscy naraz na jedno pytanie, potem poprawiają pracę według jednej wskazówki.",
+        "teacher": "Na podstawie odpowiedzi klasy zmieniasz dalszą część lekcji.",
+        "tech": "Kartoniki A-D, głosowanie albo wyniki ćwiczenia w kursie."
+      },
+      {
+        "moment": 5,
+        "title": "Blended learning",
+        "url": "https://metodyka.covepolska.pl/method-2.html",
+        "evidence": "Inspiracja projektowa",
+        "students": "Przygotowują się cyfrowo, pracują na warsztacie i wracają do treści po kilku dniach.",
+        "teacher": "Planujesz cały cykl: przygotowanie, warsztat, powrót i krótką ewaluację.",
+        "tech": "Quiz przygotowawczy i pytanie powrotne w ZPE lub formularzu szkoły."
+      }
+    ],
+    "sources": [
+      [
+        "Szpunar, Khan, Schacter: Interpolated memory tests reduce mind wandering and improve learning of online lectures (PNAS, 2013)",
+        "https://doi.org/10.1073/pnas.1221764110",
+        "Krótkie pytania w trakcie wykładu zmniejszają błądzenie myślami i poprawiają zapamiętanie."
+      ],
+      [
+        "Freeman i in.: Active learning increases student performance in science, engineering, and mathematics (PNAS, 2014)",
+        "https://doi.org/10.1073/pnas.1319030111",
+        "Metaanaliza 225 badań porównujących wykład z aktywnym uczeniem się na studiach."
+      ],
+      [
+        "Chi, Wylie: The ICAP Framework (Educational Psychologist, 2014)",
+        "https://doi.org/10.1080/00461520.2014.965823",
+        "Cztery poziomy zaangażowania poznawczego: bierny, aktywny, konstruktywny, interaktywny."
+      ],
+      [
+        "Patall, Cooper, Robinson: The effects of choice on intrinsic motivation and related outcomes (Psychological Bulletin, 2008)",
+        "https://doi.org/10.1037/0033-2909.134.2.270",
+        "Metaanaliza 41 badań nad wpływem wyboru na motywację i wysiłek."
+      ],
+      [
+        "Theobald i in.: Active learning narrows achievement gaps for underrepresented students (PNAS, 2020)",
+        "https://doi.org/10.1073/pnas.1916903117",
+        "Aktywne uczenie się zmniejsza różnice w wynikach między grupami studentów."
+      ],
+      [
+        "EEF: Special Educational Needs in Mainstream Schools (2020)",
+        "https://dera.ioe.ac.uk/37846/1/EEF_Special_Educational_Needs_in_Mainstream_Schools_Guidance_Report.pdf",
+        "Wytyczne: dobre nauczanie całej klasy jako podstawa wsparcia uczniów ze specjalnymi potrzebami."
+      ],
+      [
+        "EEF: Using Digital Technology to Improve Learning (2019)",
+        "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/digital",
+        "Technologia pomaga, gdy poprawia wyjaśnianie, ćwiczenie oraz ocenianie i informację zwrotną."
+      ],
+      [
+        "Roediger, Karpicke: Test-enhanced learning (Psychological Science, 2006)",
+        "https://doi.org/10.1111/j.1467-9280.2006.01693.x",
+        "Przypominanie sobie w teście utrwala wiedzę lepiej niż ponowne czytanie."
+      ],
+      [
+        "Dunlosky i in.: Improving Students' Learning With Effective Learning Techniques (2013)",
+        "https://pubmed.ncbi.nlm.nih.gov/26173288/",
+        "Quizowanie i rozkładanie nauki w czasie jako techniki o wysokiej użyteczności."
+      ],
+      [
+        "Kirschner, Sweller, Clark: Why Minimal Guidance During Instruction Does Not Work (2006)",
+        "https://doi.org/10.1207/s15326985ep4102_1",
+        "Uczenie przez odkrywanie bez wsparcia słabo działa u początkujących."
+      ],
+      [
+        "Pashler i in.: Learning Styles: Concepts and Evidence (2008)",
+        "https://doi.org/10.1111/j.1539-6053.2009.01038.x",
+        "Brak dowodów na dopasowywanie nauczania do „stylów uczenia się”."
+      ],
+      [
+        "Katalog metod: Innowacyjna lekcja w praktyce",
+        "https://metodyka.covepolska.pl/index.html#metody",
+        "Dwanaście metod z opisem, planem lekcji, poziomem dowodów i wersją z technologią i bez niej."
+      ]
+    ]
+  },
   "fields": [
     [
       "topic",
@@ -177,6 +448,11 @@
       "need",
       "Co chcę ułatwić uczniom?",
       "Np. wybranie najważniejszych informacji"
+    ],
+    [
+      "method",
+      "Jak uczniowie będą pracować? (metoda)",
+      "Np. samodzielne zadanie z e-materiałem, potem porównanie w parze"
     ],
     [
       "goal",
@@ -238,6 +514,7 @@
     "topic": "Jak porównać dwie formy notatki?",
     "group": "Godzina wychowawcza, klasa 1 technikum",
     "need": "Uczniowie zapisują dużo tekstu, ale trudno im porównywać informacje.",
+    "method": "Krótki pokaz, samodzielne zadanie z e-materiałem i porównanie w parze. Na końcu każdy pokazuje odpowiedź (ocenianie kształtujące).",
     "goal": "Dobiera formę notatki do porównania dwóch rzeczy i uzasadnia wybór.",
     "title": "Gdzie tego szukać? O notowaniu",
     "url": "https://zpe.gov.pl/a/gdzie-tego-szukac-o-notowaniu/DgDem0ria",
@@ -252,35 +529,36 @@
   },
   "stages": [
     {
-      "title": "Po co mi ZPE?",
+      "title": "Lekcja to nie tylko wykład",
       "time": [
         0,
-        10
+        20
       ],
-      "goal": "Wybierzesz temat lekcji, do której przyda Ci się gotowy materiał.",
+      "goal": "Zobaczysz, jak oddać uczniom część lekcji, i wybierzesz sposób ich pracy.",
       "steps": [
-        "Obejrzyj krótki przykład prowadzącego. Zobacz, co robi uczeń po otwarciu materiału.",
-        "Pomyśl o jednej lekcji, którą poprowadzisz w najbliższym tygodniu.",
-        "W „Mojej lekcji” zapisz temat i jedną rzecz, którą chcesz ułatwić uczniom."
+        "Obejrzyj krótki przykład: materiał ZPE z gotowym poleceniem. Zobacz, co robi uczeń, kiedy nauczyciel nie mówi.",
+        "Wysłuchaj trzech powodów, dla których warto przeplatać wyjaśnianie z pracą uczniów. Badania i szczegóły są na stronie „Metody pracy”.",
+        "Przejrzyj mapę metod. Wybierz jedną, którą chcesz wypróbować w swojej klasie, i powiedz partnerowi, w którym momencie lekcji jej użyjesz.",
+        "W „Mojej lekcji” zapisz temat, jedną rzecz, którą chcesz ułatwić uczniom, i wybraną metodę pracy."
       ],
-      "done": "Mam temat i jedną potrzebę mojej klasy.",
-      "hint": "Wystarczy jedno zdanie. Możesz najpierw zapisać je na papierowej karcie.",
-      "prep": "Otwórz wspólny materiał i gotowy przykład 12-minutowej lekcji. Rozdaj karty i sygnały pomocy.",
-      "say": "Dziś przygotujemy mały fragment prawdziwej lekcji. Nie trzeba poznawać całej platformy.",
-      "run": "0-3: pokaż fragment i gotowe polecenie. 3-6: uczestnicy krótko rozwiązują zadanie na papierze. 6-10: zapisują własny temat. Zapytaj: „Co w tym zasobie może zastąpić część Twoich przygotowań?”.",
-      "error": "Uczestnik próbuje zaplanować całą lekcję lub nie widzi związku ze swoim przedmiotem.",
-      "help": "Poproś o jedną trudność uczniów. Zaproponuj mały fragment: ilustracja plus pytanie.",
+      "done": "Mam temat, jedną potrzebę mojej klasy i sposób, w jaki uczniowie będą pracować samodzielnie.",
+      "hint": "Nie musisz zmieniać całej lekcji. Wystarczy jeden moment na 10-15 minut, np. przypomnienie na początku albo zadanie po krótkim pokazie. Możesz najpierw zapisać wybór na papierowej karcie.",
+      "prep": "Otwórz wspólny materiał, przykład 12-minutowej lekcji i stronę „Metody pracy”. Rozdaj karty (z kartą wstępną) i sygnały pomocy. Miej jeden przykład z własnej praktyki.",
+      "say": "Technologia nie musi oznaczać, że ja klikam, a klasa patrzy. Największa zmiana jest wtedy, gdy część lekcji przejmują uczniowie, a ja obserwuję i pomagam.",
+      "run": "0-3: pokaż fragment i gotowe polecenie; uczestnicy rozwiązują je na papierze. 3-10: trzy powody (uwaga, zaangażowanie, gotowe wyniki), przy każdym jedno badanie i jedno zastrzeżenie. 10-16: mapa metod; każdy wybiera metodę i mówi partnerowi, kiedy jej użyje. 16-20: zapis tematu, potrzeby i metody. Zauważ głośno, że ten warsztat działa tym samym rytmem.",
+      "error": "Uczestnik rozumie „mniej mówienia” jako „uczniowie sami się nauczą” albo „mniej pracy nauczyciela”; próbuje przebudować całą lekcję lub nie widzi związku ze swoim przedmiotem.",
+      "help": "Wyjaśnij, że samodzielna praca wymaga polecenia, przykładu i sprawdzenia, a nauczyciel w tym czasie obserwuje i pomaga. Poproś o jeden moment lekcji i jedną trudność uczniów. Zaproponuj mały fragment: ilustracja plus pytanie.",
       "extra": "",
       "link": [
-        "Otwórz „Moją lekcję”",
-        "#/moja-lekcja"
+        "Otwórz „Metody pracy”",
+        "#/metody"
       ]
     },
     {
       "title": "Spokojny start",
       "time": [
-        10,
-        25
+        20,
+        35
       ],
       "goal": "Otworzysz ZPE i wrócisz do tej instrukcji.",
       "steps": [
@@ -293,7 +571,7 @@
       "hint": "Karta przeglądarki to zakładka z tytułem u góry okna. Nie zamykaj programu. Jeśli nie możesz się zalogować, zgłoś pomoc i otwórz publiczny materiał.",
       "prep": "Przed wejściem uczestników sprawdź Wi-Fi, projektor i otwarcie strony. Przygotuj instrukcję odzyskania dostępu w oficjalnej pomocy ZPE.",
       "say": "Teraz odnajdujemy dwie karty u góry. Ta karta to instrukcja, druga to miejsce ćwiczeń.",
-      "run": "10-13: pokaż pasek adresu i karty. 13-19: logowanie. 19-22: przewijanie i powiększenie. 22-25: powrót do instrukcji i rozpoznanie potrzeb pomocy.",
+      "run": "20-23: pokaż pasek adresu i karty. 23-29: logowanie. 29-32: przewijanie i powiększenie. 32-35: powrót do instrukcji i rozpoznanie potrzeb pomocy.",
       "error": "Adres wpisany w wyszukiwarkę zamiast paska; otwieranie wielu okien; brak hasła.",
       "help": "Wskaż pasek adresu, bez przejmowania myszy. Nie resetuj hasła całej grupie; uczestnik może ćwiczyć na publicznym zasobie.",
       "extra": "",
@@ -305,8 +583,8 @@
     {
       "title": "Patrz, potem zrób",
       "time": [
-        25,
-        45
+        35,
+        55
       ],
       "goal": "Znajdziesz i zapiszesz wspólny materiał.",
       "steps": [
@@ -319,7 +597,7 @@
       "hint": "Drugie kliknięcie serca może usunąć zapis. Jeśli nie znajdujesz wyniku, skorzystaj z bezpośredniego linku. Brak konta pozwala oglądać materiał, ale nie zalicza zapisu.",
       "prep": "Sprawdź tę ścieżkę na koncie trenera. Przygotuj kartę 2 z ilustracjami oficjalnego poradnika.",
       "say": "Teraz tylko patrzymy. Za chwilę każdy wykona te trzy kroki u siebie.",
-      "run": "25-28: pokaz wyszukiwania; 28-33: wykonanie. 33-36: pokaz serca i listy; 36-42: wykonanie. 42-45: sprawdź, czy uczestnicy wrócili do zasobu przez listę.",
+      "run": "35-38: pokaz wyszukiwania; 38-43: wykonanie. 43-46: pokaz serca i listy; 46-52: wykonanie. 52-55: sprawdź, czy uczestnicy wrócili do zasobu przez listę.",
       "error": "Uczestnik zapisuje stronę w zakładkach przeglądarki albo szuka ikony bez zalogowania.",
       "help": "Nazwij różnicę: „Ulubione ZPE są na Twoim koncie”. Wskaż oficjalną instrukcję. Przy czterech parach z tym samym problemem powtórz pokaz.",
       "extra": "",
@@ -331,21 +609,21 @@
     {
       "title": "Powtórz z partnerem",
       "time": [
-        45,
-        65
+        55,
+        70
       ],
       "goal": "Obie osoby przećwiczą powrót do zapisanego materiału.",
       "steps": [
         "Ustalcie, kto zaczyna. Osoba A obsługuje własny laptop, osoba B czyta pytania z karty 3.",
         "A otwiera Ulubione, odnajduje materiał i pokazuje wybrany fragment. B pyta: „Gdzie jesteś?” i „Jaki jest następny krok?”.",
         "Zamieńcie role. Teraz B wykonuje te same czynności na własnym laptopie.",
-        "Każdy samodzielnie pokaże jeden fragment i powie, co mogliby z nim zrobić uczniowie."
+        "Każdy jednym zdaniem mówi, co z pokazanym fragmentem mogliby zrobić uczniowie."
       ],
       "done": "Każda osoba samodzielnie obsługiwała swój komputer. Oboje odnaleźliśmy materiał.",
       "hint": "Partner może wskazać krok w instrukcji, ale nie wykonuje go za Ciebie. Nie musicie pracować w tym samym tempie.",
       "prep": "Pary sąsiedzkie; karta 3. Przećwicz jedno pomocne pytanie na przykładzie.",
       "say": "Pomoc oznacza wskazówkę. Myszkę trzyma osoba, która teraz ćwiczy.",
-      "run": "45-47: model pomocy. 47-54: A ćwiczy. 54-61: B ćwiczy. 61-65: indywidualny powrót i sprawdzenie efektu.",
+      "run": "55-57: model pomocy. 57-63: A ćwiczy. 63-69: B ćwiczy. 69-70: krótkie sprawdzenie efektu.",
       "error": "Jedna osoba wykonuje wszystkie operacje na obu komputerach.",
       "help": "Poproś o zmianę ról. Wróć do ostatniego kroku, który uczestnik wykonał samodzielnie.",
       "extra": "Szybciej gotowe? Wskaż drugi fragment tego samego materiału.",
@@ -354,8 +632,8 @@
     {
       "title": "Przerwa",
       "time": [
-        65,
-        75
+        70,
+        80
       ],
       "goal": "Odpoczniesz od ekranu.",
       "steps": [
@@ -376,13 +654,13 @@
     {
       "title": "Znajdź coś dla siebie",
       "time": [
-        75,
+        80,
         95
       ],
       "goal": "Dobierzesz jeden materiał do swojej lekcji.",
       "steps": [
         "Otwórz zestaw ośmiu materiałów. Wybierz propozycję ogólną lub zawodową albo wyszukaj własny temat na ZPE.",
-        "Sprawdź trzy rzeczy: zgodność z celem lekcji, poziom trudności i ilość treści.",
+        "Sprawdź trzy rzeczy: zgodność z celem lekcji, poziom trudności i ilość treści. Zapytaj też: czy uczeń poradzi sobie z tym fragmentem sam?",
         "Otwórz jeden fragment, który uczeń może wykorzystać w kilka minut. Nie musisz przechodzić całego materiału.",
         "Zapisz zasób w Ulubionych. W swojej karcie zachowaj tytuł, link oraz nazwę fragmentu."
       ],
@@ -390,7 +668,7 @@
       "hint": "Jeśli po 5 minutach nie masz wyniku, wybierz materiał z zestawu startowego. Link do przewodnika nauczyciela zamień na adres wybranego zasobu dla ucznia.",
       "prep": "Otwórz katalog startowy i wskaż podział ogólne/zawodowe. Przygotuj bezpośredni link do wspólnego przykładu.",
       "say": "Szukamy jednego użytecznego fragmentu. Dobry wybór to taki, do którego potrafisz ułożyć konkretne zadanie.",
-      "run": "75-78: trzy kryteria wyboru. 78-90: wyszukiwanie. 90-95: zapis i krótkie uzasadnienie partnerowi.",
+      "run": "80-82: trzy kryteria wyboru. 82-92: wyszukiwanie. 92-95: zapis i krótkie uzasadnienie partnerowi.",
       "error": "Przeglądanie kolejnych materiałów bez wyboru; wybór samego przewodnika zamiast zasobu ucznia.",
       "help": "Po 5 minutach skieruj do zestawu startowego. Zapytaj: „Który fragment pokażesz uczniowi?”.",
       "extra": "",
@@ -408,7 +686,7 @@
       "goal": "Przygotujesz działanie ucznia na 10-15 minut.",
       "steps": [
         "Otwórz „Moją lekcję”. Najpierw przeczytaj gotowy przykład.",
-        "Wpisz cel, dokładny fragment i polecenie. Zacznij polecenie od „porównaj”, „wybierz”, „wyjaśnij” albo „oblicz”.",
+        "Wpisz cel, dokładny fragment i polecenie zgodne z wybraną metodą pracy. Zacznij polecenie od „porównaj”, „wybierz”, „wyjaśnij” albo „oblicz”.",
         "Dopisz oczekiwaną odpowiedź i sposób sprawdzenia wszystkich uczniów.",
         "Rozpisz 10-15 minut, łącznie ze sprawdzeniem. Zapisz plan bez internetu."
       ],
@@ -486,10 +764,10 @@
         "Odpowiedz: czy samo skopiowanie adresu materiału daje mi raport ucznia?"
       ],
       "done": "Wiem, że zwykły link nie oznacza przypisania zadania i zbierania wyników w kursie.",
-      "hint": "Odpowiedź: nie. Kurs wymaga przygotowania i przypisania odpowiednich użytkowników. To temat na kolejne zajęcia.",
+      "hint": "Odpowiedź: nie. Kurs wymaga przygotowania i przypisania odpowiednich użytkowników. Dopiero wtedy wyniki ćwiczeń trafiają do raportu i mogą skrócić sprawdzanie lub stać się podstawą części ocen. To temat na kolejne zajęcia.",
       "prep": "Przygotuj wcześniej kurs testowy z danymi demonstracyjnymi. Jeśli nie masz kont testowych, użyj oficjalnych ilustracji instrukcji i autorskiego przypadku poniżej. Nie prezentuj danych prawdziwych uczniów.",
       "say": "To pokaz możliwości na przyszłość. Dzisiaj wystarczy Wasza gotowa lekcja.",
-      "run": "150-153: materiał → Udostępnij → Platforma edukacyjna → Nowy kurs. 153-156: wyjaśnij zapis roboczy, publikację i przypisanie. 156-159: Analiza i decyzja dydaktyczna. 159-160: pytanie kontrolne.",
+      "run": "150-153: materiał → Udostępnij → Platforma edukacyjna → Nowy kurs. 153-156: wyjaśnij zapis roboczy, publikację i przypisanie. 156-159: Analiza i decyzja dydaktyczna; nawiąż do części ogólnej: wyniki to informacja zwrotna i, zgodnie z zasadami oceniania szkoły, podstawa części ocen. 159-160: pytanie kontrolne.",
       "error": "Uczestnicy zaczynają samodzielnie tworzyć kursy i gubią główny cel.",
       "help": "Zaproś do odłożenia myszy. Wyświetl link do poradnika na później.",
       "extra": "",
@@ -554,7 +832,7 @@
   "short": [
     [
       "0-10",
-      "Po co mi ZPE?",
+      "Lekcja to nie tylko wykład (wersja skrócona)",
       1
     ],
     [
@@ -598,6 +876,7 @@
     "1-2 dni wcześniej: na koncie trenera przejdź wyszukiwanie, zapis sercem, Katalog → Ulubione i ponowne otwarcie. Porównaj ekran z kartą 2. Jeśli układ się zmienił, zaktualizuj instrukcję i ilustracje.",
     "1-2 dni wcześniej: przygotuj kurs demonstracyjny lub oficjalne ilustracje oraz przykład dydaktyczny. Sprawdź, czy wybrane zadanie rejestruje wyniki; nie każde starsze ćwiczenie musi to obsługiwać.",
     "W sali: sprawdź internet przy przewidywanym obciążeniu, gniazdka i widoczność projektora z ostatniego rzędu. Ustaw powiększenie pokazu tak, by dało się odczytać nazwy przycisków.",
+    "Przejrzyj stronę „Metody pracy” i katalog metod. Wybierz jeden przykład z własnej praktyki: moment lekcji, w którym uczniowie pracowali samodzielnie, i co z tego wynikło.",
     "Wydrukuj 40 kompletów kart, 40 kart sygnałowych i scenariusz trenera. Przygotuj 20 par sąsiedzkich, najlepiej o podobnych przedmiotach. Każdy ma własny laptop.",
     "Próba z dwiema osobami początkującymi: poproś o otwarcie strony, odnalezienie podpowiedzi, powrót z ZPE i zapis własnego planu. Zapisz miejsce zatrzymania oraz popraw instrukcję. Ta próba nie została wykonana przez autora pakietu.",
     "Tuż przed startem: otwórz pakiet lokalnie lub na przygotowanym serwerze. Rozdaj adres strony w formie krótkiej instrukcji organizacyjnej; nie zakładaj umiejętności odczytywania kodów QR."
