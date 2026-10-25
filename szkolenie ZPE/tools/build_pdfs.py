@@ -10,6 +10,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.pagesizes import A4
 R=Path(__file__).resolve().parents[1]; D=json.loads((R/'content.json').read_text())
 F=Path('/Users/maciejnajwer/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/Resources/fonts/truetype')
+if not (F/'DejaVuSans.ttf').exists():F=Path('/usr/share/fonts/truetype/dejavu')  # Linux
 # Both fonts cover Polish characters.
 pdfmetrics.registerFont(TTFont('Body',str(F/'DejaVuSans.ttf')))
 pdfmetrics.registerFont(TTFont('Bold',str(F/'DejaVuSans-Bold.ttf')))
@@ -81,6 +82,28 @@ styles['small'].fontSize=8.5
 styles['small'].leading=12
 T=[]
 T.append(heading('SCENARIUSZ PROWADZĄCEGO','ZPE bez pośpiechu')+[p('180 minut zegarowych, w tym dwie przerwy. Około 40 osób, 20 par, jeden trener. Każdy pracuje na swoim laptopie i koncie ZPE.'),p('Efekt warsztatu','h2'),p('Uczestnik znajduje, zapisuje i ponownie otwiera materiał. Przygotowuje fragment lekcji na 10–15 minut: cel, polecenie, oczekiwaną odpowiedź i sposób sprawdzenia.'),p('Zasady prowadzenia','h2')]+numbered(['Pokaż jedną krótką czynność przez 2–4 minuty. Potem uczestnik wykonuje ją na swoim komputerze.','Pracuj z całą grupą przy czterech parach zgłaszających ten sam problem. Przy pojedynczej trudności udziel wskazówki przy stanowisku.','Zmieniaj role w parach. Osoba wspierająca wskazuje instrukcję, nie przejmuje myszy. Osoby szybsze układają drugie polecenie do tego samego materiału.','Dostosuj pomoc do obserwowanej trudności. Nie etykietuj uczestników według wieku ani szybkości pracy.','Oddziel brak logowania od braku umiejętności. Publiczne przeglądanie nie zalicza zapisu w Ulubionych.'])+[p('Co jest już sprawdzone','h2'),p('Kwerenda publicznych źródeł: 28.09.2026. Oficjalne instrukcje opisują serce i drogę Katalog → Ulubione. Ilustracje pochodzą z tych poradników.'),p('Do wykonania przez organizatora','h2'),p('Próba na zalogowanym koncie, test sieci i projektora w sali oraz pilotaż z dwiema osobami początkującymi. Autor pakietu nie wykonał tych prób. Nie są przedstawiane jako zakończone.')])
+I=D['intro'];L=I['lesson'];WHO={'n':'mówi nauczyciel','u':'pracuje uczeń','p':'pracuje para','k':'rozmowa klasy'}
+SEG={'n':colors.HexColor('#53635c'),'u':GREEN,'p':colors.HexColor('#a9d1b6'),'k':LIGHT}
+def bar(segs):
+ t=Table([['' for _ in segs]],colWidths=[491*s[0]/40 for s in segs],rowHeights=[20]);t.setStyle(TableStyle([('BACKGROUND',(i,0),(i,0),SEG[s[1]]) for i,s in enumerate(segs)]+[('LINEAFTER',(0,0),(-2,0),1.5,colors.white)]));return t
+def segrows(segs):
+ out=[];m=0
+ for s in segs:out.append(p(f'{m}-{m+s[0]} min | {s[2]} ({WHO[s[1]]})','small'));m+=s[0]
+ return out
+def totals(segs):return ' · '.join(f'{WHO[w]}: {sum(s[0] for s in segs if s[1]==w)} min' for w in WHO if any(s[1]==w for s in segs))
+page=heading('WSTĘP / ETAP 1',I['title'])+[p(I['lede'])]+[rich('<b>'+html.escape(t['title'])+'.</b> '+html.escape(t['text'])) for t in I['thesis']]+[p(I['caution'],'small'),p('Dwie wersje tej samej lekcji (40 minut pracy)','h2')]
+for k,lab in [('A','A. Wykład'),('B','B. Praca własna z ZPE')]:
+ page+=[KeepTogether([p(lab+' | '+totals(I['compare'][k]),'h3'),bar(I['compare'][k]),Spacer(1,6)]+segrows(I['compare'][k]))]
+page+=[p('Kolory: ciemnoszary – mówi nauczyciel, zielony – pracuje uczeń, jasnozielony – para, najjaśniejszy – rozmowa klasy. '+I['compare_note'],'small')];T.append(page)
+page=heading('WSTĘP / PRZYKŁADOWA LEKCJA',L['label'])+[p(L['context'],'small'),p('Cel: '+L['goal']),url('Materiał ZPE',L['url'])]
+m=0
+for s in L['steps']:
+ page+=[KeepTogether([p(f"{m}-{m+s['min']} min | {s['title']} | {s['method']}",'h3'),p('Nauczyciel: '+s['teacher'],'small'),p('Uczniowie: '+s['students'],'small'),p('Urządzenie: '+s['device'],'small')])];m+=s['min']
+page+=[p(L['decision']),p(L['note'],'small')];T.append(page)
+page=heading('WSTĘP / PRZESUNIĘCIA I METODY','Co laptop lub iPad z ZPE pozwala przesunąć?')+[p(f'{a} → {b} {how} ({m})','small') for a,b,how,m in I['shifts']]+[p('Mapa 12 metod: co robi uczeń z ZPE?','h2')]
+rows=[[p('Metoda','small'),p('Uczeń','small'),p('Nauczyciel / uwaga','small')]]+[[rich('<a href="'+html.escape(I['base']+f,quote=True)+'" color="#225541"><u>'+html.escape(n)+'</u></a>','small'),p(u,'small'),p(te+' '+c,'small')] for n,f,u,te,c in I['methods']]
+mt=Table(rows,colWidths=[100,195,196],repeatRows=1);mt.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),LIGHT),('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,-1),.3,colors.HexColor('#cbd6cd')),('TOPPADDING',(0,0),(-1,-1),3),('BOTTOMPADDING',(0,0),(-1,-1),1)]))
+page+=[mt,p('Wariant ogólnokształcący (matematyka, zmiana procentowa) i uwagi o laptopach i iPadach są na stronie warsztatu w zakładce Wstęp.','small')];T.append(page)
 prep=heading('PRZED SZKOLENIEM','Lista przygotowania')
 for x in D['preflight']:prep += [p('○ '+x)]
 prep +=[p('Krótki protokół pilotażu','h2'),p('Osoba / etap / miejsce zatrzymania / potrzebna podpowiedź / poprawka instrukcji:'),lines(3)];T.append(prep)
