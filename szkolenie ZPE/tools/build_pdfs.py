@@ -91,7 +91,7 @@ def segrows(segs):
  for s in segs:out.append(p(f'{m}-{m+s[0]} min | {s[2]} ({WHO[s[1]]})','small'));m+=s[0]
  return out
 def totals(segs):return ' · '.join(f'{WHO[w]}: {sum(s[0] for s in segs if s[1]==w)} min' for w in WHO if any(s[1]==w for s in segs))
-page=heading('WSTĘP / ETAP 1',I['title'])+[p(I['lede'])]+[p(x) for x in I['thesis']]+[p(I['caution'],'small'),p('Dwie wersje tej samej lekcji (40 minut pracy)','h2')]
+page=heading('WSTĘP / ETAP 1',I['title'])+[p(I['lede'])]+[rich('<b>'+html.escape(t['title'])+'.</b> '+html.escape(t['text'])) for t in I['thesis']]+[p(I['caution'],'small'),p('Dwie wersje tej samej lekcji (40 minut pracy)','h2')]
 for k,lab in [('A','A. Wykład'),('B','B. Praca własna z ZPE')]:
  page+=[KeepTogether([p(lab+' | '+totals(I['compare'][k]),'h3'),bar(I['compare'][k]),Spacer(1,6)]+segrows(I['compare'][k]))]
 page+=[p('Kolory: ciemnoszary – mówi nauczyciel, zielony – pracuje uczeń, jasnozielony – para, najjaśniejszy – rozmowa klasy. '+I['compare_note'],'small')];T.append(page)

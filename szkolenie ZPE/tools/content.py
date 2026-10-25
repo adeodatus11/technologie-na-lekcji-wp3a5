@@ -48,9 +48,9 @@ D['intro']={
  'title':'Lekcja, w której pracują uczniowie',
  'lede':'Laptop, iPad i ZPE nie zmieniają lekcji same z siebie. Zmieniają ją wtedy, gdy gotowy materiał przejmuje część podawania treści, a nauczyciel odzyskuje czas na rozmowę z uczniami w trakcie ich pracy.',
  'thesis':[
-  'W wykładzie najwięcej pracuje nauczyciel. Uczniowie słuchają w jednym tempie, a o tym, co zrozumieli, nauczyciel dowiaduje się zwykle dopiero z kartkówki.',
-  'E-materiał ZPE ma tekst, ilustracje, filmy i ćwiczenia. Uczeń może go zatrzymać, cofnąć albo powiększyć. Część ćwiczeń sprawdza odpowiedź od razu. Na kilkanaście minut materiał może więc zastąpić tłumaczenie z przodu sali.',
-  'Odzyskany czas nie jest przerwą dla nauczyciela. Nauczyciel chodzi między ławkami i siada przy uczniach, którzy utknęli. Na podstawie odpowiedzi całej klasy decyduje, co zrobić dalej.'],
+  dict(icon='🎤',title='Dziś najczęściej pracuje nauczyciel',text='W wykładzie uczniowie słuchają w jednym tempie. O tym, co zrozumieli, nauczyciel dowiaduje się zwykle dopiero z kartkówki.'),
+  dict(icon='💻',title='Materiał może przejąć tłumaczenie',text='E-materiał ZPE ma tekst, ilustracje, filmy i ćwiczenia. Uczeń może go zatrzymać, cofnąć albo powiększyć. Część ćwiczeń sprawdza odpowiedź od razu.'),
+  dict(icon='🧭',title='Nauczyciel odzyskuje czas',text='To nie jest przerwa dla nauczyciela. Chodzi między ławkami i siada przy uczniach, którzy utknęli. Na podstawie odpowiedzi całej klasy decyduje, co dalej.')],
  'caution':'Technologia nie jest metodą. Efekt zależy od zadania ucznia, informacji zwrotnej i od tego, co nauczyciel zrobi z odpowiedziami klasy. Przy każdej metodzie w katalogu COVE jest ocena siły dowodów.',
  'shifts':[
   ['Wszyscy słuchają w jednym tempie.','Każdy pracuje z materiałem we własnym tempie.','Uczeń może zatrzymać film, wrócić do akapitu lub przejść dalej. Kto skończy wcześniej, dostaje zadanie trudniejsze, a nie czeka.','360 e-learning; Mastery learning'],
@@ -91,12 +91,12 @@ D['intro']={
    ['Rozmowa klasy','Dlaczego +20% nie znosi −20%? Para wyjaśnia to jednym zdaniem: drugi procent liczy się od innej podstawy.'],
    ['Karta wyjścia','„Zanim policzę procent, sprawdzam…”']]},
  'devices':[
-  'Jedno urządzenie na ucznia albo jedno na parę. Przy pracy w parze ustal, kto obsługuje ekran, a kto zapisuje odpowiedzi. Po połowie zadania zamieńcie się rolami.',
-  'Podaj bezpośredni link do fragmentu na tablicy, w dzienniku albo w kursie ZPE. Wyszukiwanie materiału przez 30 osób zabiera dużą część lekcji.',
-  'Publiczny materiał ZPE otwiera się bez logowania. Logowanie uczniów jest potrzebne dopiero wtedy, gdy przypisujesz kurs i chcesz zobaczyć wyniki.',
-  'Na laptopie i iPadzie materiał otwiera się w przeglądarce. Przed lekcją sprawdź jedno ćwiczenie interaktywne na takim samym urządzeniu, jakiego używają uczniowie.',
-  'Na czas rozmowy w parach i rozmowy klasy ekrany są zamknięte: pokrywa laptopa w dół, iPad ekranem do stołu.',
-  'Plan B: wydruk wybranego fragmentu i te same pytania. Lekcja ma się odbyć także wtedy, gdy nie działa sieć.'],
+  ['👥','Jedno urządzenie na ucznia lub parę','Przy pracy w parze ustal, kto obsługuje ekran, a kto zapisuje odpowiedzi. Po połowie zadania zamieńcie się rolami.'],
+  ['🔗','Bezpośredni link','Podaj link do fragmentu na tablicy, w dzienniku albo w kursie ZPE. Wyszukiwanie materiału przez 30 osób zabiera dużą część lekcji.'],
+  ['🔓','Bez logowania','Publiczny materiał ZPE otwiera się bez logowania. Logowanie uczniów jest potrzebne dopiero wtedy, gdy przypisujesz kurs i chcesz zobaczyć wyniki.'],
+  ['🧪','Próba na tym samym sprzęcie','Na laptopie i iPadzie materiał otwiera się w przeglądarce. Przed lekcją sprawdź jedno ćwiczenie interaktywne na takim samym urządzeniu, jakiego używają uczniowie.'],
+  ['🙈','Ekrany w dół','Na czas rozmowy w parach i rozmowy klasy ekrany są zamknięte: pokrywa laptopa w dół, iPad ekranem do stołu.'],
+  ['📄','Plan B na papierze','Wydruk wybranego fragmentu i te same pytania. Lekcja ma się odbyć także wtedy, gdy nie działa sieć.']],
  'methods':[
   ['360 e-learning','method-1.html','Przechodzi krótki e-materiał z ćwiczeniami sprawdzanymi automatycznie, a potem rozwiązuje przypadek.','Chodzi po sali i notuje, kto utknął; siada przy tych osobach.','Nie nadaje się do wprowadzania całkiem nowej, trudnej treści.'],
   ['Blended learning','method-2.html','Przed warsztatem rozwiązuje krótki quiz, a po kilku dniach wraca do pytania powrotnego.','Prowadzi warsztat na tym, co wyszło w quizie.','Liczy się to, co uczeń robi w każdej fazie, a nie liczba kanałów.'],
@@ -116,7 +116,26 @@ D['intro']={
   ['Przetestuj i popraw','Ocenianie kształtujące: informacja zwrotna od partnera i poprawka.'],
   ['Potrafię wrócić','Przypominanie: samodzielna próba bez prowadzącego.'],
   ['Mój następny krok','Powroty: ponowne otwarcie materiału po 2 dniach i jego użycie po 7 dniach.']],
+ 'who':['Kto pracuje w minutach 9–21?','W wersji A mówi nauczyciel, a klasa słucha. W wersji B każdy uczeń pracuje z materiałem we własnym tempie. W tym czasie nauczyciel siedzi przy 3–4 osobach, które utknęły, i notuje, na którym pytaniu się zatrzymały.'],
+ 'poll':dict(q='Cena 100 zł wzrosła o 10%, a potem spadła o 10%. Ile kosztuje teraz?',options=['100 zł','99 zł','101 zł','90 zł'],correct=1,explain='110 zł · 0,9 = 99 zł. Drugi procent liczymy od nowej podstawy, czyli od 110 zł, a nie od 100 zł.',after='Podczas wykładu nauczyciel nie wiedziałby, ile osób uważa, że cena wróciła do 100 zł. Pytanie do wszystkich pokazuje to w kilka sekund.'),
+ 'notes':{
+  'teza':'Około 1 minuty. Powiedz: „Dziś nie będzie wykładu o platformie”. Każdą z trzech kart skomentuj jednym zdaniem. Podkreśl ramkę na dole: technologia nie jest metodą.',
+  'dwie':'Minuty 1–3. Pokaż obie osie. Zapytaj salę: „Kto pracuje w minutach 9–21?”. Odpowiedź odsłoń dopiero po 2–3 głosach. Zwróć uwagę na najdłuższy odcinek wersji B: 12 minut pracy własnej z materiałem.',
+  'poll':'Minuty 3–6. Rozdaj karteczki. Odlicz do trzech: wszyscy podnoszą kartkę z literą w tej samej chwili. Policz głosy A i B i dopiero wtedy kliknij „Pokaż odpowiedź”. Powiedz: „Podczas wykładu nie wiedziałbym, ile osób myśli, że 100 zł”.',
+  'shifts':'Slajd do lektury po warsztacie. Na żywo wskaż jedno przesunięcie najbliższe grupie, np. „nauczyciel przy uczniach”. Gdy brakuje czasu, przejdź dalej.',
+  'lekcjaB':'Pokaż, że 40 minut dzieli się na 7 krótkich etapów, a najdłuższy z nich to praca własna (12 min). Pełny opis jest na następnym slajdzie.',
+  'kroki':'Kliknij etap 3 (praca własna) i etap 4 (pytanie do wszystkich). Pozostałe etapy uczestnicy przejrzą sami po warsztacie.',
+  'mat':'Dla nauczycieli przedmiotów ogólnych: ten sam układ, inna treść. Rachunki są sprawdzone.',
+  'sprzet':'Najważniejsze są dwie rzeczy: bezpośredni link i plan B na papierze. Resztę uczestnicy przeczytają sami.',
+  'mapa':'Nie omawiaj kart po kolei. Powiedz: „Po warsztacie kliknijcie metodę, która brzmi znajomo. Każda ma gotowy plan lekcji”.',
+  'warsztat':'Powiedz: „Dziś Państwo są uczniami w lekcji B”. Przejdź do zadania etapu 1 (minuty 6–10).'},
  'base':M}
+D['deck']=dict(
+ label='Warsztat dla nauczycieli · ZSZ5 · COVE Polska',
+ sub='Lekcja, w której pracują uczniowie. Gotowy materiał, laptop lub iPad i czas na własną próbę.',
+ outcomes=['Jeden wybrany materiał ZPE.','Polecenie gotowe dla Twoich uczniów.','Plan na 10–15 minut lekcji.','Ściąga, dzięki której wrócisz do materiału.'],
+ facts=['180 minut z dwiema przerwami','20 par, każdy na własnym laptopie','Prezentacja i zadania w jednym miejscu'],
+ end=[['Po 2 dniach','Otwórz materiał przez Katalog → Ulubione.'],['Po 7 dniach','Użyj fragmentu na lekcji albo przećwicz plan jeszcze raz.'],['Po 7–14 dniach','Powiedz organizatorowi, co zrobili uczniowie i jakiego wsparcia potrzebujesz.']])
 S=[]
 def stage(title,time,goal,steps,done,hint,prep,say,run,error,help,extra='',link=None):
  S.append(dict(title=title,time=time,goal=goal,steps=steps,done=done,hint=hint,prep=prep,say=say,run=run,error=error,help=help,extra=extra,link=link))

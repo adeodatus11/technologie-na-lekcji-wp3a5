@@ -27,3 +27,15 @@ Dodano stronę `#/wstep` i przebudowano etap 1 („Kto pracuje na lekcji?”; na
 - Wygenerowanie scenariusza PDF (28 stron) i przegląd wizualny stron 1–8. Karty uczestnika nie zmieniły się.
 
 Do sprawdzenia przez organizatora: fragment „Dokumentacja w obrocie magazynowym” na ZPE (stan prawny materiału: 08.09.2023), klucz przypadku z nauczycielem przedmiotu zawodowego oraz działanie infografiki na iPadzie i laptopach używanych w szkole.
+
+## Aktualizacja 25.10.2026: szkolenie jako klikana prezentacja
+
+Strona została przebudowana w jedną prezentację z 35 slajdami. Treść zadań, formularzy, materiałów i kart się nie zmieniła. Wykonano:
+
+- `node tools/test.mjs`: każdy etap ma slajd otwierający, etapy robocze mają slajd zadania, każdy slajd i jego notatki renderują się bez pustych wartości, stare adresy prowadzą do właściwych slajdów, strony pomocnicze się renderują.
+- Chromium, 1366×800, jasny motyw: zrzuty wszystkich 35 slajdów, brak poziomego przewijania i błędów w konsoli. Slajdy zadań przewijają się w pionie (tak zaprojektowano). Trzy gęste slajdy wstępu (przesunięcia, krok po kroku, mapa metod) mieszczą się bez przewijania przy 1920×1080, a przy 1366×800 trzeba je lekko przewinąć.
+- Chromium, 390×844, ciemny motyw: wszystkie slajdy bez poziomego przewijania.
+- Automatyczna próba interakcji: klawiatura, kliknięcie w tło, odsłanianie odpowiedzi, ankieta A–D, krokownik lekcji B, notatki (N), spis (M), zapis formularza i oznaczenia etapu po odświeżeniu, filtr materiałów, przeniesienie materiału do formularza, zegar przerwy, powrót ze strony pomocniczej, przycisk „Kontynuuj”, PageDown przewijający długi slajd.
+- Wydruk kart z przeglądarki: 8 stron A4. PDF scenariusza: 28 stron, wstęp na stronach 2–6.
+
+Do sprawdzenia przez organizatora: czytelność slajdów na projektorze w sali i działanie pilota do prezentacji. Nie wykonano pełnego testu z czytnikiem ekranu.

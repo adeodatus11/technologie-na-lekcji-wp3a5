@@ -16,8 +16,10 @@ Polecenie uruchom w folderze pakietu, następnie otwórz `http://127.0.0.1:8765/
 
 ## Co jest w pakiecie
 
-- Strona: wstęp „Lekcja, w której pracują uczniowie” (`#/wstep`): wykład a praca własna z ZPE na laptopie lub iPadzie, przykładowa lekcja minuta po minucie (logistyka i wariant z matematyki), mapa 12 metod z katalogu COVE. Etap 1 korzysta z tego wstępu.
-- Strona: 12 etapów, 8 materiałów (4 ogólne i 4 zawodowe), formularz lekcji, samoocena, instrukcje i widok trenera.
+- Strona to klikana prezentacja (35 slajdów) w stylu prezentacji COVE z Hamburga. Slajdy pokazowe przeplatają się z zadaniami w stylu kursu ai.covepolska.pl: cel, kroki, podpowiedź, narzędzie do wykonania i oznaczenie etapu jako wykonanego.
+- Kolejność: tytuł, plan, a następnie każdy z 12 etapów (slajd otwierający, a w etapach roboczych także zadanie). Etap 1 to wstęp „Lekcja, w której pracują uczniowie”: porównanie wykładu i pracy własnej z ZPE, pytanie do wszystkich z odsłanianą odpowiedzią, sześć przesunięć, lekcja B (logistyka) krok po kroku, wariant z matematyki, uwagi o laptopie i iPadzie, mapa 12 metod z katalogu COVE. Przerwy mają zegar odliczający.
+- Sterowanie: strzałki, PageDown/PageUp (pilot), spacja, kliknięcie w tło slajdu pokazowego, przesunięcie palcem. Na długich slajdach PageDown i spacja najpierw przewijają treść. N pokazuje notatki prowadzącego do bieżącego slajdu, M otwiera spis slajdów i materiałów.
+- Narzędzia z poprzedniej wersji działają bez zmian, osadzone w zadaniach i dostępne jako osobne strony ze spisu: formularz „Moja lekcja”, 8 materiałów (4 ogólne i 4 zawodowe), samoocena, karty pracy, scenariusz trenera, źródła. Stare adresy (`#/etap/N`, `#/wstep`, `#/moja-lekcja` itd.) nadal działają.
 - `output/pdf/karty-uczestnika.pdf`: 8 stron A4; pięć kart tematycznych (karty 2 i 4 mają po dwie strony) oraz komunikaty na stolik.
 - `output/pdf/scenariusz-trenera.pdf`: 28 stron A4; wstęp (strony 2–6), harmonogramy, komunikaty, czynności, trudności i pomoc, pokaz kursu, przykład lekcji, plan awaryjny, źródła.
 - `content.json`: treści do dalszej edycji; źródłem generującym JSON i JS jest `tools/content.py`.
