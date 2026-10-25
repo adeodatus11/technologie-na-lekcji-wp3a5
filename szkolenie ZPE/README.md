@@ -16,11 +16,12 @@ Polecenie uruchom w folderze pakietu, następnie otwórz `http://127.0.0.1:8765/
 
 ## Co jest w pakiecie
 
+- Strona: wstęp „Lekcja, w której pracują uczniowie” (`#/wstep`): wykład a praca własna z ZPE na laptopie lub iPadzie, przykładowa lekcja minuta po minucie (logistyka i wariant z matematyki), mapa 12 metod z katalogu COVE. Etap 1 korzysta z tego wstępu.
 - Strona: 12 etapów, 8 materiałów (4 ogólne i 4 zawodowe), formularz lekcji, samoocena, instrukcje i widok trenera.
 - `output/pdf/karty-uczestnika.pdf`: 8 stron A4; pięć kart tematycznych (karty 2 i 4 mają po dwie strony) oraz komunikaty na stolik.
-- `output/pdf/scenariusz-trenera.pdf`: 23 strony A4; harmonogramy, komunikaty, czynności, trudności i pomoc, pokaz kursu, przykład lekcji, plan awaryjny, źródła.
+- `output/pdf/scenariusz-trenera.pdf`: 28 stron A4; wstęp (strony 2–6), harmonogramy, komunikaty, czynności, trudności i pomoc, pokaz kursu, przykład lekcji, plan awaryjny, źródła.
 - `content.json`: treści do dalszej edycji; źródłem generującym JSON i JS jest `tools/content.py`.
-- `tools/build_pdfs.py`: generator PDF (Python, ReportLab, czcionki DejaVu; ścieżkę czcionek należy dostosować na innym komputerze).
+- `tools/build_pdfs.py`: generator PDF (Python, ReportLab, czcionki DejaVu; na Linuksie używa `/usr/share/fonts/truetype/dejavu`, na innym komputerze ścieżkę należy dostosować).
 - `tools/test.mjs`: testy logiki i spójności; uruchomienie `node tools/test.mjs`.
 
 ## Jak poprowadzić zajęcia

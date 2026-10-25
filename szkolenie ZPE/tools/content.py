@@ -42,19 +42,95 @@ D['fields']=[
  ['backup','Plan bez internetu','Np. wydruk wybranego fragmentu i to samo pytanie']]
 D['example']={
  'topic':'Jak porównać dwie formy notatki?', 'group':'Godzina wychowawcza, klasa 1 technikum', 'need':'Uczniowie zapisują dużo tekstu, ale trudno im porównywać informacje.', 'goal':'Dobiera formę notatki do porównania dwóch rzeczy i uzasadnia wybór.', 'title':D['resources'][0]['title'],'url':D['resources'][0]['url'], 'fragment':'Początek materiału: zestawienie „Tabela / Punkty / Schemat”.', 'duration':'2 min pokaz form; 5 min zadanie; 3 min rozmowa w parze; 2 min sprawdzenie. Razem 12 min.', 'task':'Porównaj notatkę w punktach z tabelą. Zapisz po jednej zalecie każdej formy. Wybierz formę do porównania dwóch telefonów i uzasadnij wybór jednym zdaniem.', 'answer':'Dwie zalety związane z zastosowaniem. Np. punkty porządkują kolejne kroki, tabela ułatwia porównanie według tych samych cech. Wybór tabeli uzasadniony kryteriami porównania.', 'check':'Każdy zapisuje wybór i uzasadnienie. Czytam trzy różne odpowiedzi; sprawdzamy, czy uzasadnienie odnosi się do celu.', 'revision':'Doprecyzowanie: porównujemy telefony według ceny i czasu pracy baterii.', 'date':'Najbliższa godzina wychowawcza; przed wyjściem wpisuję konkretną datę.', 'backup':'Na kartce podaję trzy formy: tabela, punkty, schemat. Uczniowie wykonują to samo polecenie.'}
+# Wstęp do warsztatu: od wykładu do pracy własnej ucznia. Ta sama treść trafia na stronę #/wstep i do scenariusza PDF.
+M='https://metodyka.covepolska.pl/'
+D['intro']={
+ 'title':'Lekcja, w której pracują uczniowie',
+ 'lede':'Laptop, iPad i ZPE nie zmieniają lekcji same z siebie. Zmieniają ją wtedy, gdy gotowy materiał przejmuje część podawania treści, a nauczyciel odzyskuje czas na rozmowę z uczniami w trakcie ich pracy.',
+ 'thesis':[
+  'W wykładzie najwięcej pracuje nauczyciel. Uczniowie słuchają w jednym tempie, a o tym, co zrozumieli, nauczyciel dowiaduje się zwykle dopiero z kartkówki.',
+  'E-materiał ZPE ma tekst, ilustracje, filmy i ćwiczenia. Uczeń może go zatrzymać, cofnąć albo powiększyć. Część ćwiczeń sprawdza odpowiedź od razu. Na kilkanaście minut materiał może więc zastąpić tłumaczenie z przodu sali.',
+  'Odzyskany czas nie jest przerwą dla nauczyciela. Nauczyciel chodzi między ławkami i siada przy uczniach, którzy utknęli. Na podstawie odpowiedzi całej klasy decyduje, co zrobić dalej.'],
+ 'caution':'Technologia nie jest metodą. Efekt zależy od zadania ucznia, informacji zwrotnej i od tego, co nauczyciel zrobi z odpowiedziami klasy. Przy każdej metodzie w katalogu COVE jest ocena siły dowodów.',
+ 'shifts':[
+  ['Wszyscy słuchają w jednym tempie.','Każdy pracuje z materiałem we własnym tempie.','Uczeń może zatrzymać film, wrócić do akapitu lub przejść dalej. Kto skończy wcześniej, dostaje zadanie trudniejsze, a nie czeka.','360 e-learning; Mastery learning'],
+  ['Pierwszy kontakt z treścią to wykład.','Pierwszy kontakt to krótki materiał, a lekcja służy pracy nad problemem.','Krótki film lub fragment e-materiału przed lekcją albo na jej początku. Na lekcji zostaje czas na zadania z nauczycielem.','Flipped classroom; Blended learning'],
+  ['Nauczyciel sprawdza prace po tygodniu.','Uczeń dostaje informację zwrotną od razu.','Ćwiczenie z automatycznym sprawdzaniem pokazuje błąd w chwili jego popełnienia. Najczęstszy błąd nauczyciel omawia z całą klasą.','Przypominanie i powroty; Ocenianie kształtujące'],
+  ['Jedna droga dostępu: słuchanie.','Kilka dróg do tego samego celu.','Ten sam zasób często ma tekst, grafikę i nagranie. Uczeń wybiera drogę dostępu, ale cel jest wspólny dla całej klasy.','UDL'],
+  ['Nauczyciel przy tablicy.','Nauczyciel przy uczniach.','Gdy materiał tłumaczy, nauczyciel siada przy 3–4 wcześniej wybranych osobach i notuje, gdzie się zatrzymały.','Modelowanie; Metapoznanie'],
+  ['Na koniec lekcji uczeń ma notatkę.','Na koniec lekcji uczeń ma decyzję lub produkt.','Materiał staje się źródłem danych. Uczniowie korzystają z niego, rozwiązując przypadek, porównując odpowiedzi w parze i rozmawiając całą klasą.','Problem, przypadek, projekt; Współpraca; Nauczanie dialogowe']],
+ # Oś czasu dwóch wersji tej samej lekcji (40 minut roboczych). who: n = mówi nauczyciel, u = pracuje uczeń, p = para, k = rozmowa klasy.
+ 'compare':{
+  'A':[[25,'n','Wykład z prezentacją; uczniowie przepisują slajdy'],[8,'n','Pytania do chętnych'],[5,'u','Jedno zadanie z podręcznika'],[2,'n','Zadanie domowe']],
+  'B':[[4,'u','Przypomnij bez notatek'],[5,'n','Pokaz jednej decyzji'],[12,'u','Praca własna z ZPE'],[3,'k','Jedno pytanie do wszystkich'],[10,'p','Przypadek w parach'],[4,'k','Rozmowa klasy'],[2,'u','Karta wyjścia']]},
+ 'compare_note':'To plan, a nie pomiar. Porównanie pokazuje, kto pracuje w kolejnych minutach. W wersji B nauczyciel mówi do całej klasy przez około 9 minut, a przez 22 minuty pracy własnej i pracy w parach jest przy uczniach.',
+ 'lesson':{
+  'label':'Technik logistyk, klasa 2: Który dokument magazynowy?',
+  'context':'Lekcja 45 minut: około 5 minut organizacji, 40 minut pracy. Jeden laptop lub iPad na ucznia (możliwa też praca jednym urządzeniem w parze). Materiał ZPE „Dokumentacja magazynowa”, fragment „Dokumentacja w obrocie magazynowym” (infografika).',
+  'url':'https://zpe.gov.pl/a/wprowadzenie/DQ4p55Laj',
+  'goal':'Uczeń dobiera dokument (PZ, WZ, MM, RW, PW) do sytuacji magazynowej i uzasadnia decyzję przy przyjęciu dostawy z rozbieżnością.',
+  'steps':[
+   dict(min=4,title='Przypomnij bez notatek',method='Przypominanie i powroty',teacher='Wyświetla trzy krótkie pytania z poprzedniej lekcji o przyjęciu i wydaniu towaru. Po 3 minutach pokazuje klucz.',students='Odpowiadają na kartce bez zeszytu i ekranu. Sami sprawdzają odpowiedzi z kluczem i zaznaczają, czego nie pamiętali.',device='Urządzenia zamknięte.'),
+   dict(min=5,title='Pokaz jednej decyzji',method='Modelowanie',teacher='Na jednym przykładzie myśli na głos: „Skąd przychodzi towar? Spoza firmy czy z jej wnętrza? Przyjmuję go czy wydaję?” Dochodzi w ten sposób do PZ.',students='Zapisują dwa pytania kontrolne: kierunek ruchu towaru (przyjęcie czy wydanie) oraz to, czy druga strona jest spoza firmy, czy z wewnątrz.',device='Ekran nauczyciela; uczniowie piszą na kartce.'),
+   dict(min=12,title='Praca własna z ZPE',method='360 e-learning; UDL',teacher='Podaje bezpośredni link. Chodzi po sali z listą 3–4 osób, przy których siada najpierw. Notuje, na którym pytaniu kto się zatrzymał. Nie tłumaczy całej klasie.',students='Otwierają infografikę i we własnym tempie odpowiadają na pięć pytań o PZ, WZ, MM, RW i PW. Kto skończy, układa własną sytuację do jednego dokumentu dla kolegi.',device='Laptop lub iPad: powiększenie, powrót do fragmentu, opis tekstowy. Wydruk infografiki dla osób, którym ekran przeszkadza.'),
+   dict(min=3,title='Jedno pytanie do wszystkich',method='Ocenianie kształtujące; Mastery learning',teacher='Pyta: „Magazynier wydaje materiał na produkcję we własnej firmie. Jaki dokument? A) WZ, B) RW, C) MM, D) PZ”. Wszyscy pokazują odpowiedź w tej samej chwili. Liczy odpowiedzi.',students='Podnoszą kartkę z literą. Poprawna odpowiedź to B, czyli RW. Typowy błąd to WZ, bo „wydanie” kojarzy się z wydaniem zewnętrznym.',device='Kartki z literami albo ankieta; urządzenia zamknięte.'),
+   dict(min=10,title='Przypadek w parach',method='Problem, przypadek, projekt; Współpraca',teacher='Słucha par. Wybiera dwie pary, których decyzje się różnią. Jeśli w poprzednim kroku źle odpowiedziała więcej niż 1/3 klasy, przez pierwsze 3 minuty siada z tą grupą przy pytaniu „zewnętrzny czy wewnętrzny?”.',students='Przypadek: zamówiono 120 sztuk, przyjechało 112, a jeden karton z 12 sztukami jest uszkodzony. Każdy najpierw sam zapisuje decyzję (2 min). Potem para porównuje decyzje i zapisuje jedną różnicę i jedną zmianę.',device='Jedno urządzenie na parę, tylko do zajrzenia w infografikę; decyzja na papierze.'),
+   dict(min=4,title='Rozmowa klasy',method='Nauczanie dialogowe',teacher='Dwie pary przedstawiają różne decyzje. Nauczyciel pyta o dane: „Ile sztuk przyjmujesz bez zastrzeżeń? Co musiałoby się zmienić, żebyś podpisał dokument dostawy bez adnotacji?”',students='Uzasadniają decyzję liczbami z przypadku. Klucz: 100 sztuk bez zastrzeżeń; 12 uszkodzonych do reklamacji; niedobór 8 sztuk zgłoszony dostawcy; adnotacja na dokumencie dostawy przed podpisem.',device='Ekrany zamknięte.'),
+   dict(min=2,title='Karta wyjścia',method='Metapoznanie; Przypominanie i powroty',teacher='Zbiera karty. Zapowiada, że za tydzień lekcja zacznie się od trzech pytań o te dokumenty.',students='Kończą zdanie: „Po czym rozpoznam, czy to RW, czy WZ?”',device='Kartka.')],
+  'note':'Szczegółowe zasady przyjęcia dostawy zależą od procedury firmy. Materiał ZPE podaje stan prawny z 08.09.2023. Przed lekcją nauczyciel przedmiotu zawodowego sprawdza aktualność przepisów i klucz. Pięć pytań z kluczem i pełny przypadek są w opisie metody 360 e-learning.',
+  'decision':'Punkt decyzji: jeśli po 12 minutach więcej niż 1/3 klasy nie odpowiedziała na pięć pytań, rozdaj wydruk najważniejszego fragmentu i przejdź do pytania dla wszystkich.'},
+ 'variant':{
+  'label':'Ten sam układ w przedmiocie ogólnym: matematyka, zmiana procentowa',
+  'url':'https://zpe.gov.pl/a/obliczenia-procentowe-czesc-i/DLiy0FUq5',
+  'rows':[
+   ['Przypomnij bez notatek','10% z 50, 50% z 30, 1% z 400. Klucz: 5, 15, 4.'],
+   ['Pokaz jednej decyzji','„Od jakiej liczby liczę procent?” Na przykładzie: 15% z 200 zł to 30 zł, bo podstawą jest 200 zł.'],
+   ['Praca własna z ZPE','Przykłady z „Obliczeń procentowych”. Trzy zadania: 15% z 200 zł (30 zł); wzrost z 80 do 100 zł (o 25%); cena po obniżce o 20% wynosi 160 zł (przed obniżką: 200 zł).'],
+   ['Jedno pytanie do wszystkich','Cena 100 zł wzrosła o 10%, potem spadła o 10%. Ile kosztuje teraz? A) 100 zł, B) 99 zł, C) 101 zł, D) 90 zł. Poprawnie: B, bo 110 · 0,9 = 99. Typowy błąd: 100 zł.'],
+   ['Przypadek w parach','Kurtka za 250 zł potaniała o 20%, a po miesiącu nowa cena wzrosła o 20%. Czy wróciła do 250 zł? Klucz: 200 zł, potem 240 zł, więc nie wróciła.'],
+   ['Rozmowa klasy','Dlaczego +20% nie znosi −20%? Para wyjaśnia to jednym zdaniem: drugi procent liczy się od innej podstawy.'],
+   ['Karta wyjścia','„Zanim policzę procent, sprawdzam…”']]},
+ 'devices':[
+  'Jedno urządzenie na ucznia albo jedno na parę. Przy pracy w parze ustal, kto obsługuje ekran, a kto zapisuje odpowiedzi. Po połowie zadania zamieńcie się rolami.',
+  'Podaj bezpośredni link do fragmentu na tablicy, w dzienniku albo w kursie ZPE. Wyszukiwanie materiału przez 30 osób zabiera dużą część lekcji.',
+  'Publiczny materiał ZPE otwiera się bez logowania. Logowanie uczniów jest potrzebne dopiero wtedy, gdy przypisujesz kurs i chcesz zobaczyć wyniki.',
+  'Na laptopie i iPadzie materiał otwiera się w przeglądarce. Przed lekcją sprawdź jedno ćwiczenie interaktywne na takim samym urządzeniu, jakiego używają uczniowie.',
+  'Na czas rozmowy w parach i rozmowy klasy ekrany są zamknięte: pokrywa laptopa w dół, iPad ekranem do stołu.',
+  'Plan B: wydruk wybranego fragmentu i te same pytania. Lekcja ma się odbyć także wtedy, gdy nie działa sieć.'],
+ 'methods':[
+  ['360 e-learning','method-1.html','Przechodzi krótki e-materiał z ćwiczeniami sprawdzanymi automatycznie, a potem rozwiązuje przypadek.','Chodzi po sali i notuje, kto utknął; siada przy tych osobach.','Nie nadaje się do wprowadzania całkiem nowej, trudnej treści.'],
+  ['Blended learning','method-2.html','Przed warsztatem rozwiązuje krótki quiz, a po kilku dniach wraca do pytania powrotnego.','Prowadzi warsztat na tym, co wyszło w quizie.','Liczy się to, co uczeń robi w każdej fazie, a nie liczba kanałów.'],
+  ['Flipped classroom','method-3.html','Przed lekcją ogląda krótki film lub fragment e-materiału i zapisuje jedno pytanie.','Lekcję przeznacza na zadania i rozmowę o trudnościach.','Główne ryzyko: uczniowie się nie przygotują. Plan B na papierze jest konieczny.'],
+  ['Przypominanie i powroty','metoda-przypominanie-i-powroty.html','Rozwiązuje ćwiczenie bez notatek, a po tygodniu wraca do tej samej treści.','Omawia najczęstszy błąd klasy.','Samo kliknięcie wyniku w ćwiczeniu nie wystarczy.'],
+  ['Modelowanie','metoda-modelowanie.html','Po krótkim pokazie rozwiązuje przykład z lukami, a potem samodzielne zadanie z materiału.','Pokazuje procedurę, nazywa decyzje i stopniowo wycofuje pomoc.','Sprawdź, czy e-materiał pokazuje kroki rozwiązania z komentarzem.'],
+  ['Ocenianie kształtujące','metoda-ocenianie-ksztaltujace.html','Odpowiada na jedno pytanie w tej samej chwili co cała klasa i poprawia pracę po wskazówce.','Widzi odpowiedzi wszystkich i decyduje, co dalej.','Wynik to informacja do decyzji nauczyciela, a nie ocena do dziennika.'],
+  ['Metapoznanie','metoda-metapoznanie.html','Przed zadaniem planuje, w trakcie sprawdza, a po zadaniu zapisuje, co zrobi inaczej.','Pokazuje na własnym przykładzie, jak planuje i sprawdza.','Refleksja dotyczy konkretnego zadania, a nie tego, „jak się uczyłeś”.'],
+  ['Współpraca','metoda-wspolpraca.html','W grupie każdy otwiera inny fragment materiału i przynosi informację potrzebną do wspólnego produktu.','Przydziela role i sprawdza, czy każdy umie odpowiedzieć sam.','Samo posadzenie uczniów w grupie nie daje efektu.'],
+  ['Nauczanie dialogowe','metoda-nauczanie-dialogowe.html','Na podstawie materiału zapisuje stanowisko i porównuje je z kolegą w parze.','Prowadzi rozmowę klasy pytaniami o dane.','Rozmowa odbywa się bez ekranów. Dowody są ograniczone.'],
+  ['UDL','metoda-udl.html','Wybiera drogę dostępu: tekst, grafikę, nagranie, powiększenie. Cel jest taki sam dla całej klasy.','Usuwa jedną przewidywalną barierę wejścia.','UDL nie opiera się na „stylach uczenia się”; ta koncepcja nie ma poparcia w badaniach.'],
+  ['Mastery learning','metoda-mastery-learning.html','Rozwiązuje krótką diagnozę. Kto opanował umiejętność, idzie dalej; kto nie, dostaje inne wyjaśnienie i ponowną próbę.','Ustala próg i siada z grupą, która potrzebuje wyjaśnienia.','Stosuj do jednego warunku, a nie do całego działu.'],
+  ['Problem, przypadek, projekt','metoda-problem-projekt-przypadek.html','Analizuje dane z materiału i podejmuje decyzję albo wykonuje produkt.','Podaje dane etapami i pilnuje, by uczniowie uzasadniali decyzje.','Początkujący potrzebują danych i wsparcia; odkrywanie bez wsparcia słabo działa.']],
+ 'workshop':[
+  ['Patrz, potem zrób','Modelowanie: krótki pokaz, potem własna próba.'],
+  ['Powtórz z partnerem','Tutoring w parach: osoba wspierająca pyta, a ćwicząca sama obsługuje komputer.'],
+  ['Przetestuj i popraw','Ocenianie kształtujące: informacja zwrotna od partnera i poprawka.'],
+  ['Potrafię wrócić','Przypominanie: samodzielna próba bez prowadzącego.'],
+  ['Mój następny krok','Powroty: ponowne otwarcie materiału po 2 dniach i jego użycie po 7 dniach.']],
+ 'base':M}
 S=[]
 def stage(title,time,goal,steps,done,hint,prep,say,run,error,help,extra='',link=None):
  S.append(dict(title=title,time=time,goal=goal,steps=steps,done=done,hint=hint,prep=prep,say=say,run=run,error=error,help=help,extra=extra,link=link))
-stage('Po co mi ZPE?',[0,10],'Wybierzesz temat lekcji, do której przyda Ci się gotowy materiał.',[
- 'Obejrzyj krótki przykład prowadzącego. Zobacz, co robi uczeń po otwarciu materiału.',
- 'Pomyśl o jednej lekcji, którą poprowadzisz w najbliższym tygodniu.',
+stage('Kto pracuje na lekcji?',[0,10],'Zobaczysz, jak ZPE i laptop mogą przenieść pracę z nauczyciela na ucznia, i wybierzesz temat swojej lekcji.',[
+ 'Obejrzyj dwie wersje tej samej lekcji: wykład i lekcję z pracą własną na ZPE. Sprawdź, kto pracuje w kolejnych minutach.',
+ 'Odpowiedz na jedno pytanie jak uczeń: na kartce, w tej samej chwili co wszyscy.',
+ 'Pomyśl o lekcji, którą poprowadzisz w najbliższym tygodniu. Którą jej część uczniowie mogliby wykonać sami z materiałem?',
  'W „Mojej lekcji” zapisz temat i jedną rzecz, którą chcesz ułatwić uczniom.'
- ],'Mam temat i jedną potrzebę mojej klasy.','Wystarczy jedno zdanie. Możesz najpierw zapisać je na papierowej karcie.',
- 'Otwórz wspólny materiał i gotowy przykład 12-minutowej lekcji. Rozdaj karty i sygnały pomocy.',
- 'Dziś przygotujemy mały fragment prawdziwej lekcji. Nie trzeba poznawać całej platformy.',
- '0–3: pokaż fragment i gotowe polecenie. 3–6: uczestnicy krótko rozwiązują zadanie na papierze. 6–10: zapisują własny temat. Zapytaj: „Co w tym zasobie może zastąpić część Twoich przygotowań?”.',
- 'Uczestnik próbuje zaplanować całą lekcję lub nie widzi związku ze swoim przedmiotem.',
- 'Poproś o jedną trudność uczniów. Zaproponuj mały fragment: ilustracja plus pytanie.',link=['Otwórz „Moją lekcję”','#/moja-lekcja'])
+ ],'Mam temat i wiem, którą część lekcji uczniowie mogą wykonać sami.','Pełny wstęp z przykładową lekcją i mapą 12 metod możesz przeczytać po warsztacie. Teraz wystarczy jedno zdanie, także na papierowej karcie.',
+ 'Wyświetl wstęp „Lekcja, w której pracują uczniowie” z porównaniem dwóch wersji lekcji. Przygotuj karteczki na odpowiedź, karty pracy i sygnały pomocy.',
+ 'Dziś nie będzie wykładu o platformie. Pokażę, jak może wyglądać lekcja, w której pracują uczniowie. Potem każdy przygotuje mały fragment takiej lekcji.',
+ '0–3: pokaż porównanie dwóch lekcji i zapytaj: „Kto pracuje w minutach 9–21?”. 3–6: pytanie do wszystkich: „Cena 100 zł wzrosła o 10%, potem spadła o 10%. Ile kosztuje teraz?”. Wszyscy pokazują kartkę w tej samej chwili. Policz odpowiedzi 100 zł i 99 zł. Powiedz: „Podczas wykładu nie wiedziałbym, ile osób myśli, że 100”. 6–10: uczestnicy zapisują temat i część lekcji do pracy własnej.',
+ 'Uczestnik uznaje, że taka lekcja jest tylko dla informatyków, albo próbuje od razu zaplanować całą lekcję.',
+ 'Wskaż jeden etap przykładowej lekcji, np. 12 minut pracy z materiałem. Zaproponuj mały fragment: ilustracja i pytanie.',link=['Zobacz przykładową lekcję','#/wstep'])
 stage('Spokojny start',[10,25],'Otworzysz ZPE i wrócisz do tej instrukcji.',[
  'Otwórz ZPE przyciskiem poniżej. Pojawi się druga karta przeglądarki.',
  'Na ZPE wybierz „Zaloguj się” i użyj własnych danych. Hasło wpisujesz wyłącznie w ZPE.',
@@ -165,7 +241,7 @@ stage('Mój następny krok',[175,180],'Zaplanujesz pierwsze wykorzystanie i powt
  'Ogólna deklaracja „kiedyś skorzystam”; przekonanie, że trener automatycznie widzi formularz.',
  'Poproś o termin i pokaż pobieranie kopii. Wyjaśnij, że strona niczego nie wysyła.',link=['Zachowaj własny plan','#/moja-lekcja'])
 D['stages']=S
-D['short']=[['0–10','Po co mi ZPE?',1],['10–25','Spokojny start',2],['25–45','Patrz, potem zrób',3],['45–60','Powtórz z partnerem',4],['60–70','Przerwa',5],['70–85','Znajdź coś dla siebie',6],['85–105','Zbuduj fragment lekcji',7],['105–120','Potrafię wrócić i mój następny krok',11]]
+D['short']=[['0–10','Kto pracuje na lekcji?',1],['10–25','Spokojny start',2],['25–45','Patrz, potem zrób',3],['45–60','Powtórz z partnerem',4],['60–70','Przerwa',5],['70–85','Znajdź coś dla siebie',6],['85–105','Zbuduj fragment lekcji',7],['105–120','Potrafię wrócić i mój następny krok',11]]
 D['preflight']=[
  '7 dni wcześniej: sprawdź przedmioty uczestników i osiem propozycji. Poproś o przyniesienie tematu najbliższej lekcji oraz sprawdzenie własnego logowania; nikt nie przekazuje trenerowi hasła.',
  '1–2 dni wcześniej: na koncie trenera przejdź wyszukiwanie, zapis sercem, Katalog → Ulubione i ponowne otwarcie. Porównaj ekran z kartą 2. Jeśli układ się zmienił, zaktualizuj instrukcję i ilustracje.',
