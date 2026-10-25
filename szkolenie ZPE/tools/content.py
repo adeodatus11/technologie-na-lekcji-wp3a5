@@ -116,14 +116,14 @@ D['intro']={
   ['Przetestuj i popraw','Ocenianie kształtujące: informacja zwrotna od partnera i poprawka.'],
   ['Potrafię wrócić','Przypominanie: samodzielna próba bez prowadzącego.'],
   ['Mój następny krok','Powroty: ponowne otwarcie materiału po 2 dniach i jego użycie po 7 dniach.']],
- 'who':['Kto pracuje w minutach 9–21?','W wersji A mówi nauczyciel, a klasa słucha. W wersji B każdy uczeń pracuje z materiałem we własnym tempie. W tym czasie nauczyciel siedzi przy 3–4 osobach, które utknęły, i notuje, na którym pytaniu się zatrzymały.'],
+ 'who':['Kto pracuje przez większość lekcji?','W wersji A mówi nauczyciel, a klasa słucha. W wersji B każdy uczeń pracuje z materiałem we własnym tempie. W tym czasie nauczyciel siedzi przy 3–4 osobach, które utknęły, i notuje, na którym pytaniu się zatrzymały.'],
  'poll':dict(q='Cena 100 zł wzrosła o 10%, a potem spadła o 10%. Ile kosztuje teraz?',options=['100 zł','99 zł','101 zł','90 zł'],correct=1,explain='110 zł · 0,9 = 99 zł. Drugi procent liczymy od nowej podstawy, czyli od 110 zł, a nie od 100 zł.',after='Podczas wykładu nauczyciel nie wiedziałby, ile osób uważa, że cena wróciła do 100 zł. Pytanie do wszystkich pokazuje to w kilka sekund.'),
  'notes':{
   'teza':'Około 1 minuty. Powiedz: „Dziś nie będzie wykładu o platformie”. Każdą z trzech kart skomentuj jednym zdaniem. Podkreśl ramkę na dole: technologia nie jest metodą.',
-  'dwie':'Minuty 1–3. Pokaż obie osie. Zapytaj salę: „Kto pracuje w minutach 9–21?”. Odpowiedź odsłoń dopiero po 2–3 głosach. Zwróć uwagę na najdłuższy odcinek wersji B: 12 minut pracy własnej z materiałem.',
+  'dwie':'Minuty 1–3. Pokaż obie osie. Zapytaj salę: „Kto pracuje przez większość lekcji?”. Odpowiedź odsłoń dopiero po 2–3 głosach. Zwróć uwagę na najdłuższy odcinek wersji B: pracę własną z materiałem.',
   'poll':'Minuty 3–6. Rozdaj karteczki. Odlicz do trzech: wszyscy podnoszą kartkę z literą w tej samej chwili. Policz głosy A i B i dopiero wtedy kliknij „Pokaż odpowiedź”. Powiedz: „Podczas wykładu nie wiedziałbym, ile osób myśli, że 100 zł”.',
   'shifts':'Slajd do lektury po warsztacie. Na żywo wskaż jedno przesunięcie najbliższe grupie, np. „nauczyciel przy uczniach”. Gdy brakuje czasu, przejdź dalej.',
-  'lekcjaB':'Pokaż, że 40 minut dzieli się na 7 krótkich etapów, a najdłuższy z nich to praca własna (12 min). Pełny opis jest na następnym slajdzie.',
+  'lekcjaB':'Pokaż, że lekcja dzieli się na 7 krótkich etapów, a najdłuższy z nich to praca własna z materiałem. Pełny opis jest na następnym slajdzie.',
   'kroki':'Kliknij etap 3 (praca własna) i etap 4 (pytanie do wszystkich). Pozostałe etapy uczestnicy przejrzą sami po warsztacie.',
   'mat':'Dla nauczycieli przedmiotów ogólnych: ten sam układ, inna treść. Rachunki są sprawdzone.',
   'sprzet':'Najważniejsze są dwie rzeczy: bezpośredni link i plan B na papierze. Resztę uczestnicy przeczytają sami.',
@@ -147,7 +147,7 @@ stage('Kto pracuje na lekcji?',[0,10],'Zobaczysz, jak ZPE i laptop mogą przenie
  ],'Mam temat i wiem, którą część lekcji uczniowie mogą wykonać sami.','Pełny wstęp z przykładową lekcją i mapą 12 metod możesz przeczytać po warsztacie. Teraz wystarczy jedno zdanie, także na papierowej karcie.',
  'Wyświetl wstęp „Lekcja, w której pracują uczniowie” z porównaniem dwóch wersji lekcji. Przygotuj karteczki na odpowiedź, karty pracy i sygnały pomocy.',
  'Dziś nie będzie wykładu o platformie. Pokażę, jak może wyglądać lekcja, w której pracują uczniowie. Potem każdy przygotuje mały fragment takiej lekcji.',
- '0–3: pokaż porównanie dwóch lekcji i zapytaj: „Kto pracuje w minutach 9–21?”. 3–6: pytanie do wszystkich: „Cena 100 zł wzrosła o 10%, potem spadła o 10%. Ile kosztuje teraz?”. Wszyscy pokazują kartkę w tej samej chwili. Policz odpowiedzi 100 zł i 99 zł. Powiedz: „Podczas wykładu nie wiedziałbym, ile osób myśli, że 100”. 6–10: uczestnicy zapisują temat i część lekcji do pracy własnej.',
+ '0–3: pokaż porównanie dwóch lekcji i zapytaj: „Kto pracuje przez większość lekcji?”. 3–6: pytanie do wszystkich: „Cena 100 zł wzrosła o 10%, potem spadła o 10%. Ile kosztuje teraz?”. Wszyscy pokazują kartkę w tej samej chwili. Policz odpowiedzi 100 zł i 99 zł. Powiedz: „Podczas wykładu nie wiedziałbym, ile osób myśli, że 100”. 6–10: uczestnicy zapisują temat i część lekcji do pracy własnej.',
  'Uczestnik uznaje, że taka lekcja jest tylko dla informatyków, albo próbuje od razu zaplanować całą lekcję.',
  'Wskaż jeden etap przykładowej lekcji, np. 12 minut pracy z materiałem. Zaproponuj mały fragment: ilustracja i pytanie.',link=['Zobacz przykładową lekcję','#/wstep'])
 stage('Spokojny start',[10,25],'Otworzysz ZPE i wrócisz do tej instrukcji.',[

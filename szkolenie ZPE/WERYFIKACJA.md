@@ -39,3 +39,5 @@ Strona została przebudowana w jedną prezentację z 35 slajdami. Treść zadań
 - Wydruk kart z przeglądarki: 8 stron A4. PDF scenariusza: 28 stron, wstęp na stronach 2–6.
 
 Do sprawdzenia przez organizatora: czytelność slajdów na projektorze w sali i działanie pilota do prezentacji. Nie wykonano pełnego testu z czytnikiem ekranu.
+
+Uzupełnienie: ze slajdów usunięto czas poszczególnych elementów: etapów warsztatu (plan, slajdy otwierające, zadania) i etapów przykładowej lekcji B. Zostały łączne sumy w porównaniu dwóch lekcji (nauczyciel mówi 35 min albo 5 min) oraz zegar przerwy. Automatyczne przejście przez wszystkie 35 slajdów nie znalazło przedziałów minut w widocznym tekście.
