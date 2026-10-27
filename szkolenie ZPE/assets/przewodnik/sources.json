@@ -1,0 +1,58 @@
+[
+  {
+    "file": "katalog.jpg",
+    "source": "01-poradnik-praktyczny-zpe.pdf",
+    "page": 7,
+    "image_index": 1,
+    "sha256": "5c682002acd8e779e2d4de70499f9a05611ab376fcffcf3bc11ceb416ed28aa5"
+  },
+  {
+    "file": "wyszukiwarka.jpg",
+    "source": "01-poradnik-praktyczny-zpe.pdf",
+    "page": 8,
+    "image_index": 0,
+    "sha256": "f715a764bd3874455e93e1951a0323f431bfabe6401250490e92db13725c610f"
+  },
+  {
+    "file": "podstawa.jpg",
+    "source": "01-poradnik-praktyczny-zpe.pdf",
+    "page": 9,
+    "image_index": 0,
+    "sha256": "48ef8fbd15ec12f5ababb9887a431a3122872bdcc7093e5c8f084293f0da964d"
+  },
+  {
+    "file": "udostepnianie.png",
+    "source": "03-udostepnianie-i-wyniki.pdf",
+    "page": 3,
+    "image_index": 2,
+    "sha256": "32a4b0a09b0f809e09ccd23074d63f3845a48a80bdade933f6266ece66a651fb"
+  },
+  {
+    "file": "moje-materialy.jpg",
+    "source": "03-udostepnianie-i-wyniki.pdf",
+    "page": 13,
+    "image_index": 2,
+    "sha256": "9fac8ae578a4c11e3568b1d63f69a0ef2a24d2757f49a790ab02d2080544bdd1"
+  },
+  {
+    "file": "karta-pracy.png",
+    "source": "04-generator-kart-pracy.pdf",
+    "page": 4,
+    "image_index": 3,
+    "sha256": "fc95a21a348a65224f8731fbf36fa34080b60118ebd67b122d9b2cc21a6f547a"
+  },
+  {
+    "file": "kreator.png",
+    "source": "10-kreator-e-materialow.pdf",
+    "page": 8,
+    "image_index": 2,
+    "sha256": "b3c63aa467190bc38a16581c5ecd48fb5ae46f8a09f115a2803cfe880899a764"
+  },
+  {
+    "file": "sciezka.jpg",
+    "source": "05-sciezki-nauki.pdf",
+    "page": 2,
+    "image_index": 2,
+    "sha256": "9d29fb0f29026f5e46010820dfd225c1fc514d5193904b8c6124580a8604578d"
+  }
+]

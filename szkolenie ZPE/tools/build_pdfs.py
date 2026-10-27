@@ -1,5 +1,6 @@
+"""Buduje ilustrowany PDF z aktualnego widoku przewodnika."""
 from pathlib import Path
-import runpy
+import subprocess
 
 if __name__ == '__main__':
-    runpy.run_path(str(Path(__file__).with_name('build_workshop_pdfs.py')), run_name='__main__')
+    subprocess.run(['node', str(Path(__file__).with_name('check_guide.cjs')), '--pdf'], check=True)

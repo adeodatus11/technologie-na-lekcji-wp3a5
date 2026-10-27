@@ -1,5 +1,13 @@
 # Weryfikacja wersji na 4 listopada
 
+## Aktualizacja: przewodnik zamiast slajdów
+
+Aktualny produkt to osiem rozdziałów w jednym ilustrowanym przewodniku. Poprzednie informacje o trzynastu ekranach opisują wycofany wariant. Strona ładuje wyłącznie nowe moduły przewodnika. Ma dziewięć powiększanych ilustracji, rozbudowane wyszukiwanie, rozróżnienie kont i trybów udostępniania, przykłady przedmiotowe oraz bibliotekę oryginałów. Grafiki pochodzą z poradników, a manifest w `assets/przewodnik/sources.json` pozwala odtworzyć ich pochodzenie.
+
+Sprawdzono renderowanie na komputerze i telefonie, powiększenie, dialog ilustracji, tryb prowadzenia, stare adresy, lokalne odsyłacze i kompletność obrazów. Ilustrowany PDF jest drukiem aktualnej strony, a nie osobno utrzymywaną wersją treści. Nie wykonano operacji na zalogowanym koncie ZPE ani pilotażu z uczestnikami.
+
+## Historia poprzedniego wariantu
+
 Główna ścieżka ma 13 ekranów i obejmuje trzy modele pracy, podstawowe operacje ZPE, pokaz udostępniania oraz własny materiał. Usunięto powtarzające się ćwiczenia i publiczny harmonogram. Zachowano klucze wcześniejszych zapisów formularza.
 
 ## Poprawione problemy

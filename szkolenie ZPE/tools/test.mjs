@@ -1,1 +1,1 @@
-import './verify_workshop.mjs';
+import './check_guide.cjs';
