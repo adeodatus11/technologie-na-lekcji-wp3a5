@@ -1,6 +1,9 @@
 # ZPE bez pośpiechu
 
-Gotowy pakiet warsztatu dla około 40 nauczycieli: 180 minut z dwiema przerwami, jeden trener, własne laptopy i konta ZPE. Zawiera też wariant 120 minut. Cel uczestnika: gotowy fragment lekcji na 10–15 minut i umiejętność powrotu do materiału.
+Aktualna wersja na 4 listopada: 18 ekranów pokazu i swobodna praca własna. Szczegółowo pokazano wyszukiwanie, filtry, ocenę i zapis materiałów. Nie ma obowiązkowego formularza, planu lekcji ani oddawania pracy. Publiczny pakiet nie zawiera harmonogramu. Rozszerzenia są w bazie wiedzy i centrum materiałów.
+
+Po zmianie treści uruchom `python3 tools/content.py`, `python3 tools/build_pdfs.py` i `node tools/test.mjs`. Ścieżkę pokazu definiuje `presentation.js`; z tego samego tekstu powstają PDF-y. Historyczne zapisy lokalne pozostają zachowane.
+
 
 ## Uruchomienie
 
@@ -16,12 +19,8 @@ Polecenie uruchom w folderze pakietu, następnie otwórz `http://127.0.0.1:8765/
 
 ## Co jest w pakiecie
 
-- Strona to klikana prezentacja (35 slajdów) w stylu prezentacji COVE z Hamburga. Slajdy pokazowe przeplatają się z zadaniami w stylu kursu ai.covepolska.pl: cel, kroki, podpowiedź, narzędzie do wykonania i oznaczenie etapu jako wykonanego.
-- Kolejność: tytuł, plan, a następnie każdy z 12 etapów (slajd otwierający, a w etapach roboczych także zadanie). Etap 1 to wstęp „Lekcja, w której pracują uczniowie”: porównanie wykładu i pracy własnej z ZPE, pytanie do wszystkich z odsłanianą odpowiedzią, sześć przesunięć, lekcja B (logistyka) krok po kroku, wariant z matematyki, uwagi o laptopie i iPadzie, mapa 12 metod z katalogu COVE. Przerwy mają zegar odliczający. Uczestnik nie widzi na slajdach czasu poszczególnych etapów; harmonogram minutowy jest w notatkach prowadzącego (N), w scenariuszu trenera i w PDF.
 - Sterowanie: strzałki, PageDown/PageUp (pilot), spacja, kliknięcie w tło slajdu pokazowego, przesunięcie palcem. Na długich slajdach PageDown i spacja najpierw przewijają treść. N pokazuje notatki prowadzącego do bieżącego slajdu, M otwiera spis slajdów i materiałów.
 - Narzędzia z poprzedniej wersji działają bez zmian, osadzone w zadaniach i dostępne jako osobne strony ze spisu: formularz „Moja lekcja”, 8 materiałów (4 ogólne i 4 zawodowe), samoocena, karty pracy, scenariusz trenera, źródła. Stare adresy (`#/etap/N`, `#/wstep`, `#/moja-lekcja` itd.) nadal działają.
-- `output/pdf/karty-uczestnika.pdf`: 8 stron A4; pięć kart tematycznych (karty 2 i 4 mają po dwie strony) oraz komunikaty na stolik.
-- `output/pdf/scenariusz-trenera.pdf`: 28 stron A4; wstęp (strony 2–6), harmonogramy, komunikaty, czynności, trudności i pomoc, pokaz kursu, przykład lekcji, plan awaryjny, źródła.
 - `content.json`: treści do dalszej edycji; źródłem generującym JSON i JS jest `tools/content.py`.
 - `tools/build_pdfs.py`: generator PDF (Python, ReportLab, czcionki DejaVu; na Linuksie używa `/usr/share/fonts/truetype/dejavu`, na innym komputerze ścieżkę należy dostosować).
 - `tools/test.mjs`: testy logiki i spójności; uruchomienie `node tools/test.mjs`.

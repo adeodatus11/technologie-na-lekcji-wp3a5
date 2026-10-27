@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const data=JSON.parse(fs.readFileSync(new URL('../content.json',import.meta.url)));
+const code=['app.js','workshop.js','presentation.js'].map(f=>fs.readFileSync(new URL('../'+f,import.meta.url),'utf8')).join('\n');
+const elements=new Map();const cl={add(){},remove(){},toggle(){}};
+const el=id=>{if(!elements.has(id))elements.set(id,{innerHTML:'',textContent:'',value:'auto',hidden:true,dataset:{},style:{},classList:cl,addEventListener(){},focus(){},querySelector(){return null},querySelectorAll(){return []}});return elements.get(id)};
+let saved=JSON.stringify({lesson:{topic:'Zachowany temat',duration:'Kolejność'},completed:[7]});
+const context=vm.createContext({window:{WORKSHOP:data,addEventListener(){},scrollTo(){},matchMedia(){return {matches:false}}},document:{getElementById:el,querySelector:el,querySelectorAll(){return []},addEventListener(){},body:{classList:cl},documentElement:{dataset:{}}},localStorage:{getItem(k){return k==='zpe-warsztat-v1'?saved:null},setItem(k,v){saved=v}},location:{hash:''},URL,Blob,setTimeout,setInterval,clearInterval});
+for(const id of ['notes-btn','theme'])el(id).setAttribute=()=>{};
+vm.runInContext(code,context);
+const run=s=>vm.runInContext(s,context);
+assert.equal(run('state.lesson.topic'),'Zachowany temat');
+assert.equal(run('state.lesson.duration'),'Kolejność');
+const count=run('SLIDES.length');
+const forbidden=/\b\d+\s*(?:[-–]\s*\d+\s*)?min(?:ut\w*)?\b|Harmonogram|role="timer"/i;
+for(let i=0;i<count;i++){const html=run(`SLIDES[${i}].html()+SLIDES[${i}].notes()`);assert(!forbidden.test(html),'Czas na slajdzie '+i);assert(!html.includes('undefined'),'Brak danych '+i)}
+for(const route of ['/centrum-materialow','/poradniki','/baza-wiedzy','/materialy','/trener','/karty','/pokaz','/moja-lekcja'])assert(!forbidden.test(run(`PAGES['${route}']()`)),route);
+for(const g of data.pdf_guides)assert(fs.existsSync(new URL('../'+g.file,import.meta.url)),g.file);
+assert.equal(run("slideNo('/etap/7')"),run("idx('wlasna')"));
+assert(run("lesson()").includes('name="own"'));
+assert(run("lesson()").includes('name="delivery"'));
+for(let i=0;i<count;i++)assert(!/<form|<input|<textarea|data-complete/.test(run(`SLIDES[${i}].html()`)),'Formularz na slajdzie '+i);
+assert(!run("materialsCenter()").includes('#/moja-lekcja'));
+console.log('PASS:',count,'slajdów, brak czasów, trasy materiałów, oryginalne PDF-y, zachowanie zapisów i nowe pola.');

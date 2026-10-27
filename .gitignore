@@ -4,6 +4,7 @@ Development/
 grafiki/
 *.docx
 *.pdf
+!szkolenie ZPE/materialy-zrodlowe/*.pdf
 *.psd
 
 # Archived pages not published in this lightweight site

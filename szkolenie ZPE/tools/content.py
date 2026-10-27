@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-D={'title':'ZPE bez pośpiechu','date':'28.09.2026','version':1}
+D={'title':'ZPE bez pośpiechu','date':'27.10.2026','event_date':'4 listopada 2026','version':2}
 D['sources']=[
  ['Wyszukiwanie materiałów','https://zpe.gov.pl/a/wyszukiwanie-materialow/DB4RUK55O','Instrukcja wyszukiwania i filtrów; punkt odniesienia dla karty 2.'],
  ['Ulubione','https://zpe.gov.pl/a/ulubione/DE1FP3VBC','Zapis przez serce, powrót przez Katalog → Ulubione; źródło dwóch ilustracji. Funkcja wymaga zalogowania.'],
@@ -15,6 +15,131 @@ D['sources']=[
  ['Przykłady rozwiązane','https://metodyka.covepolska.pl/metoda-przyklady-rozwiazane.html','Pełny model, pomoc stopniowo wycofywana, nowe zadanie.'],
  ['Tutoring rówieśniczy','https://metodyka.covepolska.pl/metoda-peer-tutoring.html','Ćwiczenie poznanej procedury w parach ze zmianą ról.'],
  ['Wzorzec struktury lekcji','https://informatyka.szkolamistrzow.info/teacher/lesson/08/','Cele, przygotowanie, etapy, pytania prowadzącego, trudności i sprawdzenie.']]
+
+# Skrót jedenastu przekazanych instrukcji PDF. Ekrany i nazwy modułów mogły się
+# zmienić, dlatego baza opisuje sens funkcji, a ścieżki wymagające konta trener
+# sprawdza na żywo przed szkoleniem.
+D['knowledge']=[
+ dict(group='Zacznij tutaj',title='Wyszukiwanie i wybór materiału',live=True,
+      purpose='Znajdź jeden fragment pasujący do celu lekcji, poziomu uczniów i dostępnego czasu.',
+      path='Katalog → wyszukiwarka → etap edukacyjny, przedmiot lub podstawa programowa → podgląd materiału.',
+      practice='Skróć zapytanie, gdy nie ma wyników. Otwórz materiał i wskaż dokładny fragment, zamiast zadawać uczniom cały zasób.',
+      caution='Filtry i układ ekranu mogą wyglądać inaczej niż w starszym poradniku. Wybór materiału zawsze wymaga oceny nauczyciela.',
+      source='Poradnik: logowanie, wyszukiwanie, udostępnianie i tworzenie materiałów'),
+ dict(group='Zacznij tutaj',title='Ulubione i porządkowanie zasobów',live=True,
+      purpose='Zachowaj materiał na swoim koncie i wróć do niego bez ponownego wyszukiwania.',
+      path='Otwarty materiał → serce / Dodaj do ulubionych → Katalog → Ulubione.',
+      practice='Zapisz tytuł, pełny link i nazwę fragmentu również w planie lekcji. Materiały z kilku przedmiotów można porządkować w teczkach.',
+      caution='Zakładka przeglądarki i Ulubione ZPE to dwie różne rzeczy. Drugie kliknięcie serca może usunąć zapis.',
+      source='Poradnik: logowanie, wyszukiwanie, udostępnianie i tworzenie materiałów'),
+ dict(group='Praca z uczniami',title='Udostępnianie: link, grupa, kod lub kurs',live=True,
+      purpose='Dobierz sposób przekazania materiału do tego, czy potrzebujesz tylko dostępu, czy także wyników uczniów.',
+      path='Otwarty materiał → Udostępnij → wybór dostępnego trybu: istniejąca lub nowa grupa, kod/link albo praca na platformie.',
+      practice='Do szybkiego użycia wystarczy bezpośredni link i jasne polecenie. Jeśli chcesz raportów, przygotuj pracę na platformie i przypisz właściwych użytkowników.',
+      caution='Samo wysłanie zwykłego linku nie tworzy zadania i nie gwarantuje raportu. Nie każde ćwiczenie zapisuje wyniki w ten sam sposób.',
+      source='Udostępnianie materiałów, ich segregacja i sprawdzenie wyników uczniów'),
+ dict(group='Praca z uczniami',title='Klasy i własne grupy',live=False,
+      purpose='Udostępniaj kolejne materiały tej samej grupie i zarządzaj uczestnikami.',
+      path='Klasy/Grupy → wybór klasy z systemu szkolnego albo Utwórz grupę → dodanie uczestników.',
+      practice='Własną grupę można wykorzystać ponownie. Klasy pochodzące z SIO i grupy utworzone ręcznie mają inne zasady zarządzania.',
+      caution='Nauczyciel nie edytuje danych klasy zaimportowanej z SIO. Nie pokazuj na szkoleniu danych prawdziwych uczniów.',
+      source='Zarządzanie użytkownikami; Tworzenie grup i zarządzanie nimi'),
+ dict(group='Sprawdzanie',title='Wyniki i decyzja nauczyciela',live=True,
+      purpose='Zobacz odpowiedzi lub wyniki i zdecyduj, co wyjaśnić ponownie, komu pomóc i kto może przejść dalej.',
+      path='Przypisany materiał lub kurs → wyniki / analiza → widok grupy i szczegóły podejścia.',
+      practice='Najpierw sprawdź, czy uczeń miał dostęp i rozumiał polecenie. Dopiero potem interpretuj brak odpowiedzi lub niski wynik.',
+      caution='Czas wyświetlania nie jest miarą uwagi. Raport ma wspierać decyzję dydaktyczną, a nie automatycznie oceniać zaangażowanie.',
+      source='Udostępnianie materiałów…; Tworzenie ścieżek nauki; Zarządzanie materiałami'),
+ dict(group='Tworzenie',title='Generator kart pracy',live=False,
+      purpose='Zbuduj prostą, wielostronicową kartę z tekstem i grafikami, zapisz ją, pobierz lub udostępnij.',
+      path='Generator Kart Pracy → nowa karta albo szablon → strony i elementy → zapis → podgląd / pobranie / udostępnienie.',
+      practice='Zacznij od jednej strony i jednego celu. Najpierw przygotuj polecenie i oczekiwaną odpowiedź, potem dobieraj elementy.',
+      caution='To rozszerzenie po szkoleniu. Podczas warsztatu szybszy będzie plan 10–15 minut oparty na gotowym zasobie.',
+      source='Zintegrowana Platforma Edukacyjna — Generator Kart Pracy'),
+ dict(group='Tworzenie',title='Kreator e-materiałów',live=False,
+      purpose='Twórz rozbudowane materiały z tekstem, multimediami, spisem treści i ćwiczeniami interaktywnymi.',
+      path='Kreator → nowy projekt → ustawienia i spis treści → komponenty → podgląd → zapis i publikacja.',
+      practice='Buduj małymi krokami: jedna sekcja, jedno ćwiczenie i próba na koncie testowym. Kreator obsługuje też wiele typów interakcji.',
+      caution='Kreator jest rozbudowany i zasługuje na osobne szkolenie. Nie zaczynaj od niego, jeśli celem jest gotowy materiał w ciągu jednego spotkania.',
+      source='Zintegrowana Platforma Edukacyjna — Kreator e-materiałów'),
+ dict(group='Planowanie',title='Ścieżki nauki',live=False,
+      purpose='Ułóż kilka materiałów w kolejności i określ warunki przechodzenia do kolejnych kroków.',
+      path='Moje materiały → Utwórz ścieżkę → dodaj materiały → ustaw kolejność i warunki → zapisz → udostępnij.',
+      practice='Używaj, gdy uczniowie mają pracować dłużej niż jedną lekcję lub różnym tempem. Sprawdź ścieżkę na koncie ucznia testowego.',
+      caution='Próg procentowy lub przeczytanie zasobu nie dowodzi jeszcze zrozumienia. Dodaj zadanie wymagające odpowiedzi lub produktu.',
+      source='Zintegrowana Platforma Edukacyjna — Tworzenie ścieżek nauki'),
+ dict(group='Komunikacja',title='Wiadomości i komunikator',live=False,
+      purpose='Przekazuj instrukcje, linki i pliki pojedynczym osobom, grupom lub klasom.',
+      path='Funkcjonalności zaawansowane → Wiadomości albo Komunikator → odbiorca / kanał → treść i załącznik.',
+      practice='W tytule podaj przedmiot i termin, a w wiadomości: co otworzyć, co zrobić i jak oddać efekt.',
+      caution='Kanały publiczne, grupy prywatne i wiadomości bezpośrednie mają różny zakres widoczności. Nie przesyłaj danych wrażliwych.',
+      source='Wysyłanie wiadomości; Zintegrowana Platforma Edukacyjna — Komunikator'),
+ dict(group='Dla zaawansowanych',title='Inne obiekty i funkcje zaawansowane',live=False,
+      purpose='Zarządzaj m.in. testami, ankietami, kursami, plikami, filmami, linkami i pakietami SCORM.',
+      path='Funkcjonalności zaawansowane → zarządzanie materiałami → wybór typu obiektu → ustawienia → zapis / udostępnienie.',
+      practice='Najpierw określ efekt dla ucznia i sposób sprawdzenia. Dopiero potem wybierz typ obiektu.',
+      caution='Nazwy ekranów i dostępność funkcji zależą od roli oraz wersji platformy. Ten obszar wymaga osobnego ćwiczenia na koncie testowym.',
+      source='Zarządzanie materiałami w funkcjonalnościach zaawansowanych')]
+
+D['parts']=[
+ dict(n=1,title='Modele pracy z technologią',time='0–25 min',effect='Rozumiem, co robi uczeń, co robi nauczyciel i po co w tej lekcji jest technologia.',stages=[1]),
+ dict(n=2,title='ZPE krok po kroku',time='25–75 min',effect='Potrafię się zalogować, znaleźć, ocenić, zapisać i ponownie otworzyć materiał.',stages=[2,3,4]),
+ dict(n=3,title='Pracownia: moja lekcja',time='75–180 min',effect='Mam gotowy fragment lekcji lub materiał, sprawdzony z partnerem i zapisany do użycia.',stages=[6,7,9,10,11,12])]
+
+# Indeks źródeł przekazanych przez organizatora. Tytuły opisowe zastępują
+# techniczne nazwy plików, aby uczestnik wiedział, po co sięgnąć do poradnika.
+D['pdf_guides']=[
+ dict(title='Poradnik praktyczny: od logowania do własnych materiałów',pages=19,
+      topics=['logowanie i rejestracja','wyszukiwanie i filtry','udostępnianie','teczki i własne materiały','komunikacja'],
+      used='Podstawa części wspólnej: logowanie, wyszukiwanie, Ulubione i dobór sposobu udostępnienia.'),
+ dict(title='Komunikator ZPE',pages=14,
+      topics=['kanały publiczne','grupy prywatne','wiadomości bezpośrednie','załączniki, audio i wideo','wyszukiwanie i oznaczanie wiadomości'],
+      used='Rozszerzenie po szkoleniu: organizowanie komunikacji w klasie i świadomy wybór widoczności.'),
+ dict(title='Udostępnianie materiałów i sprawdzanie wyników',pages=21,
+      topics=['istniejąca i nowa grupa','kod lub link','praca na platformie','segregowanie materiałów','raporty i szczegółowe odpowiedzi'],
+      used='Podstawa pokazu różnicy między zwykłym linkiem a zadaniem, z którego nauczyciel może otrzymać wyniki.'),
+ dict(title='Generator Kart Pracy',pages=32,
+      topics=['nowa karta i szablony','strony i elementy','zapis i filtrowanie','pobieranie i udostępnianie','edycja i usuwanie'],
+      used='Rozszerzenie dla osób, które po warsztacie chcą zamienić plan lekcji w osobną kartę pracy.'),
+ dict(title='Tworzenie ścieżek nauki',pages=11,
+      topics=['dodawanie materiałów','kolejne kroki','warunki zaliczenia','udostępnianie','wyniki uczestników'],
+      used='Rozszerzenie do pracy dłuższej niż jedna lekcja lub do pracy uczniów w różnym tempie.'),
+ dict(title='Zarządzanie użytkownikami',pages=10,
+      topics=['klasy i grupy','klasy z SIO','lista użytkowników','filtrowanie','uprawnienia'],
+      used='Źródło rozróżnienia między klasą zaimportowaną z SIO a własną grupą nauczyciela.'),
+ dict(title='Jak utworzyć grupę i nią zarządzać',pages=4,
+      topics=['utworzenie grupy','dodawanie adresów e-mail','usuwanie uczestnika','usuwanie grupy','filtrowanie użytkowników'],
+      used='Krótka instrukcja pomocnicza do wielokrotnego udostępniania materiałów tej samej grupie.'),
+ dict(title='Klasy i grupy — instrukcja rozszerzona',pages=23,
+      topics=['tworzenie i opuszczanie grup','dodawanie z klas i grup','zaproszenia','uczestnicy','udostępnianie materiału grupie'],
+      used='Rozszerzenie dla prowadzącego i nauczycieli planujących regularną pracę z tą samą grupą.'),
+ dict(title='Wysyłanie wiadomości',pages=11,
+      topics=['odebrane i wysłane','wyszukiwanie wiadomości','wiadomość do osoby','wiadomość do grupy lub klasy','załączniki i usuwanie'],
+      used='Źródło prostego schematu wiadomości: co otworzyć, co zrobić, do kiedy i jak przekazać efekt.'),
+ dict(title='Kreator e-materiałów',pages=67,
+      topics=['projekty i ustawienia','spis treści','komponenty i multimedia','ćwiczenia interaktywne','publikacja i dostępność'],
+      used='Najszersze rozszerzenie. Na 4 listopada pokazujemy jego miejsce w ekosystemie, a nie pełną obsługę.'),
+ dict(title='Zarządzanie materiałami w funkcjach zaawansowanych',pages=26,
+      topics=['testy i ankiety','kursy','pliki, filmy i linki','SCORM','wyniki i statystyki'],
+      used='Źródło mapy zaawansowanych obiektów oraz ostrzeżenia, że dostęp zależy od roli użytkownika.')]
+for guide,filename in zip(D['pdf_guides'],[
+ '01-poradnik-praktyczny-zpe.pdf','02-komunikator-zpe.pdf','03-udostepnianie-i-wyniki.pdf',
+ '04-generator-kart-pracy.pdf','05-sciezki-nauki.pdf','06-zarzadzanie-uzytkownikami.pdf',
+ '07-tworzenie-grupy.pdf','08-klasy-i-grupy.pdf','09-wysylanie-wiadomosci.pdf',
+ '10-kreator-e-materialow.pdf','11-funkcje-zaawansowane.pdf']):
+ guide['file']='materialy-zrodlowe/'+filename
+
+D['extensions']={
+ 1:[['Mapa 12 metod pracy z technologią','#/wstep'],['Pełny katalog metod COVE','https://metodyka.covepolska.pl/']],
+ 2:[['Baza wiedzy: logowanie i organizacja pracy','#/baza-wiedzy']],
+ 3:[['Baza wiedzy: wyszukiwanie i Ulubione','#/baza-wiedzy'],['Indeks 11 poradników PDF','#/poradniki']],
+ 4:[['Jak pracować z klasą lub grupą','#/baza-wiedzy']],
+ 6:[['Zestaw 8 sprawdzonych punktów startowych','#/materialy'],['Baza wiedzy: wyszukiwanie i dobór','#/baza-wiedzy']],
+ 7:[['Generator Kart Pracy i Kreator — kiedy warto','#/baza-wiedzy']],
+ 9:[['Katalog metod COVE','https://metodyka.covepolska.pl/']],
+ 10:[['Udostępnianie, raporty i ścieżki nauki','#/baza-wiedzy'],['Przykład interpretacji raportu','#/pokaz']],
+ 11:[['Karty uczestnika krok po kroku','#/karty']],
+ 12:[['Wszystkie materiały po szkoleniu','#/centrum-materialow']]}
 D['resources']=[
  dict(id='notatki',kind='ogólne',subject='Wspólny start / każdy przedmiot',title='Gdzie tego szukać? O notowaniu',url='https://zpe.gov.pl/a/gdzie-tego-szukac-o-notowaniu/DgDem0ria',fragment='Początek materiału: zestawienie form notatki (tabela, punkty, schemat).',minutes=10,task='Wybierz formę notatki do porównania dwóch rozwiązań. Zapisz dwie kolumny i uzasadnij wybór formy.',evidence='Uczeń wybiera tabelę lub inną uzasadnioną formę i podaje kryterium porównania.',note='Na warsztacie wykorzystujemy krótki fragment. Oprawa całego zasobu jest skierowana do młodszych uczniów.'),
  dict(id='sarmatyzm',kind='ogólne',subject='Język polski / historia, szkoła ponadpodstawowa',title='Orient a kultura sarmacka',url='https://zpe.gov.pl/a/wprowadzenie/D532MWKZ8',fragment='Wprowadzenie: trzy portrety i akapit o wpływach Wschodu i Zachodu.',minutes=10,task='Wskaż na ilustracjach dwa szczegóły stroju. Ułóż pytanie, które pomoże zbadać ich pochodzenie.',evidence='Dwie obserwacje i pytanie odróżnione od niepotwierdzonej hipotezy.',note='Dalsza część „Przeczytaj” może posłużyć do późniejszej weryfikacji hipotez.'),
@@ -278,7 +403,8 @@ def norm(x):
  if isinstance(x,list): return [norm(y) for y in x]
  if isinstance(x,dict): return {k:norm(v) for k,v in x.items()}
  return x
-D=norm(D)
+from content_review import review
+D=norm(review(D))
 (ROOT/'content.json').write_text(json.dumps(D,ensure_ascii=False,indent=2))
 (ROOT/'content.js').write_text('window.WORKSHOP = '+json.dumps(D,ensure_ascii=False)+';\n')
 print('Created',len(S),'stages and',len(D['resources']),'resources')

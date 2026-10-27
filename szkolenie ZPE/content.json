@@ -1,7 +1,8 @@
 {
   "title": "ZPE bez pośpiechu",
   "date": "28.09.2026",
-  "version": 1,
+  "event_date": "4 listopada 2026",
+  "version": 3,
   "sources": [
     [
       "Wyszukiwanie materiałów",
@@ -64,6 +65,364 @@
       "Cele, przygotowanie, etapy, pytania prowadzącego, trudności i sprawdzenie."
     ]
   ],
+  "knowledge": [
+    {
+      "group": "Zacznij tutaj",
+      "title": "Wyszukiwanie i wybór materiału",
+      "live": true,
+      "purpose": "Znajdź jeden fragment pasujący do celu lekcji, poziomu uczniów i dostępnego czasu.",
+      "path": "Katalog → wyszukiwarka → etap edukacyjny, przedmiot lub podstawa programowa → podgląd materiału.",
+      "practice": "Skróć zapytanie, gdy nie ma wyników. Otwórz materiał i wskaż dokładny fragment, zamiast zadawać uczniom cały zasób.",
+      "caution": "Filtry i układ ekranu mogą wyglądać inaczej niż w starszym poradniku. Wybór materiału zawsze wymaga oceny nauczyciela.",
+      "source": "Poradnik: logowanie, wyszukiwanie, udostępnianie i tworzenie materiałów"
+    },
+    {
+      "group": "Zacznij tutaj",
+      "title": "Ulubione i porządkowanie zasobów",
+      "live": true,
+      "purpose": "Zachowaj materiał na swoim koncie i wróć do niego bez ponownego wyszukiwania.",
+      "path": "Otwarty materiał → serce / Dodaj do ulubionych → Katalog → Ulubione.",
+      "practice": "Zapisz tytuł, pełny link i nazwę fragmentu również w planie lekcji. Materiały z kilku przedmiotów można porządkować w teczkach.",
+      "caution": "Zakładka przeglądarki i Ulubione ZPE to dwie różne rzeczy. Drugie kliknięcie serca może usunąć zapis.",
+      "source": "Poradnik: logowanie, wyszukiwanie, udostępnianie i tworzenie materiałów"
+    },
+    {
+      "group": "Praca z uczniami",
+      "title": "Udostępnianie: link, grupa, kod lub kurs",
+      "live": true,
+      "purpose": "Dobierz sposób przekazania materiału do tego, czy potrzebujesz tylko dostępu, czy także wyników uczniów.",
+      "path": "Otwarty materiał → Udostępnij → wybór dostępnego trybu: istniejąca lub nowa grupa, kod/link albo praca na platformie.",
+      "practice": "Do szybkiego użycia wystarczy bezpośredni link i jasne polecenie. Jeśli chcesz raportów, przygotuj pracę na platformie i przypisz właściwych użytkowników.",
+      "caution": "Samo wysłanie zwykłego linku nie tworzy zadania i nie gwarantuje raportu. Nie każde ćwiczenie zapisuje wyniki w ten sam sposób.",
+      "source": "Udostępnianie materiałów, ich segregacja i sprawdzenie wyników uczniów"
+    },
+    {
+      "group": "Praca z uczniami",
+      "title": "Klasy i własne grupy",
+      "live": false,
+      "purpose": "Udostępniaj kolejne materiały tej samej grupie i zarządzaj uczestnikami.",
+      "path": "Klasy/Grupy → wybór klasy z systemu szkolnego albo Utwórz grupę → dodanie uczestników.",
+      "practice": "Własną grupę można wykorzystać ponownie. Klasy pochodzące z SIO i grupy utworzone ręcznie mają inne zasady zarządzania.",
+      "caution": "Nauczyciel nie edytuje danych klasy zaimportowanej z SIO. Nie pokazuj na szkoleniu danych prawdziwych uczniów.",
+      "source": "Zarządzanie użytkownikami; Tworzenie grup i zarządzanie nimi"
+    },
+    {
+      "group": "Sprawdzanie",
+      "title": "Wyniki i decyzja nauczyciela",
+      "live": true,
+      "purpose": "Zobacz odpowiedzi lub wyniki i zdecyduj, co wyjaśnić ponownie, komu pomóc i kto może przejść dalej.",
+      "path": "Przypisany materiał lub kurs → wyniki / analiza → widok grupy i szczegóły podejścia.",
+      "practice": "Najpierw sprawdź, czy uczeń miał dostęp i rozumiał polecenie. Dopiero potem interpretuj brak odpowiedzi lub niski wynik.",
+      "caution": "Czas wyświetlania nie jest miarą uwagi. Raport ma wspierać decyzję dydaktyczną, a nie automatycznie oceniać zaangażowanie.",
+      "source": "Udostępnianie materiałów…; Tworzenie ścieżek nauki; Zarządzanie materiałami"
+    },
+    {
+      "group": "Tworzenie",
+      "title": "Generator kart pracy",
+      "live": false,
+      "purpose": "Zbuduj prostą, wielostronicową kartę z tekstem i grafikami, zapisz ją, pobierz lub udostępnij.",
+      "path": "Generator Kart Pracy → nowa karta albo szablon → strony i elementy → zapis → podgląd / pobranie / udostępnienie.",
+      "practice": "Zacznij od jednej strony i jednego celu. Najpierw przygotuj polecenie i oczekiwaną odpowiedź, potem dobieraj elementy.",
+      "caution": "To rozszerzenie po szkoleniu. Podczas warsztatu szybszy będzie plan krótki fragment oparty na gotowym zasobie.",
+      "source": "Zintegrowana Platforma Edukacyjna - Generator Kart Pracy"
+    },
+    {
+      "group": "Tworzenie",
+      "title": "Kreator e-materiałów",
+      "live": false,
+      "purpose": "Twórz rozbudowane materiały z tekstem, multimediami, spisem treści i ćwiczeniami interaktywnymi.",
+      "path": "Kreator → nowy projekt → ustawienia i spis treści → komponenty → podgląd → zapis i publikacja.",
+      "practice": "Buduj małymi krokami: jedna sekcja, jedno ćwiczenie i próba na koncie testowym. Kreator obsługuje też wiele typów interakcji.",
+      "caution": "Kreator jest rozbudowany i zasługuje na osobne szkolenie. Nie zaczynaj od niego, jeśli celem jest gotowy materiał w ciągu jednego spotkania.",
+      "source": "Zintegrowana Platforma Edukacyjna - Kreator e-materiałów"
+    },
+    {
+      "group": "Planowanie",
+      "title": "Ścieżki nauki",
+      "live": false,
+      "purpose": "Ułóż kilka materiałów w kolejności i określ warunki przechodzenia do kolejnych kroków.",
+      "path": "Moje materiały → Utwórz ścieżkę → dodaj materiały → ustaw kolejność i warunki → zapisz → udostępnij.",
+      "practice": "Używaj, gdy uczniowie mają pracować dłużej niż jedną lekcję lub różnym tempem. Sprawdź ścieżkę na koncie ucznia testowego.",
+      "caution": "Próg procentowy lub przeczytanie zasobu nie dowodzi jeszcze zrozumienia. Dodaj zadanie wymagające odpowiedzi lub produktu.",
+      "source": "Zintegrowana Platforma Edukacyjna - Tworzenie ścieżek nauki"
+    },
+    {
+      "group": "Komunikacja",
+      "title": "Wiadomości i komunikator",
+      "live": false,
+      "purpose": "Przekazuj instrukcje, linki i pliki pojedynczym osobom, grupom lub klasom.",
+      "path": "Funkcjonalności zaawansowane → Wiadomości albo Komunikator → odbiorca / kanał → treść i załącznik.",
+      "practice": "W tytule podaj przedmiot i termin, a w wiadomości: co otworzyć, co zrobić i jak oddać efekt.",
+      "caution": "Kanały publiczne, grupy prywatne i wiadomości bezpośrednie mają różny zakres widoczności. Nie przesyłaj danych wrażliwych.",
+      "source": "Wysyłanie wiadomości; Zintegrowana Platforma Edukacyjna - Komunikator"
+    },
+    {
+      "group": "Dla zaawansowanych",
+      "title": "Inne obiekty i funkcje zaawansowane",
+      "live": false,
+      "purpose": "Zarządzaj m.in. testami, ankietami, kursami, plikami, filmami, linkami i pakietami SCORM.",
+      "path": "Funkcjonalności zaawansowane → zarządzanie materiałami → wybór typu obiektu → ustawienia → zapis / udostępnienie.",
+      "practice": "Najpierw określ efekt dla ucznia i sposób sprawdzenia. Dopiero potem wybierz typ obiektu.",
+      "caution": "Nazwy ekranów i dostępność funkcji zależą od roli oraz wersji platformy. Ten obszar wymaga osobnego ćwiczenia na koncie testowym.",
+      "source": "Zarządzanie materiałami w funkcjonalnościach zaawansowanych"
+    }
+  ],
+  "parts": [
+    {
+      "n": 1,
+      "title": "Modele pracy z technologią",
+      "effect": "Rozumiem, co robi uczeń, co robi nauczyciel i po co w tej lekcji jest technologia.",
+      "stages": [
+        1
+      ]
+    },
+    {
+      "n": 2,
+      "title": "ZPE krok po kroku",
+      "effect": "Potrafię się zalogować, znaleźć, ocenić, zapisać i ponownie otworzyć materiał.",
+      "stages": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Pracownia: moja lekcja",
+      "effect": "Mam gotowy fragment lekcji lub materiał, sprawdzony z partnerem i zapisany do użycia.",
+      "stages": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "pdf_guides": [
+    {
+      "title": "Poradnik praktyczny: od logowania do własnych materiałów",
+      "pages": 19,
+      "topics": [
+        "logowanie i rejestracja",
+        "wyszukiwanie i filtry",
+        "udostępnianie",
+        "teczki i własne materiały",
+        "komunikacja"
+      ],
+      "used": "Podstawa części wspólnej: logowanie, wyszukiwanie, Ulubione i dobór sposobu udostępnienia.",
+      "file": "materialy-zrodlowe/01-poradnik-praktyczny-zpe.pdf"
+    },
+    {
+      "title": "Komunikator ZPE",
+      "pages": 14,
+      "topics": [
+        "kanały publiczne",
+        "grupy prywatne",
+        "wiadomości bezpośrednie",
+        "załączniki, audio i wideo",
+        "wyszukiwanie i oznaczanie wiadomości"
+      ],
+      "used": "Rozszerzenie po szkoleniu: organizowanie komunikacji w klasie i świadomy wybór widoczności.",
+      "file": "materialy-zrodlowe/02-komunikator-zpe.pdf"
+    },
+    {
+      "title": "Udostępnianie materiałów i sprawdzanie wyników",
+      "pages": 21,
+      "topics": [
+        "istniejąca i nowa grupa",
+        "kod lub link",
+        "praca na platformie",
+        "segregowanie materiałów",
+        "raporty i szczegółowe odpowiedzi"
+      ],
+      "used": "Podstawa pokazu różnicy między zwykłym linkiem a zadaniem, z którego nauczyciel może otrzymać wyniki.",
+      "file": "materialy-zrodlowe/03-udostepnianie-i-wyniki.pdf"
+    },
+    {
+      "title": "Generator Kart Pracy",
+      "pages": 32,
+      "topics": [
+        "nowa karta i szablony",
+        "strony i elementy",
+        "zapis i filtrowanie",
+        "pobieranie i udostępnianie",
+        "edycja i usuwanie"
+      ],
+      "used": "Rozszerzenie dla osób, które po warsztacie chcą zamienić plan lekcji w osobną kartę pracy.",
+      "file": "materialy-zrodlowe/04-generator-kart-pracy.pdf"
+    },
+    {
+      "title": "Tworzenie ścieżek nauki",
+      "pages": 11,
+      "topics": [
+        "dodawanie materiałów",
+        "kolejne kroki",
+        "warunki zaliczenia",
+        "udostępnianie",
+        "wyniki uczestników"
+      ],
+      "used": "Rozszerzenie do pracy dłuższej niż jedna lekcja lub do pracy uczniów w różnym tempie.",
+      "file": "materialy-zrodlowe/05-sciezki-nauki.pdf"
+    },
+    {
+      "title": "Zarządzanie użytkownikami",
+      "pages": 10,
+      "topics": [
+        "klasy i grupy",
+        "klasy z SIO",
+        "lista użytkowników",
+        "filtrowanie",
+        "uprawnienia"
+      ],
+      "used": "Źródło rozróżnienia między klasą zaimportowaną z SIO a własną grupą nauczyciela.",
+      "file": "materialy-zrodlowe/06-zarzadzanie-uzytkownikami.pdf"
+    },
+    {
+      "title": "Jak utworzyć grupę i nią zarządzać",
+      "pages": 4,
+      "topics": [
+        "utworzenie grupy",
+        "dodawanie adresów e-mail",
+        "usuwanie uczestnika",
+        "usuwanie grupy",
+        "filtrowanie użytkowników"
+      ],
+      "used": "Krótka instrukcja pomocnicza do wielokrotnego udostępniania materiałów tej samej grupie.",
+      "file": "materialy-zrodlowe/07-tworzenie-grupy.pdf"
+    },
+    {
+      "title": "Klasy i grupy - instrukcja rozszerzona",
+      "pages": 23,
+      "topics": [
+        "tworzenie i opuszczanie grup",
+        "dodawanie z klas i grup",
+        "zaproszenia",
+        "uczestnicy",
+        "udostępnianie materiału grupie"
+      ],
+      "used": "Rozszerzenie dla prowadzącego i nauczycieli planujących regularną pracę z tą samą grupą.",
+      "file": "materialy-zrodlowe/08-klasy-i-grupy.pdf"
+    },
+    {
+      "title": "Wysyłanie wiadomości",
+      "pages": 11,
+      "topics": [
+        "odebrane i wysłane",
+        "wyszukiwanie wiadomości",
+        "wiadomość do osoby",
+        "wiadomość do grupy lub klasy",
+        "załączniki i usuwanie"
+      ],
+      "used": "Źródło prostego schematu wiadomości: co otworzyć, co zrobić, do kiedy i jak przekazać efekt.",
+      "file": "materialy-zrodlowe/09-wysylanie-wiadomosci.pdf"
+    },
+    {
+      "title": "Kreator e-materiałów",
+      "pages": 67,
+      "topics": [
+        "projekty i ustawienia",
+        "spis treści",
+        "komponenty i multimedia",
+        "ćwiczenia interaktywne",
+        "publikacja i dostępność"
+      ],
+      "used": "Najszersze rozszerzenie. Na 4 listopada pokazujemy jego miejsce w ekosystemie, a nie pełną obsługę.",
+      "file": "materialy-zrodlowe/10-kreator-e-materialow.pdf"
+    },
+    {
+      "title": "Zarządzanie materiałami w funkcjach zaawansowanych",
+      "pages": 26,
+      "topics": [
+        "testy i ankiety",
+        "kursy",
+        "pliki, filmy i linki",
+        "SCORM",
+        "wyniki i statystyki"
+      ],
+      "used": "Źródło mapy zaawansowanych obiektów oraz ostrzeżenia, że dostęp zależy od roli użytkownika.",
+      "file": "materialy-zrodlowe/11-funkcje-zaawansowane.pdf"
+    }
+  ],
+  "extensions": {
+    "1": [
+      [
+        "Mapa 12 metod pracy z technologią",
+        "#/wstep"
+      ],
+      [
+        "Pełny katalog metod COVE",
+        "https://metodyka.covepolska.pl/"
+      ]
+    ],
+    "2": [
+      [
+        "Baza wiedzy: logowanie i organizacja pracy",
+        "#/baza-wiedzy"
+      ]
+    ],
+    "3": [
+      [
+        "Baza wiedzy: wyszukiwanie i Ulubione",
+        "#/baza-wiedzy"
+      ],
+      [
+        "Indeks 11 poradników PDF",
+        "#/poradniki"
+      ]
+    ],
+    "4": [
+      [
+        "Jak pracować z klasą lub grupą",
+        "#/baza-wiedzy"
+      ]
+    ],
+    "6": [
+      [
+        "Zestaw 8 sprawdzonych punktów startowych",
+        "#/materialy"
+      ],
+      [
+        "Baza wiedzy: wyszukiwanie i dobór",
+        "#/baza-wiedzy"
+      ]
+    ],
+    "7": [
+      [
+        "Generator Kart Pracy i Kreator - kiedy warto",
+        "#/baza-wiedzy"
+      ]
+    ],
+    "9": [
+      [
+        "Katalog metod COVE",
+        "https://metodyka.covepolska.pl/"
+      ]
+    ],
+    "10": [
+      [
+        "Udostępnianie, raporty i ścieżki nauki",
+        "#/baza-wiedzy"
+      ],
+      [
+        "Przykład interpretacji raportu",
+        "#/pokaz"
+      ]
+    ],
+    "11": [
+      [
+        "Karty uczestnika krok po kroku",
+        "#/karty"
+      ]
+    ],
+    "12": [
+      [
+        "Wszystkie materiały po szkoleniu",
+        "#/centrum-materialow"
+      ]
+    ]
+  },
   "resources": [
     {
       "id": "notatki",
@@ -72,7 +431,6 @@
       "title": "Gdzie tego szukać? O notowaniu",
       "url": "https://zpe.gov.pl/a/gdzie-tego-szukac-o-notowaniu/DgDem0ria",
       "fragment": "Początek materiału: zestawienie form notatki (tabela, punkty, schemat).",
-      "minutes": 10,
       "task": "Wybierz formę notatki do porównania dwóch rozwiązań. Zapisz dwie kolumny i uzasadnij wybór formy.",
       "evidence": "Uczeń wybiera tabelę lub inną uzasadnioną formę i podaje kryterium porównania.",
       "note": "Na warsztacie wykorzystujemy krótki fragment. Oprawa całego zasobu jest skierowana do młodszych uczniów."
@@ -84,7 +442,6 @@
       "title": "Orient a kultura sarmacka",
       "url": "https://zpe.gov.pl/a/wprowadzenie/D532MWKZ8",
       "fragment": "Wprowadzenie: trzy portrety i akapit o wpływach Wschodu i Zachodu.",
-      "minutes": 10,
       "task": "Wskaż na ilustracjach dwa szczegóły stroju. Ułóż pytanie, które pomoże zbadać ich pochodzenie.",
       "evidence": "Dwie obserwacje i pytanie odróżnione od niepotwierdzonej hipotezy.",
       "note": "Dalsza część „Przeczytaj” może posłużyć do późniejszej weryfikacji hipotez."
@@ -96,7 +453,6 @@
       "title": "Obliczenia procentowe. Część I",
       "url": "https://zpe.gov.pl/a/obliczenia-procentowe-czesc-i/DLiy0FUq5",
       "fragment": "Początkowe przypomnienie typów obliczeń procentowych; jeden przykład dobrany przez nauczyciela.",
-      "minutes": 12,
       "task": "Po obejrzeniu przykładu oblicz 15% z 200 zł i wyjaśnij, od jakiej liczby liczysz procent.",
       "evidence": "30 zł oraz wskazanie 200 zł jako podstawy obliczenia.",
       "note": "Polecenie z kwotą 200 zł jest autorskim zadaniem warsztatu, nie cytatem z ZPE."
@@ -108,7 +464,6 @@
       "title": "Fotosynteza jako reakcja anaboliczna",
       "url": "https://zpe.gov.pl/a/wprowadzenie/D1ADAV8f6",
       "fragment": "Wprowadzenie: krótki opis fotosyntezy i lista celów.",
-      "minutes": 10,
       "task": "Wypisz dwa substraty fotosyntezy i wskaż źródło energii. Powiedz, czego roślina nie pobiera w gotowej postaci.",
       "evidence": "Woda, dwutlenek węgla, energia światła; rozróżnienie substratów od wytwarzanych związków organicznych.",
       "note": "Zakres i język polecenia nauczyciel dostosowuje do swojej klasy."
@@ -120,7 +475,6 @@
       "title": "Przygotowanie materiałów do publikacji",
       "url": "https://zpe.gov.pl/a/przewodnik-dla-nauczyciela/D16iKRlNO",
       "fragment": "Przewodnik nauczyciela → Struktura e-materiału → „Przygotowanie publikacji elektronicznych” (plansza).",
-      "minutes": 12,
       "task": "Wybierz jeden element planszy. Ułóż dwa pytania kontrolne dla osoby przygotowującej publikację.",
       "evidence": "Dwa pytania, odpowiedzi oparte na wskazanym elemencie oraz miejsce sprawdzenia.",
       "note": "Link otwiera przewodnik. Do własnej lekcji skopiuj adres wybranej planszy, a nie przewodnika."
@@ -132,7 +486,6 @@
       "title": "Przygotowanie miejsca pracy kierowcy mechanika",
       "url": "https://zpe.gov.pl/a/przewodnik-dla-uczacego-sie/D1FAMRiKQ",
       "fragment": "Przewodnik → film instruktażowy „Przygotowanie miejsca pracy kierowcy mechanika”. Wybierz jedną czynność z filmu.",
-      "minutes": 12,
       "task": "Po wybranym fragmencie zapisz dwie czynności przygotowawcze i uzasadnij ich kolejność.",
       "evidence": "Dwie czynności zgodne z filmem i uzasadnienie; nauczyciel weryfikuje poprawność zawodową.",
       "note": "To analiza materiału przy komputerze. Nie jest instruktażem uprawniającym do obsługi pojazdu."
@@ -144,7 +497,6 @@
       "title": "Dokumentacja magazynowa (obieg dokumentów)",
       "url": "https://zpe.gov.pl/a/wprowadzenie/DQ4p55Laj",
       "fragment": "Spis treści → „Dokumentacja w obrocie magazynowym” (infografika). Wybierz dwa dokumenty.",
-      "minutes": 12,
       "task": "Dla dwóch wybranych dokumentów zapisz nazwę i sytuację, w której są potrzebne.",
       "evidence": "Dwie poprawne pary: dokument i zastosowanie; odniesienie do infografiki.",
       "note": "Materiał wskazuje stan prawny z 08.09.2023. Na warsztacie ćwiczymy wybór zasobu; aktualność przepisów zawodowych wymaga osobnej weryfikacji."
@@ -156,7 +508,6 @@
       "title": "Przygotowanie surowców i wytwarzanie ciast",
       "url": "https://zpe.gov.pl/a/podstawowe-zabiegi-przygotowawcze-surowcow-do-wytwarzania-ciast/DCrSaaRtm",
       "fragment": "Grafika interaktywna „Podstawowe zabiegi przygotowawcze surowców do wytwarzania ciast”; wybierz jeden zabieg.",
-      "minutes": 10,
       "task": "Nazwij wybrany zabieg i wyjaśnij jego cel. Wskaż w materiale informację, na której opierasz odpowiedź.",
       "evidence": "Nazwa zabiegu, jego cel i odwołanie do opisu w grafice.",
       "note": "Dostępny jest także opis tekstowy. Nie trzeba przechodzić wszystkich zakładek."
@@ -200,8 +551,8 @@
     ],
     [
       "duration",
-      "Przebieg 10-15 minut",
-      "Np. 2 min pokaz, 5 min zadanie, 3 min sprawdzenie"
+      "Kolejność działań ucznia",
+      "Najpierw przykład, potem własna próba i sprawdzenie"
     ],
     [
       "task",
@@ -232,6 +583,16 @@
       "backup",
       "Plan bez internetu",
       "Np. wydruk wybranego fragmentu i to samo pytanie"
+    ],
+    [
+      "own",
+      "Moje materiały i dodatkowe źródła",
+      "Tytuł pliku lub pełny adres źródła; autor i warunki wykorzystania"
+    ],
+    [
+      "delivery",
+      "Jak przekażę zadanie uczniom?",
+      "Projektor, urządzenie na parę lub praca indywidualna; link albo przypisane zadanie"
     ]
   ],
   "example": {
@@ -242,13 +603,15 @@
     "title": "Gdzie tego szukać? O notowaniu",
     "url": "https://zpe.gov.pl/a/gdzie-tego-szukac-o-notowaniu/DgDem0ria",
     "fragment": "Początek materiału: zestawienie „Tabela / Punkty / Schemat”.",
-    "duration": "2 min pokaz form; 5 min zadanie; 3 min rozmowa w parze; 2 min sprawdzenie. Razem 12 min.",
+    "duration": "Porównanie dwóch przykładów, własna odpowiedź, rozmowa w parze i sprawdzenie uzasadnienia.",
     "task": "Porównaj notatkę w punktach z tabelą. Zapisz po jednej zalecie każdej formy. Wybierz formę do porównania dwóch telefonów i uzasadnij wybór jednym zdaniem.",
     "answer": "Dwie zalety związane z zastosowaniem. Np. punkty porządkują kolejne kroki, tabela ułatwia porównanie według tych samych cech. Wybór tabeli uzasadniony kryteriami porównania.",
     "check": "Każdy zapisuje wybór i uzasadnienie. Czytam trzy różne odpowiedzi; sprawdzamy, czy uzasadnienie odnosi się do celu.",
     "revision": "Doprecyzowanie: porównujemy telefony według ceny i czasu pracy baterii.",
     "date": "Najbliższa godzina wychowawcza; przed wyjściem wpisuję konkretną datę.",
-    "backup": "Na kartce podaję trzy formy: tabela, punkty, schemat. Uczniowie wykonują to samo polecenie."
+    "backup": "Na kartce podaję trzy formy: tabela, punkty, schemat. Uczniowie wykonują to samo polecenie.",
+    "own": "Dwa opisy telefonów przygotowane przez nauczyciela, bez danych uczniów.",
+    "delivery": "Wyświetlam przykłady na projektorze. Każdy zapisuje odpowiedź, następnie porównuje ją z partnerem."
   },
   "intro": {
     "title": "Lekcja, w której pracują uczniowie",
@@ -370,23 +733,21 @@
         ]
       ]
     },
-    "compare_note": "To plan, a nie pomiar. Porównanie pokazuje, kto pracuje w kolejnych minutach. W wersji B nauczyciel mówi do całej klasy przez około 9 minut, a przez 22 minuty pracy własnej i pracy w parach jest przy uczniach.",
+    "compare_note": "To plan, a nie pomiar. Porównanie pokazuje, kto pracuje w kolejnych minutach. W wersji B nauczyciel mówi do całej klasy przez około , a przez  pracy własnej i pracy w parach jest przy uczniach.",
     "lesson": {
       "label": "Technik logistyk, klasa 2: Który dokument magazynowy?",
-      "context": "Lekcja 45 minut: około 5 minut organizacji, 40 minut pracy. Jeden laptop lub iPad na ucznia (możliwa też praca jednym urządzeniem w parze). Materiał ZPE „Dokumentacja magazynowa”, fragment „Dokumentacja w obrocie magazynowym” (infografika).",
+      "context": "Lekcja : około  organizacji,  pracy. Jeden laptop lub iPad na ucznia (możliwa też praca jednym urządzeniem w parze). Materiał ZPE „Dokumentacja magazynowa”, fragment „Dokumentacja w obrocie magazynowym” (infografika).",
       "url": "https://zpe.gov.pl/a/wprowadzenie/DQ4p55Laj",
       "goal": "Uczeń dobiera dokument (PZ, WZ, MM, RW, PW) do sytuacji magazynowej i uzasadnia decyzję przy przyjęciu dostawy z rozbieżnością.",
       "steps": [
         {
-          "min": 4,
           "title": "Przypomnij bez notatek",
           "method": "Przypominanie i powroty",
-          "teacher": "Wyświetla trzy krótkie pytania z poprzedniej lekcji o przyjęciu i wydaniu towaru. Po 3 minutach pokazuje klucz.",
+          "teacher": "Wyświetla trzy krótkie pytania z poprzedniej lekcji o przyjęciu i wydaniu towaru. Po  pokazuje klucz.",
           "students": "Odpowiadają na kartce bez zeszytu i ekranu. Sami sprawdzają odpowiedzi z kluczem i zaznaczają, czego nie pamiętali.",
           "device": "Urządzenia zamknięte."
         },
         {
-          "min": 5,
           "title": "Pokaz jednej decyzji",
           "method": "Modelowanie",
           "teacher": "Na jednym przykładzie myśli na głos: „Skąd przychodzi towar? Spoza firmy czy z jej wnętrza? Przyjmuję go czy wydaję?” Dochodzi w ten sposób do PZ.",
@@ -394,7 +755,6 @@
           "device": "Ekran nauczyciela; uczniowie piszą na kartce."
         },
         {
-          "min": 12,
           "title": "Praca własna z ZPE",
           "method": "360 e-learning; UDL",
           "teacher": "Podaje bezpośredni link. Chodzi po sali z listą 3-4 osób, przy których siada najpierw. Notuje, na którym pytaniu kto się zatrzymał. Nie tłumaczy całej klasie.",
@@ -402,7 +762,6 @@
           "device": "Laptop lub iPad: powiększenie, powrót do fragmentu, opis tekstowy. Wydruk infografiki dla osób, którym ekran przeszkadza."
         },
         {
-          "min": 3,
           "title": "Jedno pytanie do wszystkich",
           "method": "Ocenianie kształtujące; Mastery learning",
           "teacher": "Pyta: „Magazynier wydaje materiał na produkcję we własnej firmie. Jaki dokument? A) WZ, B) RW, C) MM, D) PZ”. Wszyscy pokazują odpowiedź w tej samej chwili. Liczy odpowiedzi.",
@@ -410,15 +769,13 @@
           "device": "Kartki z literami albo ankieta; urządzenia zamknięte."
         },
         {
-          "min": 10,
           "title": "Przypadek w parach",
           "method": "Problem, przypadek, projekt; Współpraca",
-          "teacher": "Słucha par. Wybiera dwie pary, których decyzje się różnią. Jeśli w poprzednim kroku źle odpowiedziała więcej niż 1/3 klasy, przez pierwsze 3 minuty siada z tą grupą przy pytaniu „zewnętrzny czy wewnętrzny?”.",
-          "students": "Przypadek: zamówiono 120 sztuk, przyjechało 112, a jeden karton z 12 sztukami jest uszkodzony. Każdy najpierw sam zapisuje decyzję (2 min). Potem para porównuje decyzje i zapisuje jedną różnicę i jedną zmianę.",
+          "teacher": "Słucha par. Wybiera dwie pary, których decyzje się różnią. Jeśli w poprzednim kroku źle odpowiedziała więcej niż 1/3 klasy, przez pierwsze  siada z tą grupą przy pytaniu „zewnętrzny czy wewnętrzny?”.",
+          "students": "Przypadek: zamówiono 120 sztuk, przyjechało 112, a jeden karton z 12 sztukami jest uszkodzony. Każdy najpierw sam zapisuje decyzję (). Potem para porównuje decyzje i zapisuje jedną różnicę i jedną zmianę.",
           "device": "Jedno urządzenie na parę, tylko do zajrzenia w infografikę; decyzja na papierze."
         },
         {
-          "min": 4,
           "title": "Rozmowa klasy",
           "method": "Nauczanie dialogowe",
           "teacher": "Dwie pary przedstawiają różne decyzje. Nauczyciel pyta o dane: „Ile sztuk przyjmujesz bez zastrzeżeń? Co musiałoby się zmienić, żebyś podpisał dokument dostawy bez adnotacji?”",
@@ -426,7 +783,6 @@
           "device": "Ekrany zamknięte."
         },
         {
-          "min": 2,
           "title": "Karta wyjścia",
           "method": "Metapoznanie; Przypominanie i powroty",
           "teacher": "Zbiera karty. Zapowiada, że za tydzień lekcja zacznie się od trzech pytań o te dokumenty.",
@@ -435,7 +791,7 @@
         }
       ],
       "note": "Szczegółowe zasady przyjęcia dostawy zależą od procedury firmy. Materiał ZPE podaje stan prawny z 08.09.2023. Przed lekcją nauczyciel przedmiotu zawodowego sprawdza aktualność przepisów i klucz. Pięć pytań z kluczem i pełny przypadek są w opisie metody 360 e-learning.",
-      "decision": "Punkt decyzji: jeśli po 12 minutach więcej niż 1/3 klasy nie odpowiedziała na pięć pytań, rozdaj wydruk najważniejszego fragmentu i przejdź do pytania dla wszystkich."
+      "decision": "Punkt decyzji: jeśli po  więcej niż 1/3 klasy nie odpowiedziała na pięć pytań, rozdaj wydruk najważniejszego fragmentu i przejdź do pytania dla wszystkich."
     },
     "variant": {
       "label": "Ten sam układ w przedmiocie ogólnym: matematyka, zmiana procentowa",
@@ -628,7 +984,7 @@
       "after": "Podczas wykładu nauczyciel nie wiedziałby, ile osób uważa, że cena wróciła do 100 zł. Pytanie do wszystkich pokazuje to w kilka sekund."
     },
     "notes": {
-      "teza": "Około 1 minuty. Powiedz: „Dziś nie będzie wykładu o platformie”. Każdą z trzech kart skomentuj jednym zdaniem. Podkreśl ramkę na dole: technologia nie jest metodą.",
+      "teza": "Około . Powiedz: „Dziś nie będzie wykładu o platformie”. Każdą z trzech kart skomentuj jednym zdaniem. Podkreśl ramkę na dole: technologia nie jest metodą.",
       "dwie": "Minuty 1-3. Pokaż obie osie. Zapytaj salę: „Kto pracuje przez większość lekcji?”. Odpowiedź odsłoń dopiero po 2-3 głosach. Zwróć uwagę na najdłuższy odcinek wersji B: pracę własną z materiałem.",
       "poll": "Minuty 3-6. Rozdaj karteczki. Odlicz do trzech: wszyscy podnoszą kartkę z literą w tej samej chwili. Policz głosy A i B i dopiero wtedy kliknij „Pokaż odpowiedź”. Powiedz: „Podczas wykładu nie wiedziałbym, ile osób myśli, że 100 zł”.",
       "shifts": "Slajd do lektury po warsztacie. Na żywo wskaż jedno przesunięcie najbliższe grupie, np. „nauczyciel przy uczniach”. Gdy brakuje czasu, przejdź dalej.",
@@ -645,15 +1001,15 @@
     "label": "Warsztat dla nauczycieli · ZSZ5 · COVE Polska",
     "sub": "Lekcja, w której pracują uczniowie. Gotowy materiał, laptop lub iPad i czas na własną próbę.",
     "outcomes": [
-      "Jeden wybrany materiał ZPE.",
-      "Polecenie gotowe dla Twoich uczniów.",
-      "Plan na 10-15 minut lekcji.",
-      "Ściąga, dzięki której wrócisz do materiału."
+      "Wybrany fragment ZPE.",
+      "Polecenie i kryterium odpowiedzi.",
+      "Materiał do własnej klasy.",
+      "Instrukcje do samodzielnego powrotu."
     ],
     "facts": [
-      "180 minut z dwiema przerwami",
-      "20 par, każdy na własnym laptopie",
-      "Prezentacja i zadania w jednym miejscu"
+      "4 listopada 2026",
+      "Wspólny pokaz i praca w pracowniach",
+      "Własny temat i gotowy materiał"
     ],
     "end": [
       [
@@ -673,10 +1029,6 @@
   "stages": [
     {
       "title": "Kto pracuje na lekcji?",
-      "time": [
-        0,
-        10
-      ],
       "goal": "Zobaczysz, jak ZPE i laptop mogą przenieść pracę z nauczyciela na ucznia, i wybierzesz temat swojej lekcji.",
       "steps": [
         "Obejrzyj dwie wersje tej samej lekcji: wykład i lekcję z pracą własną na ZPE. Sprawdź, kto pracuje w kolejnych minutach.",
@@ -690,7 +1042,7 @@
       "say": "Dziś nie będzie wykładu o platformie. Pokażę, jak może wyglądać lekcja, w której pracują uczniowie. Potem każdy przygotuje mały fragment takiej lekcji.",
       "run": "0-3: pokaż porównanie dwóch lekcji i zapytaj: „Kto pracuje przez większość lekcji?”. 3-6: pytanie do wszystkich: „Cena 100 zł wzrosła o 10%, potem spadła o 10%. Ile kosztuje teraz?”. Wszyscy pokazują kartkę w tej samej chwili. Policz odpowiedzi 100 zł i 99 zł. Powiedz: „Podczas wykładu nie wiedziałbym, ile osób myśli, że 100”. 6-10: uczestnicy zapisują temat i część lekcji do pracy własnej.",
       "error": "Uczestnik uznaje, że taka lekcja jest tylko dla informatyków, albo próbuje od razu zaplanować całą lekcję.",
-      "help": "Wskaż jeden etap przykładowej lekcji, np. 12 minut pracy z materiałem. Zaproponuj mały fragment: ilustracja i pytanie.",
+      "help": "Wskaż jeden etap przykładowej lekcji, np.  pracy z materiałem. Zaproponuj mały fragment: ilustracja i pytanie.",
       "extra": "",
       "link": [
         "Zobacz przykładową lekcję",
@@ -699,10 +1051,6 @@
     },
     {
       "title": "Spokojny start",
-      "time": [
-        10,
-        25
-      ],
       "goal": "Otworzysz ZPE i wrócisz do tej instrukcji.",
       "steps": [
         "Otwórz ZPE przyciskiem poniżej. Pojawi się druga karta przeglądarki.",
@@ -725,10 +1073,6 @@
     },
     {
       "title": "Patrz, potem zrób",
-      "time": [
-        25,
-        45
-      ],
       "goal": "Znajdziesz i zapiszesz wspólny materiał.",
       "steps": [
         "Na ZPE otwórz Katalog. Wyszukaj „Gdzie tego szukać? O notowaniu”.",
@@ -751,10 +1095,6 @@
     },
     {
       "title": "Powtórz z partnerem",
-      "time": [
-        45,
-        65
-      ],
       "goal": "Obie osoby przećwiczą powrót do zapisanego materiału.",
       "steps": [
         "Ustalcie, kto zaczyna. Osoba A obsługuje własny laptop, osoba B czyta pytania z karty 3.",
@@ -774,15 +1114,11 @@
     },
     {
       "title": "Przerwa",
-      "time": [
-        65,
-        75
-      ],
       "goal": "Odpoczniesz od ekranu.",
       "steps": [
         "Zostaw otwarte karty.",
         "Wstań, napij się wody i odpocznij od ekranu.",
-        "Wróć za 10 minut."
+        "Wróć za ."
       ],
       "done": "Jestem gotowy/gotowa na dalszą część.",
       "hint": "Nie musisz niczego nadrabiać w przerwie.",
@@ -796,10 +1132,6 @@
     },
     {
       "title": "Znajdź coś dla siebie",
-      "time": [
-        75,
-        95
-      ],
       "goal": "Dobierzesz jeden materiał do swojej lekcji.",
       "steps": [
         "Otwórz zestaw ośmiu materiałów. Wybierz propozycję ogólną lub zawodową albo wyszukaj własny temat na ZPE.",
@@ -808,12 +1140,12 @@
         "Zapisz zasób w Ulubionych. W swojej karcie zachowaj tytuł, link oraz nazwę fragmentu."
       ],
       "done": "Mam jeden zasób i wiem, dlaczego pasuje do mojego celu.",
-      "hint": "Jeśli po 5 minutach nie masz wyniku, wybierz materiał z zestawu startowego. Link do przewodnika nauczyciela zamień na adres wybranego zasobu dla ucznia.",
+      "hint": "Jeśli po  nie masz wyniku, wybierz materiał z zestawu startowego. Link do przewodnika nauczyciela zamień na adres wybranego zasobu dla ucznia.",
       "prep": "Otwórz katalog startowy i wskaż podział ogólne/zawodowe. Przygotuj bezpośredni link do wspólnego przykładu.",
       "say": "Szukamy jednego użytecznego fragmentu. Dobry wybór to taki, do którego potrafisz ułożyć konkretne zadanie.",
       "run": "75-78: trzy kryteria wyboru. 78-90: wyszukiwanie. 90-95: zapis i krótkie uzasadnienie partnerowi.",
       "error": "Przeglądanie kolejnych materiałów bez wyboru; wybór samego przewodnika zamiast zasobu ucznia.",
-      "help": "Po 5 minutach skieruj do zestawu startowego. Zapytaj: „Który fragment pokażesz uczniowi?”.",
+      "help": "Po  skieruj do zestawu startowego. Zapytaj: „Który fragment pokażesz uczniowi?”.",
       "extra": "",
       "link": [
         "Wybierz materiał",
@@ -822,16 +1154,12 @@
     },
     {
       "title": "Zbuduj fragment lekcji",
-      "time": [
-        95,
-        120
-      ],
-      "goal": "Przygotujesz działanie ucznia na 10-15 minut.",
+      "goal": "Przygotujesz działanie ucznia na krótki fragment.",
       "steps": [
         "Otwórz „Moją lekcję”. Najpierw przeczytaj gotowy przykład.",
         "Wpisz cel, dokładny fragment i polecenie. Zacznij polecenie od „porównaj”, „wybierz”, „wyjaśnij” albo „oblicz”.",
         "Dopisz oczekiwaną odpowiedź i sposób sprawdzenia wszystkich uczniów.",
-        "Rozpisz 10-15 minut, łącznie ze sprawdzeniem. Zapisz plan bez internetu."
+        "Rozpisz krótki fragment, łącznie ze sprawdzeniem. Zapisz plan bez internetu."
       ],
       "done": "Mam cel, link, fragment, polecenie, kryterium odpowiedzi i wykonalny czas.",
       "hint": "„Obejrzyj film” nie określa jeszcze efektu. Dodaj: „Po obejrzeniu zapisz dwie…”. Możesz wypełnić papierową kartę zamiast formularza.",
@@ -848,15 +1176,11 @@
     },
     {
       "title": "Druga przerwa",
-      "time": [
-        120,
-        130
-      ],
       "goal": "Odpoczniesz przed próbą własnego zadania.",
       "steps": [
         "Sprawdź komunikat zapisu formularza.",
         "Zostaw otwarte karty i odpocznij od ekranu.",
-        "Wróć za 10 minut."
+        "Wróć za ."
       ],
       "done": "Wiem, gdzie jest mój plan.",
       "hint": "Jeśli zapis w przeglądarce nie działa, pobierz kopię tekstową lub skorzystaj z papieru.",
@@ -870,15 +1194,11 @@
     },
     {
       "title": "Przetestuj i popraw",
-      "time": [
-        130,
-        150
-      ],
       "goal": "Sprawdzisz, czy druga osoba rozumie Twoje polecenie.",
       "steps": [
         "Runda 1: A pokazuje materiał i polecenie. B wykonuje początek zadania, A obserwuje bez dopowiadania.",
         "B mówi: „Wiem, co mam zrobić…” oraz „Potrzebuję doprecyzowania…”. A zapisuje jedną zmianę.",
-        "Po 10 minutach zamieńcie role.",
+        "Po  zamieńcie role.",
         "Każdy poprawia własne polecenie lub dobór fragmentu."
       ],
       "done": "Mam jedną poprawkę wynikającą z próby z partnerem.",
@@ -896,10 +1216,6 @@
     },
     {
       "title": "Co można zrobić dalej?",
-      "time": [
-        150,
-        160
-      ],
       "goal": "Rozpoznasz różnicę między linkiem a pracą w kursie.",
       "steps": [
         "Obejrzyj pokaz prowadzącego. Nie musisz powtarzać tych operacji na swoim koncie.",
@@ -921,10 +1237,6 @@
     },
     {
       "title": "Potrafię wrócić",
-      "time": [
-        160,
-        175
-      ],
       "goal": "Samodzielnie odtworzysz drogę do swojego zasobu.",
       "steps": [
         "Przejdź na stronę główną ZPE. Otwórz Katalog → Ulubione.",
@@ -947,10 +1259,6 @@
     },
     {
       "title": "Mój następny krok",
-      "time": [
-        175,
-        180
-      ],
       "goal": "Zaplanujesz pierwsze wykorzystanie i powtórkę.",
       "steps": [
         "W „Mojej lekcji” wpisz datę i klasę pierwszego wykorzystania.",
@@ -972,56 +1280,12 @@
       ]
     }
   ],
-  "short": [
-    [
-      "0-10",
-      "Kto pracuje na lekcji?",
-      1
-    ],
-    [
-      "10-25",
-      "Spokojny start",
-      2
-    ],
-    [
-      "25-45",
-      "Patrz, potem zrób",
-      3
-    ],
-    [
-      "45-60",
-      "Powtórz z partnerem",
-      4
-    ],
-    [
-      "60-70",
-      "Przerwa",
-      5
-    ],
-    [
-      "70-85",
-      "Znajdź coś dla siebie",
-      6
-    ],
-    [
-      "85-105",
-      "Zbuduj fragment lekcji",
-      7
-    ],
-    [
-      "105-120",
-      "Potrafię wrócić i mój następny krok",
-      11
-    ]
-  ],
   "preflight": [
-    "7 dni wcześniej: sprawdź przedmioty uczestników i osiem propozycji. Poproś o przyniesienie tematu najbliższej lekcji oraz sprawdzenie własnego logowania; nikt nie przekazuje trenerowi hasła.",
-    "1-2 dni wcześniej: na koncie trenera przejdź wyszukiwanie, zapis sercem, Katalog → Ulubione i ponowne otwarcie. Porównaj ekran z kartą 2. Jeśli układ się zmienił, zaktualizuj instrukcję i ilustracje.",
-    "1-2 dni wcześniej: przygotuj kurs demonstracyjny lub oficjalne ilustracje oraz przykład dydaktyczny. Sprawdź, czy wybrane zadanie rejestruje wyniki; nie każde starsze ćwiczenie musi to obsługiwać.",
-    "W sali: sprawdź internet przy przewidywanym obciążeniu, gniazdka i widoczność projektora z ostatniego rzędu. Ustaw powiększenie pokazu tak, by dało się odczytać nazwy przycisków.",
-    "Wydrukuj 40 kompletów kart, 40 kart sygnałowych i scenariusz trenera. Przygotuj 20 par sąsiedzkich, najlepiej o podobnych przedmiotach. Każdy ma własny laptop.",
-    "Próba z dwiema osobami początkującymi: poproś o otwarcie strony, odnalezienie podpowiedzi, powrót z ZPE i zapis własnego planu. Zapisz miejsce zatrzymania oraz popraw instrukcję. Ta próba nie została wykonana przez autora pakietu.",
-    "Tuż przed startem: otwórz pakiet lokalnie lub na przygotowanym serwerze. Rozdaj adres strony w formie krótkiej instrukcji organizacyjnej; nie zakładaj umiejętności odczytywania kodów QR."
+    "Sprawdź logowanie, wyszukiwanie, Ulubione i ponowne otwarcie na koncie trenera.",
+    "Przetestuj udostępnienie i rejestrowanie odpowiedzi na kontach testowych. Nie pokazuj danych uczniów.",
+    "Sprawdź projektor, internet i stanowiska w pracowniach na trzecim piętrze.",
+    "Poproś uczestników o własny temat i dostępne materiały. Hasła wpisują wyłącznie w ZPE.",
+    "Przygotuj wydruki na wypadek problemów technicznych."
   ],
   "checks": [
     "Odnajduję materiał pasujący do tematu.",
@@ -1034,5 +1298,6 @@
     "Wykonuję samodzielnie",
     "Wykonuję ze ściągą",
     "Potrzebuję pomocy"
-  ]
+  ],
+  "prepared_date": "27.10.2026"
 }
