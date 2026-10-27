@@ -1,5 +1,11 @@
 # Weryfikacja wersji na 4 listopada
 
+## Pełne wydanie PDF
+
+Przykłady zawodowe ograniczono do fryzjera, handlowca, cukiernika i kucharza. Przykłady ogólnokształcące obejmują matematykę i analizę źródła na języku polskim/historii; w bibliotece jest też zasób biologiczny. Sprawdzono obliczenia ceny jednostkowej, proporcjonalnego skalowania składników oraz masy brutto/netto. Nie przedstawiono haseł zawodowych jako sprawdzonych adresów konkretnych zasobów ZPE.
+
+Wydanie pełne zachowuje wszystkie rozdziały i rozwinięcia strony. Dodano okładkę z podpisem Macieja Najwera, datą „Październik 2026”, spis treści i zakładki PDF. Strona zamykająca opisuje wykorzystanie materiału WP3.A5 i zawiera aktywne adresy covepolska.pl oraz win4smes.eu. Znaki projektowe i zachowane zastrzeżenie występują wyłącznie na pierwszej i ostatniej stronie. W środku publikacji są ilustracje źródłowe, tekst i dyskretna numeracja. Treść jest generowana ze strony, dzięki czemu nie skraca się do dziewięciu plansz.
+
 ## Aktualizacja: przewodnik zamiast slajdów
 
 Aktualny produkt to osiem rozdziałów w jednym ilustrowanym przewodniku. Poprzednie informacje o trzynastu ekranach opisują wycofany wariant. Strona ładuje wyłącznie nowe moduły przewodnika. Ma dziewięć powiększanych ilustracji, rozbudowane wyszukiwanie, rozróżnienie kont i trybów udostępniania, przykłady przedmiotowe oraz bibliotekę oryginałów. Grafiki pochodzą z poradników, a manifest w `assets/przewodnik/sources.json` pozwala odtworzyć ich pochodzenie.

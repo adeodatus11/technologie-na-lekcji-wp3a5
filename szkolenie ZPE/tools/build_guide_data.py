@@ -4,4 +4,7 @@ import json
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'content.json').read_text())
 public={key:data[key] for key in ('resources','sources','pdf_guides')}
-(root/'guide-data.js').write_text('window.WORKSHOP = '+json.dumps(public,ensure_ascii=False)+';\n')
+public['resources']=[r for r in public['resources'] if r['id'] in ('procenty','sarmatyzm','fotosynteza')]
+public['case_examples']=json.loads((root/'subject-examples.json').read_text())
+brand=json.loads((root/'project-branding.json').read_text())
+(root/'guide-data.js').write_text('window.WORKSHOP = '+json.dumps(public,ensure_ascii=False)+';\nwindow.PROJECT_BRANDING = '+json.dumps(brand,ensure_ascii=False)+';\n')

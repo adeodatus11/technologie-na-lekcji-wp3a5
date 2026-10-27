@@ -1,0 +1,64 @@
+[
+  {
+    "subject": "Matematyka",
+    "title": "Dlaczego cena nie wróciła do 100 zł?",
+    "context": "Przypomnienie obliczeń procentowych na podstawie przykładu z materiału ZPE.",
+    "material": "Przykład obliczania procentu danej wielkości oraz własny przykład kolejnej zmiany ceny.",
+    "task": "Cena 100 zł wzrosła o 10%, a potem nową cenę obniżono o 10%. Oblicz wynik i wskaż podstawę drugiego procentu.",
+    "answer": "100 × 1,1 = 110; 110 × 0,9 = 99 zł. Podstawą drugiego procentu jest 110 zł.",
+    "teacher": "Porównuje uzasadnienia i sprawdza, czy uczniowie rozpoznają zmianę podstawy obliczenia.",
+    "keywords": ["obliczenia procentowe", "procent danej liczby"],
+    "resource_id": "procenty"
+  },
+  {
+    "subject": "Język polski / historia",
+    "title": "Obserwacja czy hipoteza?",
+    "context": "Analiza portretów z materiału o kulturze sarmackiej.",
+    "material": "Ilustracje z wprowadzenia do zasobu „Orient a kultura sarmacka” oraz fragment objaśniający ich kontekst.",
+    "task": "Wskaż dwa widoczne szczegóły stroju. Oddziel opis tego, co widać, od hipotezy o pochodzeniu lub znaczeniu tych elementów.",
+    "answer": "Opis odnosi się do rzeczywiście widocznego elementu. Hipoteza jest oznaczona jako przypuszczenie i wymaga potwierdzenia w tekście źródłowym.",
+    "teacher": "Sprawdza, czy uczeń uzasadnia interpretację obserwacją i nie przedstawia domysłu jako faktu.",
+    "keywords": ["kultura sarmacka", "portret sarmacki"],
+    "resource_id": "sarmatyzm"
+  },
+  {
+    "subject": "Fryzjer",
+    "title": "Czy ta instrukcja dotyczy moich narzędzi?",
+    "context": "Przygotowanie stanowiska i higiena narzędzi fryzjerskich.",
+    "material": "Materiał o higienie pracy w salonie oraz instrukcja producenta środka używanego do narzędzi.",
+    "task": "W instrukcji wskaż dopuszczone zastosowanie, sposób przygotowania preparatu i ograniczenia. Wyjaśnij, czy opis dotyczy wskazanego narzędzia.",
+    "answer": "Uzasadnienie wynika z instrukcji konkretnego produktu. Jeżeli brak informacji o danym zastosowaniu, uczeń zaznacza brak podstaw do decyzji zamiast dopisywać parametry z pamięci.",
+    "teacher": "Sprawdza czytanie instrukcji i rozróżnienie czynności higienicznych. Parametry postępowania bierze z dokumentacji produktu, nie z autorskiego przykładu.",
+    "keywords": ["higiena w salonie fryzjerskim", "dezynfekcja narzędzi fryzjerskich"]
+  },
+  {
+    "subject": "Handlowiec",
+    "title": "Które opakowanie ma niższą cenę jednostkową?",
+    "context": "Porównanie oferty i prawidłowe odczytanie ceny za jednostkę miary.",
+    "material": "Materiał o cenach jednostkowych oraz dwie przykładowe etykiety przygotowane przez nauczyciela.",
+    "task": "Opakowanie 500 g kosztuje 8,90 zł, a 750 g — 12,90 zł. Oblicz cenę za kilogram i porównaj oferty.",
+    "answer": "8,90 ÷ 0,5 = 17,80 zł/kg; 12,90 ÷ 0,75 = 17,20 zł/kg. Drugie opakowanie ma niższą cenę jednostkową, choć wyższą cenę całego opakowania.",
+    "teacher": "Sprawdza przeliczenie gramów na kilogramy oraz rozróżnienie ceny opakowania i ceny jednostkowej.",
+    "keywords": ["cena jednostkowa", "oznaczanie cen towarów"]
+  },
+  {
+    "subject": "Cukiernik",
+    "title": "Jak przeliczyć recepturę na inną liczbę porcji?",
+    "context": "Proporcjonalne przeliczanie mas składników.",
+    "material": "Materiał o recepturach cukierniczych i autorski zestaw danych do ćwiczenia rachunkowego.",
+    "task": "Zestaw na 8 porcji zawiera 400 g mąki, 200 g masła i 100 g cukru. Przelicz te ilości na 12 porcji.",
+    "answer": "Współczynnik: 12 ÷ 8 = 1,5. Potrzeba 600 g mąki, 300 g masła i 150 g cukru.",
+    "teacher": "Sprawdza użycie tego samego współczynnika dla wszystkich mas. To zestaw do ćwiczenia proporcji, a nie kompletna instrukcja wyrobu; technologii procesu nie przelicza się automatycznie w ten sam sposób.",
+    "keywords": ["receptury cukiernicze", "przeliczanie receptur"]
+  },
+  {
+    "subject": "Kucharz",
+    "title": "Ile surowca kupić, żeby uzyskać potrzebną ilość?",
+    "context": "Rozróżnienie masy brutto i netto przy planowaniu produkcji.",
+    "material": "Materiał o obróbce wstępnej i wydajności surowca oraz przykładowe dane do obliczenia.",
+    "task": "Potrzeba 2 kg surowca netto. Przyjmij w zadaniu wydajność 80%: po obróbce zostaje 80% masy brutto. Oblicz potrzebną masę zakupu.",
+    "answer": "2 ÷ 0,8 = 2,5 kg brutto. Różnica między masą brutto i netto wynosi w tym przykładzie 0,5 kg.",
+    "teacher": "Sprawdza, od której masy liczony jest procent. Wydajność 80% jest daną zadania, nie uniwersalną normą dla każdego surowca.",
+    "keywords": ["obróbka wstępna surowców", "masa brutto i netto", "wydajność surowca"]
+  }
+]

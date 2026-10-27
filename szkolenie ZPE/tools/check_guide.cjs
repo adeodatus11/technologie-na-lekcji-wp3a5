@@ -27,6 +27,16 @@ async function check(){
   assert.equal(await page.locator('input,textarea,form').count(),0);
   assert.equal(await page.locator('.pdf-card').count(),11);
   assert.equal(await page.locator('.image-card').count(),9);
+  assert.equal(await page.locator('.case-example').count(),6);
+  for(const subject of ['Fryzjer','Handlowiec','Cukiernik','Kucharz'])assert.equal(await page.locator('.case-example').filter({hasText:subject}).count(),1);
+  assert(Math.abs(8.9/.5-17.8)<1e-9&&Math.abs(12.9/.75-17.2)<1e-9);
+  assert.deepEqual([400,200,100].map(x=>x*12/8),[600,300,150]);
+  assert.equal(2/.8,2.5);
+  await page.waitForSelector('.project-strip');
+  assert.equal(await page.locator('.project-strip img').count(),4);
+  assert.equal(await page.locator('.footer-logos img[alt^="WIN4SMEs"]').count(),1);
+  assert((await page.locator('.funding-credit').innerText()).includes('nie ponoszą za nie odpowiedzialności'));
+  assert((await page.locator('.hero-author').innerText()).includes('Maciej Najwer'));
   const localLinks=await page.locator('a[href]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')).filter(h=>h&&!h.startsWith('https:')&&!h.startsWith('#')));
   const guides=JSON.parse(fs.readFileSync(path.join(root,'content.json'),'utf8')).pdf_guides;
   for(const href of localLinks){
@@ -65,7 +75,12 @@ async function check(){
   await page.evaluate(()=>{document.querySelectorAll('details').forEach(d=>d.open=true);document.querySelectorAll('img').forEach(i=>i.loading='eager');});
   await page.waitForFunction(()=>[...document.images].filter(i=>i.getAttribute('src')).every(i=>i.complete&&i.naturalWidth>0));
   if(process.argv.includes('--pdf')){
-   require('node:child_process').execFileSync('python3',[path.join(__dirname,'build_illustrated_pdf.py')],{stdio:'inherit'});
+   const temp=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'zpe-publication-'));
+   try{
+    const body=path.join(temp,'body.pdf');
+    await page.pdf({path:body,format:'A4',printBackground:true,margin:{top:'18mm',bottom:'22mm',left:'18mm',right:'18mm'},displayHeaderFooter:false});
+    require('node:child_process').execFileSync('python3',[path.join(__dirname,'build_illustrated_pdf.py'),body],{stdio:'inherit'});
+   }finally{fs.rmSync(temp,{recursive:true,force:true});}
   }
   assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
   console.log('PASS: 8 rozdziałów, 9 ilustracji, 11 PDF-ów, powiększanie, tryb prowadzenia, stare adresy, brak formularzy i czasów, obrazy, mobile.');

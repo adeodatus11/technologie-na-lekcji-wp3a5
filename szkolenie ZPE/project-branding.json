@@ -1,0 +1,14 @@
+{
+  "author": "Maciej Najwer",
+  "project": "WIN4SMEs",
+  "date": "Październik 2026",
+  "funding_status": "Zachowano obecne brzmienie zgodnie z dyspozycją autora. Nie dodano nazwy instytucji przyznającej finansowanie.",
+  "school": "ZSZ5 · Szkoła Mistrzów",
+  "funding": "Dofinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami i opiniami autora i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej ani podmiotu udzielającego dotacji. Unia Europejska ani podmiot udzielający dotacji nie ponoszą za nie odpowiedzialności.",
+  "logos": {
+    "cove": "assets/COVE Polska bez tła.png",
+    "win": "assets/Logo-2025.png",
+    "eu": "assets/PL_Co-fundedbytheEU_RGB_POS.png",
+    "workshop": "assets/logo-zpe-zsz5-v1.png"
+  }
+}
