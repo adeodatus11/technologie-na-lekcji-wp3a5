@@ -5,6 +5,7 @@ grafiki/
 *.docx
 *.pdf
 !szkolenie ZPE/materialy-zrodlowe/*.pdf
+!szkolenie ZPE/output/pdf/przewodnik-zpe-ilustrowany.pdf
 *.psd
 
 # Archived pages not published in this lightweight site

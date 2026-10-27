@@ -65,9 +65,7 @@ async function check(){
   await page.evaluate(()=>{document.querySelectorAll('details').forEach(d=>d.open=true);document.querySelectorAll('img').forEach(i=>i.loading='eager');});
   await page.waitForFunction(()=>[...document.images].filter(i=>i.getAttribute('src')).every(i=>i.complete&&i.naturalWidth>0));
   if(process.argv.includes('--pdf')){
-   await page.pdf({path:path.join(root,'output/pdf/karty-uczestnika.pdf'),format:'A4',printBackground:true,margin:{top:'14mm',bottom:'14mm',left:'13mm',right:'13mm'}});
-   fs.copyFileSync(path.join(root,'output/pdf/karty-uczestnika.pdf'),path.join(root,'output/pdf/scenariusz-trenera.pdf'));
-   console.log('PDF: ilustrowany przewodnik z aktualnej strony.');
+   require('node:child_process').execFileSync('python3',[path.join(__dirname,'build_illustrated_pdf.py')],{stdio:'inherit'});
   }
   assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
   console.log('PASS: 8 rozdziałów, 9 ilustracji, 11 PDF-ów, powiększanie, tryb prowadzenia, stare adresy, brak formularzy i czasów, obrazy, mobile.');
