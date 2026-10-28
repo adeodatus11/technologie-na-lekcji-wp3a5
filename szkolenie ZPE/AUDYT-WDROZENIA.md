@@ -34,3 +34,8 @@ Nie potwierdzono operacji na zalogowanym koncie ZPE ani potrzeb konkretnej grupy
 Oryginalne poradniki zachowują historyczną treść, ilustracje i informacje autorów. Nie zmieniano w nich oznaczeń czasu. Publiczny harmonogram usunięto z opracowanych materiałów warsztatowych.
 
 Przed spotkaniem prowadzący powinien sprawdzić konto testowe, zapis wyników wybranego ćwiczenia, sieć i projektor oraz dostęp do stanowisk w pracowniach.
+
+
+Skład książkowy: druga strona pozostaje pusta, a spis treści jest na stronie trzeciej. Rozdziały płyną kolejno, bez obowiązkowego rozpoczynania każdego tematu na nowej stronie; tekst akapitowy jest justowany. Zmiana liczby stron wynika z kompozycji, bez usuwania treści. Autor występuje w widocznej treści wyłącznie na okładce. Znaki projektowe mają optycznie wyrównaną wysokość. Zamknięcie zawiera aktywne adresy i wektorowe kody QR do covepolska.pl, win4smes.eu i metodyka.covepolska.pl.
+
+Kontrola wydania książkowego: potwierdzono pustą stronę drugą, spis treści na trzeciej, autora tylko na okładce, komplet dziewięciu ilustracji i osadzone fonty. Trzy kody QR odczytano z renderu strony zamykającej niezależnym dekoderem; wyniki odpowiadają podpisanym adresom. Nie potwierdza to dostępności serwisów docelowych.

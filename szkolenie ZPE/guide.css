@@ -30,6 +30,33 @@ dialog{border:0;border-radius:10px;padding:20px;max-width:min(96vw,1500px);max-h
  .pdf-card{break-inside:avoid}
  .case-example{break-inside:avoid;page-break-inside:avoid}
 }
+.project-strip .eu-logo{height:50px}.project-strip .win-logo{height:45px}.project-strip .cove-logo{height:51px}.footer-logos .eu-logo{max-height:48px}.footer-logos .win-logo{max-height:43px}.footer-logos .cove-logo{max-height:49px}
 @media(max-width:700px){.mobile-contents{display:inline-flex;font-size:13px;font-weight:650;padding:8px 12px;border:1px solid var(--line);border-radius:5px;text-decoration:none}#focus-toggle{display:none}#chapter-nav{scroll-margin-top:90px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
 @media print{.site-header,.contents,.hero-links,.actions,.zoom-label,dialog,.site-footer,.skip{display:none!important}.guide-layout{display:block}main{padding:0}.hero{background:white;color:#172e48;padding:0}.hero .lede,.hero .eyebrow{color:#172e48}.hero h1 em{color:#172e48}.hero-image{display:none}.hero-source{display:none}.chapter{break-before:page;padding:10px 0}.chapter-heading{break-after:avoid}.split,.grid-3,.grid-2{display:block}.tile{margin:15px 0;break-inside:avoid}.image-card{max-width:650px;margin:20px auto;break-inside:avoid}.image-card img{max-height:340px;object-fit:contain}.work-area{background:white;color:var(--ink);padding:0}.work-area p,.work-area .tile p,.work-area .tile h3{color:var(--ink)}details{display:block}.detail-body{display:block}.library-grid{display:block}.pdf-card{margin:8px 0}.button{display:none}h1{font-size:44px}h2{font-size:30px}body{font-size:12px}.notice,.steps li,.tile p,.example p{font-size:12px}}
+
+/* Skład książkowy: ciągły tekst, bez przenoszenia każdego tematu na nową stronę. */
+@media print{
+ .chapter{break-before:auto!important;padding:18pt 0 8pt;border:0}
+ .tile,.example,.case-example{break-inside:auto;page-break-inside:auto;background:white;border:0;border-radius:0;padding:0;margin:18pt 0}
+ .tile .large-icon{display:none}
+ .tag{padding:0;background:none;margin-bottom:6pt}
+ .example dl{display:block;margin:10pt 0}
+ .example dt{break-after:avoid;margin-top:8pt}
+ .example dd{margin:2pt 0 8pt}
+ .example .result{padding-top:8pt}
+ .chapter p,.chapter li,.chapter dd{text-align:justify;text-justify:inter-word;hyphens:auto;orphans:3;widows:3}
+ .chapter h2,.chapter h3,.chapter h4,.chapter .source-line,.image-card figcaption,.pdf-card,.pdf-card small{text-align:left}
+ .chapter h2{font-size:21pt;margin:10pt 0 12pt}
+ .chapter h3{font-size:15pt;margin:15pt 0 8pt}
+ .chapter-heading{margin-bottom:16pt}
+ .image-card{padding:0;border:0;background:white;margin:16pt 0;max-width:100%}
+ .image-card img{max-height:260pt}
+ details{border:0;border-radius:0;margin:14pt 0}
+ summary{padding:0;font-size:13pt;break-after:avoid;list-style:none}
+ details[open] summary{border:0}
+ .detail-body{padding:8pt 0 0}
+ .notice,.tip{background:#f7f8fa;border:0;border-left:2pt solid #bdc9d4;padding:10pt 12pt}
+ .table-wrap{margin:12pt 0}
+ .hero-author{display:none}
+}

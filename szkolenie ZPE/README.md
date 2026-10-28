@@ -41,3 +41,6 @@ Test korzysta z Playwrighta i systemowego Chromium. Sprawdza rozdziały, ilustra
 Podgląd lokalny: `python3 -m http.server 8765 --bind 127.0.0.1` w tym folderze.
 
 Przed pokazem prowadzący sprawdza bieżący interfejs na koncie testowym ZPE, zapis wyników wybranego ćwiczenia oraz działanie stanowisk. Ilustracje poradników są oznaczone jako przykłady z dokumentów, nie aktualne zrzuty z konta uczestnika.
+
+
+Skład książkowy: druga strona pozostaje pusta, a spis treści jest na stronie trzeciej. Rozdziały płyną kolejno, bez obowiązkowego rozpoczynania każdego tematu na nowej stronie; tekst akapitowy jest justowany. Zmiana liczby stron wynika z kompozycji, bez usuwania treści. Autor występuje w widocznej treści wyłącznie na okładce. Znaki projektowe mają optycznie wyrównaną wysokość. Zamknięcie zawiera aktywne adresy i wektorowe kody QR do covepolska.pl, win4smes.eu i metodyka.covepolska.pl.
