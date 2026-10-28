@@ -1,0 +1,49 @@
+[
+  {
+    "id": "fryzjer",
+    "kind": "zawodowe",
+    "subject": "Fryzjer / branża fryzjersko-kosmetyczna",
+    "title": "Pielęgnacja owłosionej skóry głowy",
+    "url": "https://zpe.gov.pl/b/pielegnacja-owlosionej-skory-glowy/PRu24AIX1",
+    "fragment": "E-book „Pielęgnacja włosów i owłosionej skóry głowy”: diagnoza stanu włosów i skóry głowy przed doborem preparatu.",
+    "extra": ["Interaktywne materiały sprawdzające", "https://zpe.gov.pl/a/interaktywne-materialy-sprawdzajace/D1JCDNfuM"],
+    "task": "Według schematu diagnozy z materiału opisz stan włosów i skóry głowy klientki, a dopiero potem zaproponuj pielęgnację.",
+    "evidence": "Ocena skóry głowy i długości włosów osobno; propozycja wynika z diagnozy.",
+    "note": "E-zasób powstał dla technika usług kosmetycznych (FRK.04). Temat odpowiada jednostce FRK.01.3 „Wykonywanie zabiegów pielęgnacji włosów i skóry głowy”."
+  },
+  {
+    "id": "handlowiec",
+    "kind": "zawodowe",
+    "subject": "Handlowiec, sprzedawca / HAN.01",
+    "title": "Magazyn i sala sprzedaży, wyposażenie, merchandising",
+    "url": "https://zpe.gov.pl/a/przewodnik-dla-uczacego-sie/D13RC6q9t",
+    "fragment": "Słownik pojęć e-materiału: ekspozycja, merchandising i strefy wysokości regału.",
+    "extra": ["Słownik pojęć", "https://zpe.gov.pl/a/slownik-pojec-dla-e-materialu/DWKIm3KXi"],
+    "task": "Na podstawie definicji stref regału zdecyduj, na której wysokości umieścić cztery różne towary, i uzasadnij każdą decyzję.",
+    "evidence": "Przy każdym towarze strefa i powód odwołujący się do definicji z materiału.",
+    "note": "Materiał obejmuje kwalifikacje HAN.01 (sprzedawca, technik handlowiec, technik księgarstwa) i HAN.02."
+  },
+  {
+    "id": "cukiernik",
+    "kind": "zawodowe",
+    "subject": "Cukiernik / SPC.01",
+    "title": "Produkcja ciasta i wyrobów z ciasta drożdżowego",
+    "url": "https://zpe.gov.pl/b/produkcja-ciasta-i-wyrobow-z-ciasta-drozdzowego/POIxBCKHc",
+    "fragment": "Część o doborze surowców i ich ilości do produkcji ciasta drożdżowego.",
+    "task": "Przelicz zestaw surowców na większą liczbę sztuk i wskaż, czego nie przeliczysz samym współczynnikiem.",
+    "evidence": "Ten sam współczynnik dla wszystkich mas; parametry procesu ustalone według technologii.",
+    "note": "E-materiał dla zawodów cukiernik (751201) i technik technologii żywności (344403)."
+  },
+  {
+    "id": "kucharz",
+    "kind": "zawodowe",
+    "subject": "Kucharz / HGT.02",
+    "title": "Urządzenia do obróbki wstępnej surowców",
+    "url": "https://zpe.gov.pl/a/wprowadzenie/D8FpVBicP",
+    "fragment": "Wizualizacje urządzeń do obróbki wstępnej oraz interaktywne materiały sprawdzające.",
+    "extra": ["Interaktywne materiały sprawdzające", "https://zpe.gov.pl/a/interaktywne-materialy-sprawdzajace/DUaj449mR"],
+    "task": "Dobierz urządzenie do etapu obróbki wstępnej i oblicz, ile surowca brutto trzeba przygotować.",
+    "evidence": "Urządzenie przypisane do czynności; obliczenie masy brutto z podanej wydajności.",
+    "note": "E-materiał dla zawodów kucharz (512001) i technik żywienia i usług gastronomicznych (343404)."
+  }
+]

@@ -16,7 +16,8 @@ async function check(){
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
  let browser;
  try{
-  browser=await chromium.launch({executablePath:'/usr/bin/chromium'});
+  const executablePath=['/usr/bin/chromium','/opt/pw-browsers/chromium'].find(f=>fs.existsSync(f));
+  browser=await chromium.launch(executablePath?{executablePath}:{});
   const page=await browser.newPage({viewport:{width:1440,height:1000}});
   const errors=[];const missing=[];
   page.on('pageerror',e=>errors.push(e.message));
@@ -29,9 +30,10 @@ async function check(){
   assert.equal(await page.locator('.image-card').count(),9);
   assert.equal(await page.locator('.case-example').count(),6);
   for(const subject of ['Fryzjer','Handlowiec','Cukiernik','Kucharz'])assert.equal(await page.locator('.case-example').filter({hasText:subject}).count(),1);
-  assert(Math.abs(8.9/.5-17.8)<1e-9&&Math.abs(12.9/.75-17.2)<1e-9);
-  assert.deepEqual([400,200,100].map(x=>x*12/8),[600,300,150]);
+  assert.equal(await page.locator('.case-example a[href="https://zpe.gov.pl/"]').count(),0,'Przykład bez zasobu ZPE');
+  assert.deepEqual([1000,50,150,150].map(x=>x*30/20),[1500,75,225,225]);
   assert.equal(2/.8,2.5);
+  assert.equal(Math.round(100*1.1*.9),99);
   await page.waitForSelector('.project-strip');
   assert.equal(await page.locator('.project-strip img').count(),4);
   assert.equal(await page.locator('.footer-logos img[alt^="WIN4SMEs"]').count(),1);

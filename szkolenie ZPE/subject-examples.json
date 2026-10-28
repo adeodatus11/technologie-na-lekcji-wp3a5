@@ -7,7 +7,10 @@
     "task": "Cena 100 zł wzrosła o 10%, a potem nową cenę obniżono o 10%. Oblicz wynik i wskaż podstawę drugiego procentu.",
     "answer": "100 × 1,1 = 110; 110 × 0,9 = 99 zł. Podstawą drugiego procentu jest 110 zł.",
     "teacher": "Porównuje uzasadnienia i sprawdza, czy uczniowie rozpoznają zmianę podstawy obliczenia.",
-    "keywords": ["obliczenia procentowe", "procent danej liczby"],
+    "keywords": [
+      "obliczenia procentowe",
+      "procent danej liczby"
+    ],
     "resource_id": "procenty"
   },
   {
@@ -18,47 +21,69 @@
     "task": "Wskaż dwa widoczne szczegóły stroju. Oddziel opis tego, co widać, od hipotezy o pochodzeniu lub znaczeniu tych elementów.",
     "answer": "Opis odnosi się do rzeczywiście widocznego elementu. Hipoteza jest oznaczona jako przypuszczenie i wymaga potwierdzenia w tekście źródłowym.",
     "teacher": "Sprawdza, czy uczeń uzasadnia interpretację obserwacją i nie przedstawia domysłu jako faktu.",
-    "keywords": ["kultura sarmacka", "portret sarmacki"],
+    "keywords": [
+      "kultura sarmacka",
+      "portret sarmacki"
+    ],
     "resource_id": "sarmatyzm"
   },
   {
     "subject": "Fryzjer",
-    "title": "Czy ta instrukcja dotyczy moich narzędzi?",
-    "context": "Przygotowanie stanowiska i higiena narzędzi fryzjerskich.",
-    "material": "Materiał o higienie pracy w salonie oraz instrukcja producenta środka używanego do narzędzi.",
-    "task": "W instrukcji wskaż dopuszczone zastosowanie, sposób przygotowania preparatu i ograniczenia. Wyjaśnij, czy opis dotyczy wskazanego narzędzia.",
-    "answer": "Uzasadnienie wynika z instrukcji konkretnego produktu. Jeżeli brak informacji o danym zastosowaniu, uczeń zaznacza brak podstaw do decyzji zamiast dopisywać parametry z pamięci.",
-    "teacher": "Sprawdza czytanie instrukcji i rozróżnienie czynności higienicznych. Parametry postępowania bierze z dokumentacji produktu, nie z autorskiego przykładu.",
-    "keywords": ["higiena w salonie fryzjerskim", "dezynfekcja narzędzi fryzjerskich"]
+    "title": "Najpierw diagnoza, potem preparat",
+    "context": "Dobór pielęgnacji na podstawie oceny włosów i skóry głowy.",
+    "material": "Część e-booka o diagnozie stanu włosów i skóry głowy oraz opis klientki przygotowany przez nauczyciela.",
+    "task": "Klientka mówi, że skóra głowy szybko się przetłuszcza, a długości po rozjaśnianiu są suche i matowe. Opisz, co oceniasz według schematu z materiału, i zaproponuj pielęgnację osobno dla skóry głowy i dla długości.",
+    "answer": "Diagnoza według stałego schematu: osobno skóra głowy i łodyga włosa, uzupełnione rozmową z klientką. Preparat myjący dobrany do przetłuszczającej się skóry głowy, kuracja regenerująca na długości i końce. Każda propozycja wynika z wyniku diagnozy.",
+    "teacher": "Sprawdza, czy uczeń zaczyna od diagnozy i rozdziela potrzeby skóry głowy i długości. Nazwy preparatów i sposób ich użycia bierze z oferty salonu i instrukcji producentów.",
+    "keywords": [
+      "pielęgnacja owłosionej skóry głowy",
+      "diagnoza włosów i skóry głowy"
+    ],
+    "resource_id": "fryzjer"
   },
   {
     "subject": "Handlowiec",
-    "title": "Które opakowanie ma niższą cenę jednostkową?",
-    "context": "Porównanie oferty i prawidłowe odczytanie ceny za jednostkę miary.",
-    "material": "Materiał o cenach jednostkowych oraz dwie przykładowe etykiety przygotowane przez nauczyciela.",
-    "task": "Opakowanie 500 g kosztuje 8,90 zł, a 750 g — 12,90 zł. Oblicz cenę za kilogram i porównaj oferty.",
-    "answer": "8,90 ÷ 0,5 = 17,80 zł/kg; 12,90 ÷ 0,75 = 17,20 zł/kg. Drugie opakowanie ma niższą cenę jednostkową, choć wyższą cenę całego opakowania.",
-    "teacher": "Sprawdza przeliczenie gramów na kilogramy oraz rozróżnienie ceny opakowania i ceny jednostkowej.",
-    "keywords": ["cena jednostkowa", "oznaczanie cen towarów"]
+    "title": "Gdzie postawić towar na regale?",
+    "context": "Ekspozycja towarów według stref wysokości regału.",
+    "material": "Słownik pojęć e-materiału o sali sprzedaży i merchandisingu oraz lista czterech towarów od nauczyciela.",
+    "task": "Rozmieść na regale: nowy baton wprowadzany do sprzedaży, kawę z najwyższą marżą w kategorii, zgrzewkę wody 6 × 1,5 l i sól kuchenną. Przy każdym towarze podaj wysokość półki i powód.",
+    "answer": "Nowy baton i kawa na wysokości wzroku (120–160 cm) lub rąk (80–120 cm), gdzie klient najłatwiej je zauważy i weźmie. Zgrzewka wody poniżej 80 cm, bo jest ciężka i kupowana celowo. Sól poza najlepszymi strefami, bo klient jej szuka. Każdy powód odwołuje się do definicji stref.",
+    "teacher": "Sprawdza, czy decyzje wynikają z definicji stref, a nie z przyzwyczajeń z konkretnego sklepu. Różne układy są poprawne, jeśli uzasadnienie jest spójne.",
+    "keywords": [
+      "merchandising",
+      "ekspozycja towaru",
+      "sala sprzedaży"
+    ],
+    "resource_id": "handlowiec"
   },
   {
     "subject": "Cukiernik",
-    "title": "Jak przeliczyć recepturę na inną liczbę porcji?",
-    "context": "Proporcjonalne przeliczanie mas składników.",
-    "material": "Materiał o recepturach cukierniczych i autorski zestaw danych do ćwiczenia rachunkowego.",
-    "task": "Zestaw na 8 porcji zawiera 400 g mąki, 200 g masła i 100 g cukru. Przelicz te ilości na 12 porcji.",
-    "answer": "Współczynnik: 12 ÷ 8 = 1,5. Potrzeba 600 g mąki, 300 g masła i 150 g cukru.",
-    "teacher": "Sprawdza użycie tego samego współczynnika dla wszystkich mas. To zestaw do ćwiczenia proporcji, a nie kompletna instrukcja wyrobu; technologii procesu nie przelicza się automatycznie w ten sam sposób.",
-    "keywords": ["receptury cukiernicze", "przeliczanie receptur"]
+    "title": "Jak przeliczyć surowce na większą partię?",
+    "context": "Proporcjonalne przeliczanie mas surowców do ciasta drożdżowego.",
+    "material": "Część e-materiału o doborze surowców i ich ilości oraz zestaw danych do ćwiczenia rachunkowego.",
+    "task": "Zestaw na 20 bułek drożdżowych zawiera 1000 g mąki, 50 g drożdży, 150 g cukru i 150 g tłuszczu. Przelicz go na 30 bułek.",
+    "answer": "Współczynnik: 30 ÷ 20 = 1,5. Potrzeba 1500 g mąki, 75 g drożdży, 225 g cukru i 225 g tłuszczu.",
+    "teacher": "Sprawdza użycie tego samego współczynnika dla wszystkich mas. Pyta też, czego nie przelicza się współczynnikiem: warunki i czas fermentacji ustala się według technologii.",
+    "keywords": [
+      "ciasto drożdżowe",
+      "dobór surowców",
+      "SPC.01"
+    ],
+    "resource_id": "cukiernik"
   },
   {
     "subject": "Kucharz",
     "title": "Ile surowca kupić, żeby uzyskać potrzebną ilość?",
-    "context": "Rozróżnienie masy brutto i netto przy planowaniu produkcji.",
-    "material": "Materiał o obróbce wstępnej i wydajności surowca oraz przykładowe dane do obliczenia.",
-    "task": "Potrzeba 2 kg surowca netto. Przyjmij w zadaniu wydajność 80%: po obróbce zostaje 80% masy brutto. Oblicz potrzebną masę zakupu.",
-    "answer": "2 ÷ 0,8 = 2,5 kg brutto. Różnica między masą brutto i netto wynosi w tym przykładzie 0,5 kg.",
-    "teacher": "Sprawdza, od której masy liczony jest procent. Wydajność 80% jest daną zadania, nie uniwersalną normą dla każdego surowca.",
-    "keywords": ["obróbka wstępna surowców", "masa brutto i netto", "wydajność surowca"]
+    "context": "Obróbka wstępna surowców: urządzenia i różnica między masą brutto i netto.",
+    "material": "E-materiał o urządzeniach do obróbki wstępnej oraz dane do obliczenia od nauczyciela.",
+    "task": "Do surówki potrzeba 2 kg obranej marchwi. Wskaż urządzenie, którym ją obierzesz. Przyjmij wydajność 80%: po obróbce zostaje 80% masy brutto. Oblicz masę marchwi do pobrania z magazynu.",
+    "answer": "Obieraczka do warzyw. 2 ÷ 0,8 = 2,5 kg brutto; odpad wynosi 0,5 kg.",
+    "teacher": "Sprawdza, od której masy liczony jest procent. Wydajność 80% jest daną zadania, a nie normą dla każdego surowca.",
+    "keywords": [
+      "obróbka wstępna surowców",
+      "urządzenia do obróbki wstępnej",
+      "masa brutto i netto"
+    ],
+    "resource_id": "kucharz"
   }
 ]

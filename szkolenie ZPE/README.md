@@ -1,12 +1,14 @@
 # ZPE w praktyce — ilustrowany przewodnik
 
-Strona do prowadzenia szkolenia i samodzielnego powrotu do instrukcji. Zamiast slajdów: osiem rozdziałów, nawigacja boczna, powiększane ekrany ze źródeł, procedury i przykłady. Nie ma formularzy do wypełniania ani harmonogramów.
+Strona do prowadzenia szkolenia i samodzielnego powrotu do instrukcji. Zamiast slajdów: osiem rozdziałów (od lekcji, w której pracują uczniowie, po pracę nad własnym tematem), nawigacja boczna, powiększane ekrany ze źródeł, procedury i przykłady. Nie ma formularzy do wypełniania ani harmonogramów.
 
 ## Treść i źródła
 
 - `index.html`, `guide.css`, `guide.js`: aktualny widok przewodnika.
 - `guide-data.js`: dane zasobów i poradników używane na stronie.
-- `subject-examples.json`: przykłady z matematyki, języka polskiego/historii oraz zawodów fryzjer, handlowiec, cukiernik i kucharz. Dla zawodów podano autorskie zastosowania i hasła do wyszukania, bez udawania zweryfikowanych adresów e-materiałów.
+- `subject-examples.json`: zadania z matematyki, języka polskiego/historii oraz zawodów fryzjer, handlowiec, cukiernik i kucharz; każde opiera się na zasobie ZPE.
+- `zasoby-zawodowe.json`: e-materiały ZPE dla czterech zawodów, dołączane do `guide-data.js` przez `tools/build_guide_data.py`.
+- `AUDYT-MERYTORYCZNY.md`: audyt treści względem poradników, decyzje autora i lista kontrolna przed szkoleniem.
 - `assets/przewodnik/sources.json`: pochodzenie ośmiu wyodrębnionych grafik, strony PDF i sumy SHA-256. Dziewiąta ilustracja pochodzi z wcześniej dołączonej instrukcji Ulubione.
 - `materialy-zrodlowe/`: jedenaście niezmienionych poradników PDF.
 - `output/pdf/przewodnik-zpe-ilustrowany.pdf`: pełna publikacja z rozwiniętymi rozdziałami, okładką, spisem treści, ilustracjami i stroną zamykającą. Historyczne nazwy plików zachowano jako kopie dla zgodności linków.
