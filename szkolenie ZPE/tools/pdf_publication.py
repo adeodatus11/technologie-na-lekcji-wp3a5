@@ -128,7 +128,7 @@ def assemble(body_file):
     source=PdfReader(str(body_file))
     assert sum(len(p.extract_text() or '') for p in source.pages)>25000,'Brak pełnej treści'
     writer=PdfWriter()
-    titles=['Co technologia zmienia na lekcji?','Konto: co naprawdę ma znaczenie?','Wyszukiwanie dla szkoły ponadpodstawowej','Od wyniku do przydatnego fragmentu','Udostępnianie i wyniki: co wybrać?','Co jeszcze można zrobić w ZPE?','Teraz własne poszukiwania','Materiały, które zostają po spotkaniu']
+    titles=['Lekcja, w której pracują uczniowie','Konto: co naprawdę ma znaczenie?','Wyszukiwanie dla szkoły ponadpodstawowej','Od wyniku do przydatnego fragmentu','Udostępnianie i wyniki: co wybrać?','Co jeszcze można zrobić w ZPE?','Twój temat: od wyszukania do przypisania','Materiały, które zostają po spotkaniu']
     page_text=[' '.join((page.extract_text() or '').split()) for page in source.pages]
     entries=[]
     for title in titles:

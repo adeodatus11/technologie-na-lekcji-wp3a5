@@ -131,3 +131,29 @@ Materiał źródłowy w historii repozytorium:
 2. Przykład lekcji w rozdz. 1: logistyk z wersji 25.10 czy nowy dla jednego z czterech zawodów?
 3. Czy przenieść zastrzeżenia weryfikacyjne z tekstu dla uczestnika do notatek prowadzącego?
 4. Czy rozdział 7 dostaje jedno wspólne wyzwanie (bez formularza)?
+
+## 8. Decyzje autora i wprowadzone zmiany (28.10.2026)
+
+Decyzje: część o przydatności zostaje bez zmian (to szkolenie z ZPE, nie z projektowania lekcji); bez startu „uczestnicy jako uczniowie”; nowy przykład lekcji z zawodu; zastrzeżenia weryfikacyjne zostają wyłącznie w tym audycie, a tekst dla uczestników jest pisany bez asekuracji.
+
+Wprowadzono:
+
+- **Rozdział 1 „Lekcja, w której pracują uczniowie”**: rytm lekcji, pięć sposobów oddania pracy (para, grupa, praca własna z tekstem, lekcja odwrócona, problem i przypadek) z odsyłaczami do katalogu COVE, przykład lekcji dla handlowca („Gdzie postawić towar na regale?”) oraz sześć zadań przedmiotowych i zawodowych.
+- **Zasoby zawodowe** (`zasoby-zawodowe.json`): po jednym e-materiale ZPE dla fryzjera, handlowca, cukiernika i kucharza. Przykłady zawodowe przepisano tak, aby opierały się na tych materiałach.
+- **Rozdział 7 „Twój temat: od wyszukania do przypisania”**: uczestnik odnajduje, przygotowuje i przypisuje uczniom materiał do własnego tematu.
+- Poprawki B1 i B2 oraz uzupełnienia U1–U3 i drobne z pkt 2 (Teczka, pytania otwarte, kod dostępu, klasa z SIO, ograniczenie czasowe, ćwiczenia oznaczane przy udostępnianiu, Generator bez logowania, komponenty Kreatora, kroki ścieżki).
+- Usunięto zdania asekuracyjne z tekstu dla uczestników (np. „nie zakładamy”, „nie potwierdzono”, „autorska propozycja”).
+- Test: Chromium z `/usr/bin/chromium` lub `/opt/pw-browsers/chromium`; każde zadanie przykładowe musi mieć zasób ZPE.
+
+### Zastrzeżenia (tylko dla autora)
+
+- **Zasoby zawodowe znaleziono przez wyszukiwarkę internetową 28.10.2026** na podstawie zaindeksowanych stron zpe.gov.pl. Z tego środowiska nie dało się ich otworzyć. Przed 4 listopada trzeba kliknąć każdy link:
+  - fryzjer: https://zpe.gov.pl/b/pielegnacja-owlosionej-skory-glowy/PRu24AIX1 i ćwiczenia https://zpe.gov.pl/a/interaktywne-materialy-sprawdzajace/D1JCDNfuM
+  - handlowiec: https://zpe.gov.pl/a/przewodnik-dla-uczacego-sie/D13RC6q9t i słownik https://zpe.gov.pl/a/slownik-pojec-dla-e-materialu/DWKIm3KXi
+  - cukiernik: https://zpe.gov.pl/b/produkcja-ciasta-i-wyrobow-z-ciasta-drozdzowego/POIxBCKHc
+  - kucharz: https://zpe.gov.pl/a/wprowadzenie/D8FpVBicP i ćwiczenia https://zpe.gov.pl/a/interaktywne-materialy-sprawdzajace/DUaj449mR
+- Zasób dla fryzjera powstał do kwalifikacji FRK.04 (technik usług kosmetycznych); tematycznie odpowiada FRK.01.3. Nie znaleziono e-materiału ZPE przypisanego wprost do FRK.01.
+- Granice stref regału (80, 120, 160 cm) pochodzą z fragmentu słownika pojęć widocznego w wyszukiwarce. Warto potwierdzić je w samym materiale.
+- Część o doborze surowców w materiale dla cukiernika i obieraczka w materiale dla kucharza wynikają z opisów w wynikach wyszukiwania, nie z otwartej treści.
+- Nie sprawdzono, czy wyszukiwarka ZPE znajduje materiały po symbolu kwalifikacji (np. „SPC.01”); przewodnik to sugeruje.
+- Lista kontrolna z pkt 6 pozostaje aktualna.
