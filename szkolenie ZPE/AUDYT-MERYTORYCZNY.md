@@ -113,7 +113,7 @@ Obecne przykłady przedmiotowe zostają, ale jako **zadania do oddania uczniom**
 
 Materiał źródłowy w historii repozytorium:
 - `c2d2650:szkolenie ZPE/content.json`, klucz `intro` (wersja z 25.10): teza, sześć przesunięć „z → na”, porównanie lekcji A/B, lekcja logistyka, wariant z matematyki, wskazówki sprzętowe, mapa 12 metod.
-- gałąź `claude/charming-allen-x7jx63` (`7ad7c9d`, 22.10): rytm lekcji, trzy uzasadnienia z badań (Szpunar i in. 2013; Freeman i in. 2014; Chi i Wylie 2014; Patall i in. 2008; Theobald i in. 2020) z zastrzeżeniem, że dotyczą głównie studentów.
+- wersja z 22.10 (niescalona gałąź `claude/charming-allen-x7jx63`, usunięta 28.10 przy porządkowaniu repozytorium): rytm lekcji oraz uzasadnienie z badań: Szpunar, Khan i Schacter (2013), Freeman i in. (2014), Chi i Wylie (2014, model ICAP), Patall, Cooper i Robinson (2008), Theobald i in. (2020). Badania dotyczą głównie studentów. Rytm lekcji przeniesiono do nowego rozdziału 1.
 
 ## 6. Przed 4 listopada: sprawdzić na żywym ZPE
 
