@@ -1,0 +1,25 @@
+# Lint i formatowanie skryptów Pythona (obecnie: szkolenie ZPE/tools).
+target-version = "py310"
+line-length = 100
+
+[lint]
+select = [
+    "E",   # pycodestyle
+    "W",
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # bugbear
+    "UP",  # pyupgrade
+    "C4",  # comprehensions
+    "SIM", # simplify
+    "RUF",
+]
+ignore = [
+    "E501",  # długie teksty treści po polsku; resztą długości zarządza formatter
+    "C408",  # dict(klucz=...) jest czytelne przy stylach i metadanych
+    "RUF001", "RUF002", "RUF003",  # półpauzy i polskie cudzysłowy są zamierzone
+]
+
+[lint.per-file-ignores]
+# Moduły generatorów importują pomocnicze pliki z katalogu tools po zbudowaniu danych.
+"szkolenie ZPE/tools/*.py" = ["E402"]

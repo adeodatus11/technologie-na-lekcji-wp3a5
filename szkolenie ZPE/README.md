@@ -38,6 +38,12 @@ python3 tools/build_pdfs.py
 python3 tools/build_archive.py
 ```
 
+Skrypty Pythona sprawdza i formatuje ruff (konfiguracja w `ruff.toml` w katalogu głównym repozytorium):
+
+```sh
+ruff check . && ruff format --check .
+```
+
 Test korzysta z Playwrighta i systemowego Chromium. Sprawdza rozdziały, ilustracje, dokumenty, powiększanie, tryb prowadzenia, stare adresy, mobile i brak formularzy oraz publicznych oznaczeń czasu. Generator PDF drukuje pełną stronę ze wszystkimi rozwinięciami, a następnie dodaje redakcyjną okładkę, spis treści, zakładki rozdziałów, numerację i zamknięcie. Sprawdza kompletność treści, ilustracji i osadzenie fontów oraz rozmieszczenie znaków projektowych.
 
 Podgląd lokalny: `python3 -m http.server 8765 --bind 127.0.0.1` w tym folderze.
