@@ -26,7 +26,7 @@ async function check(){
   await page.goto(base);await page.waitForLoadState('networkidle');
   assert.equal(await page.locator('.chapter').count(),12);
   assert.equal(await page.locator('input,textarea,form').count(),0);
-  assert.equal(await page.locator('#kreator details').count(),72);
+  assert.equal(await page.locator('#kreator details').count(),73);
   assert.equal(await page.locator('#uzytkownicy').count(),1);
   await page.locator('#expand-creator').click();
   assert.equal(await page.locator('#kreator details:not([open])').count(),0);
@@ -36,6 +36,11 @@ async function check(){
   assert.deepEqual(brokenAnchors,[],'Broken chapter links');
 
   assert.equal(await page.locator('.pdf-card').count(),11);
+  assert.equal(await page.locator('.pdf-card .source-status').count(),11,'Every original guide needs an evidence status');
+  const sharingText=await page.locator('#udostepnianie').evaluate(node=>{const copy=node.cloneNode(true);copy.querySelectorAll('details').forEach(d=>d.remove());return copy.textContent;});
+  assert(sharingText.includes('Opublikuj')&&sharingText.includes('Zapisz uczniów')&&sharingText.includes('Analiza'),'Course publication, enrolment and analysis must be covered together');
+  assert.equal(await page.locator('#udostepnianie details .image-card').count(),2,'Old sharing screenshots belong in the labelled older procedure');
+
   assert.equal(await page.locator('.image-card').count(),9);
   assert.equal(await page.locator('.case-example').count(),6);
   for(const subject of ['Fryzjer','Handlowiec','Cukiernik','Kucharz'])assert.equal(await page.locator('.case-example').filter({hasText:subject}).count(),1);
