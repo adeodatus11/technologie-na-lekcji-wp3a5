@@ -107,6 +107,7 @@ const sharing=chapter('udostepnianie','08','Udostępnianie i wyniki: co wybrać?
  ['Wybierz kurs','Kliknij „Udostępnij”; jeśli pojawi się wybór sposobu, wybierz „Platforma edukacyjna”. W oknie udostępniania wybierz właściwą szkołę lub przestrzeń, a potem nowy albo istniejący kurs.'],
  ['Dodaj lekcję','Umieść materiał w kursie. Kurs może zawierać tylko tę jedną lekcję, np. „Orient i kultura sarmacka”.']
 ])}${currentHelp('https://zpe.gov.pl/a/dodawanie-materialow-do-kursu/D2F5EFRLV','Dodawanie materiałów do kursu')}
+<div class="tip"><strong>Czy mój kurs będzie publiczny?</strong><p>Samo utworzenie kursu i nadanie mu tytułu, np. „Informatyka — klasa 1A”, nie udostępnia go wszystkim użytkownikom ZPE. „Zapisz” zachowuje wersję roboczą, a „Opublikuj” przygotowuje wersję dostępną dla zapisanych uczniów. Nie oznacza to dodania kursu do ogólnodostępnego katalogu. Osoby lub grupy, którym przyznajesz dostęp, wybierasz w zakładce „Uczniowie”.</p><p>Kurs tworzony w przestrzeni szkolnej może podlegać uprawnieniom administracyjnym tej przestrzeni — nie należy utożsamiać ograniczonego dostępu uczniów z widocznością wyłącznie dla autora.</p></div>
 <h3>Publikacja i zapis uczniów</h3>${steps([
  ['Opublikuj kurs','„Zapisz” zachowuje wersję roboczą. „Opublikuj” udostępnia wersję dla zapisanych uczniów. Opublikuj kurs przed zapisaniem uczniów i po kolejnych zmianach treści.'],
  ['Otwórz zakładkę Uczniowie','Wejdź do edycji kursu, wybierz „Uczniowie”, a następnie „Zapisz uczniów”.'],
