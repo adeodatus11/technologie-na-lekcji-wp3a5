@@ -1,10 +1,11 @@
 # ZPE w praktyce — ilustrowany przewodnik
 
-Strona do prowadzenia szkolenia i samodzielnego powrotu do instrukcji. Zamiast slajdów: osiem rozdziałów (od lekcji, w której pracują uczniowie, po pracę nad własnym tematem), nawigacja boczna, powiększane ekrany ze źródeł, procedury i przykłady. Nie ma formularzy do wypełniania ani harmonogramów.
+Strona do prowadzenia szkolenia i samodzielnego powrotu do instrukcji. Zamiast slajdów: dwanaście rozdziałów (od wprowadzenia o ZPE i szkolnym sprzęcie po plan szkolenia, Kreator i pracę nad własnym tematem), nawigacja boczna, powiększane ekrany ze źródeł, procedury i przykłady. Nie ma formularzy do wypełniania ani harmonogramów.
 
 ## Treść i źródła
 
 - `index.html`, `guide.css`, `guide.js`: aktualny widok przewodnika.
+- `creator-reference.js`: katalog 66 funkcji treści, ćwiczeń i dodatkowych komponentów Kreatora, z opisami przygotowania, przykładami i stronami źródłowego PDF-u. Pozostałe funkcje (projekty, testy, edycja zaawansowana, dostępność i starszy Kreator) opisano w `guide.js`.
 - `guide-data.js`: dane zasobów i poradników używane na stronie.
 - `subject-examples.json`: zadania z matematyki, języka polskiego/historii oraz zawodów fryzjer, handlowiec, cukiernik i kucharz; każde opiera się na zasobie ZPE.
 - `zasoby-zawodowe.json`: e-materiały ZPE dla czterech zawodów, dołączane do `guide-data.js` przez `tools/build_guide_data.py`.
@@ -46,3 +47,5 @@ Przed pokazem prowadzący sprawdza bieżący interfejs na koncie testowym ZPE, z
 
 
 Skład książkowy: druga strona pozostaje pusta, a spis treści jest na stronie trzeciej. Rozdziały płyną kolejno, bez obowiązkowego rozpoczynania każdego tematu na nowej stronie; tekst akapitowy jest justowany. Zmiana liczby stron wynika z kompozycji, bez usuwania treści. Autor występuje w widocznej treści wyłącznie na okładce. Znaki projektowe mają optycznie wyrównaną wysokość. Zamknięcie zawiera aktywne adresy i wektorowe kody QR do covepolska.pl, win4smes.eu i metodyka.covepolska.pl.
+
+Aktualizacja 3 listopada 2026: szkolenie prowadzone bezpośrednio w ZPE; strona służy jako przewodnik i szczegółowa pomoc po spotkaniu. Informacje o szkolnym sprzęcie i obserwacje o uczniach przekazał prowadzący. Termin kolejnych dostaw pozostaje nieokreślony. Opisy Kreatora oparto na pełnym poradniku (67 stron); gdy źródło podaje tylko funkcję komponentu, instrukcja odsyła po konfigurację do jego Pomocy.

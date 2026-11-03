@@ -65,7 +65,7 @@ def cover(canvas):
     canvas.rect(48,597,50,4,fill=1,stroke=0)
     text(canvas,'ZPE w praktyce',48,569,510,size=39,bold=True,leading=48)
     text(canvas,'Ilustrowany przewodnik nauczyciela<br/>szkoły ponadpodstawowej',48,511,490,size=18,leading=26,color=MUTED)
-    text(canvas,'WYSZUKIWANIE · MATERIAŁY · UDOSTĘPNIANIE',48,403,499,size=10.5,bold=True,color=BLUE)
+    text(canvas,'ZASOBY · KREATOR · PRACA Z KLASĄ',48,403,499,size=10.5,bold=True,color=BLUE)
     text(canvas,'Autor opracowania',48,337,490,size=10)
     text(canvas,escape(BRAND['author']),48,315,490,size=21,bold=True)
     text(canvas,'Opracowano w ramach projektu '+escape(BRAND['project']),48,275,490,size=12)
@@ -115,11 +115,11 @@ def contents(canvas,entries,total):
     y=673
     for n,(title,page_index) in enumerate(entries,start=1):
         text(canvas,f'{n:02}',48,y,30,size=10,bold=True,color=BLUE)
-        text(canvas,escape(title),88,y,405,size=11)
+        text(canvas,escape(title),88,y,380,size=10)
         canvas.setFont('Bold',11)
         canvas.setFillColor(INK)
         canvas.drawRightString(A4[0]-48,y-13,str(page_index+4))
-        y-=49
+        y-=34
     text(canvas,'Jak korzystać z publikacji',48,241,499,size=13,bold=True)
     text(canvas,'Rozdziały zawierają instrukcje, przykłady i ilustracje z poradników ZPE. Rozwinięcia ze strony internetowej są tu pokazane w całości. Odsyłacze przy grafikach prowadzą do źródeł. Dla wygodnej nawigacji w PDF-ie dostępne są zakładki rozdziałów.',48,212,499,size=10)
     folio(canvas,3,total)
@@ -128,7 +128,7 @@ def assemble(body_file):
     source=PdfReader(str(body_file))
     assert sum(len(p.extract_text() or '') for p in source.pages)>25000,'Brak pełnej treści'
     writer=PdfWriter()
-    titles=['Lekcja, w której pracują uczniowie','Konto: co naprawdę ma znaczenie?','Wyszukiwanie dla szkoły ponadpodstawowej','Od wyniku do przydatnego fragmentu','Udostępnianie i wyniki: co wybrać?','Co jeszcze można zrobić w ZPE?','Twój temat: od wyszukania do przypisania','Materiały, które zostają po spotkaniu']
+    titles=['Czym jest ZPE i po co nam szkolny sprzęt?', 'Plan szkolenia: pracujemy bezpośrednio w ZPE', 'Lekcja, w której pracują uczniowie', 'Konto: co naprawdę ma znaczenie?', 'Wyszukiwanie dla szkoły ponadpodstawowej', 'Od wyniku do przydatnego fragmentu', 'Użytkownicy, grupy i odzyskiwanie dostępu', 'Udostępnianie i wyniki: co wybrać?', 'Kreator e-materiałów: możliwości i sposób pracy', 'Co jeszcze można zrobić w ZPE?', 'Twój temat: od wyszukania do przypisania', 'Materiały, które zostają po spotkaniu']
     page_text=[' '.join((page.extract_text() or '').split()) for page in source.pages]
     entries=[]
     for title in titles:

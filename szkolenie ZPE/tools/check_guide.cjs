@@ -24,8 +24,17 @@ async function check(){
   page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
   const base='http://127.0.0.1:'+server.address().port;
   await page.goto(base);await page.waitForLoadState('networkidle');
-  assert.equal(await page.locator('.chapter').count(),8);
+  assert.equal(await page.locator('.chapter').count(),12);
   assert.equal(await page.locator('input,textarea,form').count(),0);
+  assert.equal(await page.locator('#kreator details').count(),72);
+  assert.equal(await page.locator('#uzytkownicy').count(),1);
+  await page.locator('#expand-creator').click();
+  assert.equal(await page.locator('#kreator details:not([open])').count(),0);
+  await page.locator('#expand-creator').click();
+  assert.equal(await page.locator('#kreator details[open]').count(),0);
+  const brokenAnchors=await page.locator('a[href^="#"]').evaluateAll(nodes=>nodes.map(a=>a.getAttribute('href')).filter(h=>h.length>1&&!document.getElementById(h.slice(1))));
+  assert.deepEqual(brokenAnchors,[],'Broken chapter links');
+
   assert.equal(await page.locator('.pdf-card').count(),11);
   assert.equal(await page.locator('.image-card').count(),9);
   assert.equal(await page.locator('.case-example').count(),6);
@@ -85,7 +94,7 @@ async function check(){
    }finally{fs.rmSync(temp,{recursive:true,force:true});}
   }
   assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
-  console.log('PASS: 8 rozdziałów, 9 ilustracji, 11 PDF-ów, powiększanie, tryb prowadzenia, stare adresy, brak formularzy i czasów, obrazy, mobile.');
+  console.log('PASS: 12 rozdziałów i pełny katalog Kreatora, 9 ilustracji, 11 PDF-ów, powiększanie, tryb prowadzenia, stare adresy, brak formularzy i czasów, obrazy, mobile.');
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
 }
 check().catch(e=>{console.error(e);process.exitCode=1;});
