@@ -58,6 +58,7 @@ const header = (active = "") => `
       <a href="praktyka-szkolna.html"${active === "practice" ? ' class="active" aria-current="page"' : ""}>Dla nauczyciela</a>
       <a href="inspiracje.html"${active === "engagement" ? ' class="active" aria-current="page"' : ""}>Zaangażowanie</a>
       <a href="about.html"${active === "sources" ? ' class="active" aria-current="page"' : ""}>Źródła</a>
+${active === "start" ? `      <a class="zpe-training-link" href="szkolenie%20ZPE/">ZPE bez pośpiechu</a>` : ""}
     </nav>
     <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="site-navigation">
       <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
@@ -105,9 +106,9 @@ const documentShell = ({ title, description, body, active = "" }) => `<!DOCTYPE 
   <meta name="description" content="${escapeHtml(description)}">
   <title>${escapeHtml(title)}</title>
   <link rel="icon" href="assets/innowacyjna-lekcja-logo.png">
-  <link rel="stylesheet" href="styles.css?v=20260930">
+  <link rel="stylesheet" href="styles.css?v=20261103-zpe">
 </head>
-<body>
+<body${active === "start" ? ' class="home-page"' : ""}>
 ${header(active)}
 ${body}
 ${footer()}
@@ -160,6 +161,7 @@ const indexBody = `
       <div class="hero-actions">
         <a class="button primary" href="#metody">Przeglądaj metody</a>
         <a class="button secondary" href="#wybor">Jak wybrać metodę</a>
+        <a class="button secondary" href="szkolenie%20ZPE/">Szkolenie ZPE bez pośpiechu →</a>
       </div>
     </div>
   </section>
@@ -613,7 +615,7 @@ const redirectPage = (target) => `<!DOCTYPE html>
   <meta name="robots" content="noindex">
   <title>Strona została przeniesiona</title>
 </head>
-<body>
+<body${active === "start" ? ' class="home-page"' : ""}>
   <p>Ta metoda została połączona z inną. <a href="${target}">Przejdź do nowej strony</a>.</p>
 </body>
 </html>

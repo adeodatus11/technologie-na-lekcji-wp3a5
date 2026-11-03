@@ -6,6 +6,8 @@ root=Path(__file__).resolve().parents[1]
 files=[root/name for name in ('index.html','guide.css','guide.js','creator-reference.js','guide-data.js','branding.js','project-branding.json','AUDYT-AKTUALNOSCI.md')]
 for folder in ('assets','materialy-zrodlowe','output/pdf'):
     files.extend(f for f in (root/folder).rglob('*') if f.is_file() and f.suffix in ('.png','.jpg','.pdf','.json'))
+files.extend(f for f in (root/'pakiet-dla-nauczycieli').rglob('*') if f.is_file())
+files.append(root/'output/zpe-pakiet-dla-nauczycieli.zip')
 with ZipFile(root/'output/zpe-bez-pospiechu.zip','w',ZIP_DEFLATED) as archive:
     for file in sorted(files):
         archive.write(file,str(file.relative_to(root)))

@@ -1,0 +1,82 @@
+[
+  {
+    "file": "logotypy/zpe-bez-pospiechu.png",
+    "source": "assets/logo-zpe-zsz5-v1.png",
+    "label": "ZPE bez pośpiechu — ZSZ5",
+    "sha256": "5da31c3ff5817c8d094c41e267190f6c36928281c91f8c35ef52e2873e280147",
+    "unchanged": true
+  },
+  {
+    "file": "logotypy/cove-polska.png",
+    "source": "assets/COVE Polska bez tła.png",
+    "label": "COVE Polska",
+    "sha256": "86ec39b6d6140eed0ab96a0bddc71b93882cb839bcf80bb88bccad53cd6aad24",
+    "unchanged": true
+  },
+  {
+    "file": "logotypy/win4smes.png",
+    "source": "assets/Logo-2025.png",
+    "label": "WIN4SMEs",
+    "sha256": "0c3f3e1366e8a27dc70e7c81af4eb5694fb5e19c31b738ccd070a9a4eefbd98f",
+    "unchanged": true
+  },
+  {
+    "file": "logotypy/dofinansowane-ue.png",
+    "source": "assets/PL_Co-fundedbytheEU_RGB_POS.png",
+    "label": "Dofinansowane przez Unię Europejską",
+    "sha256": "1c100ee8e90eb09d6011924e24742e5f6b417174804ef957a22984f0af0b61a8",
+    "unchanged": true
+  },
+  {
+    "file": "logotypy/innowacyjna-lekcja.png",
+    "source": "assets/innowacyjna-lekcja-logo.png",
+    "label": "Innowacyjna lekcja w praktyce — dodatkowy znak strony",
+    "sha256": "f141a0ff44dac2a12549b1d500f4803f417240ba485952bb434e7cc761d71dad",
+    "unchanged": true
+  },
+  {
+    "file": "ilustracje/katalog-zpe.jpg",
+    "source": "assets/przewodnik/katalog.jpg",
+    "document": "https://metodyka.covepolska.pl/szkolenie%20ZPE/materialy-zrodlowe/01-poradnik-praktyczny-zpe.pdf",
+    "page": 7,
+    "scope": "Przykład katalogu z dokumentu; układ filtrów porównaj z obecnym ZPE.",
+    "sha256": "5c682002acd8e779e2d4de70499f9a05611ab376fcffcf3bc11ceb416ed28aa5",
+    "unchanged": true
+  },
+  {
+    "file": "ilustracje/wyszukiwarka-zpe.jpg",
+    "source": "assets/przewodnik/wyszukiwarka.jpg",
+    "document": "https://metodyka.covepolska.pl/szkolenie%20ZPE/materialy-zrodlowe/01-poradnik-praktyczny-zpe.pdf",
+    "page": 8,
+    "scope": "Przykład wyszukiwania z poradnika.",
+    "sha256": "f715a764bd3874455e93e1951a0323f431bfabe6401250490e92db13725c610f",
+    "unchanged": true
+  },
+  {
+    "file": "ilustracje/ulubione-serce.png",
+    "source": "assets/ulubione-serce.png",
+    "document": "https://zpe.gov.pl/a/ulubione/DE1FP3VBC",
+    "page": null,
+    "scope": "Ikona serca z publicznej instrukcji Ulubione.",
+    "sha256": "f0e3e51f45edd5cb14f43852a1dc8e0d30cd64c3476addac844f46a071d11f53",
+    "unchanged": true
+  },
+  {
+    "file": "ilustracje/panel-ucznia.png",
+    "source": "assets/przewodnik/odpowiedzi-przyklad.png",
+    "document": "https://metodyka.covepolska.pl/szkolenie%20ZPE/materialy-zrodlowe/03-udostepnianie-i-wyniki.pdf",
+    "page": 17,
+    "scope": "Starszy interfejs: przykład panelu ucznia, nie ścieżka wejścia do obecnej Analizy.",
+    "sha256": "f7b3a56b1162c0de41e6ad063521baa0f94ae8a4c725a3d413d28c1a9e61de11",
+    "unchanged": true
+  },
+  {
+    "file": "ilustracje/odpowiedzi-w-zadaniach.png",
+    "source": "assets/przewodnik/cwiczenie-odpowiedzi-przyklad.png",
+    "document": "https://metodyka.covepolska.pl/szkolenie%20ZPE/materialy-zrodlowe/03-udostepnianie-i-wyniki.pdf",
+    "page": 18,
+    "scope": "Starszy interfejs: przykład zaznaczonych odpowiedzi, nie nawigacja obecnego kursu.",
+    "sha256": "8e91667fc9e234614b0e511bec325f0877434c09a08541d7514fd75f37cce000",
+    "unchanged": true
+  }
+]
