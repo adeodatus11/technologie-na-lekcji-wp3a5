@@ -63,3 +63,7 @@ Test strony obejmuje rozdziały, odsyłacze, pliki, oznaczenia źródeł, rozwij
 ## Uzupełnienie: kurs a podręcznik modułowy
 
 Dodano porównanie organizacji treści, rozpoczęcia pracy, udostępniania i raportów. Podstawą są publiczne tutoriale ZPE „Jak korzystać z modułowych e-podręczników?” (https://zpe.gov.pl/b/PABP6FHAQ), w szczególności edycja (D4C6J71XM), dodawanie modułu (DC2SHM98E), udostępnianie (D3NBVQKSP) i analiza pracy (DDA34JK3L). Rekomendacja kursu dla jednej lekcji jest wskazówką dydaktyczną; nie oznacza, że kurs nie może mieć wielu tematów, etapów lub warunków dostępu. Nie wykonano testu na zalogowanym koncie.
+
+## Uzupełnienie: praca wyłącznie z gotowymi lekcjami
+
+Dodano ośmiostopniową ścieżkę od Ulubionych do sprawdzenia odpowiedzi i informacji zwrotnej. Odróżniono zapis roboczy od publikacji całego kursu oraz istniejącą klasę od opcjonalnej nowej grupy. Ocena w dzienniku i polecenie dokończenia w domu są propozycjami organizacji pracy, bez deklaracji automatycznego eksportu ocen i bez gwarancji ponownej edycji każdego ćwiczenia. Wykorzystano dwie niezmienione ilustracje z PDF-u 03, s. 17–18, z oznaczeniem starszego interfejsu i odsyłaczem do obecnej pomocy Analizy. Obrazy z oficjalnej pomocy WWW nie zostały pobrane: środowisko odrzuciło dostęp do static.zpe.gov.pl. Nie próbowano obchodzić ograniczenia sieciowego.

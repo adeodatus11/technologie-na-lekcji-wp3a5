@@ -1,0 +1,16 @@
+[
+  {
+    "file": "odpowiedzi-przyklad.png",
+    "pdf": "03-udostepnianie-i-wyniki.pdf",
+    "page": 17,
+    "sha256": "f7b3a56b1162c0de41e6ad063521baa0f94ae8a4c725a3d413d28c1a9e61de11",
+    "scope": "Starszy interfejs: ilustracja rodzaju danych i odpowiedzi, nie ścieżki obsługi kursu."
+  },
+  {
+    "file": "cwiczenie-odpowiedzi-przyklad.png",
+    "pdf": "03-udostepnianie-i-wyniki.pdf",
+    "page": 18,
+    "sha256": "8e91667fc9e234614b0e511bec325f0877434c09a08541d7514fd75f37cce000",
+    "scope": "Starszy interfejs: ilustracja rodzaju danych i odpowiedzi, nie ścieżki obsługi kursu."
+  }
+]
