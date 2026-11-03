@@ -59,3 +59,7 @@ Daty poniżej pochodzą z pola CreationDate, nie z deklaracji wydawcy o aktualno
 ## Weryfikacja techniczna
 
 Test strony obejmuje rozdziały, odsyłacze, pliki, oznaczenia źródeł, rozwijanie katalogu, obrazy i widok mobilny. PDF i ZIP są przebudowywane z poprawionej strony. Testy te nie sprawdzają interfejsu ani zapisu odpowiedzi na kontach ZPE.
+
+## Uzupełnienie: kurs a podręcznik modułowy
+
+Dodano porównanie organizacji treści, rozpoczęcia pracy, udostępniania i raportów. Podstawą są publiczne tutoriale ZPE „Jak korzystać z modułowych e-podręczników?” (https://zpe.gov.pl/b/PABP6FHAQ), w szczególności edycja (D4C6J71XM), dodawanie modułu (DC2SHM98E), udostępnianie (D3NBVQKSP) i analiza pracy (DDA34JK3L). Rekomendacja kursu dla jednej lekcji jest wskazówką dydaktyczną; nie oznacza, że kurs nie może mieć wielu tematów, etapów lub warunków dostępu. Nie wykonano testu na zalogowanym koncie.
